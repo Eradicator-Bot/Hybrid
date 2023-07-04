@@ -953,42 +953,7 @@ ABSTRACT_TYPE(/datum/trait/job)
 	points = -1
 	category = list("species")
 	mutantRace = /datum/mutantrace/lizard
-
-/datum/trait/cow
-	name = "Bovine"
-	icon_state = "cowT"
-	desc = "You are a hummman, always have been, always will be, and any claimmms to the contrary are mmmoooonstrous lies."
-	id = "cow"
-	points = -1
-	category = list("species", "hemophilia")
-	mutantRace = /datum/mutantrace/cow
-
-/datum/trait/skeleton
-	name = "Skeleton"
-	icon_state = "skeletonT"
-	desc = "Compress all of your skin and flesh into your bones, making you resemble a skeleton. Not as uncomfortable as it sounds."
-	id = "skeleton"
-	points = -1
-	category = list("species", "cloner_stuff")
-	mutantRace = /datum/mutantrace/skeleton
-
-/datum/trait/roach
-	name = "Roach"
-	icon_state = "roachT"
-	desc = "One space-morning, on the shuttle-ride to the station, you found yourself transformed in your seat into a horrible vermin. A cockroach, specifically."
-	id = "roach"
-	points = -1
-	category = list("species")
-	mutantRace = /datum/mutantrace/roach
-
-/datum/trait/pug
-	name = "Pug"
-	icon_state = "pug"
-	desc = "Should a pug really be on a space station? They aren't suited for space at all. They're practically a liability to the compan... Aw, look at those little ears!"
-	id = "pug"
-	points = -4 //Subject to change- -3 feels too low as puritan is relatively common. Though Puritan Pug DOES make for a special sort of Hard Modes
-	category = list("species", "nopug")
-	mutantRace = /datum/mutantrace/pug
+	unselectable = TRUE //temporary measure
 
 /datum/trait/super_slips
 	name = "Slipping Hazard"
