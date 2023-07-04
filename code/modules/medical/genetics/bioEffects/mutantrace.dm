@@ -16,6 +16,7 @@
 	lockedTries = 8
 	curable_by_mutadone = 0
 	icon_state  = "lizard"
+	occur_in_genepools = 0
 
 	OnAdd()
 		..() // caaaaaaall yooooooour paaaareeeeents
@@ -93,6 +94,7 @@
 	msgGain = "" //BOOOOORING
 	msgLose = ""
 	icon_state  = "blank"
+	occur_in_genepools = 1
 
 /datum/bioEffect/mutantrace/monkey
 	name = "Primal Genetics"
@@ -104,6 +106,7 @@
 	msgGain = "You go bananas!"
 	msgLose = "You do the evolution."
 	icon_state  = "monkey"
+	occur_in_genepools = 1
 
 /datum/bioEffect/mutantrace/seamonkey
 	name = "Aquatic Primal Genetics"
