@@ -66,14 +66,14 @@
 		name = "chip butty"
 		desc = "French fries and ketchup between two slices of bread."
 		icon_state = "c_butty"
-		initial_reagents = list("innitium"=25,"ketchup"=20)
+		initial_reagents = list("ketchup"=20)
 		food_effects = list("food_sweaty", "food_energized_big")
 
 	elvis_meat_h
 		name = "elvismanwich"
 		desc = "Human meat between two slices of elvis bread."
 		icon_state = "elviswich_m"
-		initial_reagents = list("essenceofelvis"=25,"blood"=10)
+		initial_reagents = list("blood"=10)
 		food_effects = list("food_refreshed", "food_energized_big")
 		meal_time_flags = MEAL_TIME_FORBIDDEN_TREAT
 
@@ -81,7 +81,7 @@
 		name = "monkey elviswich"
 		desc = "Meat between two slices of elvis bread."
 		icon_state = "elviswich_m"
-		initial_reagents = list("essenceofelvis"=25,"blood"=10)
+		initial_reagents = list("blood"=10)
 		food_effects = list("food_refreshed", "food_energized")
 		meal_time_flags = MEAL_TIME_FORBIDDEN_TREAT
 
@@ -89,35 +89,34 @@
 		name = "peanut butter elviswich"
 		desc = "Peanut butter between two slices of elvis bread."
 		icon_state = "elviswich_p"
-		initial_reagents = list("essenceofelvis"=25)
 		food_effects = list("food_refreshed", "food_energized")
 
 	elvis_pbh
 		name = "peanut butter and honey elviswich"
 		desc = "Peanut butter and honey between two slices of elvis bread."
 		icon_state = "elviswich_p"
-		initial_reagents = list("essenceofelvis"=15,"honey"=10)
+		initial_reagents = list("honey"=10)
 		food_effects = list("food_refreshed", "food_energized_big")
 
 	elvis_meat_s
 		name = "synthmeat elviswich"
 		desc = "Synthetic meat between two slices of elvis bread."
 		icon_state = "elviswich_m"
-		initial_reagents = list("essenceofelvis"=25,"synthflesh"=10)
+		initial_reagents = list("synthflesh"=10)
 		food_effects = list("food_hp_up_big")
 
 	elvis_cheese
 		name = "cheese elviswich"
 		desc = "Cheese between two slices of elvis bread."
 		icon_state = "elviswich_c"
-		initial_reagents = list("essenceofelvis"=20,"cheese"=2)
+		initial_reagents = list("cheese"=2)
 		food_effects = list("food_energized","food_hp_up")
 
 	elvis_blt
 		name = "BLT elviswich"
 		desc = "Crunchy bacon, lettuce, and tomato between two slices of elvis bread."
 		icon_state = "elviswich_blt"
-		initial_reagents = list("essenceofelvis"=20,"juice_tomato"=2,"cholesterol"=3,"porktonium"=3)
+		initial_reagents = list("juice_tomato"=2,"cholesterol"=3,"porktonium"=3)
 		food_effects = list("food_refreshed", "food_energized_big")
 
 	spooky_cheese
