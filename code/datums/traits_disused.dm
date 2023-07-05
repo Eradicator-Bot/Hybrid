@@ -187,3 +187,103 @@
 
 			SPAWN(4 SECONDS) owner.add_memory(str) //FUCK THIS SPAWN FUCK FUUUCK
 		return
+
+// Languages - Yellow Border
+
+/datum/trait/swedish
+	name = "Swedish"
+	desc = "You are from sweden. Meat balls and so on."
+	id = "swedish"
+	icon_state = "swedenY"
+	points = 0
+	category = list("language")
+	unselectable = TRUE
+
+	onAdd(var/mob/owner)
+		owner.bioHolder?.AddEffect("accent_swedish", 0, 0, 0, 1)
+
+/datum/trait/french
+	name = "French"
+	desc = "You are from Quebec. y'know, the other Canada."
+	id = "french"
+	icon_state = "frY"
+	points = 0
+	category = list("language")
+	unselectable = TRUE
+
+	onAdd(var/mob/owner)
+		owner.bioHolder?.AddEffect("accent_french", 0, 0, 0, 1)
+
+/datum/trait/scots
+	name = "Scottish"
+	desc = "Hear the pipes are calling, down thro' the glen. Och aye!"
+	id = "scottish"
+	icon_state = "scott"
+	points = 0
+	category = list("language")
+	unselectable = TRUE
+
+	onAdd(var/mob/owner)
+		owner.bioHolder?.AddEffect("accent_scots", 0, 0, 0, 1)
+
+/datum/trait/chav
+	name = "Chav"
+	desc = "U wot m8? I sware i'll fite u."
+	id = "chav"
+	icon_state = "ukY"
+	points = 0
+	category = list("language")
+	unselectable = TRUE
+
+	onAdd(var/mob/owner)
+		owner.bioHolder?.AddEffect("accent_chav", 0, 0, 0, 1)
+
+/datum/trait/elvis
+	name = "Funky Accent"
+	desc = "Give a man a banana and he will clown for a day. Teach a man to clown and he will live in a cold dark corner of a space station for the rest of his days. - Elvis, probably."
+	id = "elvis"
+	icon_state = "elvis"
+	points = 0
+	category = list("language")
+	unselectable = TRUE
+
+	onAdd(var/mob/owner)
+		owner.bioHolder?.AddEffect("accent_elvis", 0, 0, 0, 1)
+
+/datum/trait/tommy // please do not re-enable this without talking to spy tia
+	name = "New Jersey Accent"
+	desc = "Ha ha ha. What a story, Mark."
+	id = "tommy"
+	icon_state = "whatY"
+	points = 0
+	category = list("language")
+	unselectable = TRUE // this was not supposed to be a common thing!!
+/*
+	onAdd(var/mob/owner)
+		owner.bioHolder?.AddEffect("accent_tommy")
+		return
+*/
+
+/datum/trait/finnish
+	name = "Finnish Accent"
+	desc = "...and you thought space didn't have Finns?"
+	id = "finnish"
+	icon_state = "finnish"
+	points = 0
+	category = list("language")
+	unselectable = TRUE
+
+	onAdd(var/mob/owner)
+		owner.bioHolder?.AddEffect("accent_finnish", 0, 0, 0, 1)
+
+/datum/trait/tyke
+	name = "Tyke"
+	desc = "You're from Oop North in Yorkshire, and don't let anyone forget it!"
+	id = "tyke"
+	icon_state = "yorkshire"
+	points = 0
+	category = list("language")
+	unselectable = TRUE
+
+	onAdd(var/mob/owner)
+		owner.bioHolder?.AddEffect("accent_tyke")

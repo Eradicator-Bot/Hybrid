@@ -58,6 +58,10 @@
 	lockedDiff = 2
 	lockedChars = list("G","C")
 	lockedTries = 3
+	probability = 0
+	occur_in_genepools = FALSE
+	can_make_injector = FALSE
+	can_copy = FALSE
 
 	OnSpeak(var/message)
 		if (!istext(message))
@@ -79,6 +83,10 @@
 	lockedDiff = 2
 	lockedChars = list("G","C")
 	lockedTries = 3
+	probability = 0
+	occur_in_genepools = FALSE
+	can_make_injector = FALSE
+	can_copy = FALSE
 
 	OnSpeak(var/message)
 		if (!istext(message))
@@ -100,6 +108,10 @@
 	lockedDiff = 2
 	lockedChars = list("G","C")
 	lockedTries = 3
+	probability = 0
+	occur_in_genepools = FALSE
+	can_make_injector = FALSE
+	can_copy = FALSE
 	var/danny_index = 0
 
 	OnSpeak(var/message)
@@ -122,6 +134,10 @@
 	lockedDiff = 2
 	lockedChars = list("G","C")
 	lockedTries = 3
+	probability = 0
+	occur_in_genepools = FALSE
+	can_make_injector = FALSE
+	can_copy = FALSE
 
 	OnSpeak(var/message)
 		if (!istext(message))
@@ -143,6 +159,10 @@
 	lockedDiff = 2
 	lockedChars = list("G","C")
 	lockedTries = 3
+	probability = 0
+	occur_in_genepools = FALSE
+	can_make_injector = FALSE
+	can_copy = FALSE
 
 	OnSpeak(var/message)
 		if (!istext(message))
@@ -731,6 +751,10 @@
 	lockedDiff = 2
 	lockedChars = list("G","C")
 	lockedTries = 3
+	probability = 0
+	occur_in_genepools = FALSE
+	can_make_injector = FALSE
+	can_copy = FALSE
 
 	OnSpeak(var/message)
 		if (!istext(message))
@@ -752,6 +776,10 @@
 	lockedDiff = 2
 	lockedChars = list("G","C")
 	lockedTries = 3
+	probability = 0
+	occur_in_genepools = FALSE
+	can_make_injector = FALSE
+	can_copy = FALSE
 
 	OnSpeak(var/message)
 		if (!istext(message))
