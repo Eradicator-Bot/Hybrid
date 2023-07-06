@@ -121,7 +121,7 @@
 	density = 1
 	anchored = ANCHORED
 
-	examine()
+	/*examine()
 		. = ..()
 		. += "Your keen skills of observation tell you that [expected.len - unlocked.len] out of the [expected.len] locks are locked."
 
@@ -195,7 +195,7 @@
 		return
 
 	bullet_act()
-		return
+		return*/
 
 /obj/nerd_trap_door/voidoor
 	name = "V O I D O O R"
@@ -215,6 +215,9 @@
 		. += "Your keen skills of observation tell you that [locks_opened + skull_used] out of the 5 locks are unlocked."
 
 	attackby(var/obj/item/I, var/mob/user)
+		if ((locks_opened == 4) && (skull_used == TRUE))
+			boutput(user, "<span class='notice'>All locks are unlocked. The door can now be opened.</span>")
+			return
 		if ((istype(I, /obj/item/device/key)) || (istype(I, /obj/item/skull)))
 			if (used_keys != null)
 				if (I.name in used_keys)
@@ -253,8 +256,6 @@
 			boutput(user, "<span class='alert'>The door won't budge!</span>")
 
 	proc/open()
-		if ((locks_opened == 4) && (skull_used == TRUE))
-			return
 		playsound(src.loc, 'sound/machines/door_open.ogg', 50, 1)
 		icon_state = "hld1"
 		set_density(0)
