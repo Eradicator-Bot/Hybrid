@@ -200,8 +200,78 @@
 /obj/nerd_trap_door/voidoor
 	name = "V O I D O O R"
 	desc = "This door cannot be returned. You see, the warranty is void."
-	expected = list("silver key", /*"skeleton key",*/ "literal skeleton key", "hot iron key", "cold steel key", "onyx key", /*"key lime pie",*/ /*"futuristic key",*/ /*"virtual key",*/ "golden key", /*"bee key",*/ "iron key", /*"iridium key",*/ "lunar key")
-	icon_state = "hld2"
+	var/list/valid_keys = list("silver key", "literal skeleton key", "hot iron key", "iron key", "iridium key", "niobium key", "lunar key", "collar key", "chomps key", "studio door key")
+	var/list/used_keys = list()
+	var/locks_opened = 0
+	var/skull_used = FALSE
+	icon = 'icons/misc/aprilfools.dmi'
+	icon_state = "hld0"
+	opacity = 1
+	density = 1
+	anchored = ANCHORED
+
+	examine()
+		. = ..()
+		. += "Your keen skills of observation tell you that [locks_opened + skull_used] out of the 5 locks are unlocked."
+
+	attackby(var/obj/item/I, var/mob/user)
+		if ((istype(I, /obj/item/device/key)) || (istype(I, /obj/item/skull)))
+			if (used_keys != null)
+				if (I.name in used_keys)
+					boutput(user, "<span class='alert'>You have already tried that key.</span>")
+					return
+			if ((I.name in valid_keys) && (locks_opened < 4))
+				boutput(user, "<span class='notice'>You insert the [I.name] into a keyhole and turn it. The door emits a loud click.</span>")
+				playsound(src.loc, 'sound/impact_sounds/Generic_Click_1.ogg', 60, 1)
+				used_keys += I.name
+				locks_opened += 1
+				return
+			if ((istype(I, /obj/item/skull/crystal)) && (skull_used == FALSE))
+				boutput(user, "<span class='notice'>You insert the [I.name] into the skullhole. The door emits a loud click.</span>")
+				playsound(src.loc, 'sound/impact_sounds/Generic_Click_1.ogg', 60, 1)
+				skull_used = TRUE
+			else
+				if (skull_used == TRUE)
+					boutput(user, "<span class='alert'>You've already unlocked that keyhole.</span>")
+				else
+					boutput(user, "<span class='alert'>The [I.name] doesn't seem to fit.</span>")
+		else
+			boutput(user, "<span class='alert'>The [I.name] doesn't seem to fit.</span>")
+
+
+	Bumped(var/mob/M)
+		if (!istype(M))
+			return
+		attack_hand(M)
+
+	attack_hand(var/mob/user)
+		if (!density)
+			return
+		if ((locks_opened == 4) && (skull_used == TRUE))
+			open()
+		else
+			boutput(user, "<span class='alert'>The door won't budge!</span>")
+
+	proc/open()
+		if ((locks_opened == 4) && (skull_used == TRUE))
+			return
+		playsound(src.loc, 'sound/machines/door_open.ogg', 50, 1)
+		icon_state = "hld1"
+		set_density(0)
+		set_opacity(0)
+		overlays.len = 0
+
+	meteorhit()
+		return
+
+	ex_act()
+		return
+
+	blob_act()
+		return
+
+	bullet_act()
+		return
 
 /obj/steel_beams
 	name = "steel beams"
