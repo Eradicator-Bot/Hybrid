@@ -218,6 +218,18 @@
 
 // BODY - Red Border
 
+/datum/trait/dwarf_t
+	name = "Dwarfism"
+	desc = "Your body is a bit shorter and stouter than most."
+	icon_state = "dwarfT"
+	id = "dwarf_t"
+	category = list("body")
+	points = -2 //-2 because it adds 10% heat resistance
+
+	onLife(var/mob/owner) //Just to be safe.
+		if(owner.bioHolder && !owner.bioHolder.HasEffect("dwarf"))
+			owner.bioHolder.AddEffect("dwarf", 0, 0, 0, 1)
+
 /datum/trait/roboarms
 	name = "Robotic arms"
 	desc = "Your arms have been replaced with light robotic arms."
