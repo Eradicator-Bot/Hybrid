@@ -111,7 +111,7 @@
 /obj/nerd_trap_door/voidoor
 	name = "V O I D O O R"
 	desc = "This door cannot be returned. You see, the warranty is void."
-	var/list/valid_keys = list("silver key", "literal skeleton key", "hot iron key", "iron key", "iridium key", "niobium key", "lunar key", "collar key", "chomps key", "studio door key")
+	var/list/valid_keys = list("silver key", "skeleton key", "literal skeleton key", "hot iron key", "iron key", "iridium key", "niobium key", "lunar key", "collar key", "chomps key", "studio door key", "Owlish Key")
 	var/list/used_keys = list()
 	var/locks_opened = 0
 	var/skull_used = FALSE
