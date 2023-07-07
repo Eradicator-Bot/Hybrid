@@ -115,7 +115,7 @@
 	var/list/expected = list("silver key", "skeleton key", "cold steel key", "literal skeleton key", "hot iron key", "onyx key", "virtual key", "golden key", "iron key", "iridium key", "lunar key")
 	var/list/unlocked = list()
 	var/list/ol = list()
-	icon = 'icons/misc/aprilfools.dmi'
+	icon = 'icons/obj/doors/vaultdoor.dmi'
 	icon_state = "hld0"
 	opacity = 1
 	density = 1
@@ -204,7 +204,7 @@
 	var/list/used_keys = list()
 	var/locks_opened = 0
 	var/skull_used = FALSE
-	icon = 'icons/misc/aprilfools.dmi'
+	icon = 'icons/obj/doors/vaultdoor.dmi'
 	icon_state = "hld0"
 	opacity = 1
 	density = 1
