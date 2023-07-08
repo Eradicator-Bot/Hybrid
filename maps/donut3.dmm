@@ -10510,10 +10510,6 @@
 	dir = 5;
 	icon_state = "tile1"
 	},
-/obj/machinery/bot/buttbot{
-	desc = "It surprisingly has managed to keep the bathroom pretty clean...Somehow.";
-	name = "Bathroom Supervisor"
-	},
 /turf/simulated/floor/sanitary/white,
 /area/station/security/brig/north_side)
 "dbt" = (

@@ -95,11 +95,7 @@ ABSTRACT_TYPE(/datum/plant/crop)
 		..()
 		var/datum/plantgenes/DNA = S.plantgenes
 		if (!DNA) return
-		if (reagent == "nanites" && (DNA.mutation && istype(DNA.mutation,/datum/plantmutation/synthmeat/butt)))
-			DNA.mutation = HY_get_mutation_from_path(/datum/plantmutation/synthmeat/butt/buttbot)
 		switch(reagent)
-			if("anti_fart")
-				DNA.mutation = HY_get_mutation_from_path(/datum/plantmutation/synthmeat/butt)
 			if("synthflesh")
 				DNA.mutation = HY_get_mutation_from_path(/datum/plantmutation/synthmeat/limb)
 			if("mannitol")

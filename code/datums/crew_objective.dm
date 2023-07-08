@@ -802,20 +802,6 @@ ABSTRACT_TYPE(/datum/objective/crew/medicaldirector)
 			if (medbots > 4)
 				check_result = TRUE
 		return check_result
-/datum/objective/crew/medicaldirector/buttbots
-	explanation_text = "Have at least five buttbots on the station level at the end of the round."
-	medal_name = "Puerile humour"
-	var/static/check_result = null
-	check_completion()
-		var/buttbots = 0
-		if(isnull(check_result))
-			check_result = FALSE
-			for(var/obj/machinery/bot/buttbot/B in machine_registry[MACHINES_BOTS])
-				if(B.z == Z_LEVEL_STATION)
-					buttbots ++
-			if(buttbots > 4)
-				check_result = TRUE
-		return check_result
 /datum/objective/crew/medicaldirector/cryo
 	explanation_text = "Ensure that both cryo cells are online and below 225K at the end of the round."
 	medal_name = "It's frickin' freezing in here, Mr. Bigglesworth"
@@ -905,20 +891,6 @@ ABSTRACT_TYPE(/datum/objective/crew/roboticist)
 				if (M.z == Z_LEVEL_STATION)
 					medbots++
 			if (medbots > 4)
-				check_result = TRUE
-		return check_result
-/datum/objective/crew/roboticist/buttbots
-	explanation_text = "Have at least five buttbots on the station level at the end of the round."
-	medal_name = "Puerile humour"
-	var/static/check_result = null
-	check_completion()
-		var/buttbots = 0
-		if(isnull(check_result))
-			check_result = FALSE
-			for(var/obj/machinery/bot/buttbot/B in machine_registry[MACHINES_BOTS])
-				if(B.z == Z_LEVEL_STATION)
-					buttbots ++
-			if(buttbots > 4)
 				check_result = TRUE
 		return check_result
 

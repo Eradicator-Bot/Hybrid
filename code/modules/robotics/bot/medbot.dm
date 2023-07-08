@@ -55,7 +55,6 @@
 																				"haloperidol" = 15,
 																				"morphine" = 20,
 																				"cold_medicine" = 40,
-																				"anti_fart" = 10,
 																				"sulfonal" = 5, /* its an oldetimey sedative */
 																				"atropine" = 10,
 																				"methamphetamine" = 30,

@@ -2691,23 +2691,6 @@ datum
 					holder.clear_reagents()
 				return
 
-		anti_fart
-			name = "Simethicone"
-			id = "anti_fart"
-			result = "anti_fart"
-			required_reagents = list("oxygen" = 1, "chlorine" = 1, "hydrogen" = 1, "silicon" = 1)
-			result_amount = 3
-
-		honk_fart
-			name = "Honkfartium"
-			id = "honk_fart"
-			result = "honk_fart"
-			required_reagents = list("anti_fart" = 1, "fartonium" = 1)
-			min_temperature = T0C + 100
-			result_amount = 1
-			mix_sound = 'sound/misc/drinkfizz.ogg'
-			mix_phrase = "The chemicals hiss and fizz briefly, followed by one big bubble that smells like a fart."
-
 		flash_powder
 			name = "Flash Powder"
 			id = "flashpowder"
@@ -3928,15 +3911,6 @@ datum
 			required_reagents = list("fliptonium" = 1, "water" = 2)
 			result_amount = 3
 			mix_phrase = "The mixture swirls around in a kinda lackluster way. You feel pretty unimpressed."
-
-		fartonium
-			name = "fartonium"
-			id = "fartonium"
-			result = "fartonium"
-			required_reagents = list("egg" = 1, "refried_beans" = 1, "yuck" = 1, "fakecheese" = 1)
-			result_amount = 2
-			mix_phrase = "The substance makes a little 'toot' noise and starts to smell pretty bad."
-			mix_sound = 'sound/voice/farts/poo2.ogg'
 
 		flaptonium
 			name = "flaptonium"

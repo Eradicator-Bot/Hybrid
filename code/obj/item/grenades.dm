@@ -967,14 +967,6 @@ TYPEINFO(/obj/item/old_grenade/oxygen)
 					M.set_clothing_icon_dirty()
 		..()
 
-/obj/item/gimmickbomb/butt
-	name = "Butt Bomb"
-	desc = "What a crappy grenade."
-	icon_state = "fartbomb"
-	sound_beep = 'sound/voice/farts/poo2.ogg'
-	sound_explode = 'sound/voice/farts/superfart.ogg'
-	is_dangerous = FALSE
-
 /obj/item/gimmickbomb/gold
 	name = "Gold Bomb"
 	desc = "Why explode when you can gold!"
@@ -1652,8 +1644,6 @@ TYPEINFO(/obj/item/old_grenade/oxygen)
 						A.name = "modified pipe bomb"
 						if (istype(M, /obj/item/device/light/glowstick))
 							A.glowsticks += 1
-						if (istype(M, /obj/item/clothing/head/butt))
-							A.butt += 1
 						if (istype(M, /obj/item/paper))
 							A.confetti += 1
 						if (istype(M, /obj/item/reagent_containers/food/snacks/ingredient/meat))
@@ -1716,7 +1706,6 @@ ADMIN_INTERACT_PROCS(/obj/item/pipebomb/bomb, proc/arm)
 	var/is_dangerous = TRUE
 
 	var/glowsticks = 0
-	var/butt = 0
 	var/confetti = 0
 	var/meat = 0
 	var/ghost = 0
@@ -1779,15 +1768,6 @@ ADMIN_INTERACT_PROCS(/obj/item/pipebomb/bomb, proc/arm)
 						if (M.reagents)
 							M.reagents.add_reagent("radium", radium_amt, null, T0C + 300)
 					boutput(M, "<span class='alert'>You are splashed with hot green liquid!</span>")
-			if (butt)
-				if (butt > 1)
-					playsound(src.loc, 'sound/voice/farts/superfart.ogg', 90, 1, channel=VOLUME_CHANNEL_EMOTE)
-					for (var/mob/M in view(3+butt,src.loc))
-						ass_explosion(M, 0, 5)
-				else
-					playsound(src.loc, 'sound/voice/farts/poo2.ogg', 90, 1, channel=VOLUME_CHANNEL_EMOTE)
-					for (var/mob/M in view(3,src.loc))
-						ass_explosion(M, 0, 5)
 			if (confetti)
 				if (confetti > 1)
 					particleMaster.SpawnSystem(new /datum/particleSystem/confetti_more(src.loc))

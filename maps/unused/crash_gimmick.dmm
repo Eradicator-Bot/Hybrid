@@ -76028,7 +76028,6 @@
 	},
 /area/russian/radiation)
 "wmp" = (
-/obj/machinery/bot/buttbot,
 /obj/disposalpipe/segment{
 	dir = 4
 	},

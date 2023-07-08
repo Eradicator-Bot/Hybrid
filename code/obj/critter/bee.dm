@@ -1521,7 +1521,7 @@ ADMIN_INTERACT_PROCS(/obj/critter/domestic_bee, proc/dance, proc/puke_honey)
 		/datum/targetable/critter/bee_sting/clown)
 
 /datum/targetable/critter/bee_sting/clown // NO RAINBOW FLUID
-	venom1 = "honk_fart"
+	venom1 = "superlube"
 	amt1 = 5
 	venom2 = "lube"
 
@@ -1534,8 +1534,8 @@ ADMIN_INTERACT_PROCS(/obj/critter/domestic_bee, proc/dance, proc/puke_honey)
 	honey_color = "#ff0033"
 
 	do_reagentStuff(mob/M)
-		if (M.reagents.get_reagent_amount("honk_fart") < 10)
-			M.reagents.add_reagent("honk_fart", 5)
+		if (M.reagents.get_reagent_amount("superlube") < 10)
+			M.reagents.add_reagent("superlube", 5)
 		M.reagents.add_reagent("lube", 5)
 
 

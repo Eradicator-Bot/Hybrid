@@ -923,6 +923,7 @@ ABSTRACT_TYPE(/obj/item/reagent_containers/food/snacks/soup)
 			M.reagents.add_reagent("synd_methamphetamine", 15)
 		..()
 
+/* Disabled until we have some different reagents to add.
 /obj/item/reagent_containers/food/snacks/donkpocket/honk
 	name = "honk-pocket"
 	desc = "The food of choice for the seasoned t-- wait, what?"
@@ -944,6 +945,7 @@ ABSTRACT_TYPE(/obj/item/reagent_containers/food/snacks/soup)
 				src.warm = DONK_COLD
 				src.name = "honk-pocket"
 		return
+*/
 
 #undef DONK_COLD
 #undef DONK_WARM
@@ -2450,11 +2452,6 @@ ABSTRACT_TYPE(/obj/item/reagent_containers/food/snacks/soup)
 	name = "haggass"
 	isbutt = 1
 	meal_time_flags = MEAL_TIME_FORBIDDEN_TREAT
-
-	New()
-		..()
-		reagents.add_reagent("fartonium",10)
-
 
 /obj/item/reagent_containers/food/snacks/scotch_egg
 	name = "scotch egg"

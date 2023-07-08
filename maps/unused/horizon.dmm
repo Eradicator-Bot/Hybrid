@@ -45872,7 +45872,6 @@
 /turf/simulated/floor/circuit,
 /area/station/turret_protected/ai)
 "cqX" = (
-/obj/machinery/bot/buttbot,
 /obj/disposalpipe/segment{
 	dir = 4
 	},

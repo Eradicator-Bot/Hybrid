@@ -60,9 +60,6 @@
 			reagents.add_reagent("glowing_fliptonium", 3)
 			usedCapacity += 3
 		if (prob(10))
-			reagents.add_reagent("fartonium", 30)
-			usedCapacity += 30
-		if (prob(10))
 			reagents.add_reagent("glitter", 30)
 			usedCapacity += 30
 		if (prob(15))

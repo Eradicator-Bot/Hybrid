@@ -155,7 +155,6 @@
 		S["ma_crim"] = pick(\
 								"Grand theft apidae.",\
 								"Bee murder.",\
-								"Superfarted on the captain.",\
 								"Released the singularity.",\
 								"Stole the captain's spare ID.",\
 								"Arson, murder, jaywalking.",\

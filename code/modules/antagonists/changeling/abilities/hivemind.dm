@@ -188,35 +188,6 @@ ABSTRACT_TYPE(/datum/targetable/changeling/critter)
 
 		return original_leg
 
-/datum/targetable/changeling/critter/buttcrab
-	name = "Buttcrab"
-	desc = "You butt fall off and hivemind person become butt"
-	icon_state = "buttcrab"
-	cooldown = 600
-	pointCost = 1
-	antag_role = ROLE_BUTTCRAB
-
-	available_bodypart()
-		var/mob/living/carbon/human/owner = holder.owner
-		if (!(owner.organHolder.butt) || !ishuman(holder.owner))
-			return FALSE
-
-		return TRUE
-
-	get_bodypart()
-		var/mob/living/carbon/human/owner = holder.owner
-		if (!src.available_bodypart())
-			boutput(holder.owner, "<span class='notice'>We have no ass!</span>") // what a terrifying fate you've given yourself
-			return null
-
-		var/obj/item/clothing/head/butt/original_butt = owner.drop_organ("butt")
-		owner.changeStatus("c_regrow-butt", 40 SECONDS)
-
-		holder.owner.visible_message(text("<span class='alert'><B>[holder.owner]'s butt falls off and starts moving!</B></span>"))
-
-		return original_butt
-
-
 /datum/targetable/changeling/hivesay
 	name = "Speak Hivemind"
 	desc = "Speak to your own collected minds telepathically."

@@ -289,7 +289,6 @@ var/list/admin_verbs = list(
 		/client/proc/cmd_admin_spidergib,
 		/client/proc/cmd_admin_implodegib,
 		/client/proc/cmd_admin_cluwnegib,
-		/client/proc/cmd_admin_buttgib,
 		/client/proc/cmd_admin_tysongib,
 		/client/proc/cmd_admin_smitegib,
 		/client/proc/removeOther,

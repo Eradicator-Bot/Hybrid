@@ -247,22 +247,6 @@ datum
 				..()
 				return
 
-		anti_fart
-			name = "simethicone"
-			id = "anti_fart"
-			description = "This strange liquid seems to have no bubbles on the surface."
-			reagent_state = LIQUID
-
-		honk_fart
-			name = "honkfartium"
-			id = "honk_fart"
-			description = "This always-bubbling liquid looks pretty funny."
-			reagent_state = LIQUID
-			fluid_r = 255
-			fluid_g = 182
-			fluid_b = 193
-			transparency = 200
-
 		//new name for old stimulants
 		omegazine
 			name = "omegazine"

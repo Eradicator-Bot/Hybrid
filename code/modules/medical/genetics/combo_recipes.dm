@@ -158,10 +158,6 @@
 	required_effects = list("bad_eyesight","glowy")
 	result = /datum/bioEffect/power/eyebeams
 
-/datum/geneticsrecipe/superfart // Discovered
-	required_effects = list("loud_voice","farty")
-	result = /datum/bioEffect/power/superfart
-
 /datum/geneticsrecipe/cryokinesis
 	required_effects = list("chime_snaps","fire_resist")
 	result = /datum/bioEffect/power
@@ -253,14 +249,6 @@
 /datum/geneticsrecipe/erebokinesis_three
 	required_effects = list("uncontrollable_cloak","psy_resist")
 	result = /datum/bioEffect/power/erebokinesis
-
-/datum/geneticsrecipe/brown_note
-	required_effects = list("farty","loud_voice")
-	result = /datum/bioEffect/power/brown_note
-
-/datum/geneticsrecipe/brown_note_two
-	required_effects = list("stinky","loud_voice")
-	result = /datum/bioEffect/power/brown_note
 
 /datum/geneticsrecipe/cloak_of_darkness // Discovered
 	required_effects = list("uncontrollable_cloak","melanism")

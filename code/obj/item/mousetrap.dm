@@ -422,19 +422,6 @@
 			src.pie.throw_impact(target, thr)
 			src.pie = null
 
-		else if (src.butt)
-			if (src.butt.sound_fart)
-				playsound(target, src.butt.sound_fart, 50)
-			else
-				playsound(target, 'sound/voice/farts/poo2.ogg', 50)
-
-		else if (src.buttbomb)
-			src.overlays -= image('icons/obj/items/weapons.dmi', "trap-buttbomb")
-			var/obj/effects/explosion/E = new /obj/effects/explosion(get_turf(src.loc))
-			E.fingerprintslast = src.fingerprintslast
-			playsound(src.loc, 'sound/voice/farts/superfart.ogg', 100, 1)
-			qdel(src.buttbomb)
-			src.buttbomb = null
 		clear_armer()
 		return
 

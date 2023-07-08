@@ -1430,13 +1430,6 @@ Note: Add new traitor items to syndicate_buylist.dm, not here.
 	assoc_spell = /datum/targetable/spell/animal
 	cost = 2
 
-/datum/SWFuplinkspell/rathensecret
-	name = "Rathen's Secret"
-	eqtype = "Offensive"
-	desc = "This spell summons a shockwave that rips the arses off of your foes. If you're lucky, the shockwave might even sever an arm or leg."
-	assoc_spell = /datum/targetable/spell/rathens
-	cost = 2
-
 /*/datum/SWFuplinkspell/lightningbolt
 	name = "Lightning Bolt"
 	eqtype = "Offensive"
