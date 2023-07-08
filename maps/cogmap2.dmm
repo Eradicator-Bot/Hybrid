@@ -6189,7 +6189,6 @@
 /area/station/crew_quarters/catering)
 "arc" = (
 /obj/rack,
-/obj/item/reagent_containers/food/drinks/bottle/vintage,
 /obj/item/reagent_containers/food/drinks/bottle/hobo_wine,
 /obj/item/reagent_containers/food/drinks/bottle/hobo_wine,
 /obj/item/reagent_containers/food/drinks/bottle/hobo_wine,
@@ -32320,7 +32319,6 @@
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/reagent_containers/food/drinks/bottle/vintage,
 /turf/simulated/floor/carpet{
 	dir = 9;
 	icon_state = "blue2"

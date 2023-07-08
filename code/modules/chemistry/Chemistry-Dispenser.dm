@@ -507,7 +507,7 @@ TYPEINFO(/obj/machinery/chem_dispenser)
 /obj/machinery/chem_dispenser/botany
 	name = "botany dispenser"
 	desc = "Unlike other chem dispensers, this one's mostly just made for plants.";
-	dispensable_reagents = list("mutadone","saltpetre","ammonia","potash","poo","space_fungus","weedkiller","mutagen");
+	dispensable_reagents = list("mutadone","saltpetre","ammonia","potash","compost","space_fungus","weedkiller","mutagen");
 
 // Reagent Groups
 

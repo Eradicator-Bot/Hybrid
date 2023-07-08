@@ -1331,7 +1331,6 @@
 		src.goods_sell += new /datum/commodity/drugs/catdrugs(src)
 		src.goods_sell += new /datum/commodity/drugs/morphine(src)
 		src.goods_sell += new /datum/commodity/drugs/krokodil(src)
-		src.goods_sell += new /datum/commodity/drugs/jenkem(src)
 		src.goods_sell += new /datum/commodity/drugs/lsd(src)
 		src.goods_sell += new /datum/commodity/drug/lsd_bee(src)
 		src.goods_sell += new /datum/commodity/medical/ether(src)

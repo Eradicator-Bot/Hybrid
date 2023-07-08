@@ -35,7 +35,7 @@
 	icon_state = "maneater"
 	icon_state_dead = "maneater-dead"
 	custom_gib_handler = /proc/vegetablegibs
-	blood_id = "poo"
+	blood_id = "compost"
 	hand_count = 2
 	can_throw = 1
 	can_grab = 1
@@ -91,7 +91,7 @@
 	icon_state = "maneater"
 	icon_state_dead = "maneater-dead"
 	custom_gib_handler = /proc/vegetablegibs
-	blood_id = "poo"
+	blood_id = "compost"
 	hand_count = 2
 	can_throw = 1
 	can_grab = 1

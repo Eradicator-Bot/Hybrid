@@ -44,7 +44,7 @@
 	"Candle", "Shelterbee")//symbols that cant be colored
 	var/list/colorable_symbols = list("None", "Skull", "Drop", "Shortcross", "Smile", "One", "FadeCircle", "Square", "NT", "Ghost", "Bone",\
 	"Heart", "Pentagram", "Key", "Lock") //list of symbols that can be coloured
-	var/list/alchemical_symbols = list("None", "Mercury", "Salt", "Sulfur", "Urine", "Water", "Fire", "Air", "Earth", "Calcination", "Congelation",\
+	var/list/alchemical_symbols = list("None", "Mercury", "Salt", "Sulfur", "Ammonia", "Water", "Fire", "Air", "Earth", "Calcination", "Congelation",\
 	"Fixation", "Dissolution", "Digestion", "Distillation", "Sublimation", "Seperation", "Ceration", "Fermentation", "Multiplication",\
 	"Projection") //alchemical symbols (because theres a lot of them)
 	var/list/alphanumeric_symbols = list("None", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S",\

@@ -117,7 +117,7 @@
 		//ensure_reagent_holder()
 		var/datum/reagents/R = reagents
 
-		var/flavor_value = rand(1,100)
+		var/flavor_value = rand(1,90)
 
 
 		if (flavor_value == 1)
@@ -173,14 +173,6 @@
 			R.add_reagent("hugs",5)
 
 		else if(flavor_value < 37)
-			name += " - Farty Party Flavor"
-			desc = "What a blast!"
-			R.add_reagent("fartonium", 10)
-			R.add_reagent("refried_beans",5)
-			R.add_reagent("egg",5)
-			R.add_reagent("milk",5)
-
-		else if(flavor_value < 47)
 			name += " - Herbal Cleanse Flavor"
 			desc = "Better out than in, I always say!"
 			R.add_reagent("sewage", 5)
@@ -189,10 +181,9 @@
 			R.add_reagent("toxic_slurry",5)
 			R.add_reagent("THC",5)
 
-		else if(flavor_value < 57)
+		else if(flavor_value < 47)
 			name += " - Public Pool Flavor"
 			desc = pick("No Running!","Don't forget to wear sunscreen!","Smells like summer. Hot, sweaty, and miserable.")
-			R.add_reagent("urine", 3)
 			if(prob(10))
 				R.add_reagent("gvomit",7)
 			else
@@ -203,7 +194,7 @@
 				R.add_reagent("blood",5)
 			R.add_reagent("chlorine",10)
 
-		else if(flavor_value < 67)
+		else if(flavor_value < 57)
 			name += " - Vampire Tea Party Flavor"
 			desc = "Ugh, who invited Nosferatu?"
 			R.add_reagent("blood", 5)
@@ -212,7 +203,7 @@
 			R.add_reagent("tea",5)
 			R.add_reagent("halfandhalf",5)
 
-		else if(flavor_value < 77)
+		else if(flavor_value < 67)
 			name += " - Beff Bath and Byond Flavor"
 
 			if(prob(1))
@@ -224,7 +215,7 @@
 			R.add_reagent("glitter",5)
 			R.add_reagent("colors",1)
 
-		else if(flavor_value < 87)
+		else if(flavor_value < 77)
 			name += " - Relaxation Rodeo Flavor"
 			desc = "Yeet haw."
 			R.add_reagent("sorium", 5)

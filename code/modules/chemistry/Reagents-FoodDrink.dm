@@ -2013,7 +2013,7 @@ datum
 							explosion(M, T, -1, -1, 1, 1)
 						if(2)
 							boutput(M, "<span class='alert'>So juicy!</span>")
-							M.reagents.add_reagent(pick("capsaicin","psilocybin","LSD","THC","ethanol","poo","omnizine","methamphetamine","haloperidol","mutagen","radium","acid","mercury","space_drugs","morphine"), rand(10,40))
+							M.reagents.add_reagent(pick("capsaicin","psilocybin","LSD","THC","ethanol","compost","omnizine","methamphetamine","haloperidol","mutagen","radium","acid","mercury","space_drugs","morphine"), rand(10,40))
 						if(3)
 							boutput(M, "<span class='notice'>How refreshing!</span>")
 							M.HealDamage("All", 30, 30)
@@ -3699,9 +3699,6 @@ datum
 			on_mob_life(var/mob/M, var/mult = 1)
 				if(!M)
 					M = holder.my_atom
-
-				if(probmult(10))
-					new /obj/decal/cleanable/urine(M.loc)
 
 				if(probmult(15) && !M.reagents?.has_reagent("promethazine"))
 					M.visible_message("<span class='alert'>[M] pukes violently!</span>")

@@ -416,7 +416,7 @@
 			/obj/critter/domestic_bee_larva = 10,
 			/datum/reagent/fooddrink/juice_tomato = 1,
 			/datum/reagent/drug/THC = 1,
-			/datum/reagent/poo = 1,
+			/datum/reagent/compost = 1,
 			/obj/item/reagent_containers/food/snacks/plant/melonslice = 10,
 			/obj/item/reagent_containers/food/snacks/plant/melon = 20,
 			/obj/item/reagent_containers/food/snacks/plant/melon/bowling = 20,

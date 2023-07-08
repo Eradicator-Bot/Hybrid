@@ -1301,9 +1301,6 @@ TYPEINFO(/obj/item/clothing/under/towel)
 		for (var/obj/decal/cleanable/water/W in T)
 			qdel(W)
 			dried ++
-		for (var/obj/decal/cleanable/urine/U in T) // ew
-			qdel(U)
-			dried ++
 		return dried
 
 // Gimmick Jumpsuits

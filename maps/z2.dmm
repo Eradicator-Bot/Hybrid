@@ -15879,7 +15879,6 @@
 /area/marsoutpost)
 "bhp" = (
 /obj/stool/bed,
-/obj/decal/cleanable/urine,
 /obj/item/clothing/suit/bedsheet{
 	bcolor = "yellow";
 	icon_state = "bedsheet-yellow"
@@ -34782,7 +34781,6 @@
 	name = "crusty vent"
 	},
 /obj/decal/cleanable/dirt,
-/obj/item/reagent_containers/syringe/jenkem,
 /obj/machinery/light/small/iomoon{
 	dir = 4;
 	name = "maintenance light";
@@ -41305,7 +41303,6 @@
 	dir = 8
 	},
 /obj/item/reagent_containers/food/snacks/ingredient/egg/critter/owl/madness,
-/obj/decal/cleanable/urine,
 /turf/unsimulated/floor/yellowblack{
 	dir = 8
 	},
@@ -52248,7 +52245,7 @@
 	},
 /area/crypt/sigma/crew)
 "dvH" = (
-/obj/reagent_dispensers/watertank/fountain/piss,
+/obj/reagent_dispensers/watertank/fountain,
 /turf/unsimulated/floor/grey/side{
 	dir = 4
 	},
@@ -54989,7 +54986,7 @@
 	},
 /area/centcom/lounge)
 "dGg" = (
-/obj/reagent_dispensers/watertank/fountain/piss,
+/obj/reagent_dispensers/watertank/fountain,
 /turf/unsimulated/floor{
 	icon_state = "floor"
 	},
@@ -58826,7 +58823,7 @@
 	},
 /area/centcom/lounge)
 "dRI" = (
-/obj/reagent_dispensers/watertank/fountain/piss,
+/obj/reagent_dispensers/watertank/fountain,
 /turf/unsimulated/floor/carpet{
 	icon_state = "blue1";
 	tag = "icon-blue1"
@@ -63007,7 +63004,7 @@
 	},
 /area/meat_derelict/guts)
 "hIz" = (
-/obj/reagent_dispensers/watertank/fountain/piss,
+/obj/reagent_dispensers/watertank/fountain,
 /obj/machinery/light{
 	dir = 4
 	},
