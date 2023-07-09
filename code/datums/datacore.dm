@@ -118,7 +118,6 @@
 								"Tresspassing.",\
 								"Killing a monkey.",\
 								"Negligence.",\
-								"Pushing down and farting on a member of security.",\
 								"Throwing a toolbox at a member of security.",\
 								"Being drunk.",\
 								"Being high.",\

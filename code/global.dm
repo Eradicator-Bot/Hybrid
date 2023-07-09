@@ -280,7 +280,6 @@ var/global
 	debug_mixed_forced_wraith = 0
 	debug_mixed_forced_blob = 0
 	debug_mixed_forced_flock = 0
-	farting_allowed = 1
 	blood_system = 1
 	bone_system = 0
 	pull_slowing = 0
@@ -303,10 +302,7 @@ var/global
 
 	outpost_destroyed = 0
 	signal_loss = 0
-	fart_attack = 0
 	blowout = 0
-	farty_party = 0
-	deep_farting = 0
 	no_emote_cooldowns = 0
 	spooky_light_mode = 0
 	// Default ghost invisibility. Set when the game is over

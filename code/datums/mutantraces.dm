@@ -1846,7 +1846,7 @@ ABSTRACT_TYPE(/datum/mutantrace)
 						if (src.mob) src.mob.emote_allowed = 1
 					return message
 
-			if("burp","fart","gasp")
+			if("burp","gasp")
 				if(src.mob.emote_allowed)
 					src.mob.emote_allowed = 0
 					message = "<B>[src.mob]</B> croaks."

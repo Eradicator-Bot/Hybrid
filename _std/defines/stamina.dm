@@ -84,9 +84,6 @@
 /// The message tired people get when they try to attack.
 #define STAMINA_EXHAUSTED_STR "<p style=\"color:red;font-weight:bold;\">You are too exhausted to attack.</p>"
 
-/// How much farting costs. I am not even kidding.
-#define STAMINA_DEFAULT_FART_COST 1
-
 #define USE_STAMINA_DISORIENT //use the new stamina based stun disorient system thingy
 
 //disorient target defines

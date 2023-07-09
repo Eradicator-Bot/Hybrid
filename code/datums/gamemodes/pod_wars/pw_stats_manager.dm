@@ -76,13 +76,6 @@
 					stat.time_of_last_death = shift_time
 					stat.longest_life = shift_time - stat.time_of_last_death
 
-	proc/inc_farts(var/mob/M)
-		if (!ismob(M) || !M.ckey)
-			return
-		var/datum/pw_player_stats/stat = player_stats[M.ckey]
-		if (istype(stat))
-			stat.farts ++
-
 	//has a variable increment amount cause not every tic of ethanol metabolize metabolizes the same amount of alcohol.
 	proc/inc_alcohol_metabolized(var/mob/M, var/inc_amt = 1)
 		if (!ismob(M) || !M.ckey)
@@ -138,7 +131,6 @@
  <td>[stat.friendly_fire_count]</td>
  <td>[stat.longest_life] (min)</td>
  <td>[round(stat.alcohol_metabolized, 0.01)](u)</td>
- <td>[stat.farts]</td>
  <td>[stat.control_point_capture_count]</th>  d
 </tr>"}
 
@@ -158,7 +150,6 @@ Player Stats
     <th>Friendly Fire</th>
     <th>Longest Life</th>
     <th>Alcohol Metabolized</th>
-    <th>Farts</th>
     <th>Ctrl Pts</th>
   </tr>
 [p_stat_text]</table>
@@ -255,7 +246,6 @@ Player Stats
 	var/control_point_capture_count = 0			//should be determined by being in the control point area when captured
 	var/longest_life = 0						//this value is in "minutes" byond time.
 	var/alcohol_metabolized = 0
-	var/farts = 0
 
 	New(var/datum/mind/mind, var/initial_name, var/team_num, var/rank)
 		..()

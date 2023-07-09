@@ -180,8 +180,6 @@ var/list/pw_rewards_tier3 = null
 			sleep(5 MINUTES)
 			command_alert("You may feel a slight burning sensation.", "Emergency Update")
 			sleep(10 SECONDS)
-			for(var/mob/living/carbon/M in mobs)
-				M.emote("fart")
 			force_end = 1
 
 	src.playsound_to_team(team_NT, "sound/voice/pod_wars_voices/NanoTrasen-Roundstart{ALTS}.ogg", sound_type=PW_ROUNDSTART)

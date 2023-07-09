@@ -62,7 +62,6 @@
 #define IMMUNE_SINGULARITY_INACTIVE	(1 << 7)
 /// used for trinkets GC
 #define IS_TRINKET					(1 << 8)
-#define IS_FARTABLE					(1 << 9)
 /// overrides the click drag mousedrop pickup QOL kinda stuff
 #define NO_MOUSEDROP_QOL			(1 << 10)
 #define MOVE_NOCLIP 				(1 << 11)

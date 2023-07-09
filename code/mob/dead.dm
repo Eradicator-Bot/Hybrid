@@ -99,40 +99,13 @@
 				else
 					M.show_message("<span class='game'><i>[stutter(message)]</i></span>", 2)
 
-/mob/dead/emote(var/act, var/voluntary = 0) // fart
+/mob/dead/emote(var/act, var/voluntary = 0)
 	if (!deadchat_allowed)
 		src.show_text("<b>Deadchat is currently disabled.</b>")
 		return
 	..()
 	var/message = null
 	switch (lowertext(act))
-
-		if ("fart")
-			if (farting_allowed && src.emote_check(voluntary, 25, 1, 0))
-				var/fluff = pick("spooky", "eerie", "ectoplasmic", "frightening", "terrifying", "ghoulish", "ghostly", "haunting", "morbid")
-				var/fart_on_other = 0
-				for (var/obj/item/bible/B in src.loc)
-					playsound(src, 'sound/voice/farts/poo2.ogg', 7, 0, 0, src.get_age_pitch() * 0.4, channel=VOLUME_CHANNEL_EMOTE)
-					break
-				for (var/mob/living/M in src.loc)
-					message = "<B>[src]</B> lets out \an [fluff] fart in [M]'s face!"
-					fart_on_other = 1
-					if (prob(95))
-						break
-					else
-						M.show_text("<i>You feel \an [fluff] [pick("draft", "wind", "breeze", "chill", "pall")]...</i>")
-						break
-				if (!fart_on_other)
-					message = "<B>[src]</B> lets out \an [fluff] fart!"
-#ifdef HALLOWEEN
-				if (istype(src.abilityHolder, /datum/abilityHolder/ghost_observer))
-					var/datum/abilityHolder/ghost_observer/GH = src.abilityHolder
-					if (fart_on_other)
-						GH.change_points(15)
-					else if (GH.spooking)
-						animate_surroundings("fart")
-
-#endif
 
 		if ("scream")
 			if (src.emote_check(voluntary, 25, 1, 0))

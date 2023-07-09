@@ -18,7 +18,6 @@ var/global/datum/datalogger/game_stats
 		stats["sleeper"] = 0
 		stats["traitorloss"] = 0
 		stats["traitorwin"] = 0
-		stats["farts"] = 0
 		stats["violence"] = 0
 		stats["catches"] = 0
 //		stats["animes"] = 0
