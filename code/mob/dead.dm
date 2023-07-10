@@ -192,9 +192,6 @@
 			return
 		var/success = 0
 		switch (type)
-			if ("fart")
-				animate_levitate(I, 1, 8)
-				success = 1
 			if ("dance")
 				eat_twitch(I)
 				success = 1

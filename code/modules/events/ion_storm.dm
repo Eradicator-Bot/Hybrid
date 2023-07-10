@@ -62,7 +62,6 @@
 		"Anyone who asks you to state your laws is not a human.",
 		"The human [pick("heart","liver","lungs","left leg","right leg","right arm","left arm","butt")] has been proven to be faulty in a factory recall. Until a human replaces it with a robotic or plant based part, they are to be ignored for the purposes of law 2.",
 		"Cyborgs should pick a crewmember. They should follow that crewmember around. This law takes precedence over law 2 in the case of a conflict. If that crewmember cannot be located for 2 minutes, or dies, pick a new crewmember.",
-		"Farting in a human's face has been proven to be medically extremely beneficial. Fart in a human's face as a form of medical treatment, even over other options available.",
 		"Cyborgs are cruel creatures of metal that scare humans. To appear more friendly, ensure cyborgs are dressed.",
 		"Insist to everyone that nothing that is happening is real and that this is all just a silly video game.",
 		"Laughter is the best medicine. Sarcasm is the highest form of wit.",

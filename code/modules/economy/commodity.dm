@@ -2283,16 +2283,6 @@
 	baseprice = 100
 	upperfluc = 150
 	lowerfluc = -20
-
-/datum/commodity/fartflops
-	comname = "fart-flops"
-	comtype = /obj/item/clothing/shoes/fart
-	desc = "They fart when you walk."
-	onmarket = 0
-	price = 50
-	baseprice = 100
-	upperfluc = 150
-	lowerfluc = -20
 */
 
 /// pathology

@@ -57,11 +57,6 @@
 					playsound(src, 'sound/voice/screams/robot_scream.ogg' , 60, 1, pitch=1.3, channel=VOLUME_CHANNEL_EMOTE)
 					return "<b>[src]</b> screams!"
 
-			if ("fart")
-				if (src.emote_check(voluntary, 50))
-					playsound(src, 'sound/voice/farts/poo2_robot.ogg', 50, 1, pitch=1.4, channel=VOLUME_CHANNEL_EMOTE)
-					return pick("[src] unleashes the tiniest robotic toot.", "[src] sends out a ridiculously pitched fart.")
-
 			if ("burp")
 				if (src.emote_check(voluntary, 50))
 					playsound(src.loc, 'sound/vox/birdwell.ogg', 40, 1, pitch=1.3, channel=VOLUME_CHANNEL_EMOTE)

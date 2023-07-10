@@ -71,7 +71,6 @@
 		var/Toxins_pp = (breath.toxins/breath_moles)*breath_pressure
 		// And CO2, lets say a PP of more than 10 will be bad (It's a little less really, but eh, being passed out all round aint no fun)
 		var/CO2_pp = (breath.carbon_dioxide/breath_moles)*breath_pressure
-		var/FARD_pp = (breath.farts/breath_moles)*breath_pressure
 		var/Radgas_pp = (breath.radgas/breath_moles)*breath_pressure
 		var/oxygen_used
 
@@ -127,18 +126,6 @@
 		else if (N2O_pp > 0.5)	// There is sleeping gas in their lungs, but only a little, so give them a bit of a warning
 			if (probmult(20))
 				update.emotes |= pick("giggle", "laugh")
-
-		if (prob(15) && (FARD_pp > fart_smell_min))
-			boutput(donor, "<span class='alert'>Smells like someone [pick("died","soiled themselves","let one rip","made a bad fart","peeled a dozen eggs")] in here!</span>")
-			if ((FARD_pp > fart_vomit_min) && prob(50))
-				var/vomit_message = "<span class='notice'>[donor] vomits from the [pick("stink","stench","awful odor")]!!</span>"
-				donor.vomit(0, null, vomit_message)
-		if (FARD_pp > fart_choke_min)
-			donor.take_oxygen_deprivation(6.9 * mult/LUNG_COUNT)
-			if (prob(20))
-				update.emotes |= "cough"
-				if (prob(30))
-					boutput(donor, "<span class='alert'>Oh god it's so bad you could choke to death in here!</span>")
 
 		if (breath.temperature > min(temp_tolerance) && !donor.is_heat_resistant()) // Hot air hurts :(
 			var/lung_burn = clamp(breath.temperature - temp_tolerance, 0, 30) / 3

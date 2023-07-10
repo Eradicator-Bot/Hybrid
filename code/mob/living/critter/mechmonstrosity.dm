@@ -77,15 +77,8 @@
 				boutput(src,"<b>You hear a voice in your head... <i>Your suffering amuses me, insect.</i></b>")
 			if(4)
 				boutput(src,"<b>You hear a voice in your head... <i>I have cured your curse of the flesh, insect. You should be most grateful.</i></b>")
-			if(5)
-				src.emote("fart")
-
-	specific_emotes(var/act, var/param = null, var/voluntary = 0)
-		switch (act)
-			if ("fart")
-				if (src.emote_check(voluntary, 50))
-					playsound(src, 'sound/voice/killme.ogg', 70, 1, channel=VOLUME_CHANNEL_EMOTE)
-					return "<b>[src]</b> begs for mercy!"
+			if (5)
+				playsound(src, 'sound/voice/killme.ogg', 70, 1, channel=VOLUME_CHANNEL_EMOTE)
 
 /mob/living/critter/mechmonstrosity/medical
 	icon_state = "mechmonstrosity_m"

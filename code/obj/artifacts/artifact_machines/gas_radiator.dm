@@ -107,8 +107,6 @@
 					gas.toxins = src.gas_amount_current
 				if("carbon dioxide")
 					gas.carbon_dioxide = src.gas_amount_current
-				if("farts")
-					gas.farts = src.gas_amount_current
 				if("agent b")
 					gas.oxygen_agent_b = src.gas_amount_current
 				if("sleeping agent")

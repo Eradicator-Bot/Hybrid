@@ -325,9 +325,6 @@
 
 	src.mutantrace.onLife(mult)
 
-	if (farty_party)
-		src.emote("fart")
-
 	//Attaching a limb that didn't originally belong to you can do stuff
 	if(!isdead(src) && prob(2) && src.limbs)
 		if(src.limbs.l_arm && istype(src.limbs.l_arm, /obj/item/parts/human_parts/arm/))

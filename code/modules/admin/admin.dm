@@ -17,7 +17,7 @@ var/global/noir = 0
 	for (var/client/C in clients)
 		if(!C.holder)
 			continue
-		if (!asay && rank_to_level(C.holder.rank) < LEVEL_MOD) // No confidential info for goat farts (Convair880).
+		if (!asay && rank_to_level(C.holder.rank) < LEVEL_MOD)
 			continue
 		if (C.player_mode)
 			if (!asay || (asay && !C.player_mode_asay))
@@ -61,7 +61,7 @@ var/global/noir = 0
 			return LEVEL_SA
 		if("moderator")
 			return LEVEL_MOD
-		if("goat fart", "ayn rand's armpit")
+		if("intern")
 			return LEVEL_BABBY
 
 /proc/level_to_rank(var/level)
@@ -81,7 +81,7 @@ var/global/noir = 0
 		if(LEVEL_MOD)
 			return "Moderator"
 		if(LEVEL_BABBY)
-			return "Goat Fart or Ayn Rand's Armpit"
+			return "Intern"
 	return "ERROR"
 
 /datum/admins/Topic(href, href_list)
@@ -89,7 +89,6 @@ var/global/noir = 0
 
 	if (src.level < 0)
 		tgui_alert(usr,"UM, EXCUSE ME??  YOU AREN'T AN ADMIN, GET DOWN FROM THERE!")
-		usr << csound('sound/voice/farts/poo2.ogg')
 		return
 
 	if (usr.client != src.owner)
@@ -2002,8 +2001,7 @@ var/global/noir = 0
 							<A href='?src=\ref[src];action=chgadlvl;type=Intermediate Administrator;target=\ref[C]'>Intermediate Administrator</A><BR>
 							<A href='?src=\ref[src];action=chgadlvl;type=Secondary Administrator;target=\ref[C]'>Secondary Administrator</A><BR>
 							<A href='?src=\ref[src];action=chgadlvl;type=Moderator;target=\ref[C]'>Moderator</A><BR>
-							<A href='?src=\ref[src];action=chgadlvl;type=Ayn Rand%27s Armpit;target=\ref[C]'>Ayn Rand's Armpit</A><BR>
-							<A href='?src=\ref[src];action=chgadlvl;type=Goat Fart;target=\ref[C]'>Goat Fart</A><BR>
+							<A href='?src=\ref[src];action=chgadlvl;type=Intern;target=\ref[C]'>Intern</A><BR>
 							<A href='?src=\ref[src];action=chgadlvl;type=Remove;target=\ref[C]'>Remove Admin</A><BR>
 							"}
 				usr.Browse(dat, "window=prom_demot;size=480x300")
@@ -3149,20 +3147,6 @@ var/global/noir = 0
 						else
 							tgui_alert(usr,"You are not a shit enough guy to switcharoo, bub.")
 
-
-					if("fartyparty")
-						if(src.level >= LEVEL_ADMIN) //Will be SG when tested
-							if (farty_party)
-								farty_party = 0
-								deep_farting = 0
-								message_admins("[key_name(usr)] stopped the farty party, ok everyone go home")
-							else
-								farty_party = 1
-								deep_farting = 1
-								message_admins("[key_name(usr)] IS GETTIN THIS FARTY PARTY STARTED")
-						logTheThing(LOG_ADMIN, usr, "used Farty Party secret")
-						logTheThing(LOG_DIARY, usr, "used Farty Party secret", "admin")
-
 					else
 				if (usr) logTheThing(LOG_ADMIN, usr, "used secret [href_list["secretsfun"]]")
 				logTheThing(LOG_DIARY, usr, "used secret [href_list["secretsfun"]]", "admin")
@@ -3955,7 +3939,6 @@ var/global/noir = 0
 				<A href='?src=\ref[src];action=secretsfun;type=emag_all_things'>Emag everything</A><BR>
 				<A href='?src=\ref[src];action=secretsfun;type=noir'>Noir</A><BR>
 				<A href='?src=\ref[src];action=secretsfun;type=the_great_switcharoo'>The Great Switcharoo</A><BR>
-				<A href='?src=\ref[src];action=secretsfun;type=fartyparty'>Farty Party All The Time</A><BR>
 		"}
 
 	dat += "</div>"

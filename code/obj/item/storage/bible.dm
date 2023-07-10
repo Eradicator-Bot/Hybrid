@@ -11,7 +11,7 @@
 	throw_range = 5
 	w_class = W_CLASS_NORMAL
 	flags = FPRINT | TABLEPASS | NOSPLASH
-	event_handler_flags = USE_FLUID_ENTER | IS_FARTABLE
+	event_handler_flags = USE_FLUID_ENTER
 	var/mob/affecting = null
 	var/heal_amt = 10
 
@@ -134,57 +134,6 @@
 			return
 		return ..()
 
-	custom_suicide = 1
-	suicide_distance = 0
-	suicide(var/mob/user as mob)
-		if (!src.user_can_suicide(user))
-			return 0
-		if (!farting_allowed)
-			return 0
-
-		user.u_equip(src)
-		src.layer = initial(src.layer)
-		src.set_loc(user.loc)
-		return farty_heresy(user)
-
-	///Called when someone farts on a bible. Return TRUE if we killed them, FALSE otherwise.
-	proc/farty_heresy(mob/user)
-		if(!user || user.loc != src.loc)
-			return FALSE
-
-		if (farty_party)
-			user.visible_message("<span class='alert'>[user] farts on the bible.<br><b>The gods seem to approve.</b></span>")
-			return FALSE
-
-		if (user.traitHolder?.hasTrait("atheist"))
-			user.visible_message("<span class='alert'>[user] farts on the bible with particular vindication.<br><b>Against all odds, [user] remains unharmed!</b></span>")
-			return FALSE
-		else if (ishuman(user) && user:unkillable)
-			user.visible_message("<span class='alert'>[user] farts on the bible.</span>")
-			user:unkillable = 0
-			user.UpdateOverlays(image('icons/misc/32x64.dmi',"halo"), "halo")
-			heavenly_spawn(user)
-			user?.gib()
-			return TRUE
-		else
-			smite(user)
-			return TRUE
-
-	proc/smite(mob/M)
-		M.visible_message("<span class='alert'>[M] farts on the bible.<br><b>A mysterious force smites [M]!</b></span>")
-		logTheThing(LOG_COMBAT, M, "farted on [src] at [log_loc(src)] last touched by <b>[src.fingerprintslast ? src.fingerprintslast : "unknown"]</b>.")
-		M.smite_gib()
-
-/obj/item/bible/evil
-	name = "frayed bible"
-	event_handler_flags = USE_FLUID_ENTER | IS_FARTABLE
-
-	Crossed(atom/movable/AM as mob)
-		..()
-		if(ishuman(AM))
-			var/mob/living/carbon/human/H = AM
-			H.emote("fart")
-
 /obj/item/bible/mini
 	//Grif
 	name = "O.C. Bible"
@@ -192,68 +141,6 @@
 	icon_state = "minibible"
 	item_state = null
 	w_class = W_CLASS_SMALL
-
-	farty_heresy(mob/user) //fuk u always die
-		if(!user || user.loc != src.loc)
-			return FALSE
-
-		if(..())
-			return TRUE
-
-		user.visible_message("<span class='alert'>[user] farts on the bible.<br><b>A mysterious force smites [user]!</b></span>")
-		logTheThing(LOG_COMBAT, user, "farted on [src] at [log_loc(src)] last touched by <b>[src.fingerprintslast ? src.fingerprintslast : "unknown"]</b>.")
-		smite(user)
-		return TRUE
-
-/obj/item/bible/hungry
-	name = "hungry bible"
-	desc = "Huh."
-
-	custom_suicide = 1
-	suicide_distance = 0
-	suicide(var/mob/user as mob)
-		if (!src.user_can_suicide(user))
-			return 0
-		if (!farting_allowed)
-			return 0
-		if (farty_party)
-			user.visible_message("<span class='alert'>[user] farts on the bible.<br><b>The gods seem to approve.</b></span>")
-			return 0
-		user.visible_message("<span class='alert'>[user] farts on the bible.<br><b>A mysterious force smites [user]!</b></span>")
-		user.u_equip(src)
-		src.layer = initial(src.layer)
-		src.set_loc(user.loc)
-		var/list/gibz = user.gib(0, 1)
-		SPAWN(3 SECONDS)//this code is awful lol.
-			for( var/i = 1, i <= 500, i++ )
-				for( var/obj/gib in gibz )
-					if(!gib.loc) continue
-					step_to( gib, src )
-					if( GET_DIST( gib, src ) == 0 )
-						animate( src, pixel_x = rand(-3,3), pixel_y = rand(-3,3), time = 3 )
-						qdel( gib )
-						if(prob( 50 )) playsound( get_turf( src ), 'sound/voice/burp.ogg', 10, 1 )
-				sleep(0.3 SECONDS)
-		return 1
-	farty_heresy(var/mob/user)
-		if (farty_party)
-			user.visible_message("<span class='alert'>[user] farts on the bible.<br><b>The gods seem to approve.</b></span>")
-			return 0
-		user.visible_message("<span class='alert'>[user] farts on the bible.<br><b>A mysterious force smites [user]!</b></span>")
-		user.u_equip(src)
-		src.layer = initial(src.layer)
-		src.set_loc(user.loc)
-		var/list/gibz = user.gib(0, 1)
-		SPAWN(3 SECONDS)//this code is awful lol.
-			for( var/i = 1, i <= 50, i++ )
-				for( var/obj/gib in gibz )
-					step_to( gib, src )
-					if( GET_DIST( gib, src ) == 0 )
-						animate( src, pixel_x = rand(-3,3), pixel_y = rand(-3,3), time = 3 )
-						qdel( gib )
-						if(prob( 50 )) playsound( get_turf( src ), 'sound/voice/burp.ogg', 10, 1 )
-				sleep(0.3 SECONDS)
-		return 1
 
 /obj/item/bible/loaded
 

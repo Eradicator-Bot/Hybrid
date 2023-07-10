@@ -334,16 +334,14 @@ ABSTRACT_TYPE(/obj/item/reactor_component)
 							air_contents.temperature += 5
 							. -= N
 							qdel(N)
-							switch(rand(1,5))
+							switch(rand(1,4))
 								if(1)
 									air_contents.oxygen += 0.5
 								if(2)
 									air_contents.nitrogen += 0.5
 								if(3)
-									air_contents.farts += 0.1
-								if(4)
 									air_contents.nitrous_oxide += 0.1
-								if(5)
+								if(4)
 									air_contents.oxygen_agent_b += 0.01
 							continue_reacting = FALSE
 

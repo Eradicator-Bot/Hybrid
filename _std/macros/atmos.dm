@@ -225,7 +225,6 @@ What can break when adding new gases:
 #define SPECIFIC_HEAT_O2		40
 #define SPECIFIC_HEAT_N2		50
 #define SPECIFIC_HEAT_CO2		40
-#define SPECIFIC_HEAT_FARTS 	69
 #define SPECIFIC_HEAT_RADGAS 	5
 #define SPECIFIC_HEAT_N2O		60
 #define SPECIFIC_HEAT_AGENTB	300
@@ -235,7 +234,6 @@ What can break when adding new gases:
 	MACRO(PREF ## nitrogen ## SUFF, SPECIFIC_HEAT_N2, "N2", ARGS) \
 	MACRO(PREF ## carbon_dioxide ## SUFF, SPECIFIC_HEAT_CO2, "CO2", ARGS) \
 	MACRO(PREF ## toxins ## SUFF, SPECIFIC_HEAT_PLASMA, "Plasma", ARGS) \
-	MACRO(PREF ## farts ## SUFF, SPECIFIC_HEAT_FARTS, "Farts", ARGS) \
 	MACRO(PREF ## radgas ## SUFF, SPECIFIC_HEAT_RADGAS, "Fallout", ARGS) \
 	MACRO(PREF ## nitrous_oxide ## SUFF, SPECIFIC_HEAT_N2O, "N2O", ARGS) \
 	MACRO(PREF ## oxygen_agent_b ## SUFF, SPECIFIC_HEAT_AGENTB, "Oxygen Agent B", ARGS) \
@@ -245,7 +243,6 @@ What can break when adding new gases:
 	MACRO(nitrogen, SPECIFIC_HEAT_N2, "N2", ARGS) \
 	MACRO(carbon_dioxide, SPECIFIC_HEAT_CO2, "CO2", ARGS) \
 	MACRO(toxins, SPECIFIC_HEAT_PLASMA, "Plasma", ARGS) \
-	MACRO(farts, SPECIFIC_HEAT_FARTS, "Farts", ARGS) \
 	MACRO(radgas, SPECIFIC_HEAT_RADGAS, "Fallout", ARGS) \
 	MACRO(nitrous_oxide, SPECIFIC_HEAT_N2O, "N2O", ARGS) \
 	MACRO(oxygen_agent_b, SPECIFIC_HEAT_AGENTB, "Oxygen Agent B", ARGS) \
@@ -275,8 +272,6 @@ proc/gas_text_color(gas_id)
 			return "orange"
 		if("toxins")
 			return "red"
-		if("farts")
-			return "purple"
 		if("radgas")
 			return "green"
 	return "black"

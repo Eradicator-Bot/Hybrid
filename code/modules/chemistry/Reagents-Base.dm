@@ -183,7 +183,7 @@ datum
 						if (ethanol_amt >= 55)
 							liver_damage = 0.4
 							if(probmult(10))
-								H.emote(pick("hiccup", "fart", "mumble", "grumble"))
+								H.emote(pick("hiccup", "mumble", "grumble"))
 							H.stuttering += 1
 							if (probmult(33))
 								H.change_eye_blurry(10 , 50)

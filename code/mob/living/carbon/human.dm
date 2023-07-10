@@ -12,7 +12,7 @@
 	throw_range = 4
 	p_class = 1.5 // 1.5 while standing, 2.5 while resting)
 
-	event_handler_flags = USE_FLUID_ENTER  | IS_FARTABLE
+	event_handler_flags = USE_FLUID_ENTER
 	mob_flags = IGNORE_SHIFT_CLICK_MODIFIER
 
 	var/dump_contents_chance = 20
@@ -3034,65 +3034,6 @@
 			logTheThing(LOG_CHEMISTRY, src, "transfers chemicals from [src.chest_item] [log_reagents(src.chest_item)] to [src] at [log_loc(src)]")
 			src.chest_item.reagents.trans_to(src, maxVolumeAdd)
 	return
-
-/mob/living/carbon/human/proc/chest_item_attack_self_on_fart()
-	if(!(src.chest_item && (src.chest_item in src.contents)))
-		return
-	src.show_text("You grunt and squeeze <B>[src.chest_item]</B> in your chest.")
-	if (src.chest_item_sewn == 0 || istype(src.chest_item, /obj/item/cloaking_device))	// If item isn't sewn in, poop it onto the ground. No fartcloaks allowed
-		// Item object is pooped out
-		if (istype(src.chest_item, /obj/item/))
-			// Determine ass and bleed damage based on item size
-			var/poopingDamage = 0
-			if (src.chest_item.w_class == W_CLASS_TINY )
-				poopingDamage = 5
-				src.show_text("<B>[src.chest_item]</B> plops out of your rear and onto the floor.")
-			else if (src.chest_item.w_class == W_CLASS_SMALL )
-				poopingDamage = 10
-				src.show_text("You poop out <B>[src.chest_item]</B>! Your butt aches a bit.")
-			else if (src.chest_item.w_class == W_CLASS_NORMAL )
-				poopingDamage = 20
-				src.show_text("<span class='alert'><B>[src.chest_item]</B> was shat out, that's got to hurt!</span>")
-				src.changeStatus("stunned", 2 SECONDS)
-				take_bleeding_damage(src, src, 5)
-			else if (src.chest_item.w_class == W_CLASS_BULKY || src.chest_item.w_class == W_CLASS_HUGE)
-				poopingDamage = 50
-				src.show_text("<span class='alert'><B>[src.chest_item] explodes out of your ass, jesus christ!</B></span>")
-				src.changeStatus("stunned", 5 SECONDS)
-				take_bleeding_damage(src, src, 20)
-
-			// Deal out ass damage
-			src.TakeDamage("chest", poopingDamage, 0, 0, src.chest_item.hit_type)
-
-			// If the object cuts things, cut the butt off
-			var/cutOffButt = 0
-			if (src.chest_item.hit_type == DAMAGE_CUT || src.chest_item.hit_type == DAMAGE_STAB)
-				cutOffButt = 1
-			if (istype(src.chest_item, /obj/item/sword/))
-				var/obj/item/sword/c_saber = src.chest_item
-				if(c_saber.active)
-					cutOffButt = 1
-			if (cutOffButt)
-				src.TakeDamage("chest", 15, 0, 0, src.chest_item.hit_type)
-				take_bleeding_damage(src, src, 15)
-				src.show_text("<span class='alert'><B>[src.chest_item] cuts your butt off on the way out!</B></span>")
-				src.organHolder.drop_organ("butt")
-		// Other object is pooped out
-		else
-			// If it's not an "item", deal medium damage
-			src.show_text("<span class='alert'><B>[src.chest_item]</B> was shat out, that's got to hurt!</span>")
-			src.changeStatus("stunned", 1 SECOND)
-			src.TakeDamage("chest", 20, 0, 0, DAMAGE_BLUNT)
-			take_bleeding_damage(src, src, 5)
-		// added log - cirr
-		logTheThing(LOG_COMBAT, src, "takes damage from farting out [src.chest_item] embedded in [src]'s chest cavity at [log_loc(src)]")
-		// Make copy of item on ground
-		var/obj/item/outChestItem = src.chest_item
-		outChestItem.set_loc(get_turf(src))
-		outChestItem.AttackSelf(src)
-		src.chest_item = null
-		return
-	src.chest_item.AttackSelf(src)
 
 ///Clear chest item if it escapes/gets disposed
 /mob/living/carbon/human/Exited(atom/movable/thing)

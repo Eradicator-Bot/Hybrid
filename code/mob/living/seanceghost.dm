@@ -122,9 +122,6 @@
 						animate_spin(src, "R", 1, 0)
 					else
 						animate_spin(src, "L", 1, 0)
-			if("fart")
-				if(src.emote_check(voluntary, 100, 1, 0))
-					message = "emits a chilling wind..."
 			if("scream")
 				if(src.emote_check(voluntary, 100, 1, 0))
 					message = "produces a low hum..."

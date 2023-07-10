@@ -1069,7 +1069,6 @@ var/datum/preMapLoad/preMapLoad = new
 #include "code\modules\events\vortexes.dm"
 #include "code\modules\events\white_hole.dm"
 #include "code\modules\events\wormholes.dm"
-#include "code\modules\events\gimmick\bigfart.dm"
 #include "code\modules\events\gimmick\generate_planet.dm"
 #include "code\modules\events\gimmick\halloween.dm"
 #include "code\modules\events\gimmick\kudzu.dm"

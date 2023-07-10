@@ -950,7 +950,7 @@ datum
 			required_reagents = list("vodka" = 1, "juice_cran" = 1, "juice_orange" = 1)
 			result_amount = 3
 			mix_phrase = "You die a little inside after making that."
-			mix_sound = 'sound/voice/farts/poo2.ogg'
+			mix_sound = 'sound/misc/drinkfizz.ogg'
 
 		cocktail_beach/beach2
 			id = "beach2"

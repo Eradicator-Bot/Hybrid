@@ -6,7 +6,7 @@
 	inhand_image_icon = 'icons/mob/inhand/hand_books.dmi'
 	item_state = "paper"
 	layer = OBJ_LAYER
-	event_handler_flags = USE_FLUID_ENTER | IS_FARTABLE
+	event_handler_flags = USE_FLUID_ENTER
 
 	var/list/readers = list()
 
@@ -43,27 +43,3 @@
 			return jointext(., "<br>")
 		else
 			. = "This ancient data storage medium appears to contain data used for entertainment purposes."
-
-	custom_suicide = 1
-	suicide_distance = 0
-	suicide(var/mob/living/user as mob)
-		if (!src.user_can_suicide(user))
-			return 0
-		if (istype(user))
-			if (!farting_allowed)
-				return 0
-			if (src.loc == user)
-				user.u_equip(src)
-				src.layer = initial(src.layer)
-				src.set_loc(user.loc)
-				return farty_doom(user)
-		else
-			return 0
-
-	proc/farty_doom(var/mob/living/victim)
-		if(istype(victim) && victim.loc == src.loc)
-			victim.visible_message("<span class='alert'>[victim] farts on [src].<br><b>A mysterious force sucks [victim] into the book!!</b></span>")
-			victim.emote("scream")
-			victim.implode()
-			return 1
-		return 0

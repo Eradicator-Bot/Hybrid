@@ -230,8 +230,8 @@
 		if(src.emoting)
 			return
 		..()
-		var/icon/soulcache
-		var/icon/blendic
+		/*var/icon/soulcache
+		var/icon/blendic*/
 		switch (lowertext(act))
 			if("flip")
 				if(invisibility)
@@ -257,23 +257,6 @@
 						src.ClearAllOverlays()
 						var/obj/item/reagent_containers/food/snacks/ectoplasm/e = new /obj/item/reagent_containers/food/snacks/ectoplasm
 						e.set_loc(get_turf(src))
-			if("fart")
-				src.visible_message("<span><b>[src.name]</b> flies in a figure 8!</span>")
-				src.emoting = 1
-				soulcache = src.icon
-				if(!src.invisibility)
-					src.visible_message("<span class='alert'><b>The ectoplasm falls off! Oh no!</b></span>")
-					APPLY_ATOM_PROPERTY(src, PROP_MOB_INVISIBILITY, src, INVIS_GHOST)
-					src.ClearAllOverlays()
-					var/obj/item/reagent_containers/food/snacks/ectoplasm/e = new /obj/item/reagent_containers/food/snacks/ectoplasm
-					e.set_loc(get_turf(src))
-				blendic = new /icon('icons/obj/zoldorf.dmi',"figure8")
-				if(src.soulcolor)
-					blendic.Blend("[soulcolor]",ICON_MULTIPLY)
-				src.icon = blendic
-				sleep(22.5)
-				src.icon = soulcache
-				src.emoting = 0
 			if("scream")
 				if(src.emote_check(voluntary, 100, 1, 0))
 					src.visible_message("<span><b>[src.name]</b> vibrates mid-air...</span>")

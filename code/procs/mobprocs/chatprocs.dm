@@ -801,8 +801,6 @@
 	var/modifier = 30
 	if (src.reagents && src.reagents.has_reagent("helium"))
 		modifier += 30
-	if (deep_farting)
-		modifier -= 120
 	if (modifier == 0)
 		modifier = 1
 	return 1.0 + (0.5*(modifier - src.bioHolder.age)/80) + ((src.gender == MALE) ? 0.1 : 0.3)
@@ -814,8 +812,6 @@
 		modifier += 30
 	if (src.getStatusDuration("crunched") > 0)
 		modifier += 100
-	if (deep_farting)
-		modifier -= 120
 	if (modifier == 0)
 		modifier = 1
 	return 1.0 + 0.5*(modifier - src.bioHolder.age)/80

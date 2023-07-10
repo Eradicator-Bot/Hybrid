@@ -67,7 +67,6 @@ var/list/server_toggles_tab_verbs = list(
 /datum/admins/proc/adspawn,
 /datum/admins/proc/adrev,
 /datum/admins/proc/toggledeadchat,
-/datum/admins/proc/togglefarting,
 /datum/admins/proc/toggle_blood_system,
 /datum/admins/proc/toggle_bone_system,
 /datum/admins/proc/togglesuicide,
@@ -712,23 +711,9 @@ client/proc/toggle_ghost_respawns()
 	logTheThing(LOG_DIARY, usr, "toggled Deadchat [deadchat_allowed ? "on" : "off"].", "admin")
 	message_admins("[key_name(usr)] toggled Deadchat [deadchat_allowed ? "on" : "off"]")
 
-/datum/admins/proc/togglefarting()
-	SET_ADMIN_CAT(ADMIN_CAT_SERVER_TOGGLES)
-	set desc = "Toggle Farting on or off."
-	set name = "Toggle Farting"
-	NOT_IF_TOGGLES_ARE_OFF
-	farting_allowed = !( farting_allowed )
-	if (farting_allowed)
-		boutput(world, "<B>Farting has been enabled.</B>")
-	else
-		boutput(world, "<B>Farting has been disabled.</B>")
-	logTheThing(LOG_ADMIN, usr, "toggled Farting [farting_allowed ? "on" : "off"].")
-	logTheThing(LOG_DIARY, usr, "toggled Farting [farting_allowed ? "on" : "off"].", "admin")
-	message_admins("[key_name(usr)] toggled Farting [farting_allowed ? "on" : "off"]")
-
 /datum/admins/proc/toggle_emote_cooldowns()
 	SET_ADMIN_CAT(ADMIN_CAT_SERVER_TOGGLES)
-	set desc="Let everyone spam emotes, including farts/filps/suplexes. Oh no."
+	set desc="Let everyone spam emotes, including flips/suplexes. Oh no."
 	set name="Toggle Emote Cooldowns"
 	NOT_IF_TOGGLES_ARE_OFF
 	no_emote_cooldowns = !( no_emote_cooldowns )
@@ -785,14 +770,13 @@ client/proc/toggle_ghost_respawns()
 	config.allow_admin_spawning = !(config.allow_admin_spawning)
 	config.allow_admin_rev = !(config.allow_admin_rev)
 	deadchat_allowed = !( deadchat_allowed )
-	farting_allowed = !( farting_allowed )
 	no_emote_cooldowns = !( no_emote_cooldowns )
 	suicide_allowed = !( suicide_allowed )
 	monkeysspeakhuman = !( monkeysspeakhuman )
 	no_automatic_ending = !( no_automatic_ending )
 	late_traitors = !( late_traitors )
 	sound_waiting = !( sound_waiting )
-	message_admins("[key_name(usr)] toggled OOC [ooc_allowed ? "on" : "off"], Dead OOC  [dooc_allowed ? "on" : "off"], Global Player Cap  [player_capa ? "on" : "off"], Entering [enter_allowed ? "on" : "off"],Playing as the AI [config.allow_ai ? "on" : "off"], Sound Preference override [soundpref_override ? "on" : "off"], Abandoning [abandon_allowed ? "on" : "off"], Admin Jumping [config.allow_admin_jump ? "on" : "off"], Admin sound playing [config.allow_admin_sounds ? "on" : "off"], Admin Spawning [config.allow_admin_spawning ? "on" : "off"], Admin Reviving [config.allow_admin_rev ? "on" : "off"], Deadchat [deadchat_allowed ? "on" : "off"], Farting [farting_allowed ? "on" : "off"], Blood system [blood_system ? "on" : "off"], Suicide [suicide_allowed ? "on" : "off"], Monkey/Human communication [monkeysspeakhuman ? "on" : "off"], Late Traitors [late_traitors ? "on" : "off"], and Sound Queuing [sound_waiting ? "on" : "off"]   ")
+	message_admins("[key_name(usr)] toggled OOC [ooc_allowed ? "on" : "off"], Dead OOC  [dooc_allowed ? "on" : "off"], Global Player Cap  [player_capa ? "on" : "off"], Entering [enter_allowed ? "on" : "off"],Playing as the AI [config.allow_ai ? "on" : "off"], Sound Preference override [soundpref_override ? "on" : "off"], Abandoning [abandon_allowed ? "on" : "off"], Admin Jumping [config.allow_admin_jump ? "on" : "off"], Admin sound playing [config.allow_admin_sounds ? "on" : "off"], Admin Spawning [config.allow_admin_spawning ? "on" : "off"], Admin Reviving [config.allow_admin_rev ? "on" : "off"], Deadchat [deadchat_allowed ? "on" : "off"], Blood system [blood_system ? "on" : "off"], Suicide [suicide_allowed ? "on" : "off"], Monkey/Human communication [monkeysspeakhuman ? "on" : "off"], Late Traitors [late_traitors ? "on" : "off"], and Sound Queuing [sound_waiting ? "on" : "off"]   ")
 
 /client/proc/togglepersonaldeadchat()
 	SET_ADMIN_CAT(ADMIN_CAT_SELF)
