@@ -8,7 +8,6 @@ flockdrone_betrayal@=disregarding attack from ignored target@,turning a blind ey
 flockdrone_death@=terminal damage, system malf---@,situation untenable, death imminen---@,severe damage, unable to recov---@,notification: unit death---
 flockdrone_player_kicked@=consciousness subsumed, resuming autonomous actions@,higher functions suspended successfully@,contributing more to flockmind@,sapience removed, falling back to preprogrammed directives@,allocating greater processing resources to flock
 flockdrone_split@=decomposing@,deconstructing self@,redistributing matter@,fragmenting@,compartmentalizing@,divide and conquer
-flockdrone_fart@=transmits a wubby sound.@,drops the bass all over the station.@,uploads a bubbling synth to every nearby speaker.@,approximates mathematically the cadence of "fart".@,has assimilated humanity's digestive noises into the flock.@,emulates the clearly inferior human metabolism.@,farts. Or maybe that's a loose part rattling inside.@,releases a puff of teal smoke. Probably don't breathe that.@,replicates the farts it knows it will never have.@,fries a diode, and the magic smoke goes away.@,uploads either to the cloud or just a cloud.@,farts so hard the flockmind feels it.@,farts for the flock, for the flock will not fart for itself.@,purges useless byproduct gasses from its exhaust port, making a little toot.
 flockbit_name_adj@=floaty@,spindly@,fragile@,bobbing@,tilting@,wavering
 flockbit_name_noun@=gewgaw@,thingy@,device@,object@,drone@,assembly
 // ENCAGED MESSAGES

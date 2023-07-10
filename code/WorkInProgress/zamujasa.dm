@@ -934,7 +934,7 @@
 				return "[sign][round(val / 3600)]:[add_zero(val / 60 % 60, 2)]:[add_zero(val % 60, 2)]"
 
 			if ("time2")
-				// some things use centiseconds. some things dont. fart!
+				// some things use centiseconds. some things dont.
 				var/sign = ""
 				if (val < 0)
 					val *= -1
@@ -1184,13 +1184,6 @@
 			src.monitored = game_stats
 			..()
 
-		farts
-			name = "fart counter"
-			desc = "If you see this you are probably going to push F a lot. Show your respect!"
-			monitored_var = "farts"
-			maptext_prefix = "<span class='c pixel sh'>Farts:\n<span class='vga'>"
-			update_delay = 1
-
 		slips
 			name = "slips counter"
 			desc = "The number of times someone slipped on something else. May be an indicator of rampant clown crimes."
@@ -1385,7 +1378,7 @@
 
 				the_server = new(get_turf(src))
 				the_server.name = "server rack"
-				the_server.desc = "This looks kinda important.  You can barely hear farting and honking coming from a speaker inside.  Weird."
+				the_server.desc = "This looks kinda important.  You can barely hear honking coming from a speaker inside.  Weird."
 				the_server.icon = 'icons/obj/networked.dmi'
 				the_server.icon_state = "server"
 				the_server.anchored = ANCHORED

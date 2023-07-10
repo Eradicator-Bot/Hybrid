@@ -18,9 +18,6 @@
 	var/safe_toxins_max = 0.4
 	var/n2o_para_min = 1
 	var/n2o_sleep_min = 5
-	var/fart_smell_min = 0.69 // don't ask ~warc
-	var/fart_vomit_min = 6.9
-	var/fart_choke_min = 16.9
 	var/rad_immune = FALSE
 	var/breaths_oxygen = TRUE
 

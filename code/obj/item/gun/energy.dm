@@ -495,7 +495,7 @@ TYPEINFO(/obj/item/gun/energy/vuvuzela_gun)
 	icon_state = "vuvuzela"
 	uses_multiple_icon_states = 1
 	item_state = "bike_horn"
-	desc = "BZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZT, *fart*"
+	desc = "BZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZT"
 	cell_type = /obj/item/ammo/power_cell/med_power
 	is_syndicate = 1
 	uses_charge_overlay = TRUE

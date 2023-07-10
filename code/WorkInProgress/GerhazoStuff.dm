@@ -1019,7 +1019,7 @@
 		. = ..()
 		boutput(src, {"<h1><span class='alert'>PIZZA, PASTA.</span></h1>
 			<span class='notice'>Walk/run intent toggles MACH RUN.</span>
-			<br><span class='notice'>*scream, *fart and *dance have special effects.</span>"})
+			<br><span class='notice'>*scream and *dance have special effects.</span>"})
 
 	Life(datum/controller/process/mobs/parent)
 		. = ..()
@@ -1176,7 +1176,7 @@
 					flick("breakdance", src)
 					playsound(src.loc, '+secret/sound/misc/peppino_breakdance.ogg', 75)
 					return "<b><span class='alert'>[src] breaks out some sick moves!</span></b>"
-			if ("fart")
+			/*if ("fart") To do: tie this to a different emote.
 				if (src.emote_check(voluntary, 50))
 					if(prob(50))
 						attack_twitch(src)
@@ -1184,7 +1184,7 @@
 						animate_buff_in(src)
 					flick("taunt_[rand(1,10)]", src)
 					playsound(src.loc, '+secret/sound/misc/peppino_taunt.ogg', 75)
-					return null
+					return null*/
 		return null
 
 	specific_emote_type(var/act)
@@ -1192,8 +1192,6 @@
 			if ("scream")
 				return 2
 			if ("dance")
-				return 2
-			if ("fart")
 				return 2
 		return ..()
 

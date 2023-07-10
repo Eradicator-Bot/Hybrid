@@ -71,7 +71,7 @@ var/global/derelict_mode = 0
 //congrats you won
 /obj/the_server_ingame_whoa
 	name = "server rack"
-	desc = "This looks kinda important.  You can barely hear farting and honking coming from a speaker inside.  Weird."
+	desc = "This looks kinda important.  You can barely hear honking coming from a speaker inside.  Weird."
 	icon = 'icons/obj/networked.dmi'
 	icon_state = "server"
 	anchored = ANCHORED
