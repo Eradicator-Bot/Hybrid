@@ -444,7 +444,6 @@ ABSTRACT_TYPE(/datum/artifact/bomb)
 					100;"ice",  // no possible way this ends poorly
 					15;"spacelag",
 					15;"cardboard",
-					15;"frozenfart",
 					15;"negativematter")
 
 		mat = getMaterial(material)

@@ -37,8 +37,7 @@
 				gas_type = pick(
 					200;"oxygen",
 					100;"nitrogen",
-					50;"carbon dioxide",
-					50;"farts")
+					50;"carbon dioxide")
 			if("ancient") // industrial type stuff
 				gas_type = pick(
 					200;"oxygen",
@@ -51,7 +50,6 @@
 					100;"nitrogen",
 					75;"plasma",
 					50;"carbon dioxide",
-					30;"farts",
 					30;"agent b",
 					30;"sleeping agent")
 

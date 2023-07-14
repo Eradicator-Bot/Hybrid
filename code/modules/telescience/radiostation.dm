@@ -286,7 +286,7 @@
 			if(R)
 				phrase_log.log_phrase("record", R)
 			if (!R)
-				R = record_inside.record_name ? record_inside.record_name : pick("rad tunes","hip jams","cool music","neat sounds","magnificent melodies","fantastic farts")
+				R = record_inside.record_name ? record_inside.record_name : pick("rad tunes","hip jams","cool music","neat sounds","magnificent melodies")
 			user.client.play_music_radio(record_inside.song, R)
 			/// PDA message ///
 			var/datum/signal/pdaSignal = get_free_signal()

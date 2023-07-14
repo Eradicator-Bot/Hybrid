@@ -184,15 +184,6 @@
 				src.change_stack_amount(-1)
 				user.visible_message("<span class='notice'>[user] hangs up a [B.name] in [A]!.</span>", "<span class='notice'>You hang up a [B.name] in [A]!</span>")
 
-/obj/item/material_piece/fart
-	icon_state = "fart"
-	name = "frozen fart"
-	desc = "Remarkable! The cold temperatures in the freezer have frozen the fart in mid-air."
-	amount = 5
-	default_material = "frozenfart"
-	mat_changename = FALSE
-	uses_material_appearance = FALSE
-
 /obj/item/material_piece/steel
 	desc = "A processed bar of Steel, a common metal."
 	default_material = "steel"

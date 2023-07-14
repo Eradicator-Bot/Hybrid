@@ -496,16 +496,16 @@
 //////////////
 
 /datum/bioEffect/emoter
-	name = "Irritable Bowels"
-	desc = "Causes the subject to experience frequent involuntary flatus."
-	id = "farty"
+	name = ""
+	desc = ""
+	id = ""
 	effectType = EFFECT_TYPE_DISABILITY
 	isBad = 1
-	msgGain = "Your guts are rumbling."
-	msgLose = "Your guts settle down."
+	msgGain = ""
+	msgLose = ""
 	probability = 99
 	var/emote_prob = 15
-	var/emote_type = "fart"
+	var/emote_type = "flip"
 	icon_state  = "bad"
 
 	OnLife(var/mult)
@@ -589,25 +589,6 @@
 	msgLose = "You calm down."
 	emote_type = "scream"
 	emote_prob = 10
-
-
-/datum/bioEffect/emoter/linkedfart
-	name = "Psychic Fart Link"
-	desc = "Creates a neural fart linkage between all life-forms within 15 kilometers"
-	id = "linkedfart"
-	msgGain = "You feel the gas of a thousand souls"
-	msgLose = "You no longer feel so gassy."
-	emote_type = "fart"
-	emote_prob = 20
-	occur_in_genepools = 0
-	probability = 0
-	scanner_visibility = 0
-	can_research = 0
-	can_make_injector = 0
-	can_copy = 0
-	can_reclaim = 0
-	can_scramble = 0
-	curable_by_mutadone = 0
 
 /datum/bioEffect/emoter/juggler
 	name = "Jugglemancer's Curse"
@@ -872,10 +853,10 @@
 	lockedTries = 10
 	stability_loss = 15
 	var/prob_per_tick = 15
-	var/list/emotes = list("slap","snap","hiccup","burp","fart","dance","tantrum","flipoff","flip","boggle")
+	var/list/emotes = list("slap","snap","hiccup","burp","dance","tantrum","flipoff","flip","boggle")
 	var/list/noises = list('sound/musical_instruments/WeirdHorn_0.ogg','sound/voice/animal/cat.ogg','sound/musical_instruments/piano/furelise.ogg',
 	'sound/machines/engine_alert3.ogg','sound/machines/fortune_riff.ogg','sound/misc/ancientbot_grump2.ogg',
-	'sound/voice/farts/diarrhea.ogg','sound/misc/sad_server_death.ogg','sound/voice/animal/werewolf_howl.ogg',
+	'sound/misc/sad_server_death.ogg','sound/voice/animal/werewolf_howl.ogg',
 	'sound/voice/MEruncoward.ogg','sound/voice/macho/macho_become_enraged01.ogg',
 	'sound/voice/macho/macho_rage_81.ogg','sound/voice/macho/macho_rage_73.ogg','sound/weapons/male_cswordturnon.ogg')
 	icon_state  = "bad"

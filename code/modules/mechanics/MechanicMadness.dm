@@ -3012,11 +3012,6 @@ ADMIN_INTERACT_PROCS(/obj/item/mechanics/trigger/button, proc/press)
 			sounds = I.sounds_instrument
 			volume = I.volume
 			delay = I.note_time
-		else if (istype(W, /obj/item/clothing/head/butt))
-			instrument = W
-			sounds = 'sound/voice/farts/poo2.ogg'
-			volume = 100
-			delay = 5
 		else if (istype(W, /obj/item/clothing/shoes/clown_shoes))
 			instrument = W
 			sounds = list('sound/misc/clownstep1.ogg','sound/misc/clownstep2.ogg')

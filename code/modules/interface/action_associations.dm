@@ -8,7 +8,6 @@ var/list/action_names = list(
 	"equip" = "Equip",
 	"resist" = "Resist",
 
-	"fart" = "Fart",
 	"flip" = "Flip",
 	"twirl" = "Twirl",
 	"eyebrow" = "Raise Eyebrow",
@@ -99,7 +98,6 @@ var/list/action_verbs = list(
 	"dab" = "me_hotkey dab",
 	"dance" = "me_hotkey dance",
 	"eyebrow" = "me_hotkey eyebrow",
-	"fart" = "me_hotkey fart",
 	"flip" = "me_hotkey flip",
 	"twirl" = "me_hotkey twirl",
 	"gasp" = "me_hotkey gasp",

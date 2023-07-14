@@ -261,19 +261,6 @@
 	onChange(optional=null)
 		. = ..(change)
 
-
-/datum/statusEffect/deep_fart
-	id = "food_deep_fart"
-	name = "Food (Gassy)"
-	desc = "You feel gassy."
-	icon_state = "foodbuff"
-	exclusiveGroup = "Food"
-	maxDuration = 6000
-	unique = 1
-
-	getChefHint()
-		. = "Makes the consumer feel more gassy."
-
 /datum/statusEffect/deep_burp
 	id = "food_deep_burp"
 	name = "Food (Gross Burps)"
@@ -411,18 +398,6 @@
 		if(ismob(owner))
 			var/mob/M = owner
 			REMOVE_ATOM_PROPERTY(M, PROP_MOB_RADPROT_INT, src)
-
-/datum/statusEffect/space_farts
-	id = "food_space_farts"
-	name = "Food (Fart Thrust)"
-	desc = "Farts in space provide maximum thrust."
-	icon_state = "foodbuff"
-	exclusiveGroup = "Food"
-	maxDuration = 6000
-	unique = 1
-
-	getChefHint()
-		. = "Increase strengths of farts as to provide thrust."
 
 /datum/statusEffect/bad_breath
 	id = "food_bad_breath"

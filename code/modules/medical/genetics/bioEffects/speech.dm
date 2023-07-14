@@ -613,40 +613,6 @@
 	P.chars_used = used
 	return P
 
-/datum/bioEffect/speech/butt
-	name = "Frontal Gyrus Alteration Type-BT"
-	desc = "Causes the language center of the brain to be connected to the subject's butt."
-	id = "accent_butt"
-	msgGain = "Your breath smells like a fart."
-	msgLose = "Your breath no longer smells like a fart."
-	reclaim_fail = 10
-	stability_loss = -10
-	lockProb = 75
-	lockedGaps = 4
-	lockedDiff = 2
-	lockedChars = list("G","C")
-	lockedTries = 3
-	icon_state = "speech_bad"
-	OnSpeak(var/message)
-		if (!istext(message))
-			return ""
-
-		var/list/speech_list = splittext(message, " ")
-		if(!speech_list || !length(speech_list))
-			return ""
-
-		var/num_butts = rand(1,4)
-		var/counter = 0
-		while(num_butts)
-			counter++
-			num_butts--
-			speech_list[rand(1,speech_list.len)] = "butt"
-			if(counter >= (speech_list.len / 2) )
-				num_butts = 0
-
-		return jointext(speech_list, " ")
-
-
 /datum/bioEffect/speech/uwuwhatsthis //God is Dead
 	// okay this one is less creepy/weird than the owo one because it
 	// doesn't have the awkward prefix/suffixes. It's more like an actual accent.

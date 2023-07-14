@@ -331,7 +331,7 @@ var/list/rollList = list()
 	sound_roll = 'sound/items/coindrop.ogg'
 	can_have_pals = 0
 
-/obj/item/dice/magic8ball // farte
+/obj/item/dice/magic8ball
 	name = "magic 8 ball"
 	desc = "Think of a yes-or-no question, shake it, and it'll tell you the answer! You probably shouldn't use it for playing an actual game of pool."
 	icon_state = "8ball"

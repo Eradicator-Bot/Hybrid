@@ -20,10 +20,6 @@
 	required_effects = list("adrenaline","healing_touch")
 	result = /datum/bioEffect/regenerator
 
-/datum/geneticsrecipe/toxic_farts
-	required_effects = list("farty","stinky")
-	result = /datum/bioEffect/toxic_farts
-
 /datum/geneticsrecipe/thermal_res
 	required_effects = list("fire_resist","cold_resist")
 	result = /datum/bioEffect/thermalres
@@ -127,10 +123,6 @@
 /datum/geneticsrecipe/strong
 	required_effects = list("fitness_debuff","detox")
 	result = /datum/bioEffect/strong
-
-/datum/geneticsrecipe/stinky
-	required_effects = list("farty","dead_scan")
-	result = /datum/bioEffect/stinky
 
 /datum/geneticsrecipe/bee
 	required_effects = list("roach","detox")
@@ -261,10 +253,6 @@
 /datum/geneticsrecipe/chameleon_two
 	required_effects = list("uncontrollable_cloak","examine_stopper")
 	result = /datum/bioEffect/power/chameleon
-
-/datum/geneticsrecipe/shoot_limb
-	required_effects = list("farty","bigpuke")
-	result = /datum/bioEffect/power/shoot_limb
 
 // Mutantraces
 

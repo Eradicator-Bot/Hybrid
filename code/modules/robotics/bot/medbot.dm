@@ -840,8 +840,8 @@
 		return
 	else
 		var/obj/item/firstaid_arm_assembly/A = new /obj/item/firstaid_arm_assembly
-		if (src.icon_state != "firstaid") // fart
-			A.skin = src.icon_state // farto
+		if (src.icon_state != "firstaid")
+			A.skin = src.icon_state
 /* all of this is kinda needlessly complicated imo
 		if (istype(src, /obj/item/storage/firstaid/fire))
 			A.skin = "ointment"
