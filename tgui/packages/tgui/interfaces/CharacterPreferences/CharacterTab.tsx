@@ -68,12 +68,6 @@ export const CharacterTab = (_props, context) => {
       </Section>
       <Section title="Sounds">
         <LabeledList>
-          <LabeledList.Item label="Fart">
-            <Button onClick={() => act('update-fartsound')}>{data.fartsound}</Button>
-            <Button icon="volume-up" onClick={() => act('previewSound', { fartsound: 1 })}>
-              Preview
-            </Button>
-          </LabeledList.Item>
           <LabeledList.Item label="Scream">
             <Button onClick={() => act('update-screamsound')}>{data.screamsound}</Button>
             <Button icon="volume-up" onClick={() => act('previewSound', { screamsound: 1 })}>
