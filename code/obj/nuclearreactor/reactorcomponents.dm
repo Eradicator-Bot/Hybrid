@@ -475,7 +475,6 @@ ABSTRACT_TYPE(/obj/item/reactor_component)
 		100;"ice",\
 		5;"spacelag",\
 		15;"cardboard",\
-		15;"frozenfart",\
 		5;"negativematter",\
 		5;"plutonium"
 
