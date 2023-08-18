@@ -32,7 +32,6 @@ export interface CharacterPreferencesData {
   securityNote: string;
   medicalNote: string;
   syndintNote: string;
-  fartsound: string;
   screamsound: string;
   chatsound: string;
   pdaColor: string;

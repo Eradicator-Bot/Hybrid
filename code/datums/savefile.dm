@@ -49,7 +49,6 @@
 		F["[profileNum]_robot_name"] << src.robot_name
 		F["[profileNum]_gender"] << src.gender
 		F["[profileNum]_age"] << src.age
-		F["[profileNum]_fartsound"] << AH.fartsound
 		F["[profileNum]_screamsound"] << AH.screamsound
 		F["[profileNum]_voicetype"] << AH.voicetype
 		F["[profileNum]_PDAcolor"] << src.PDAcolor
@@ -216,7 +215,6 @@
 		F["[profileNum]_robot_name"] >> src.robot_name
 		F["[profileNum]_gender"] >> src.gender
 		F["[profileNum]_age"] >> src.age
-		F["[profileNum]_fartsound"] >> AH.fartsound
 		F["[profileNum]_screamsound"] >> AH.screamsound
 		F["[profileNum]_voicetype"] >> AH.voicetype
 		F["[profileNum]_PDAcolor"] >> src.PDAcolor
@@ -336,8 +334,6 @@
 			src.randomize_name()
 
 		// Clean up invalid / default preferences
-		if (isnull(AH.fartsound))
-			AH.fartsound = "default"
 		if (isnull(AH.screamsound) || AH.screamsound == "default")
 			AH.screamsound = "male"
 		if (!AH.voicetype)

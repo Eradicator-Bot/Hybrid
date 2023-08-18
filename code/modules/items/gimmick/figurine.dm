@@ -100,7 +100,7 @@
 				user.visible_message("<span class='alert'>[user] makes the [W.name] and the [src.name] kiss and kiss and kiss!</span>")
 			else if(user:a_intent == INTENT_DISARM)
 				playsound(src, 'sound/items/toys/figure-knock.ogg', 15, 1)
-				user.visible_message("<span class='alert'>[user] makes the [W.name] knock over and fart on the [src.name]!</span>")
+				user.visible_message("<span class='alert'>[user] makes the [W.name] knock over the [src.name]!</span>")
 			else if(user:a_intent == INTENT_GRAB)
 				playsound(src, 'sound/items/toys/figure-headlock.ogg', 15, 1)
 				user.visible_message("<span class='alert'>[user] has [W.name] put the [src.name] in a headlock!</span>")
@@ -616,11 +616,6 @@ ABSTRACT_TYPE(/datum/figure_info/patreon)
 		name = "\improper Derek Clarke"
 		icon_state = "derekclarke"
 		ckey = "heisenbee"
-
-	fartcan
-		name = "\improper Fart Canister"
-		icon_state = "fartcan"
-		ckey = "warcrimes"
 
 	tomato
 		name = "\improper Tomato"

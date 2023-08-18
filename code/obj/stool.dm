@@ -749,9 +749,6 @@ TYPEINFO(/obj/stool/wooden)
 			to_buckle.set_loc(src.loc)
 			src.buckledIn = 1
 			to_buckle.setStatus("buckled", duration = INFINITE_STATUS)
-		if (has_butt)
-			playsound(src, (has_butt.sound_fart ? has_butt.sound_fart : 'sound/voice/farts/fart1.ogg'), 50, 1)
-		else
 			playsound(src, 'sound/misc/belt_click.ogg', 50, 1)
 		return TRUE
 

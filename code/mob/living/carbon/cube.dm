@@ -84,35 +84,6 @@
 				if("dance")
 					if(src.emote_check(voluntary, 10))
 						message = "<B>[src]</B> twitches to some kind of rhythm. At least, you think so. Those things are always twitching."
-				if("fart")
-					if (farting_allowed && src.emote_check(voluntary, 50))
-						var/fart_on_other = 0
-						for (var/mob/living/M in src.loc)
-							if (M == src || !M.lying) continue
-							message = "<span class='alert'><B>[src]</B> jumps and farts all over [M]! That's disgusting!</span>"
-							fart_on_other = 1
-							if(prob(20))
-								M.vomit()
-							break
-						if(!fart_on_other)
-							switch (rand(1, 10))
-								if (1) message = "<B>[src]</B> releases some kind of gas into the air."
-								if (2) message = "<B>[src]</B> farts! How can meat cubes do that?"
-								if (3) message = "<B>[src]</B> shoots out a butt of death."
-								if (4) message = "<B>[src]</B> squeezes itself inward and farts."
-								if (5) message = "<B>[src]</B> hops up and down, farting all the while."
-								if (6) message = "<B>[src]</B> fart in it own mouth. A shameful [src]."
-								if (7) message = "<B>[src]</B> gets revenge on humanity with a terrible fart."
-								if (8) message = "<B>[src]</B> stinks even worse than normal, somehow."
-								if (9) message = "<B>[src]</B> shows that it can fart just as good as any human."
-								if (10)
-									message = "<B>[src]</B> farts blood and guts out of one of its sides! That's absolutely disgusting!"
-									var/obj/decal/cleanable/blood/gibs/gib = null
-									gib = make_cleanable(/obj/decal/cleanable/blood/gibs,src.loc)
-									gib.streak_cleanable()
-						playsound(src.loc, 'sound/vox/fart.ogg', 50, 1, channel=VOLUME_CHANNEL_EMOTE)
-						src.remove_stamina(STAMINA_DEFAULT_FART_COST)
-						src.stamina_stun()
 				if ("flex","flexmuscles")
 					if(src.emote_check(voluntary, 10))
 						message = "<B>[src]</B>'s center compresses slightly more than the rest of its jiggling mass. Are those... muscles?"
@@ -251,42 +222,10 @@
 					// basic visible single-word emotes
 					if(src.emote_check(voluntary, 10))
 						return "<B>[src]</B> rattles like only a metal cube can."
-				if("fart")
-					if (farting_allowed && src.emote_check(voluntary, 50))
-						var/message = ""
-						var/fart_on_other = 0
-						for (var/mob/living/M in src.loc)
-							if (M == src || !M.lying) continue
-							message = "<span class='alert'><B>[src]</B> jumps and farts all over [M]! That's disgusting!</span>"
-							fart_on_other = 1
-							if(prob(20))
-								M.vomit()
-							break
-						if(!fart_on_other)
-							switch (rand(1, 10))
-								if (1) message = "<B>[src]</B> releases some kind of gas into the air."
-								if (2) message = "<B>[src]</B> farts! How can metal cubes do that?"
-								if (3) message = "<B>[src]</B> shoots out a bolt of death."
-								if (4) message = "<B>[src]</B> squeezes itself inward and farts."
-								if (5) message = "<B>[src]</B> hops up and down, farting all the while."
-								if (6) message = "<B>[src]</B> fart in it own mouth. A shameful [src]."
-								if (7) message = "<B>[src]</B> gets revenge on humanity with a terrible fart."
-								if (8) message = "<B>[src]</B> stinks even worse than normal, somehow."
-								if (9) message = "<B>[src]</B> shows that it can fart just as good as any human."
-								if (10)
-									message = "<B>[src]</B> farts oil and debris out of one of its sides! That's kinda grody!"
-									var/obj/decal/cleanable/machine_debris/gib = make_cleanable(/obj/decal/cleanable/machine_debris, src.loc)
-									gib.streak_cleanable()
-						playsound(src.loc, 'sound/voice/farts/poo2_robot.ogg', 50, 1, channel=VOLUME_CHANNEL_EMOTE)
-						src.remove_stamina(STAMINA_DEFAULT_FART_COST)
-						src.stamina_stun()
-						return message
 			return null
 
 		specific_emote_type(var/act)
 			switch (act)
 				if ("smile","grin","smirk","frown","scowl","grimace","sulk","pout","blink","nod","shrug","think","ponder","contemplate")
 					return 1
-				if ("fart")
-					return 2
 			return ..()

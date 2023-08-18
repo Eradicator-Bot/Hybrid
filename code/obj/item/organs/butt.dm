@@ -28,7 +28,6 @@ TYPEINFO(/obj/item/clothing/head/butt)
 	var/donor_name = null
 	var/donor_DNA = null
 	var/datum/organHolder/holder = null
-	var/sound/sound_fart = null // this is the life I live, making it so you can change the fart sound of your butt (that you can wear on your head) so that you can make artifact butts with weird farts
 	default_material = "butt"
 	mat_changename = "butt"
 
@@ -159,22 +158,8 @@ TYPEINFO(/obj/item/clothing/head/butt)
 			user.show_text("You add the timer to the butt!", "blue")
 			qdel(W)
 			qdel(src)
-		else if (istype(W, /obj/item/parts/robot_parts/arm))
-			var/obj/machinery/bot/buttbot/B = new /obj/machinery/bot/buttbot(src, W)
-			if (src.donor || src.donor_name)
-				B.name = "[src.donor_name ? "[src.donor_name]" : "[src.donor.real_name]"] buttbot"
-			user.show_text("You add [W] to [src]. Fantastic.", "blue")
-			B.set_loc(get_turf(src))
-			src.set_loc(B)
-			user.u_equip(src)
-			W.set_loc(B)
-			user.u_equip(W)
-
 		else
 			return ..()
-
-	proc/on_fart(var/mob/farted_on) // what is wrong with me
-		return
 
 TYPEINFO(/obj/item/clothing/head/butt/cyberbutt)
 	mat_appearances_to_ignore = list("pharosium")
@@ -185,23 +170,8 @@ TYPEINFO(/obj/item/clothing/head/butt/cyberbutt)
 	allow_staple = 0
 	toned = 0
 	default_material = "pharosium"
-	sound_fart = 'sound/voice/farts/poo2_robot.ogg'
 // no this is not done and I dunno when it will be done
 // I am a bad person who accepts bribes of freaky macho butt drawings and then doesn't prioritize the request the bribe was for
-
-	attackby(obj/item/W, mob/user)
-		if (istype(W, /obj/item/parts/robot_parts/arm))
-			var/obj/machinery/bot/buttbot/cyber/B = new /obj/machinery/bot/buttbot/cyber(src, W)
-			if (src.donor || src.donor_name)
-				B.name = "[src.donor_name ? "[src.donor_name]" : "[src.donor.real_name]"] robuttbot"
-			user.show_text("You add [W] to [src]. Fantastic.", "blue")
-			B.set_loc(get_turf(src))
-			src.set_loc(B)
-			user.u_equip(src)
-			W.set_loc(B)
-			user.u_equip(W)
-		else
-			return ..()
 
 // moving this from plants_crop.dm because SERIOUSLY WHY -- cirr
 /obj/item/clothing/head/butt/synth

@@ -89,60 +89,57 @@
 	initial_reagents = list("cola"=20)
 
 	New()
-		switch(rand(1,16))
+		switch(rand(1,15))
 			if (1)
-				src.name += "Crunchy Kidney Stone Lemonade flavor"
-				src.initial_reagents["urine"] = 10
-			if (2)
 				src.name += "Radical Roadkill Rampage flavor"
 				src.initial_reagents["bloodc"] = 10 // heh
-			if (3)
+			if (2)
 				src.name += "Awesome Asbestos Candy Apple flavor"
 				src.initial_reagents["lithium"] = 10
-			if (4)
+			if (3)
 				src.name += "Salt-Free Senile Dementia flavor"
 				src.initial_reagents["mercury"] = 10
-			if (5)
+			if (4)
 				src.name += "High Fructose Traumatic Stress Disorder flavor"
 				src.initial_reagents["atropine"] = 10
-			if (6)
+			if (5)
 				src.name += "Tangy Dismembered Orphan Tears flavor"
 				src.initial_reagents["epinephrine"] = 10
-			if (7)
+			if (6)
 				src.name += "Chunky Infected Laceration Salsa flavor"
 				src.initial_reagents["charcoal"] = 10
-			if (8)
+			if (7)
 				src.name += "Manic Depressive Multivitamin Dewberry flavor"
 				src.initial_reagents["ephedrine"] = 10
-			if (9)
+			if (8)
 				src.name += "Anti-Bacterial Air Freshener flavor"
 				src.initial_reagents["spaceacillin"] = 10
-			if (10)
+			if (9)
 				src.name += "Old Country Hay Fever flavor"
 				src.initial_reagents["antihistamine"] = 10
-			if (11)
+			if (10)
 				src.name += "Minty Restraining Order Pepper Spray flavor"
 				src.initial_reagents["capsaicin"] = 10
-			if (12)
+			if (11)
 				src.name += "Cool Keratin Rush flavor"
 				src.initial_reagents["hairgrownium"] = 10
-			if (13)
+			if (12)
 				src.name += "Rancher's Rage Whole Chicken Dinner flavor" //by Splints/FireMoose
 				src.initial_reagents += (list("chickensoup"=10, "juice_cran"=5, "juice_carrot"=5, "mashedpotatoes"=3,
 				 "gravy"=2, "ether"=5))
 				src.label = "rancher"
-			if (14)
+			if (13)
 				src.name += "Prismatic Rainbow Punch flavor" //by Genesse
 				src.initial_reagents += (list("sparkles"=10, "colors"=10, "space_drugs"=10))
 				src.label = "rainbow"
-			if (15)
+			if (14)
 				src.name += "Hearty Hellburn Brew flavor" //by Eagletanker
 				src.initial_reagents += (list("oxygen"=18, "plasma"=8, "ghostchilijuice"=1, "carbon"=3))
 				src.desc = "9/10 Engineers prefered Grones Hearty Hellburn, find out why yourself!"
 				src.label = "engine"
-			if (16)
+			if (15)
 				src.name += "Citrus Circus Catastrophe flavor" //by Coolvape
-				src.initial_reagents += (list("juice_lemon"=10, "juice_lime"=10, "honk_fart"=5, "honky_tonic"=5))
+				src.initial_reagents += (list("juice_lemon"=10, "juice_lime"=10, "honky_tonic"=10))
 				src.label = "clown"
 
 		..()
@@ -527,7 +524,7 @@ obj/item/reagent_containers/food/drinks/covfefe
 		reagents.add_reagent("VHFCS", 5)
 		reagents.add_reagent(pick("methamphetamine", "crank", "space_drugs", "catdrugs", "coffee"), 5)
 		for(var/i=0; i<3; i++)
-			reagents.add_reagent(pick("beff","ketchup","eggnog","yuck","chocolate","vanilla","cleaner","capsaicin","toxic_slurry","luminol","urine","nicotine","weedkiller","venom","jenkem","ectoplasm"), 5)
+			reagents.add_reagent(pick("beff","ketchup","eggnog","yuck","chocolate","vanilla","cleaner","capsaicin","toxic_slurry","luminol","ammonia","nicotine","weedkiller","venom","ectoplasm"), 5)
 
 /obj/item/reagent_containers/food/drinks/bottle/soda/contest
 	name = "Grones Soda Call 1-800-IMCODER flavour"
@@ -549,4 +546,4 @@ obj/item/reagent_containers/food/drinks/covfefe
 		"vanilla"=1, "harlow"=1, "espressomartini"=1, "ectocooler"=1, "bread"=1, "sarsaparilla"=1, "eggnog"=1,
 		"chocolate"=1, "guacamole"=1, "salt"=1, "gravy"=1, "mashedpotatoes"=1, "msg"=1, "mugwort"=1, "juice_cran"=1,
 		"juice_blueberry"=1, "juice_grapefruit"=1, "juice_pickle"=1, "fakecheese"=1,
-		"capsaicin"=1, "urine"=1, "paper"=1, "chalk"=1)) //pain; a little of everything
+		"capsaicin"=1, "paper"=1, "chalk"=1)) //pain; a little of everything

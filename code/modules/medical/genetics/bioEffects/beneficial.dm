@@ -711,24 +711,6 @@ var/list/radio_brains = list()
 			else
 				REMOVE_ATOM_PROPERTY(owner, PROP_MOB_NIGHTVISION, src)
 
-/datum/bioEffect/toxic_farts
-	name = "High Decay Digestion"
-	desc = "Causes the subject's digestion to create a significant amount of noxious gas."
-	id = "toxic_farts"
-	probability = 33
-	blockCount = 2
-	blockGaps = 4
-	msgGain = "Your stomach grumbles unpleasantly."
-	msgLose = "Your stomach stops acting up. Phew!"
-	lockProb = 40
-	lockedGaps = 1
-	lockedDiff = 3
-	lockedChars = list("G","C","A","T")
-	lockedTries = 8
-	stability_loss = 10
-	degrade_to = "stinky"
-	icon_state  = "fart"
-
 /datum/bioEffect/fitness_buff
 	name = "Physically Fit"
 	desc = "Causes the subject to be naturally more physically fit than the average spaceman."

@@ -190,7 +190,7 @@
 
 	onEnd()
 		if(prob(25))
-			L.emote(pick("fart", "burp"))
+			L.emote(pick("burp"))
 		var/spot
 		switch(region)
 			if (1)

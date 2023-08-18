@@ -55,7 +55,6 @@
 	<a href='?src=\ref[src];action=handspider'>Handspider</a> |
 	<a href='?src=\ref[src];action=eyespider'>Eyespider</a> |
 	<a href='?src=\ref[src];action=legworm'>Legworm</a> |
-	<a href='?src=\ref[src];action=buttcrab'>Buttcrab</a>
 </div>
 <div class='antagType' style='border-color:#AEC6CF'><b class='title' style='background:#AEC6CF'>Flock</b>
 	<a href='?src=\ref[src];action=flocktrace'>Flocktrace</a> |
@@ -224,9 +223,6 @@
 			if ("legworm")
 				window_title = "LegWorm Expectations"
 				filename = "html/notice/legworm.html"
-			if ("buttcrab")
-				window_title = "Buttcrab Expectations"
-				filename = "html/notice/buttcrab.html"
 
 			//flock
 			if("flocktrace")

@@ -1037,20 +1037,6 @@ ABSTRACT_TYPE(/datum/material/organic)
 		setProperty("hard", 1)
 		//addTrigger(triggersOnEat, new /datum/materialProc/oneat_flesh())
 
-
-	butt
-		color = "#ebbd97"
-		mat_id = "butt"
-		name = "butt"
-		texture = "buttgrey"
-		texture_blend = BLEND_OVERLAY
-		desc = "...it's butt flesh. Why is this here. Why do you somehow know it's butt flesh. Fuck."
-
-		New()
-			..()
-			addTrigger(triggersPickup, new /datum/materialProc/onpickup_butt)
-			addTrigger(triggersOnHit, new /datum/materialProc/onpickup_butt)
-
 /datum/material/organic/char
 	mat_id = "char"
 	name = "char"
@@ -1198,21 +1184,6 @@ ABSTRACT_TYPE(/datum/material/organic)
 		// maybe make it sticky somehow?
 
 
-/datum/material/organic/frozenfart
-	mat_id = "frozenfart"
-	name = "frozen fart"
-	desc = "A semi-solid state of farts originally proposed to exist by Dr. Prof. Wonk in 2016."
-	color = "#003300"
-
-	New()
-		..()
-		setProperty("density", 3)
-		setProperty("hard", 2)
-		setProperty("thermal", 1)
-		addTrigger(triggersOnAdd, new /datum/materialProc/ffart_add())
-		addTrigger(triggersPickup, new /datum/materialProc/ffart_pickup())
-
-
 /datum/material/organic/hamburgris
 	mat_id = "hamburgris"
 	name = "hamburgris"
@@ -1226,7 +1197,6 @@ ABSTRACT_TYPE(/datum/material/organic)
 		setProperty("thermal", 2)
 		setProperty("flammable", 1)
 		addTrigger(triggersOnLife, new /datum/materialProc/generic_reagent_onlife("cholesterol", 1))
-
 
 
 /datum/material/organic/pizza

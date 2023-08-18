@@ -2929,8 +2929,7 @@ TYPEINFO(/obj/machinery/vending/janitor)
 	vend_delay = 0
 	slogan_list = list("Come get a breath of fresh air",
 	"You NEED this to live!.",
-	"Breathing is GOOD!",
-	"Contains only 2% farts!")
+	"Breathing is GOOD!")
 	var/global/image/holding_overlay_image = image('icons/obj/vending.dmi', "O2vend-slot")
 
 	// Currently installed tank

@@ -79,12 +79,3 @@ ABSTRACT_TYPE(/datum/antagonist/subordinate/changeling_critter)
 	announce()
 		..()
 		boutput(src.owner.current, "<font color=red>You are a small creature that can deliver powerful kicks and fit into tight spaces. You are still connected to the hivemind.</font>")
-
-/datum/antagonist/subordinate/changeling_critter/buttcrab
-	id = ROLE_BUTTCRAB
-	display_name = "buttcrab"
-	critter_type = /mob/living/critter/changeling/buttcrab
-
-	announce()
-		..()
-		boutput(src.owner.current, "<font color=red>You are a very small, very smelly, and weak creature. You are still connected to the hivemind.</font>")

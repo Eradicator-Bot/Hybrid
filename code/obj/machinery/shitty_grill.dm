@@ -351,8 +351,3 @@ TYPEINFO(/obj/machinery/shitty_grill)
 				src.visible_message("<span class='alert'>[usr] replaces the charcoal!</span>")
 
 		return
-
-
-/*
-farts
-*/

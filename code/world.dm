@@ -1214,14 +1214,8 @@ var/global/mob/twitch_mob = 0
 
 				logTheThing(LOG_OOC, null, "Discord OOC: [nick]: [msg]")
 
-				if (nick == "buttbot")
-					for (var/obj/machinery/bot/buttbot/B in machine_registry[MACHINES_BOTS])
-						if(B.on)
-							B.speak(msg)
-					return 1
-
 				//This is important.
-				else if (nick == "HeadSurgeon")
+				if (nick == "HeadSurgeon")
 					for (var/obj/machinery/bot/medbot/head_surgeon/HS in machine_registry[MACHINES_BOTS])
 						if (HS.on)
 							HS.speak(msg)

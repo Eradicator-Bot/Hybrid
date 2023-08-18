@@ -13,7 +13,7 @@ obj/item/coin/bombini
 	var/obj/machinery/floorflusher/bathtub/tub = null
 	var/next_choice = 0 // is this head the head we want?
 	var/id = 0 // whoami?
-	default_reagent = "poo"
+	default_reagent = "compost"
 
 	proc/cycle()
 		if (stage >= 6)

@@ -94,7 +94,6 @@ datum/preferences
 
 	var/font_size = null
 
-	//var/fartsound = "default"
 	//var/screamsound = "default"
 
 	New()
@@ -213,7 +212,6 @@ datum/preferences
 			"securityNote" = src.security_note,
 			"medicalNote" = src.medical_note,
 			"syndintNote" = src.synd_int_note,
-			"fartsound" = src.AH.fartsound,
 			"screamsound" = src.AH.screamsound,
 			"chatsound" = src.AH.voicetype,
 			"pdaColor" = src.PDAcolor,
@@ -273,9 +271,6 @@ datum/preferences
 					var/datum/ringtone/RT = selectable_ringtones[src.pda_ringtone_index]
 					if(istype(RT) && length(RT.ringList))
 						sound_file = RT.ringList[rand(1,length(RT.ringList))]
-
-				if (params["fartsound"])
-					sound_file = sound(src.AH.fartsounds[src.AH.fartsound])
 
 				if (params["screamsound"])
 					sound_file = sound(src.AH.screamsounds[src.AH.screamsound])
@@ -781,16 +776,6 @@ datum/preferences
 							src.AH.underwear = new_style
 
 					update_preview_icon()
-					src.profile_modified = TRUE
-					return TRUE
-
-			if ("update-fartsound")
-				var/list/sound_list = list_keys(AH.fartsounds)
-				var/new_sound = tgui_input_list(usr, "Select a farting sound", "Fart sound", sound_list)
-
-				if (new_sound)
-					src.AH.fartsound = new_sound
-					preview_sound(sound(src.AH.fartsounds[src.AH.fartsound]))
 					src.profile_modified = TRUE
 					return TRUE
 
@@ -1764,7 +1749,6 @@ datum/preferences
 		character.update_body()
 
 		character.sound_scream = AH.screamsounds[AH.screamsound || "default"] || AH.screamsounds["default"]
-		character.sound_fart = AH.fartsounds[AH.fartsound || "default"] || AH.fartsounds["default"]
 		character.voice_type = AH.voicetype || RANDOM_HUMAN_VOICE
 
 		if (ishuman(character))

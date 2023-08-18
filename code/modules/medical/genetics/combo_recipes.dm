@@ -20,10 +20,6 @@
 	required_effects = list("adrenaline","healing_touch")
 	result = /datum/bioEffect/regenerator
 
-/datum/geneticsrecipe/toxic_farts
-	required_effects = list("farty","stinky")
-	result = /datum/bioEffect/toxic_farts
-
 /datum/geneticsrecipe/thermal_res
 	required_effects = list("fire_resist","cold_resist")
 	result = /datum/bioEffect/thermalres
@@ -116,10 +112,6 @@
 	required_effects = list("fitness_debuff","detox")
 	result = /datum/bioEffect/strong
 
-/datum/geneticsrecipe/stinky
-	required_effects = list("farty","dead_scan")
-	result = /datum/bioEffect/stinky
-
 /datum/geneticsrecipe/bee
 	required_effects = list("roach","detox")
 	result = /datum/bioEffect/bee
@@ -145,10 +137,6 @@
 /datum/geneticsrecipe/eyebeams // Discovered
 	required_effects = list("bad_eyesight","glowy")
 	result = /datum/bioEffect/power/eyebeams
-
-/datum/geneticsrecipe/superfart // Discovered
-	required_effects = list("loud_voice","farty")
-	result = /datum/bioEffect/power/superfart
 
 /datum/geneticsrecipe/cryokinesis
 	required_effects = list("chime_snaps","fire_resist")
@@ -242,14 +230,6 @@
 	required_effects = list("uncontrollable_cloak","psy_resist")
 	result = /datum/bioEffect/power/erebokinesis
 
-/datum/geneticsrecipe/brown_note
-	required_effects = list("farty","loud_voice")
-	result = /datum/bioEffect/power/brown_note
-
-/datum/geneticsrecipe/brown_note_two
-	required_effects = list("stinky","loud_voice")
-	result = /datum/bioEffect/power/brown_note
-
 /datum/geneticsrecipe/cloak_of_darkness // Discovered
 	required_effects = list("uncontrollable_cloak","melanism")
 	result = /datum/bioEffect/power/darkcloak
@@ -261,10 +241,6 @@
 /datum/geneticsrecipe/chameleon_two
 	required_effects = list("uncontrollable_cloak","examine_stopper")
 	result = /datum/bioEffect/power/chameleon
-
-/datum/geneticsrecipe/shoot_limb
-	required_effects = list("farty","bigpuke")
-	result = /datum/bioEffect/power/shoot_limb
 
 // Mutantraces
 

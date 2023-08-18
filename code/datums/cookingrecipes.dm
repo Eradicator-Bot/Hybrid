@@ -240,12 +240,12 @@ datum/cookingrecipe/flockbrainburger
 	cookbonus = 10
 	output = /obj/item/reagent_containers/food/snacks/donkpocket/warm
 
-/datum/cookingrecipe/honkpocket
+/*/datum/cookingrecipe/honkpocket
 	item1 = /obj/item/reagent_containers/food/snacks/ingredient/dough
 	item2 = /obj/item/reagent_containers/food/snacks/meatball
 	item3 = /obj/item/instrument/bikehorn
 	cookbonus = 10
-	output = /obj/item/reagent_containers/food/snacks/donkpocket/honk/warm
+	output = /obj/item/reagent_containers/food/snacks/donkpocket/honk/warm*/
 
 /datum/cookingrecipe/donkpocket2
 	item1 = /obj/item/reagent_containers/food/snacks/donkpocket

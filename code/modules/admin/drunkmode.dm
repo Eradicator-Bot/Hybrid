@@ -202,7 +202,7 @@ var/list/dangerousVerbs = list(\
 			var/list/announce = list(\
 				"is drunk as a skunk",\
 				"makes poor life choices",\
-				"likes to get wasted and play terrible space farting games. What a loser",\
+				"likes to get wasted and play terrible space games. What a loser",\
 				"is here to ruin everyone's round",\
 				"\"I'm drunk it doesn't have to make sense\""\
 			)
@@ -213,7 +213,7 @@ var/list/dangerousVerbs = list(\
 			var/list/announce = list(\
 				"is high as a kite",\
 				"makes poor life choices",\
-				"likes to get stoned and play terrible space farting games. What a loser",\
+				"likes to get stoned and play terrible space games. What a loser",\
 				"is here to ruin everyone's round",\
 				"\"I'm high it doesn't have to make sense\""\
 			)

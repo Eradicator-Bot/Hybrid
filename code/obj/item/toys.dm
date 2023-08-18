@@ -151,10 +151,10 @@
 		if(cooldown > world.time)
 			return
 		else
-			stationfirst = pick("tee", "bee", "fart", "yoo", "poo", "gee", "ma", "honk", "badmin", "terry", "rubber", "fruity", "war", "de")
-			stationlast = pick("gee", "bee", "butt", "goo", "pee", "se", "cho", "clown", "bus", "bugger", "frugal", "illegal", "crime", "row")
+			stationfirst = pick("tee", "bee", "fart", "yoo", "compost", "gee", "ma", "honk", "badmin", "terry", "rubber", "fruity", "war", "de")
+			stationlast = pick("gee", "bee", "butt", "goo", "se", "cho", "clown", "bus", "bugger", "frugal", "illegal", "crime", "row")
 			prfirst = pick("high", "cool", "beloved", "crappy", "interesting", "worthless", "random", "horribly coded", "butt", "low", "extremely", "soul", "outdated")
-			prmiddle = pick("octane", "spooky", "quality", "secret", "crap", "chatty", "butt", "energetic", "diarrhea inducing", "confusing", "magical", "relative pathed", "stealing", "ridiculous")
+			prmiddle = pick("octane", "spooky", "quality", "secret", "crap", "chatty", "butt", "energetic", "confusing", "magical", "relative pathed", "stealing", "ridiculous")
 			prlast = pick("functions", "bugfixes", "features", "items", "weapons", "the entire goddamn chat", "antagonist", "job", "sprites", "butts", "artifacts", "cars")
 			playsound(loc, 'sound/machines/ding.ogg', 75, 1)
 			user.visible_message("<span class='alert'><B>[user] uploads the Gooncode to their PDA.</B></span>")

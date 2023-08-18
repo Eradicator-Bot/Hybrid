@@ -55,7 +55,6 @@
 																				"haloperidol" = 15,
 																				"morphine" = 20,
 																				"cold_medicine" = 40,
-																				"anti_fart" = 10,
 																				"sulfonal" = 5, /* its an oldetimey sedative */
 																				"atropine" = 10,
 																				"methamphetamine" = 30,
@@ -841,8 +840,8 @@
 		return
 	else
 		var/obj/item/firstaid_arm_assembly/A = new /obj/item/firstaid_arm_assembly
-		if (src.icon_state != "firstaid") // fart
-			A.skin = src.icon_state // farto
+		if (src.icon_state != "firstaid")
+			A.skin = src.icon_state
 /* all of this is kinda needlessly complicated imo
 		if (istype(src, /obj/item/storage/firstaid/fire))
 			A.skin = "ointment"

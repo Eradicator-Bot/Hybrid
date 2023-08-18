@@ -301,33 +301,6 @@ TYPEINFO(/obj/reagent_dispensers/watertank/fountain)
 				user.show_text("That was the last cup!", "red")
 				src.UpdateIcon()
 
-	piss
-		New()
-			..()
-			src.create_reagents(4000)
-			reagents.add_reagent("urine",400)
-			reagents.add_reagent("water",600)
-			src.UpdateIcon()
-		name = "discolored water fountain"
-		desc = "It's called a fountain, but it's not very decorative or interesting. You can get a drink from it, though seeing the color you feel you shouldn't"
-		color = "#ffffcc"
-
-	juicer
-		New()
-			..()
-			src.create_reagents(4000)
-			reagents.add_reagent(pick("CBD","THC","urine","refried_beans","coffee","methamphetamine"),100)
-			reagents.add_reagent(pick("CBD","THC","urine","refried_beans","coffee","methamphetamine"),100)
-			reagents.add_reagent(pick("CBD","THC","urine","refried_beans","coffee","methamphetamine"),100)
-			reagents.add_reagent(pick("CBD","THC","urine","refried_beans","coffee","methamphetamine"),100)
-			reagents.add_reagent("water",600)
-			src.UpdateIcon()
-		name = "discolored water fountain"
-		desc = "It's called a fountain, but it's not very decorative or interesting. You can get a drink from it, though seeing the color you feel you shouldn't"
-		color = "#ccffcc"
-
-
-
 /obj/reagent_dispensers/fueltank
 	name = "fueltank"
 	desc = "A high-pressure tank full of welding fuel. Keep away from open flames and sparks."
@@ -504,11 +477,11 @@ TYPEINFO(/obj/reagent_dispensers/watertank/fountain)
 				src.anchored = UNANCHORED
 			return
 		var/load = 1
-		if (istype(W,/obj/item/reagent_containers/food/snacks/plant/)) src.reagents.add_reagent("poo", 20)
-		else if (istype(W,/obj/item/reagent_containers/food/snacks/mushroom/)) src.reagents.add_reagent("poo", 25)
-		else if (istype(W,/obj/item/seed/)) src.reagents.add_reagent("poo", 2)
-		else if (istype(W,/obj/item/plant/) || istype(W,/obj/item/clothing/head/flower/)) src.reagents.add_reagent("poo", 15)
-		else if (istype(W,/obj/item/organ/)) src.reagents.add_reagent("poo", 35)
+		if (istype(W,/obj/item/reagent_containers/food/snacks/plant/)) src.reagents.add_reagent("compost", 20)
+		else if (istype(W,/obj/item/reagent_containers/food/snacks/mushroom/)) src.reagents.add_reagent("compost", 25)
+		else if (istype(W,/obj/item/seed/)) src.reagents.add_reagent("compost", 2)
+		else if (istype(W,/obj/item/plant/) || istype(W,/obj/item/clothing/head/flower/)) src.reagents.add_reagent("compost", 15)
+		else if (istype(W,/obj/item/organ/)) src.reagents.add_reagent("compost", 35)
 		else load = 0
 
 		if(load)
@@ -548,7 +521,7 @@ TYPEINFO(/obj/reagent_dispensers/watertank/fountain)
 				else if (istype(P,/obj/item/plant/))
 					amount = 15
 				playsound(src.loc, 'sound/impact_sounds/Slimy_Hit_4.ogg', 30, 1)
-				src.reagents.add_reagent("poo", amount)
+				src.reagents.add_reagent("compost", amount)
 				qdel( P )
 				sleep(0.3 SECONDS)
 			boutput(user, "<span class='notice'>You finish stuffing [O] into [src]!</span>")

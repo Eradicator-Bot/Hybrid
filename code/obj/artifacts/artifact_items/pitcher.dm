@@ -49,8 +49,6 @@
 		if (prob(3))
 			reagents.add_reagent("glowing_fliptonium", 3)
 		if (prob(10))
-			reagents.add_reagent("fartonium", 30)
-		if (prob(10))
 			reagents.add_reagent("glitter", 30)
 		if (prob(10))
 			reagents.add_reagent("voltagen", 50)

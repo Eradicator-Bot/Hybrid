@@ -393,16 +393,6 @@
 						var/mob/M = A
 						M.show_text("Uh oh! Everything's going all wiggly! NOW YOU KNOW TRUE HOOOORROOOOR!!!!!","#8218A8")
 					animate_wiggle_then_reset(A,5,50)
-			if("FERAL TOFU GAPS") // Anagram: PLAGUE OF FARTS
-				for (var/mob/living/carbon/C in range(4,user))
-					if (C.reagents)
-						C.reagents.add_reagent("egg",25)
-						C.reagents.add_reagent("fartonium",25)
-						user.show_text("You feel a spooky rumbling in your guts! Maybe you ate a ghoooooost?!","#8218A8")
-					if (C.bioHolder)
-						C.bioHolder.age += 125
-						SPAWN(1 MINUTE)
-							C.bioHolder.age -= 125
 			if("NULL MOSS NOOK") // Anagram: SKULL MONSOON
 				particleMaster.SpawnSystem(new /datum/particleSystem/skull_rain(get_turf(user)))
 				user.show_text("You hear something rattling above you!","#8218A8")

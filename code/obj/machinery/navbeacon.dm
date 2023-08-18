@@ -1109,7 +1109,7 @@ TYPEINFO(/obj/machinery/wirenav)
 	tour14
 		name = "tour beacon - 'Medbay'"
 		location = "tour14"
-		codes_txt = "tour;next_tour=tour15;desc=Here at Oshan Laboratory, we truly want the best for our employees' physical and mental wellbeing. That's why our medical personnel consistently rank as the kindest and most competent on Nanotrasen's annual report. Got shrapnel stuck in you? They'll dig it out. In need of better physical facilities? Enjoy robotic limbs and a robotic heart. Need to be cloned after a tragic bible-farting? No problem! Want to pet Morty? They'll even let you scream at him!"
+		codes_txt = "tour;next_tour=tour15;desc=Here at Oshan Laboratory, we truly want the best for our employees' physical and mental wellbeing. That's why our medical personnel consistently rank as the kindest and most competent on Nanotrasen's annual report. Got shrapnel stuck in you? They'll dig it out. In need of better physical facilities? Enjoy robotic limbs and a robotic heart. Need to be cloned? No problem! Want to pet Morty? They'll even let you scream at him!"
 
 	tour15
 		name = "tour beacon - 'Research'"

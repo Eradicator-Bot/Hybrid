@@ -87,18 +87,6 @@ What are the archived variables for?
 			. |= CATALYST_ACTIVE
 		. |= REACTION_ACTIVE
 
-	if(src.temperature > 900 && src.farts > MINIMUM_REACT_QUANTITY && src.toxins > MINIMUM_REACT_QUANTITY && src.carbon_dioxide > MINIMUM_REACT_QUANTITY)
-		reaction_rate = min(src.carbon_dioxide*0.75, src.toxins*0.25, src.farts*0.05)
-		reaction_rate = QUANTIZE(reaction_rate)
-
-		src.carbon_dioxide -= reaction_rate
-		src.toxins += reaction_rate
-
-		src.farts -= reaction_rate*0.05
-
-		src.temperature += (reaction_rate*10000)/HEAT_CAPACITY(src)
-		. |= REACTION_ACTIVE
-
 	src.fuel_burnt = 0
 	if(src.temperature > FIRE_MINIMUM_TEMPERATURE_TO_EXIST)
 		if(src.fire())
@@ -594,7 +582,7 @@ What are the archived variables for?
 
 /// Checks for, ya know, if the mixture is potentially dangerous.
 /datum/gas_mixture/proc/check_if_dangerous()
-	if(TOTAL_MOLES(src) && (temperature > T100C || src.temperature < T0C || toxins || farts || carbon_dioxide || (nitrogen && !oxygen)))
+	if(TOTAL_MOLES(src) && (temperature > T100C || src.temperature < T0C || toxins || carbon_dioxide || (nitrogen && !oxygen)))
 		return TRUE
 	else
 		return FALSE

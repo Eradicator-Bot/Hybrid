@@ -24,12 +24,12 @@
 		switch(artitype.name)
 			if ("martian")
 				//"organic" stuff
-				picked_emote = pick("scream","fart","burp","twitch_v","retch","pale","gurgle","gasp","yawn","choke","wheeze","sneeze","groan","hiccup","cough","shiver","shake","tremble","shrug","drool")
+				picked_emote = pick("scream","burp","twitch_v","retch","pale","gurgle","gasp","yawn","choke","wheeze","sneeze","groan","hiccup","cough","shiver","shake","tremble","shrug","drool")
 			if ("eldritch")
 				//"terror"
 				picked_emote = pick("scream","dance","tantrum","smug","flex","facepalm","panic","cry","rude","rage","flipout","wail","whine","sob","weep","gasp")
 			else
-				picked_emote = pick("scream","dance","tantrum","smug","flex","facepalm","panic","cry","rude","rage","flipout","wail","whine","sob","weep","gasp","trip","fart","burp","retch","pale","gurgle","gasp","yawn","choke","wheeze","sneeze","groan","hiccup","cough","shiver","shake","tremble","shrug","drool")
+				picked_emote = pick("scream","dance","tantrum","smug","flex","facepalm","panic","cry","rude","rage","flipout","wail","whine","sob","weep","gasp","trip","burp","retch","pale","gurgle","gasp","yawn","choke","wheeze","sneeze","groan","hiccup","cough","shiver","shake","tremble","shrug","drool")
 
 		switch(artitype.name)
 			if ("precursor")
@@ -51,9 +51,7 @@
 		var/count = 0
 		for (var/mob/living/L in range(range,O))
 			if (L.hearing_check(1))
-				if(count++ > 15) break
-				if(picked_emote == "fart")
-					if(!(locate(/obj/item/bible) in get_turf(L))) //bible fart bad
-						L.emote(picked_emote, FALSE)
+				if(count++ > 15)
+					break
 				else
 					L.emote(picked_emote, FALSE)

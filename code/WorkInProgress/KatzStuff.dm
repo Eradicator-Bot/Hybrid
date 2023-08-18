@@ -117,8 +117,6 @@ TYPEINFO(/datum/component/mimic_item)
 			/datum/targetable/gimmick/reveal)
 	var/critter_scream_sound = 'sound/voice/screams/fescream4.ogg'
 	var/critter_scream_pitch = -2.5
-	var/critter_fart_sound = 'sound/voice/farts/fart2.ogg'
-	var/critter_fart_pitch = -2
 
 	var/atom/movable/target_type = null
 
@@ -150,15 +148,11 @@ TYPEINFO(/datum/component/mimic_item)
 				if (src.emote_check(voluntary, 50))
 					playsound(get_turf(src), critter_scream_sound , 80, 1, pitch = critter_scream_pitch, channel = VOLUME_CHANNEL_EMOTE)
 					return "<b>[src]</b> screams!"
-			if ("fart")
-				if (src.emote_check(voluntary, 50))
-					playsound(get_turf(src), critter_fart_sound , 80, 1, pitch = critter_fart_pitch, channel = VOLUME_CHANNEL_EMOTE)
-					return "<b>[src]</b> farts!"
 		return null
 
 	specific_emote_type(var/act)
 		switch (act)
-			if ("scream", "fart")
+			if ("scream")
 				return 2
 		return ..()
 

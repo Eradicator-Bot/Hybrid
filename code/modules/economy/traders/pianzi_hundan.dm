@@ -24,7 +24,6 @@
 	/datum/commodity/trader/pianzi/scanners,
 	/datum/commodity/trader/pianzi/concgloves,
 	/datum/commodity/trader/pianzi/medicine,
-	/datum/commodity/trader/pianzi/wine,
 	/datum/commodity/trader/pianzi/recdrugs,
 	/datum/commodity/trader/pianzi/seeds)
 
@@ -115,16 +114,6 @@
 	alt_type_chance = 25
 	possible_names = list("Everyone needs medicine at some point. Luckily, Pianzi has some for sale!",
 	"Heal what ails you with this medicine I have for sale!")
-
-/datum/commodity/trader/pianzi/wine
-	comname = "Vintage Drink"
-	comtype = /obj/item/reagent_containers/food/drinks/bottle/wine
-	amount = 8
-	price_boundary = list(25,75)
-	possible_alt_types = list(/obj/item/reagent_containers/food/drinks/bottle/vintage)
-	alt_type_chance = 50
-	possible_names = list("Cause to celebrate? This deal certainly is! Vintage drink of the best quality!",
-	"I've come across some very prized vintage drink! Excellent for parties!")
 
 /datum/commodity/trader/pianzi/recdrugs
 	comname = "Addiction Aid Patches"

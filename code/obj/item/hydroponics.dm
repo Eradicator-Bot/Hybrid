@@ -566,7 +566,7 @@ TYPEINFO(/obj/item/plantanalyzer)
 
 	New()
 		..()
-		reagents.add_reagent("poo", 60)
+		reagents.add_reagent("compost", 60)
 
 /////////////////////////////////////////// Plant formulas /////////////////////////////////////
 
@@ -652,7 +652,7 @@ TYPEINFO(/obj/item/plantanalyzer)
 	incompatible_with_chem_dispensers = 1
 	rc_flags = RC_SCALE
 	initial_volume = 250
-	initial_reagents = list("saltpetre"=50, "ammonia"=50, "potash"=50, "poo"=50, "space_fungus"=50)
+	initial_reagents = list("saltpetre"=50, "ammonia"=50, "potash"=50, "compost"=50, "space_fungus"=50)
 
 /obj/item/reagent_containers/glass/water_pipe
 	name = "water pipe"

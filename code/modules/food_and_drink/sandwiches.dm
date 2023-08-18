@@ -222,7 +222,6 @@
 	name = "buttburger"
 	desc = "This burger's all buns. It seems to be made out of a gross normal butt."
 	icon_state = "assburger"
-	initial_reagents = list("fartonium"=10)
 	food_effects = list("food_sweaty_big")
 	meal_time_flags = MEAL_TIME_FORBIDDEN_TREAT
 	New()

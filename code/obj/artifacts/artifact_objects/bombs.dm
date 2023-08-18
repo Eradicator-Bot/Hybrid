@@ -257,7 +257,7 @@ ABSTRACT_TYPE(/datum/artifact/bomb)
 				potential_reagents = list("charcoal","styptic_powder","salbutamol","anti_rad","silver_sulfadiazine","synaptizine",
 				"omnizine","synthflesh","saline","salicylic_acid","menthol","calomel","penteticacid","antihistamine","atropine","solipsizine",
 				"perfluorodecalin","ipecac","mutadone","insulin","epinephrine","cyanide","ketamine","toxin","neurotoxin","neurodepressant","mutagen",
-				"fake_initropidril","toxic_slurry","jenkem","space_fungus","blood","vomit","gvomit","urine","meat_slurry","grease","butter")
+				"fake_initropidril","toxic_slurry","space_fungus","blood","vomit","gvomit","ammonia","meat_slurry","grease","butter")
 			if ("eldritch")
 				// all the worst stuff. all of it
 				potential_reagents = list("chlorine","fluorine","lithium","mercury","plasma","radium","uranium","strange_reagent",
@@ -444,7 +444,6 @@ ABSTRACT_TYPE(/datum/artifact/bomb)
 					100;"ice",  // no possible way this ends poorly
 					15;"spacelag",
 					15;"cardboard",
-					15;"frozenfart",
 					15;"negativematter")
 
 		mat = getMaterial(material)

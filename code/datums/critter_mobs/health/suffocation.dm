@@ -14,9 +14,6 @@
 	var/toxins_max = 0.4
 	var/n2o_para_min = 1
 	var/n2o_sleep_min = 5
-	var/fart_smell_min = 1
-	var/fart_vomit_min = 10
-	var/fart_choke_min = 15
 
 
 	var/o2_damage = 0
@@ -110,18 +107,6 @@
 			else if (N2O_pp > 0.01)	// There is sleeping gas in their lungs, but only a little, so give them a bit of a warning
 				if (prob(20))
 					holder.emote(pick("giggle", "laugh"))
-
-			var/FARD_pp = (breath.farts/TOTAL_MOLES(breath))*breath_pressure
-			if (prob(10) && (FARD_pp > fart_smell_min))
-				boutput(holder, "<span class='alert'>Smells like someone [pick("died","soiled themselves","let one rip","made a bad fart","peeled a dozen eggs")] in here!</span>")
-				if ((FARD_pp > fart_vomit_min) && prob(50))
-					var/vomit_message = "<span class='notice'>[holder] vomits from the [pick("stink","stench","awful odor")]!!</span>"
-					holder.vomit(0, null, vomit_message)
-			if (FARD_pp > fart_choke_min)
-				TakeDamage(3 + o2_damage)
-				o2_damage++
-				if (prob(20))
-					holder.emote("cough")
 
 
 

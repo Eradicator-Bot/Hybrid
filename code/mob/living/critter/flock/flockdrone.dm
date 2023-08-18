@@ -557,11 +557,6 @@
 			if (src.emote_check(voluntary, 50))
 				playsound(src, "sound/misc/flockmind/flockdrone_grump[pick("1","2","3")].ogg", 30, 1, extrarange = (voluntary ? 0 : -10))
 				return "<b>[src]</b> beeps grumpily[(param? " at [param]!" : "!")]"
-		if ("fart") // i cannot ignore my heritage any longer
-			if (src.emote_check(voluntary, 50))
-				var/fart_message = pick_string("flockmind.txt", "flockdrone_fart")
-				playsound(src, 'sound/misc/flockmind/flockdrone_fart.ogg', 60, 1, channel=VOLUME_CHANNEL_EMOTE)
-				return "<b>[src]</b> [fart_message]"
 		if ("laugh")
 			if (src.emote_check(voluntary, 50))
 				return "<b>[src]</b> caws heartily[(param? " at [param]!" : "!")]"
@@ -569,7 +564,7 @@
 
 /mob/living/critter/flock/drone/specific_emote_type(var/act)
 	switch (act)
-		if ("whistle", "beep", "burp", "scream", "growl", "abeep", "grump", "fart")
+		if ("whistle", "beep", "burp", "scream", "growl", "abeep", "grump")
 			return 2
 	return ..()
 

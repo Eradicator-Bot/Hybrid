@@ -117,23 +117,6 @@
 			MT.reagents?.add_reagent("blood", 15, targeting.dna_sting_target)
 			return 0
 
-	fartonium
-		name = "Fartonium Sting"
-		desc = "Let someone else let 'er rip"
-		icon_state = "stingfart"
-		venom_id = "fartonium"
-		inject_amount = 25
-		cooldown = 600
-
-	simethicone
-		name = "Anti-farting sting"
-		desc = "You fartless bastard"
-		icon_state = "stingnofart"
-		venom_id = "anti_fart"
-		inject_amount = 25
-		cooldown = 600
-
-
 /datum/targetable/changeling/dna_target_select
 	name = "Select DNA Sting target"
 	desc = "Select target for DNA sting"

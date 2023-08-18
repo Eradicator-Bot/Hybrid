@@ -501,7 +501,6 @@ datum
 					"I remember playing the banana game at boarding school.",\
 					"It's kinda hard knowing you've nothing to go home to except a crater.",\
 					"The only good hug is a dead hug.",\
-					"Tried to fart stealthily in class. Sharted. Why the hell do you think my suit is brown?",\
 					"I remember my first holiday away from my parents. Costa Concordia, the ship was called.",\
 					"Cry because it's over, don't smile because it happened.",\
 					"They say when you are missing someone that they are probably feeling the same, but I don't think it's possible for you to miss me as much as I'm missing you right now.",\
@@ -1944,14 +1943,6 @@ datum
 			hunger_value = 2
 			taste = "filling"
 
-			on_mob_life(var/mob/M, var/mult = 1)
-				if(!M) M = holder.my_atom
-				M.nutrition += 1 * mult
-
-				if(probmult(10))
-					M.emote("fart")
-				..()
-
 		fooddrink/death_spice
 			name = "death spice"
 			id = "death_spice"
@@ -2013,7 +2004,7 @@ datum
 							explosion(M, T, -1, -1, 1, 1)
 						if(2)
 							boutput(M, "<span class='alert'>So juicy!</span>")
-							M.reagents.add_reagent(pick("capsaicin","psilocybin","LSD","THC","ethanol","poo","omnizine","methamphetamine","haloperidol","mutagen","radium","acid","mercury","space_drugs","morphine"), rand(10,40))
+							M.reagents.add_reagent(pick("capsaicin","psilocybin","LSD","THC","ethanol","compost","omnizine","methamphetamine","haloperidol","mutagen","radium","acid","mercury","space_drugs","morphine"), rand(10,40))
 						if(3)
 							boutput(M, "<span class='notice'>How refreshing!</span>")
 							M.HealDamage("All", 30, 30)
@@ -3109,10 +3100,6 @@ datum
 					M.reagents.add_reagent("cholesterol", rand(1,2) * mult)
 				..()
 
-			do_overdose(var/severity, var/mob/M, var/mult = 1)
-				if(probmult(16))
-					M.emote("fart")
-
 		fooddrink/beff
 			name = "beff"
 			id = "beff"
@@ -3699,9 +3686,6 @@ datum
 			on_mob_life(var/mob/M, var/mult = 1)
 				if(!M)
 					M = holder.my_atom
-
-				if(probmult(10))
-					new /obj/decal/cleanable/urine(M.loc)
 
 				if(probmult(15) && !M.reagents?.has_reagent("promethazine"))
 					M.visible_message("<span class='alert'>[M] pukes violently!</span>")

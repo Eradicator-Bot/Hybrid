@@ -154,7 +154,6 @@ mob/living/carbon/human/cluwne/satan
 		SPAWN(0)
 			src.bioHolder.AddEffect("horns", 0, 0, 0, 1)
 			src.bioHolder.AddEffect("aura_fire", 0, 0, 0, 1)
-			src.bioHolder.AddEffect("superfartgriff")
 			src.bioHolder.AddEffect("bigpuke", 0, 0, 0, 1)
 			src.bioHolder.AddEffect("melt", 0, 0, 0, 1)
 

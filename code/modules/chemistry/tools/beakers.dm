@@ -174,7 +174,7 @@
 	desc = "160 units of things that make plants grow happy!"
 	amount_per_transfer_from_this = 50
 	initial_volume = 250
-	initial_reagents = list("saltpetre"=50, "ammonia"=50, "potash"=50, "poo"=50, "space_fungus"=50) */
+	initial_reagents = list("saltpetre"=50, "ammonia"=50, "potash"=50, "compost"=50, "space_fungus"=50) */
 
 /* ================================================================= */
 /* -------------------- Reagent Extractor Tanks -------------------- */

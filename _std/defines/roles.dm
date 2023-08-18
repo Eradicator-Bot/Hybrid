@@ -34,7 +34,6 @@
 #define ROLE_HANDSPIDER "handspider"
 #define ROLE_EYESPIDER "eyespider"
 #define ROLE_LEGWORM "legworm"
-#define ROLE_BUTTCRAB "buttcrab"
 #define ROLE_VAMPTHRALL "vampthrall"
 #define ROLE_SLEEPER_AGENT "sleeper_agent"
 #define ROLE_HARDMODE_TRAITOR "hard-mode_traitor"

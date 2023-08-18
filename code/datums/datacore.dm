@@ -118,7 +118,6 @@
 								"Tresspassing.",\
 								"Killing a monkey.",\
 								"Negligence.",\
-								"Pushing down and farting on a member of security.",\
 								"Throwing a toolbox at a member of security.",\
 								"Being drunk.",\
 								"Being high.",\
@@ -155,7 +154,6 @@
 		S["ma_crim"] = pick(\
 								"Grand theft apidae.",\
 								"Bee murder.",\
-								"Superfarted on the captain.",\
 								"Released the singularity.",\
 								"Stole the captain's spare ID.",\
 								"Arson, murder, jaywalking.",\

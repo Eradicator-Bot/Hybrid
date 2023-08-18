@@ -545,9 +545,6 @@ var/reverse_mode = 0
 
 	eyespider
 		fake_icon_state = "eyespider"
-	buttcrab
-		fake_icon_state = "buttcrab"
-		should_attack = FALSE
 	bat
 		fake_icon_state = "bat"
 		get_name()

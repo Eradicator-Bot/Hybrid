@@ -356,14 +356,6 @@
 	iconmod = "SynthBrains"
 	crop = /obj/item/organ/brain/synth
 
-/datum/plantmutation/synthmeat/butt/buttbot
-	name = "Synthbuttbot"
-	dont_rename_crop = TRUE
-	iconmod = "SynthButts"
-	crop = /obj/machinery/bot/buttbot
-	mutation_sfx = 'sound/voice/virtual_gassy.ogg'
-	harvest_cap = 1
-
 /datum/plantmutation/synthmeat/lung
 	name = "Synthlung"
 	dont_rename_crop = TRUE

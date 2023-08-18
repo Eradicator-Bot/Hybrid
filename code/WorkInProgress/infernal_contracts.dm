@@ -726,19 +726,6 @@ obj/item/contract/juggle
 
 		return 1
 
-obj/item/contract/fart
-	desc = "It's just a piece of paper with the word 'fart' written all over it."
-	strong = 1
-	can_roll = 0 //it probably wasn't a good idea to make this player accessible in the first place. Admin spawn only now.
-
-	MagicEffect(var/mob/user as mob, var/mob/badguy as mob)
-		if(!..())
-			return 0
-		SPAWN(1 DECI SECOND)
-			user.bioHolder.AddEffect("linkedfart", 0, 0, 1)
-
-		return 1
-
 obj/item/contract/bee
 	desc = "This contract promises to bestow bees upon whomever signs it. Unlimited bees."
 

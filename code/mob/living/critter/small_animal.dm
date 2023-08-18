@@ -3493,12 +3493,9 @@ var/list/mob_bird_species = list("smallowl" = /mob/living/critter/small_animal/b
 
 			if ("flip")
 				if (!ON_COOLDOWN(src, "playsound", 5 SECONDS))
-					var/mode = pick("honk", "fart", "burp", "squeak", "cat", "harmonica", "vuvuzela", "bang", "buzz", "gunshot", "siren", "coo", "rimshot", "trombone")
+					var/mode = pick("honk", "burp", "squeak", "cat", "harmonica", "vuvuzela", "bang", "buzz", "gunshot", "siren", "coo", "rimshot", "trombone")
 					switch(mode)
 						if ("honk") playsound(src.loc, 'sound/musical_instruments/Bikehorn_1.ogg', 50, 1, channel=VOLUME_CHANNEL_EMOTE)
-						if ("fart")
-							if (farting_allowed)
-								playsound(src.loc, 'sound/voice/farts/poo2_robot.ogg', 50, 1, channel=VOLUME_CHANNEL_EMOTE)
 						if ("burp") playsound(src.loc, 'sound/voice/burp_alien.ogg', 50, 1, channel=VOLUME_CHANNEL_EMOTE)
 						if ("squeak") playsound(src.loc, 'sound/misc/clownstep1.ogg', 50, 1, channel=VOLUME_CHANNEL_EMOTE)
 						if ("cat") playsound(src.loc, 'sound/voice/animal/cat.ogg', 50, 1, channel=VOLUME_CHANNEL_EMOTE)
@@ -3597,10 +3594,6 @@ var/list/mob_bird_species = list("smallowl" = /mob/living/critter/small_animal/b
 				if (src.emote_check(voluntary, 50))
 					playsound(src, 'sound/voice/animal/mouse_squeak.ogg', 80, 1, channel=VOLUME_CHANNEL_EMOTE)
 					return "<span class='emote'><b>[src]</b> squeaks!</span>"
-			if ("fart")
-				if (src.emote_check(voluntary, 10))
-					playsound(src, 'sound/voice/farts/poo2.ogg', 40, 1, 0.1, 3, channel=VOLUME_CHANNEL_EMOTE)
-					return "<span class='emote'><b>[src]</b> farts!</span>"
 			if ("dance")
 				if (src.emote_check(voluntary, 50))
 					animate_bouncy(src)
@@ -3695,10 +3688,6 @@ var/list/mob_bird_species = list("smallowl" = /mob/living/critter/small_animal/b
 				if (src.emote_check(voluntary, 30))
 					playsound(src, 'sound/voice/burp.ogg', 40, 1, 0.1, 3, channel=VOLUME_CHANNEL_EMOTE)
 					return "<span class='emote'><b>[src]</b> burps.</span>"
-			if ("fart")
-				if (src.emote_check(voluntary))
-					playsound(src, 'sound/voice/farts/poo2.ogg', 40, 1, 0.1, 3, channel=VOLUME_CHANNEL_EMOTE)
-					return "<span class='emote'><b>[src]</b> farts!</span>"
 
 		return null
 
@@ -3707,8 +3696,6 @@ var/list/mob_bird_species = list("smallowl" = /mob/living/critter/small_animal/b
 			if ("scream")
 				return 2
 			if ("burp")
-				return 2
-			if ("fart")
 				return 2
 		return ..()
 
@@ -3839,25 +3826,10 @@ var/list/mob_bird_species = list("smallowl" = /mob/living/critter/small_animal/b
 					if(src.icon_state_exclaim)
 						flick(src.icon_state_exclaim, src)
 					return "<span class='emote'><b>[src]</b> squeaks!</span>"
-			if ("fart")
-				if (src.emote_check(voluntary, 50))
-					playsound(src, 'sound/voice/farts/poo2.ogg', 40, 1, 0.1, 3, channel=VOLUME_CHANNEL_EMOTE)
-					var/obj/item/bible/B = locate(/obj/item/bible) in get_turf(src)
-					if(B)
-						SPAWN(0.1 SECONDS) // so that this message happens second
-							playsound(src, 'sound/voice/farts/poo2.ogg', 7, 0, 0, src.get_age_pitch() * 0.4, channel=VOLUME_CHANNEL_EMOTE)
-							B.visible_message("<span class='notice'>[B] toots back [pick("grumpily","complaintively","indignantly","sadly","annoyedly","gruffly","quietly","crossly")].</span>")
-					return "<span class='emote'><b>[src]</b> toots helpfully!</span>"
 			if ("dance")
 				if (src.emote_check(voluntary, 50))
 					animate_bouncy(src) // bouncy!
 					return "<span class='emote'><b>[src]</b> [pick("bounces","dances","boogies","frolics","prances","hops")] around with [pick("joy","fervor","excitement","vigor","happiness")]!</span>"
-		return ..()
-
-	specific_emote_type(var/act)
-		switch (act)
-			if ("fart")
-				return 2
 		return ..()
 
 	Life(datum/controller/process/mobs/parent)

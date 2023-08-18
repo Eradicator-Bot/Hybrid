@@ -2,7 +2,7 @@ var/list/admin_verbs = list(
 
 
 	1 = list(
-		// LEVEL_BABBY, goat fart, ayn rand's armpit
+		// LEVEL_BABBY, intern
 		/client/proc/cmd_admin_say,
 		/client/proc/cmd_admin_gib_self,
 		),
@@ -84,7 +84,6 @@ var/list/admin_verbs = list(
 		/datum/admins/proc/camtest,
 		/client/proc/alt_key,
 		/client/proc/create_portal,
-		/datum/admins/proc/togglefarting,
 		/client/proc/cmd_admin_show_ai_laws,
 		/client/proc/cmd_admin_reset_ai,
 		/verb/restart_the_fucking_server_i_mean_it,
@@ -289,7 +288,6 @@ var/list/admin_verbs = list(
 		/client/proc/cmd_admin_spidergib,
 		/client/proc/cmd_admin_implodegib,
 		/client/proc/cmd_admin_cluwnegib,
-		/client/proc/cmd_admin_buttgib,
 		/client/proc/cmd_admin_tysongib,
 		/client/proc/cmd_admin_smitegib,
 		/client/proc/removeOther,
@@ -592,7 +590,7 @@ var/list/special_pa_observing_verbs = list(
 			src.holder.level = LEVEL_SA
 		if ("Moderator")
 			src.holder.level = LEVEL_MOD
-		if ("Goat Fart", "Ayn Rand's Armpit")
+		if ("Intern")
 			src.holder.level = LEVEL_BABBY
 
 		if ("Inactive")
@@ -770,7 +768,7 @@ var/list/special_pa_observing_verbs = list(
 
 /datum/admins/proc/set_stealth_mode(var/new_key = null, var/force_on = 0)
 	if (!src.owner || !isclient(src.owner))
-		return // farte
+		return
 	if (force_on)
 		src.owner:stealth = 1
 	else
@@ -822,7 +820,7 @@ var/list/special_pa_observing_verbs = list(
 
 /datum/admins/proc/set_alt_key(var/new_key = null, var/force_on = 0)
 	if (!src.owner || !isclient(src.owner))
-		return // farte
+		return
 	if (force_on)
 		src.owner:alt_key = 1
 	else

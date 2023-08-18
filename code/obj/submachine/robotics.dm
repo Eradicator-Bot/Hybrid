@@ -611,7 +611,7 @@ ported and crapped up by: haine
 	var/recharge_time = 3 // How fast the module recharges, not really sure how this works yet.
 	var/recharge_per_tick = 5 // how many units to add back to the tanks each tick
 
-	var/list/hydro_reagents = list("saltpetre", "ammonia", "potash", "poo", "space_fungus", "water") // IDs of what we should dispense
+	var/list/hydro_reagents = list("saltpetre", "ammonia", "potash", "compost", "space_fungus", "water") // IDs of what we should dispense
 	var/list/hydro_reagent_names = list() // the tank creation proc adds the names of the above reagents to this list
 	var/list/tanks = list() // what tanks we have
 	var/obj/item/reagent_containers/borghose_tank/active_tank = null // what tank is active

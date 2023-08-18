@@ -1,5 +1,3 @@
-// fart
-
 /obj/machinery/bot/skullbot
 	name = "skullbot"
 	desc = "A skull on a leg. Useful, somehow. I guess."

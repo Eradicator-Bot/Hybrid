@@ -455,7 +455,7 @@
 		//For giving nutrients to plantpots
 		if (istype(target, /obj/machinery/plantpot) && target.reagents)
 			//replace with kudzu_nutrients when I make it. should be a good thing for plants, maybe kinda good for man.
-			target.reagents.add_reagent("poo", 60)
+			target.reagents.add_reagent("compost", 60)
 			target.reagents.add_reagent("water", 60)
 			boutput(holder.owner, "<span class='notice'>You release some nutrients into [target].</span>")
 			return 0

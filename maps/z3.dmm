@@ -20814,7 +20814,6 @@
 /turf/unsimulated/floor/white/grime,
 /area/timewarp/ship)
 "mWO" = (
-/obj/decal/cleanable/urine,
 /turf/simulated/floor/pool/no_animate,
 /area/diner/motel/pool)
 "mXB" = (

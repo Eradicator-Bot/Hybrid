@@ -31983,7 +31983,6 @@
 	name = "special bedsheet"
 	},
 /obj/decal/cleanable/dirt,
-/obj/decal/cleanable/urine,
 /obj/cable{
 	d2 = 8;
 	icon_state = "0-8"
@@ -42245,7 +42244,7 @@
 	dir = 8
 	},
 /obj/machinery/shower{
-	default_reagent = "poo";
+	default_reagent = "compost";
 	dir = 4;
 	name = "funny-lookin shower head";
 	pixel_x = 8
@@ -76029,7 +76028,6 @@
 	},
 /area/russian/radiation)
 "wmp" = (
-/obj/machinery/bot/buttbot,
 /obj/disposalpipe/segment{
 	dir = 4
 	},

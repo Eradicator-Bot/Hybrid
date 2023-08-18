@@ -108,7 +108,7 @@
 
 /mob/living/critter/flock/bit/specific_emotes(var/act, var/param = null, var/voluntary = 0)
 	switch (act)
-		if ("whistle", "beep", "burp", "scream", "growl", "abeep", "grump", "fart")
+		if ("whistle", "beep", "burp", "scream", "growl", "abeep", "grump")
 			if (src.emote_check(voluntary, 50))
 				playsound(src, "sound/misc/flockmind/flockbit_wisp[pick("1","2","3","4","5","6")].ogg", 30, 1, extrarange = -10)
 				return "<b>[src]</b> chimes."

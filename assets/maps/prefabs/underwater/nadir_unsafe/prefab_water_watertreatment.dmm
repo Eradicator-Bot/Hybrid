@@ -385,10 +385,6 @@
 	dir = 8;
 	pixel_x = -12
 	},
-/obj/fluid_spawner{
-	amount = 5000;
-	reagent_id = "urine"
-	},
 /turf/simulated/floor/purple/side{
 	dir = 9
 	},

@@ -411,7 +411,7 @@
 
 		if(prob(rebelliousness*2)) //Emote
 			boutput(holder, "<span class='alert'><b>Your [src.name] moves by itself!</b></span>")
-			holder.emote(pick("shakebutt", "flap", "aflap","stretch","dance","fart","twitch","twitch_v","flip"))
+			holder.emote(pick("shakebutt", "flap", "aflap","stretch","dance","twitch","twitch_v","flip"))
 		else if(prob(rebelliousness)) //Trip over
 			boutput(holder, "<span class='alert'><b>Your [src.name] moves by itself!</b></span>")
 			holder.emote(pick("trip", "collapse"))

@@ -1,7 +1,7 @@
 // living
 
 /mob/living
-	event_handler_flags = USE_FLUID_ENTER  | IS_FARTABLE
+	event_handler_flags = USE_FLUID_ENTER
 	/// Tracks status of soalguard respawn on mob. SOULGUARD_INACTIVE, SOULGUARD_SPELL when from wizard ability, SOULGUARD_RING when from wizard ring.
 	var/spell_soulguard = SOULGUARD_INACTIVE
 
@@ -58,7 +58,6 @@
 	//var/sound_femalescream = 'sound/voice/screams/female_scream.ogg'
 	var/sound_flip1 = 'sound/machines/whistlealert.ogg' // for silicon mobs
 	var/sound_flip2 = 'sound/machines/whistlebeep.ogg' // for silicon mobs
-	var/sound_fart = 'sound/voice/farts/poo2.ogg'
 	var/sound_snap = 'sound/impact_sounds/Generic_Snap_1.ogg'
 	var/sound_fingersnap = 'sound/effects/fingersnap.ogg'
 	var/sound_gasp = 'sound/voice/gasps/gasp.ogg'

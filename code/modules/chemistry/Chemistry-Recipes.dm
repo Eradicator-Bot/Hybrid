@@ -933,10 +933,10 @@ datum
 			drinkrecipe = 1
 
 		cocktail_triple
-			name = "Triple Triple"
+			name = "Double Triple"
 			id = "cocktail_triple"
 			result = "cocktail_triple"
-			required_reagents = list("cocktail_citrus" = 1, "triplemeth" = 1, "triplepiss" = 1)
+			required_reagents = list("cocktail_citrus" = 1, "triplemeth" = 1)
 			result_amount = 1 //this is pretty much a hellpoison.
 			mix_phrase = "The mixture can't seem to control itself and settle down!"
 			mix_sound = 'sound/misc/drinkfizz.ogg'
@@ -950,7 +950,7 @@ datum
 			required_reagents = list("vodka" = 1, "juice_cran" = 1, "juice_orange" = 1)
 			result_amount = 3
 			mix_phrase = "You die a little inside after making that."
-			mix_sound = 'sound/voice/farts/poo2.ogg'
+			mix_sound = 'sound/misc/drinkfizz.ogg'
 
 		cocktail_beach/beach2
 			id = "beach2"
@@ -2640,7 +2640,7 @@ datum
 			id = "initropidril"
 			result = "initropidril"
 			//required_reagents = list("crank" = 1, "histamine" = 1, "krokodil" = 1, "bathsalts" = 1, "atropine" = 1, "nicotine" = 1, "morphine" = 1)
-			required_reagents = list("triplepiss" = 1, "histamine" = 1, "methamphetamine" = 1, "water_holy" = 1, "pacid" = 1, "neurotoxin" = 1, "stabiliser" = 1)
+			required_reagents = list("histamine" = 1, "methamphetamine" = 1, "water_holy" = 1, "pacid" = 1, "neurotoxin" = 1, "stabiliser" = 1)
 			result_amount = 4 // lowered slightly
 			mix_phrase = "A sweet and sugary scent drifts from the unpleasant milky substance."
 			hidden  = TRUE
@@ -2677,7 +2677,7 @@ datum
 			name = "initropidril"
 			id = "fake_initropidril"
 			result = "fake_initropidril"
-			required_reagents = list("triplepiss" = 1, "histamine" = 1, "methamphetamine" = 1, "water_holy" = 1, "pacid" = 1, "neurotoxin" = 1)
+			required_reagents = list("histamine" = 1, "methamphetamine" = 1, "water_holy" = 1, "pacid" = 1, "neurotoxin" = 1)
 			//required_reagents = list("methamphetamine" = 1, "water_holy" = 1, "pacid" = 1, "neurotoxin" = 1, "formaldehyde" = 1)
 			result_amount = 2
 			inhibitors = list("stabiliser")
@@ -2690,23 +2690,6 @@ datum
 						boutput(M, "<span class='alert'>The solution bubbles rapidly but dissipates into nothing!</span>")
 					holder.clear_reagents()
 				return
-
-		anti_fart
-			name = "Simethicone"
-			id = "anti_fart"
-			result = "anti_fart"
-			required_reagents = list("oxygen" = 1, "chlorine" = 1, "hydrogen" = 1, "silicon" = 1)
-			result_amount = 3
-
-		honk_fart
-			name = "Honkfartium"
-			id = "honk_fart"
-			result = "honk_fart"
-			required_reagents = list("anti_fart" = 1, "fartonium" = 1)
-			min_temperature = T0C + 100
-			result_amount = 1
-			mix_sound = 'sound/misc/drinkfizz.ogg'
-			mix_phrase = "The chemicals hiss and fizz briefly, followed by one big bubble that smells like a fart."
 
 		flash_powder
 			name = "Flash Powder"
@@ -2990,7 +2973,7 @@ datum
 			name = "saltpetre"
 			id = "saltpetre"
 			result = "saltpetre"
-			required_reagents = list("urine" = 1, "poo" = 1, "potash" = 1)
+			required_reagents = list("ammonia" = 1, "compost" = 1, "potash" = 1)
 			result_amount = 3
 			mix_phrase = "A white crystalline substance condenses out of the mixture."
 			mix_sound = 'sound/misc/fuse.ogg'
@@ -3003,7 +2986,7 @@ datum
 			// compost bacteria turns ammonium into nitrates
 			// nitrates are extracted from "soil" with water
 			// potash purifies nitrates into saltpetre
-			required_reagents = list("nitrogen" = 1, "poo" = 1, "potash" = 1)
+			required_reagents = list("nitrogen" = 1, "compost" = 1, "potash" = 1)
 			result_amount = 1
 			instant = 0 // Potash filtering takes time.
 			reaction_speed = 1
@@ -3017,27 +3000,6 @@ datum
 				// disgusting
 				var/turf/location = pick(holder.covered_turf())
 				location.fluid_react_single("miasma", created_volume, airborne = 1)
-
-		jenkem // moved this down so improperly mixed nutrients yield jenkem instead
-			name = "Jenkem"
-			id = "jenkem"
-			result = "jenkem"
-			required_reagents = list("urine" = 1, "poo" = 1)
-			result_amount = 2
-			mix_phrase = "The mixture ferments into a filthy morass."
-			mix_sound = 'sound/impact_sounds/Slimy_Hit_4.ogg'
-
-			on_reaction(var/datum/reagents/holder, var/created_volume)
-				var/location = get_turf(holder.my_atom)
-				for(var/mob/M in all_viewers(null, location))
-					boutput(M, "<span class='alert'>The solution generates a strong vapor!</span>")
-				var/list/mob/living/carbon/mobs_affected = list()
-				for(var/mob/living/carbon/C in range(location, 1))
-					if(!issmokeimmune(C))
-						mobs_affected += C
-				for(var/mob/living/carbon/C as anything in mobs_affected)
-					C.reagents.add_reagent("jenkem",(1 * created_volume) / length(mobs_affected)) // this is going to make people so, so angry
-				return
 
 		/*plant_nutrients_mutagenic
 			name = "Mutriant Plant Formula"
@@ -3461,7 +3423,7 @@ datum
 				// sewage is a catalyst and does not get used in the process
 				holder.add_reagent("sewage", created_volume * 5,,holder.total_temperature)
 				// Byproduct is some nutrients from the decomposted egg and some bacterials toxins
-				holder.add_reagent("poo", created_volume * 2,,holder.total_temperature)
+				holder.add_reagent("compost", created_volume * 2,,holder.total_temperature)
 				holder.add_reagent("toxin", created_volume,,holder.total_temperature)
 				// the decomposition process create some unbearable stench
 				var/turf/location = pick(holder.covered_turf())
@@ -3490,17 +3452,6 @@ datum
 			required_reagents = list("catonium" = 1, "psilocybin" = 1, "ammonia" = 1, "fuel" = 1)
 			mix_phrase = "The mixture hisses oddly."
 			mix_sound = 'sound/voice/animal/cat_hiss.ogg'
-
-		boilpee // a shameful cogwerks. hobo chemistry, assistant-sourcable source of ammonia for various other reactions.
-			name = "Boiled Pee"
-			id = "boilpee"
-			result = "ammonia"
-			min_temperature = T0C + 80
-			result_amount = 1
-			required_reagents = list("urine" = 1, "water" = 1)
-			mix_phrase = "The mixture bubbles and gives off a sharp odor."
-			mix_sound = 'sound/misc/drinkfizz.ogg'
-			hidden = TRUE
 
 		crank // cogwerks - awful hobo drug that can be made by pissing in a bunch of vending machine stuff and then boiling it all with a welder
 			name = "Crank"
@@ -3961,15 +3912,6 @@ datum
 			result_amount = 3
 			mix_phrase = "The mixture swirls around in a kinda lackluster way. You feel pretty unimpressed."
 
-		fartonium
-			name = "fartonium"
-			id = "fartonium"
-			result = "fartonium"
-			required_reagents = list("egg" = 1, "refried_beans" = 1, "yuck" = 1, "fakecheese" = 1)
-			result_amount = 2
-			mix_phrase = "The substance makes a little 'toot' noise and starts to smell pretty bad."
-			mix_sound = 'sound/voice/farts/poo2.ogg'
-
 		flaptonium
 			name = "flaptonium"
 			id = "flaptonium"
@@ -4033,7 +3975,7 @@ datum
 			name = "rotting"
 			id = "rotting"
 			result = "rotting"
-			required_reagents = list("yuck" = 1, "denatured_enzyme" = 1, "something" = 1, "poo" = 1)
+			required_reagents = list("yuck" = 1, "denatured_enzyme" = 1, "something" = 1, "compost" = 1)
 			result_amount = 3
 			mix_phrase = "The substance gives off a terrible stench. Are those maggots?"
 			hidden = TRUE

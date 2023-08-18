@@ -183,12 +183,6 @@
 	// 	icon_state = "// shocking_grasp"
 	// 	ability_path = /datum/targetable/spell/kill
 
-	rathens_secret
-		name = "ring of rathens secret"
-		desc = "This ring smells bad."
-		icon_state = "rathens_secret"
-		ability_path = /datum/targetable/spell/rathens
-
 	// shockwave
 	// 	name = "ring of rathens shockwave"
 	// 	desc = ""

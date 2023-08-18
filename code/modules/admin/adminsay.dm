@@ -16,7 +16,7 @@
 		return
 
 	var/special
-	if (src.holder.rank in list("Goat Fart", "Ayn Rand's Armpit"))
+	if (src.holder.rank in list("Intern"))
 		special = "gfartadmin"
 
 	if (src.fakekey != null)

@@ -997,7 +997,6 @@
 /turf/simulated/floor/plating,
 /area/prefab/von_ricken)
 "Il" = (
-/obj/machinery/bot/buttbot/cyber,
 /obj/decal/cleanable/dirt/jen,
 /turf/simulated/floor/black,
 /area/prefab/von_ricken)

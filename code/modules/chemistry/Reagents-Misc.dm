@@ -247,22 +247,6 @@ datum
 				..()
 				return
 
-		anti_fart
-			name = "simethicone"
-			id = "anti_fart"
-			description = "This strange liquid seems to have no bubbles on the surface."
-			reagent_state = LIQUID
-
-		honk_fart
-			name = "honkfartium"
-			id = "honk_fart"
-			description = "This always-bubbling liquid looks pretty funny."
-			reagent_state = LIQUID
-			fluid_r = 255
-			fluid_g = 182
-			fluid_b = 193
-			transparency = 200
-
 		//new name for old stimulants
 		omegazine
 			name = "omegazine"
@@ -2654,37 +2638,6 @@ datum
 							boutput(M, "<span class='notice'>You feel yourself returning back to normal. Phew!</span>")
 							M.alpha = 255
 
-		fartonium // :effort:
-			name = "fartonium"
-			id = "fartonium"
-			description = "Oh god it never ends, IT NEVER STOPS!"
-			reagent_state = GAS
-			fluid_r = 247
-			fluid_g = 122
-			fluid_b = 32
-			transparency = 200
-			addiction_prob = 1
-			addiction_prob2 = 20
-			addiction_min = 15
-
-			on_mob_life(var/mob/M, var/mult = 1)
-				if (!M) M = holder.my_atom
-
-				if (probmult(66))
-					M.emote("fart")
-
-				if (M?.reagents.has_reagent("anti_fart"))
-					if (prob(25))
-						boutput(M, "<span class='alert'>[pick("Oh god, something doesn't feel right!", "<B>IT HURTS!</B>", "<B>FUCK!</B>", "Something is seriously wrong!", "<B>THE PAIN!</B>", "You feel like you're gunna die!")]</span>")
-						random_brute_damage(M, 1 * mult)
-					if (prob(10))
-						M.emote("poo")
-						random_brute_damage(M, 2 * mult)
-					if (prob(5))
-						M.emote("scream")
-						random_brute_damage(M, 4 * mult)
-				..()
-
 // let us never forget the 3,267 parrot incident, the recipe for this just reacts instantly now
 		flaptonium
 			name = "flaptonium"
@@ -3333,62 +3286,9 @@ datum
 						playsound(T, 'sound/impact_sounds/Slimy_Splat_1.ogg', 50, 1)
 						make_cleanable( /obj/decal/cleanable/greenpuke,T)
 
-		urine
-			name = "urine"
-			id = "urine"
-			description = "Ewww."
-			reagent_state = LIQUID
-			fluid_r = 233
-			fluid_g = 216
-			fluid_b = 0
-			transparency = 245
-			hygiene_value = -3
-			hunger_value = -0.098
-
-			/*on_mob_life(var/mob/M, var/mult = 1) why
-				for (var/datum/ailment_data/disease/virus in M.ailments)
-					if (prob(10))
-						M.resistances += virus.type
-						M.ailments -= virus
-						boutput(M, "<span class='notice'>You feel better</span>")
-				..()
-				return*/
-			reaction_turf(var/turf/T, var/volume)
-				var/list/covered = holder.covered_turf()
-				if (covered.len > 9)
-					volume = (volume/covered.len)
-				if (volume > 10)
-					return 1
-				if (volume >= 5)
-					if (!locate(/obj/decal/cleanable/urine) in T)
-						playsound(T, 'sound/impact_sounds/Slimy_Splat_1.ogg', 50, 1)
-						make_cleanable( /obj/decal/cleanable/urine,T)
-
-		triplepiss
-			name = "triplepiss"
-			id = "triplepiss"
-			description = "Ewwwwwwwww."
-			reagent_state = LIQUID
-			fluid_r = 133
-			fluid_g = 116
-			fluid_b = 0
-			transparency = 255
-			hygiene_value = -5
-
-			reaction_turf(var/turf/T, var/volume)
-				var/list/covered = holder.covered_turf()
-				if (covered.len > 9)
-					volume = (volume/covered.len)
-				if (volume > 10)
-					return 1
-				if (volume >= 5)
-					if (!locate(/obj/decal/cleanable/urine) in T)
-						playsound(T, 'sound/impact_sounds/Slimy_Splat_1.ogg', 50, 1)
-						make_cleanable( /obj/decal/cleanable/urine,T)
-
-		poo
+		compost
 			name = "compost"
-			id = "poo"
+			id = "compost"
 			description = "Raw fertilizer used for gardening."
 			reagent_state = SOLID
 			fluid_r = 100
@@ -3908,43 +3808,6 @@ datum
 					if(ishuman(N) && probmult(1))
 						N.say("[M.name] is an ocean of muscle.")
 				..()
-
-		toxic_fart
-			name = "toxic fart"
-			id = "toxic_fart"
-			description = "A rancid, terrible fart."
-			reagent_state = GAS
-			fluid_r = 212
-			fluid_g = 205
-			fluid_b = 4
-			transparency = 255
-			data = null
-			blocks_sight_gas = 1
-			hygiene_value = -1
-			smoke_spread_mod = 15
-
-			reaction_mob(var/mob/M, var/method=TOUCH, var/volume_passed)
-				. = ..()
-				if(!volume_passed)
-					return
-				if (M.bioHolder && M.bioHolder.HasEffect("toxic_farts"))
-					return
-
-				if (M?.reagents)
-					if (prob(25))
-						boutput(M, "<span class='alert'>Oh god! The <i>smell</i>!!!</span>")
-					M.reagents.add_reagent("jenkem",0.1 * volume_passed)
-
-			very_toxic
-				id = "very_toxic_fart"
-				name = "very toxic fart"
-
-				on_mob_life(var/mob/M, var/mult = 1)
-					. =..()
-					M.take_toxin_damage(2 * mult)
-			//on_mob_life(var/mob/M, var/mult = 1)
-			//	if(!M) M = holder.my_atom
-			//	..()
 
 		miasma
 			name = "miasma"

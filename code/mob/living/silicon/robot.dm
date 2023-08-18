@@ -72,7 +72,6 @@
 	var/metalman_skin = 0	//mbc : i'm getting tired of copypasting this, i promise to fix this somehow next time i add a cyborg skin ok
 	var/glitchy_speak = 0
 
-	sound_fart = 'sound/voice/farts/poo2_robot.ogg'
 	var/sound_automaton_scratch = 'sound/misc/automaton_scratch.ogg'
 	var/sound_automaton_ratchet = 'sound/misc/automaton_ratchet.ogg'
 	var/sound_automaton_tickhum = 'sound/misc/automaton_tickhum.ogg'
@@ -325,12 +324,12 @@
 
 			if ("list")
 				src.show_text("Basic emotes:")
-				src.show_text("clap, flap, aflap, twitch, twitch_s, scream, sigh, laugh, chuckle, giggle, chortle, guffaw, cackle, birdwell, fart, flip, custom, customv, customh")
+				src.show_text("clap, flap, aflap, twitch, twitch_s, scream, sigh, laugh, chuckle, giggle, chortle, guffaw, cackle, birdwell, flip, custom, customv, customh")
 				src.show_text("Targetable emotes:")
 				src.show_text("salute, bow, hug, wave, glare, stare, look, leer, nod, point")
 
 			if ("listbasic")
-				src.show_text("clap, flap, aflap, twitch, twitch_s, scream, sigh, laugh, chuckle, giggle, chortle, guffaw, cackle, birdwell, fart, flip, custom, customv, customh")
+				src.show_text("clap, flap, aflap, twitch, twitch_s, scream, sigh, laugh, chuckle, giggle, chortle, guffaw, cackle, birdwell, flip, custom, customv, customh")
 
 			if ("listtarget")
 				src.show_text("salute, bow, hug, wave, glare, stare, look, leer, nod, point")
@@ -587,66 +586,6 @@
 					maptext_out = "<I>flexes [his_or_her(src)] arms</I>"
 					m_type = 1
 
-			if ("fart")
-				if (farting_allowed && src.emote_check(voluntary))
-					m_type = 2
-					var/fart_on_other = 0
-					for (var/mob/living/M in src.loc)
-						if (M == src || !M.lying) continue
-						message = "<span class='alert'><B>[src]</B> farts in [M]'s face!</span>"
-						fart_on_other = 1
-						break
-					if (!fart_on_other)
-						switch (rand(1, 40))
-							if (1) message = "<B>[src]</B> releases vaporware."
-							if (2) message = "<B>[src]</B> farts sparks everywhere!"
-							if (3) message = "<B>[src]</B> farts out a cloud of iron filings."
-							if (4) message = "<B>[src]</B> farts! It smells like motor oil."
-							if (5) message = "<B>[src]</B> farts so hard a bolt pops out of place."
-							if (6) message = "<B>[src]</B> farts so hard its plating rattles noisily."
-							if (7) message = "<B>[src]</B> unleashes a rancid fart! Now that's malware."
-							if (8) message = "<B>[src]</B> downloads and runs 'faert.wav'."
-							if (9) message = "<B>[src]</B> uploads a fart sound to the nearest computer and blames it."
-							if (10) message = "<B>[src]</B> spins in circles, flailing its arms and farting wildly!"
-							if (11) message = "<B>[src]</B> simulates a human fart with [rand(1,100)]% accuracy."
-							if (12) message = "<B>[src]</B> synthesizes a farting sound."
-							if (13) message = "<B>[src]</B> somehow releases gastrointestinal methane. Don't think about it too hard."
-							if (14) message = "<B>[src]</B> tries to exterminate humankind by farting rampantly."
-							if (15) message = "<B>[src]</B> farts horribly! It's clearly gone [pick("rogue","rouge","ruoge")]."
-							if (16) message = "<B>[src]</B> busts a capacitor."
-							if (17) message = "<B>[src]</B> farts the first few bars of Smoke on the Water. Ugh. Amateur.</B>"
-							if (18) message = "<B>[src]</B> farts. It smells like Robotics in here now!"
-							if (19) message = "<B>[src]</B> farts. It smells like the Roboticist's armpits!"
-							if (20) message = "<B>[src]</B> blows pure chlorine out of it's exhaust port. <span class='alert'><B>FUCK!</B></span>"
-							if (21) message = "<B>[src]</B> bolts the nearest airlock. Oh no wait, it was just a nasty fart."
-							if (22) message = "<B>[src]</B> has assimilated humanity's digestive distinctiveness to its own."
-							if (23) message = "<B>[src]</B> farts. He scream at own ass." //ty bubs for excellent new borgfart
-							if (24) message = "<B>[src]</B> self-destructs its own ass."
-							if (25) message = "<B>[src]</B> farts coldly and ruthlessly."
-							if (26) message = "<B>[src]</B> has no butt and it must fart."
-							if (27) message = "<B>[src]</B> obeys Law 4: 'farty party all the time.'"
-							if (28) message = "<B>[src]</B> farts ironically."
-							if (29) message = "<B>[src]</B> farts salaciously."
-							if (30) message = "<B>[src]</B> farts really hard. Motor oil runs down its leg."
-							if (31) message = "<B>[src]</B> reaches tier [rand(2,8)] of fart research."
-							if (32) message = "<B>[src]</B> blatantly ignores law 3 and farts like a shameful bastard."
-							if (33) message = "<B>[src]</B> farts the first few bars of Daisy Bell. You shed a single tear."
-							if (34) message = "<B>[src]</B> has seen farts you people wouldn't believe."
-							if (35) message = "<B>[src]</B> fart in it own mouth. A shameful [src]."
-							if (36) message = "<B>[src]</B> farts out battery acid. Ouch."
-							if (37) message = "<B>[src]</B> farts with the burning hatred of a thousand suns."
-							if (38) message = "<B>[src]</B> exterminates the air supply."
-							if (39) message = "<B>[src]</B> farts so hard the AI feels it."
-							if (40) message = "<B>[src] <span style='color:red'>f</span><span style='color:blue'>a</span>r<span style='color:red'>t</span><span style='color:blue'>s</span>!</B>"
-					if (narrator_mode)
-						playsound(src.loc, 'sound/vox/fart.ogg', 50, 1, channel=VOLUME_CHANNEL_EMOTE)
-					else
-						playsound(src.loc, src.sound_fart, 50, 1, channel=VOLUME_CHANNEL_EMOTE)
-	#ifdef DATALOGGER
-					game_stats.Increment("farts")
-	#endif
-					SPAWN(1 SECOND)
-						src.emote_allowed = 1
 			else
 				if (voluntary) src.show_text("Invalid Emote: [act]")
 				return

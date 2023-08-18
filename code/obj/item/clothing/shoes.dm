@@ -613,12 +613,6 @@ TYPEINFO(/obj/item/clothing/shoes/moon)
 	step_sound = list('sound/voice/screams/male_scream.ogg', 'sound/voice/screams/mascream6.ogg', 'sound/voice/screams/mascream7.ogg')
 	desc = "AAAAAAAAAAAAAAAAAAAAAAA"
 
-/obj/item/clothing/shoes/fart
-	name = "fart-flops"
-	icon_state = "tourist"
-	step_sound = list('sound/voice/farts/poo2.ogg', 'sound/voice/farts/fart4.ogg', 'sound/voice/farts/poo2_robot.ogg')
-	desc = "Do I really need to tell you what these do?"
-
 /obj/item/clothing/shoes/crafted
 	name = "shoes"
 	desc = "A custom pair of shoes"
