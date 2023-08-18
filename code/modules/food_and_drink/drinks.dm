@@ -539,12 +539,6 @@ obj/item/reagent_containers/food/drinks/covfefe
 		label = "lizard"
 		initial_reagents = (list("cola"=20, "yee"=5, "chalk"=5, "sangria"=10, "capsaicin"=10))
 
-
-	babel_blast
-		name = "Grones Soda Mountain Grones Babel Blast flavor" //by warcrimes
-		label = "babel"
-		initial_reagents = (list("cola"=20, "suomium"=5, "quebon"=5, "swedium"=5, "caledonium"=5, "worcestershire_sauce"=5))
-
 	jungle_juice
 		name = "Grones Soda Jammin' Jambalaya Jungle Juice flavor" //by Camryn Buttes
 		label = "jungle"

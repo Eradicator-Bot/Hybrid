@@ -103,12 +103,10 @@
 */
 			if (10)
 				src.real_name = "Rabatt Dan's Snabb-Nudlar - Inkokt Lax Smörgåsbord Smak"
-				src.initial_reagents["cleaner"] = 2
-				src.initial_reagents["mercury"] = 2
-				src.initial_reagents["swedium"] = 6
-/*				R.add_reagent("cleaner",2)
-				R.add_reagent("mercury",2)
-				R.add_reagent("swedium",6)
+				src.initial_reagents["cleaner"] = 5
+				src.initial_reagents["mercury"] = 5
+/*				R.add_reagent("cleaner",5)
+				R.add_reagent("mercury",5)
 */
 			if (11)
 				src.real_name = "Frycook Dan's Quik-Noodles - Curly Fry Ketchup Hoedown Flavor"
@@ -483,7 +481,6 @@
 				src.name = "Hungry Dan's Self-Microwaving Meals - Imported Lo Mein Lasagna Flavor" //Imported from swede-land
 				src.desc = "A self-heating TV dinner containing a well-travelled chinese lasagna. You should probably use a fork."
 				src.initial_reagents["juice_tomato"] = 5
-				src.initial_reagents["swedium"] = 5
 				src.initial_reagents["bread"] = 10
 				src.initial_reagents["fakecheese"] = 2
 

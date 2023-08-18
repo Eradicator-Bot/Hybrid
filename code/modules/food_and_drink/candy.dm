@@ -366,8 +366,6 @@ ABSTRACT_TYPE(/obj/item/reagent_containers/food/snacks/candy/jellybean)
 	initial_volume = 10
 
 	New()
-		if (prob(33))
-			src.initial_reagents = "swedium"
 		..()
 		src.pixel_x = rand(-6, 6)
 		src.pixel_y = rand(-6, 6)

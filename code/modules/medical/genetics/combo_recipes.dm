@@ -54,18 +54,6 @@
 	required_effects = list("loud_voice","quiet_voice")
 	result = /datum/bioEffect/speech/unintelligable
 
-/datum/geneticsrecipe/unintelligable_two
-	required_effects = list("accent_swedish","accent_elvis")
-	result = /datum/bioEffect/speech/unintelligable
-
-/datum/geneticsrecipe/vowels
-	required_effects = list("accent_swedish","accent_chav")
-	result = /datum/bioEffect/speech/vowelitis
-
-/datum/geneticsrecipe/coprolalia
-	required_effects = list("accent_chav","accent_tommy")
-	result = /datum/bioEffect/coprolalia
-
 /datum/geneticsrecipe/blind
 	required_effects = list("bad_eyesight","narcolepsy")
 	result = /datum/bioEffect/blind

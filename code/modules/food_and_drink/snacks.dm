@@ -983,7 +983,6 @@ ABSTRACT_TYPE(/obj/item/reagent_containers/food/snacks/soup)
 	heal_amt = 2
 	food_color ="#663300"
 	initial_volume = 30
-	initial_reagents = list("swedium"=25)
 
 	attackby(obj/item/W, mob/user)
 		if (istype(W, /obj/item/reagent_containers/food/snacks/condiment/))
@@ -1018,8 +1017,6 @@ ABSTRACT_TYPE(/obj/item/reagent_containers/food/snacks/soup)
 	process()
 		if (prob(30) && src.icon_state == "surs-open")
 			for(var/mob/living/carbon/H in viewers(src, null))
-				if (H.bioHolder.HasEffect("accent_swedish"))
-					return
 				boutput(H, "<span class='alert'>[stinkString()]</span>")
 				if(prob(30))
 					H.changeStatus("stunned", 2 SECONDS)
@@ -1031,79 +1028,66 @@ ABSTRACT_TYPE(/obj/item/reagent_containers/food/snacks/soup)
 		processing_items.Remove(src)
 		..()
 
-
 	heal(var/mob/M)
-		if (M.bioHolder.HasEffect("accent_swedish"))
-			boutput(M, "<span class='notice'>It tastes just like the old country!</span>")
-			M.reagents.add_reagent("love", 5)
-			..()
-		else
-			var/effect = rand(1,21)
-			switch(effect)
-				if(1 to 5)
-					boutput(M, "<span class='alert'>aaaaaAAAAA<b>AAAAAAAA</b></span>")
-					var/vomit_message = "<span class='alert'>[M.name] suddenly and violently vomits!</span>"
-					M.vomit(0, null, vomit_message)
-					M.changeStatus("weakened", 4 SECONDS)
-				if(6 to 10)
-					boutput(M, "<span class='alert'>A squirt of some foul-smelling juice gets in your sinuses!!!</span>")
-					M.emote("sneeze")
-					M.changeStatus("weakened", 4 SECONDS)
-					SPAWN(0)
-						while(prob(75))
-							sleep(rand(50,75))
-							boutput(M, "<span class='alert'>Some of the horrible juice in your nose drips into the back of your throat!!</span>")
-							M.emote("sneeze")
-							M.vomit()
-							M.changeStatus("stunned", 2 SECONDS)
-				if(11 to 15)
-					boutput(M, "<span class='notice'>Huh. That wasn't so bad. <span class='alert'>WAIT NEVERMIND THERE'S THE AFTERTASTE</span></span>")
-					M.emote ("cry")
-					M.changeStatus("weakened", 4 SECONDS)
-				if(16 to 20)
-					boutput(M, "<span class='alert'>AGHBGLBLGHLGBGLHGHBLGH</span>")
-					M.visible_message("<span class='alert'>[M] pukes their guts out!</span>")
-					playsound(M.loc, 'sound/impact_sounds/Slimy_Splat_1.ogg', 50, 1)
-					M.changeStatus("weakened", 4 SECONDS)
-					if (ishuman(M))
-						var/mob/living/carbon/human/H = M
-
-						var/obj/decal/cleanable/blood/gibs/G = null // For forensics (Convair880).
-						G = make_cleanable( /obj/decal/cleanable/blood/gibs,M.loc)
-						if (H.bioHolder.Uid && H.bioHolder.bloodType)
-							G.blood_DNA = H.bioHolder.Uid
-							G.blood_type = H.bioHolder.bloodType
-
-						if (prob(5) && H.organHolder && H.organHolder.heart)
-							H.organHolder.drop_organ("heart")
-
-							H.visible_message("<span class='alert'><b>Wait, is that their heart!?</b></span>")
-				if(21)
-					if (!M.bioHolder.HasEffect("stinky"))
-						boutput(M, "<span class='alert'>Oh God, the stink is <b>inside</b> you now!</span>")
-						M.bioHolder.AddEffect("stinky")
+		var/effect = rand(1,21)
+		switch(effect)
+			if(1 to 5)
+				boutput(M, "<span class='alert'>aaaaaAAAAA<b>AAAAAAAA</b></span>")
+				var/vomit_message = "<span class='alert'>[M.name] suddenly and violently vomits!</span>"
+				M.vomit(0, null, vomit_message)
+				M.changeStatus("weakened", 4 SECONDS)
+			if(6 to 10)
+				boutput(M, "<span class='alert'>A squirt of some foul-smelling juice gets in your sinuses!!!</span>")
+				M.emote("sneeze")
+				M.changeStatus("weakened", 4 SECONDS)
+				SPAWN(0)
+					while(prob(75))
+						sleep(rand(50,75))
+						boutput(M, "<span class='alert'>Some of the horrible juice in your nose drips into the back of your throat!!</span>")
+						M.emote("sneeze")
+						M.vomit()
 						M.changeStatus("stunned", 2 SECONDS)
-						return
-					else
-						boutput(M, "<span class='alert'>The stink of the surströmming combines with your inherent body funk to create a stench of BIBLICAL PROPORTIONS!</span>")
-						M.name_suffix("the Stinky")
-						M.UpdateName()
+			if(11 to 15)
+				boutput(M, "<span class='notice'>Huh. That wasn't so bad. <span class='alert'>WAIT NEVERMIND THERE'S THE AFTERTASTE</span></span>")
+				M.emote ("cry")
+				M.changeStatus("weakened", 4 SECONDS)
+			if(16 to 20)
+				boutput(M, "<span class='alert'>AGHBGLBLGHLGBGLHGHBLGH</span>")
+				M.visible_message("<span class='alert'>[M] pukes their guts out!</span>")
+				playsound(M.loc, 'sound/impact_sounds/Slimy_Splat_1.ogg', 50, 1)
+				M.changeStatus("weakened", 4 SECONDS)
+				if (ishuman(M))
+					var/mob/living/carbon/human/H = M
+
+					var/obj/decal/cleanable/blood/gibs/G = null // For forensics (Convair880).
+					G = make_cleanable( /obj/decal/cleanable/blood/gibs,M.loc)
+					if (H.bioHolder.Uid && H.bioHolder.bloodType)
+						G.blood_DNA = H.bioHolder.Uid
+						G.blood_type = H.bioHolder.bloodType
+
+					if (prob(5) && H.organHolder && H.organHolder.heart)
+						H.organHolder.drop_organ("heart")
+
+						H.visible_message("<span class='alert'><b>Wait, is that their heart!?</b></span>")
+			if(21)
+				if (!M.bioHolder.HasEffect("stinky"))
+					boutput(M, "<span class='alert'>Oh God, the stink is <b>inside</b> you now!</span>")
+					M.bioHolder.AddEffect("stinky")
+					M.changeStatus("stunned", 2 SECONDS)
+					return
+				else
+					boutput(M, "<span class='alert'>The stink of the surströmming combines with your inherent body funk to create a stench of BIBLICAL PROPORTIONS!</span>")
+					M.name_suffix("the Stinky")
+					M.UpdateName()
 		..()
 
 
 	examine(mob/user)
 		. = ..()
-		if (user.bioHolder.HasEffect("accent_swedish"))
-			if (src.icon_state == "surs")
-				. += "Oooh, a can of surströmming! It's been a while since you've seen one of these. It looks like it's ready to eat."
-			else
-				. += "Oooh, a can of surströmming! It's been a while since you've seen one of these. It smells heavenly!"
-			return
+		if (src.icon_state == "surs")
+			. += "The fuck is this? The label's written in some sort of gibberish, and you're pretty sure cans aren't supposed to bulge like that."
 		else
-			if (src.icon_state == "surs")
-				. += "The fuck is this? The label's written in some sort of gibberish, and you're pretty sure cans aren't supposed to bulge like that."
-			else
-				. += "<b>AAAAAAAAAAAAAAAAUGH AAAAAAAAAAAUGH IT SMELLS LIKE FERMENTED SKUNK EGG BUTTS MAKE IT STOP</b>"
+			. += "<b>AAAAAAAAAAAAAAAAUGH AAAAAAAAAAAUGH IT SMELLS LIKE FERMENTED SKUNK EGG BUTTS MAKE IT STOP</b>"
 
 	attack_self(var/mob/user as mob)
 		if (src.icon_state == "surs")
@@ -1111,21 +1095,15 @@ ABSTRACT_TYPE(/obj/item/reagent_containers/food/snacks/soup)
 			src.icon_state = "surs-open" //todo: get real sprite
 			for(var/mob/living/carbon/M in viewers(user, null))
 				if (M == user)
-					if (user.bioHolder.HasEffect("accent_swedish"))
-						boutput(user, "<span class='notice'>Ahhh, that smells wonderful!</span>")
-					else
-						boutput(user, "<span class='alert'><font size=4><B>HOLY FUCK THAT REEKS!!!!!</b></font></span>")
-						user.changeStatus("weakened", 8 SECONDS)
-						var/vomit_message = "<span class='alert'>[user] suddenly and violently vomits!</span>"
-						user.vomit(0, null, vomit_message)
+					boutput(user, "<span class='alert'><font size=4><B>HOLY FUCK THAT REEKS!!!!!</b></font></span>")
+					user.changeStatus("weakened", 8 SECONDS)
+					var/vomit_message = "<span class='alert'>[user] suddenly and violently vomits!</span>"
+					user.vomit(0, null, vomit_message)
 				else
-					if(M.bioHolder.HasEffect("accent_swedish"))
-						boutput(M, "<span class='notice'>Hey, something smells good!</span>")
-					else
-						boutput(M, "<span class='alert'><font size=4><B>WHAT THE FUCK IS THAT SMELL!?</b></font></span>")
-						M.changeStatus("weakened", 4 SECONDS)
-						var/vomit_message = "<span class='alert'>[M.name] suddenly and violently vomits!</span>"
-						M.vomit(0, null, vomit_message)
+					boutput(M, "<span class='alert'><font size=4><B>WHAT THE FUCK IS THAT SMELL!?</b></font></span>")
+					M.changeStatus("weakened", 4 SECONDS)
+					var/vomit_message = "<span class='alert'>[M.name] suddenly and violently vomits!</span>"
+					M.vomit(0, null, vomit_message)
 
 /obj/item/reagent_containers/food/snacks/chips
 	name = "chips"
@@ -1183,7 +1161,7 @@ ABSTRACT_TYPE(/obj/item/reagent_containers/food/snacks/soup)
 		if (istype(W, /obj/item/kitchen/utensil/spoon))
 			if (ishuman(user))
 				var/mob/living/carbon/human/H = user
-				if (H.a_intent == INTENT_HARM && (H.job == "Chef" || H.job == "Sous-Chef") && H.bioHolder?.HasEffect("accent_swedish"))
+				if (H.a_intent == INTENT_HARM && (H.job == "Chef" || H.job == "Sous-Chef"))
 					src.visible_message("<span class='alert'><b>[H] hits the [src] with [W]!<b></span>")
 					src.visible_message("<span class='alert'>The [src] barks at [H]!</span>")
 					playsound(src, 'sound/voice/animal/dogbark.ogg', 40, 1)
@@ -1361,7 +1339,7 @@ ABSTRACT_TYPE(/obj/item/reagent_containers/food/snacks/soup)
 	heal_amt = 1
 	bites_left = 5
 	initial_volume = 50
-	initial_reagents = list("quebon"=25,"nicotine"=5,"gravy"=5,"pizza"=5) // staples of french canadian life
+	initial_reagents = list("nicotine"=5,"gravy"=5,"pizza"=5) // staples of french canadian life
 	food_effects = list("food_sweaty")
 	meal_time_flags = MEAL_TIME_FORBIDDEN_TREAT
 
@@ -1632,7 +1610,7 @@ ABSTRACT_TYPE(/obj/item/reagent_containers/food/snacks/soup)
 		desc = "It ain't never caught a rabbit and it ain't no friend of mine."
 		icon_state = "elviscorndog"
 		heal_amt = 10
-		initial_reagents = list("porktonium"=10,"essenceofelvis"=15)
+		initial_reagents = list("porktonium"=10)
 		food_effects = list("food_energized_big")
 
 	spooky
@@ -1670,10 +1648,6 @@ ABSTRACT_TYPE(/obj/item/reagent_containers/food/snacks/soup)
 	on_reagent_change()
 		..()
 		src.UpdateIcon()
-
-	heal(var/mob/M)
-		if (src.bun == 4) M.bioHolder.AddEffect("accent_elvis", timeleft = 180)
-		..()
 
 	attackby(obj/item/W, mob/user)
 		if (istype(W, /obj/item/reagent_containers/food/snacks/breadslice))
@@ -2420,10 +2394,6 @@ ABSTRACT_TYPE(/obj/item/reagent_containers/food/snacks/soup)
 	initial_volume = 30
 	food_effects = list("food_burn","food_tox")
 
-	New()
-		..()
-		reagents.add_reagent("caledonium",20)
-
 	attackby(obj/item/W, mob/user)
 		if (istype(W, /obj/item/reagent_containers/food/snacks/condiment/)) src.bites_left += 1
 		else ..()
@@ -2434,19 +2404,7 @@ ABSTRACT_TYPE(/obj/item/reagent_containers/food/snacks/soup)
 		if(isbutt)
 			. += "A dire misunderstanding of how haggis works."
 		else
-			if (user.bioHolder.HasEffect("accent_scots"))
-				. += "Fair fa' your honest, sonsie face, great chieftain o the puddin'-race!"
-			else
-				. += "A big ol' meat pudding, wrapped up in a synthetic stomach stuffed nearly to bursting. Gusty!"
-
-	heal(var/mob/M)
-		if (M.bioHolder.HasEffect("accent_scots"))
-			heal_amt *= 2
-			boutput(M, "<span class='notice'>Och aye! That's th' stuff!</span>")
-			..()
-			heal_amt /= 2
-		else
-			..()
+			. += "A big ol' meat pudding, wrapped up in a synthetic stomach stuffed nearly to bursting. Gusty!"
 
 /obj/item/reagent_containers/food/snacks/haggis/ass
 	name = "haggass"

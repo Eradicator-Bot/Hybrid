@@ -108,14 +108,14 @@
 		ret += copytext(data, lgp)
 	return ret
 
-
-/obj/nerd_trap_door
-	name = "Heavily locked door"
-	desc = "Man, whatever is in here must be pretty valuable. This door seems to be indestructible and features an unrealistic amount of keyholes."
-	var/list/expected = list("silver key", "skeleton key", "cold steel key", "literal skeleton key", "hot iron key", "onyx key", "virtual key", "golden key", "iron key", "iridium key", "lunar key")
-	var/list/unlocked = list()
-	var/list/ol = list()
-	icon = 'icons/misc/aprilfools.dmi'
+/obj/nerd_trap_door/voidoor
+	name = "V O I D O O R"
+	desc = "This door cannot be returned. You see, the warranty is void."
+	var/list/valid_keys = list("silver key", "skeleton key", "literal skeleton key", "hot iron key", "iron key", "iridium key", "niobium key", "lunar key", "collar key", "chomps key", "studio door key", "Owlish Key")
+	var/list/used_keys = list()
+	var/locks_opened = 0
+	var/skull_used = FALSE
+	icon = 'icons/obj/doors/vaultdoor.dmi'
 	icon_state = "hld0"
 	opacity = 1
 	density = 1
@@ -123,45 +123,35 @@
 
 	examine()
 		. = ..()
-		. += "Your keen skills of observation tell you that [expected.len - unlocked.len] out of the [expected.len] locks are locked."
+		. += "Your keen skills of observation tell you that [locks_opened + skull_used] out of the 5 locks are unlocked."
 
 	attackby(var/obj/item/I, var/mob/user)
-		if (istype(I, /obj/item/device/key))
-			var/kname = null
-			if (I.name in expected)
-				kname = I.name
-			//for (var/N in expected)
-			//	if (dd_hasprefix(I.name, N))
-			//		break
-			if (kname)
-				boutput(user, "<span class='notice'>You insert the [I.name] into the [kname]hole and turn it. The door emits a loud click.</span>")
+		if ((locks_opened == 4) && (skull_used == TRUE))
+			boutput(user, "<span class='notice'>All locks are unlocked. The door can now be opened.</span>")
+			return
+		if ((istype(I, /obj/item/device/key)) || (istype(I, /obj/item/skull)))
+			if (used_keys != null)
+				if (I.name in used_keys)
+					boutput(user, "<span class='alert'>You have already tried that key.</span>")
+					return
+			if ((I.name in valid_keys) && (locks_opened < 4))
+				boutput(user, "<span class='notice'>You insert the [I.name] into a keyhole and turn it. The door emits a loud click.</span>")
 				playsound(src.loc, 'sound/impact_sounds/Generic_Click_1.ogg', 60, 1)
-				if (kname in unlocked)
-					unlocked -= kname
-					overlays -= ol[kname]
-					ol -= kname
-				else
-					unlocked += kname
-					var/image/IM = image('icons/misc/aprilfools.dmi', "[kname]hole")
-					ol[kname] = IM
-					overlays += IM
-			else
-				boutput(user, "<span class='alert'>You cannot find a matching keyhole for that key!</span>")
-		else if (istype(I, /obj/item/reagent_containers/food/snacks/pie/lime))
-			if ("key lime pie" in expected)
-				boutput(user, "<span class='notice'>You insert the [I.name] into the key lime piehole and turn it. The door emits a loud click.</span>")
+				used_keys += I.name
+				locks_opened += 1
+				return
+			if ((istype(I, /obj/item/skull/crystal)) && (skull_used == FALSE))
+				boutput(user, "<span class='notice'>You insert the [I.name] into the skullhole. The door emits a loud click.</span>")
 				playsound(src.loc, 'sound/impact_sounds/Generic_Click_1.ogg', 60, 1)
-				if ("key lime pie" in unlocked)
-					unlocked -= "key lime pie"
-					overlays -= ol["key lime pie"]
-					ol -= "key lime pie"
-				else
-					unlocked += "key lime pie"
-					var/image/IM = image('icons/misc/aprilfools.dmi', "key lime piehole")
-					ol["key lime pie"] = IM
-					overlays += IM
+				skull_used = TRUE
 			else
-				boutput(user, "<span class='alert'>You cannot find a matching keyhole for that key!</span>")
+				if (skull_used == TRUE)
+					boutput(user, "<span class='alert'>You've already unlocked that keyhole.</span>")
+				else
+					boutput(user, "<span class='alert'>The [I.name] doesn't seem to fit.</span>")
+		else
+			boutput(user, "<span class='alert'>The [I.name] doesn't seem to fit.</span>")
+
 
 	Bumped(var/mob/M)
 		if (!istype(M))
@@ -171,14 +161,12 @@
 	attack_hand(var/mob/user)
 		if (!density)
 			return
-		if (unlocked.len == expected.len)
+		if ((locks_opened == 4) && (skull_used == TRUE))
 			open()
 		else
 			boutput(user, "<span class='alert'>The door won't budge!</span>")
 
 	proc/open()
-		if (unlocked.len != expected.len)
-			return
 		playsound(src.loc, 'sound/machines/door_open.ogg', 50, 1)
 		icon_state = "hld1"
 		set_density(0)
@@ -196,12 +184,6 @@
 
 	bullet_act()
 		return
-
-/obj/nerd_trap_door/voidoor
-	name = "V O I D O O R"
-	desc = "This door cannot be returned. You see, the warranty is void."
-	expected = list("silver key", /*"skeleton key",*/ "literal skeleton key", "hot iron key", "cold steel key", "onyx key", /*"key lime pie",*/ /*"futuristic key",*/ /*"virtual key",*/ "golden key", /*"bee key",*/ "iron key", /*"iridium key",*/ "lunar key")
-	icon_state = "hld2"
 
 /obj/steel_beams
 	name = "steel beams"
