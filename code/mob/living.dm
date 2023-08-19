@@ -227,7 +227,7 @@
 				<a href="byond://winset?command=Ghost" style="display: inline-block; font-size: 130%; font-weight: bold;">Become a Ghost</a>
 				<br><em style="color: #666; font-size: 75%;">You can also use the "<a href="byond://winset?command=Ghost" style="font-family: 'Consolas', monospace;">Ghost</a>" command to observe.</em><br><br>
 			"} : ""]
-		<strong>You may be revived if someone clones you.</strong>
+		<strong>If you did not suicide or set DNR, you may be revived if someone clones you.</strong>
 		<br>Otherwise, you'll have to wait for the next round.
 		<br>
 		<br>There's still plenty to do, even while dead!

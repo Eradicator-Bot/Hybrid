@@ -54,6 +54,7 @@
 			return
 
 	if (src.do_suicide()) //                           <------ put mob unique behaviour here in an override!!!!
+		src.mind.get_player()?.dnr = TRUE
 		src.suiciding = TRUE
 		logTheThing(LOG_COMBAT, src, "commits suicide")
 		src.unlock_medal("Damned", 1) //You don't get the medal if you tried to wuss out!
@@ -83,6 +84,10 @@
 
 /mob/living/carbon/human/do_suicide()
 	src.unkillable = 0 //Get owned, nerd!
+
+	var/confirm = tgui_alert(src, "Warning, if you commit suicide you cannot be revived! Are you certain you wish to proceed?", "Confirm Suicide", list("Yes", "No"), 15 SECONDS)
+	if(confirm != "Yes")
+		return
 
 	var/list/suicides = list("hold your breath")
 	if (src.on_chair)
