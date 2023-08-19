@@ -143,7 +143,7 @@ var/global/list/chestitem_whitelist = list(/obj/item/gnomechompski, /obj/item/gn
 
 	if (patient.reagents) // check for anesthetics/analgetics
 		if (patient.reagents.get_reagent_amount("morphine") >= 10)
-			screw_up_prob -= 10
+			screw_up_prob -= 15
 		if (patient.reagents.get_reagent_amount("haloperidol") >= 10)
 			screw_up_prob -= 10
 		if (patient.reagents.get_reagent_amount("ethanol") >= 5)
@@ -156,7 +156,7 @@ var/global/list/chestitem_whitelist = list(/obj/item/gnomechompski, /obj/item/gn
 	if (surgeon.traitHolder.hasTrait("training_medical"))
 		screw_up_prob = clamp(screw_up_prob, 0, 100) // if they're a doctor they can have no chance to mess up
 	else
-		screw_up_prob = clamp(screw_up_prob, 5, 100) // otherwise there'll always be a slight chance
+		screw_up_prob = clamp(screw_up_prob, 15, 100) // otherwise there'll always be a slight chance
 
 	DEBUG_MESSAGE("<b>[patient]'s surgery (performed by [surgeon]) has screw_up_prob set to [screw_up_prob]</b>")
 
