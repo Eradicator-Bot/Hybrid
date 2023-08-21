@@ -490,7 +490,7 @@ ABSTRACT_TYPE(/datum/job/security)
 		limit = 1
 		slot_suit = list(/obj/item/clothing/suit/bio_suit/paramedic/armored/para_troop/alt)
 		slot_head = list(/obj/item/clothing/head/basecap/red)
-		slot_ears = list() //mixed headset
+		slot_ears = list(/obj/item/device/radio/headset/para_sec)
 		slot_eyes = list() //mixed HUD
 		slot_poc2 = list(/obj/item/requisition_token/security/para_sec)
 
