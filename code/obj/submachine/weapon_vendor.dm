@@ -18,6 +18,7 @@
 #define WEAPON_VENDOR_CATEGORY_AMMO "ammo"
 #define WEAPON_VENDOR_CATEGORY_UTILITY "utility"
 #define WEAPON_VENDOR_CATEGORY_ASSISTANT "assistant"
+#define WEAPON_VENDOR_CATEGORY_PARAMEDIC "paramedic"
 #define WEAPON_VENDOR_CATEGORY_FISHING "fishing"
 
 /obj/submachine/weapon_vendor
@@ -35,9 +36,9 @@
 	var/sound_token = 'sound/machines/capsulebuy.ogg'
 	var/sound_buy = 'sound/machines/spend.ogg'
 #ifdef BONUS_POINTS
-	var/list/credits = list(WEAPON_VENDOR_CATEGORY_SIDEARM = 999, WEAPON_VENDOR_CATEGORY_LOADOUT = 999, WEAPON_VENDOR_CATEGORY_UTILITY = 999, WEAPON_VENDOR_CATEGORY_AMMO = 999, WEAPON_VENDOR_CATEGORY_ASSISTANT = 999)
+	var/list/credits = list(WEAPON_VENDOR_CATEGORY_SIDEARM = 999, WEAPON_VENDOR_CATEGORY_LOADOUT = 999, WEAPON_VENDOR_CATEGORY_UTILITY = 999, WEAPON_VENDOR_CATEGORY_AMMO = 999, WEAPON_VENDOR_CATEGORY_ASSISTANT = 999, WEAPON_VENDOR_CATEGORY_PARAMEDIC = 999)
 #else
-	var/list/credits = list(WEAPON_VENDOR_CATEGORY_SIDEARM = 0, WEAPON_VENDOR_CATEGORY_LOADOUT = 0, WEAPON_VENDOR_CATEGORY_UTILITY = 0, WEAPON_VENDOR_CATEGORY_AMMO = 0, WEAPON_VENDOR_CATEGORY_ASSISTANT = 0)
+	var/list/credits = list(WEAPON_VENDOR_CATEGORY_SIDEARM = 0, WEAPON_VENDOR_CATEGORY_LOADOUT = 0, WEAPON_VENDOR_CATEGORY_UTILITY = 0, WEAPON_VENDOR_CATEGORY_AMMO = 0, WEAPON_VENDOR_CATEGORY_ASSISTANT = 0, WEAPON_VENDOR_CATEGORY_PARAMEDIC = 0)
 #endif
 	var/list/datum/materiel_stock = list()
 	var/token_accepted = /obj/item/requisition_token
@@ -150,6 +151,8 @@
 			src.credits[WEAPON_VENDOR_CATEGORY_UTILITY]++
 		else if (istype(token, /obj/item/requisition_token/security/utility))
 			src.credits[WEAPON_VENDOR_CATEGORY_UTILITY]++
+		else if (istype(token, /obj/item/requisition_token/security/para_sec))
+			src.credits[WEAPON_VENDOR_CATEGORY_PARAMEDIC]++
 		else
 			src.credits[WEAPON_VENDOR_CATEGORY_LOADOUT]++
 			src.credits[WEAPON_VENDOR_CATEGORY_AMMO]++
@@ -633,6 +636,10 @@
 		utility
 			desc = "An NT-provided token that entitles the owner to one additional utility purchase."
 			icon_state = "req-token-secass"
+
+		para_sec
+			desc = "An NT-provided token compatible with the Security Weapons Vendor. This one says <i>for officer paramedic use only</i>."
+			icon_state = "req-token-secpara"
 
 	pirate
 		name = "doubloon"

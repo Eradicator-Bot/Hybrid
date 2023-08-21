@@ -504,6 +504,7 @@ ABSTRACT_TYPE(/datum/job/security)
 			if (!M)
 				return
 			M.traitHolder.addTrait("training_medical")
+			M.traitHolder.addTrait("training_security")
 
 	assistant
 		name = "Security Assistant"
