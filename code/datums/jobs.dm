@@ -494,10 +494,7 @@ ABSTRACT_TYPE(/datum/job/security)
 		slot_eyes = list() //mixed HUD
 		slot_poc2 = list(/obj/item/requisition_token/security/para_sec)
 
-		New()
-			..()
-			src.access = get_access("Officer Paramedic")
-			return
+		//no need to add unique access as sec already gets all we need
 
 		special_setup(var/mob/living/carbon/human/M)
 			..()
