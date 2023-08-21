@@ -323,6 +323,10 @@
 		name = "rapid response armor"
 		desc = "A protective padded suit for emergency reponse personnel. Tailored for ground operations, not vaccuum rated. This one bears security insignia."
 
+		alt
+			icon_state = "para_sec_alt"
+			item_state = "para_sec_alt"
+
 	para_eng
 		name = "rapid response armor"
 		desc = "A protective padded suit for emergency response personnel. Tailored for ground operations, not vaccuum rated. This one bears engineering insignia."
