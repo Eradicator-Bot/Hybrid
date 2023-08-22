@@ -304,7 +304,7 @@
 /obj/item/device/radio/headset/para_sec
 	name = "security paramedic's headset"
 	desc = "In addition to having access to the Security radio channel, this headset also transceives on the Medical radio frequency."
-	icon_state = "sec headset"
+	icon_state = "sec med headset"
 	secure_frequencies = list(
 		"g" = R_FREQ_SECURITY,
 		"m" = R_FREQ_MEDICAL,
