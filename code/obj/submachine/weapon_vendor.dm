@@ -132,6 +132,7 @@
 		materiel_stock += new/datum/materiel/ammo/medium
 		materiel_stock += new/datum/materiel/ammo/self_charging
 		materiel_stock += new/datum/materiel/assistant/basic
+		materiel_stock += new/datum/materiel/paramedic/basic
 
 	vended(var/atom/A)
 		..()
@@ -411,10 +412,10 @@
 	path = /obj/item/storage/belt/security/assistant
 	description = "One belt containing a security barrier, a forensic scanner, and a security ticket writer."
 
-/*/datum/materiel/paramedic/basic
+/datum/materiel/paramedic/basic
 	name = "Paramedic"
-	path = /obj/item/storage/belt/security/para_sec
-	description = "One belt containing a scalpel, an operating mat, a vial of morphine, a vial of epinephrine, a syringe, a box of miniature brute healing patches, and a roll of bandages."*/
+	path = /obj/item/storage/belt/security/medsec
+	description = "One belt containing a scalpel, an operating mat, a vial of morphine, a vial of epinephrine, a syringe, a box of miniature brute healing patches, and a roll of bandages."
 
 //SYNDIE
 
