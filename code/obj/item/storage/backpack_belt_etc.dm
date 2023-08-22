@@ -867,7 +867,7 @@
 		desc = "Made to carry lifesaving equipment for the sake of cops and crooks alike."
 		icon_state = "injectorbelt"
 		item_state = "medical"
-		spawn_contents = list(/obj/item/scalpel, /*mat goes here,*/ /obj/item/reagent_containers/glass/bottle/morphine, /obj/item/reagent_containers/glass/bottle/epinephrine, /obj/item/reagent_containers/syringe, /obj/item/reagent_containers/patch/mini/bruise, /obj/item/bandage)
+		spawn_contents = list(/obj/item/scalpel, /*mat goes here,*/ /obj/item/reagent_containers/glass/bottle/morphine, /obj/item/reagent_containers/glass/bottle/epinephrine, /obj/item/reagent_containers/syringe, /obj/item/item_box/medical_patches/mini_styptic, /obj/item/bandage)
 
 //////////////////////////////
 // ~Nuke Ops Class Storage~ //
