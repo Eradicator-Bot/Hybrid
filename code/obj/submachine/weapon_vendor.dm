@@ -411,10 +411,10 @@
 	path = /obj/item/storage/belt/security/assistant
 	description = "One belt containing a security barrier, a forensic scanner, and a security ticket writer."
 
-/datum/materiel/paramedic/basic
+/*/datum/materiel/paramedic/basic
 	name = "Paramedic"
 	path = /obj/item/storage/belt/security/para_sec
-	description = "One belt containing a scalpel, an operating mat, a vial of morphine, a vial of epinephrine, a syringe, a box of miniature brute healing patches, and a roll of bandages."
+	description = "One belt containing a scalpel, an operating mat, a vial of morphine, a vial of epinephrine, a syringe, a box of miniature brute healing patches, and a roll of bandages."*/
 
 //SYNDIE
 
@@ -646,8 +646,8 @@
 			icon_state = "req-token-secass"
 
 		para_sec
-			desc = "An NT-provided token compatible with the Security Weapons Vendor. This one says <i>for officer paramedic use only</i>."
-			icon_state = "req-token-secpara"
+			desc = "An NT-provided token compatible with the Security Weapons Vendor. This one says <i>for medical officer use only</i>."
+			//todo: icon_state = "req-token-secpara"
 
 	pirate
 		name = "doubloon"
