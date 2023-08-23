@@ -415,7 +415,7 @@
 /datum/materiel/paramedic/basic
 	name = "Paramedic"
 	path = /obj/item/storage/belt/security/medsec
-	description = "One belt containing a scalpel, an operating mat, a vial of morphine, a vial of epinephrine, a syringe, a box of miniature brute healing patches, and a roll of bandages."
+	description = "One belt containing a scalpel, a bottle of ketamine pills, a vial of morphine, a vial of epinephrine, a syringe, a box of miniature brute healing patches, and a roll of bandages."
 
 //SYNDIE
 
