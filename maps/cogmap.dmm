@@ -12592,6 +12592,9 @@
 /obj/cable{
 	icon_state = "4-8"
 	},
+/obj/landmark/start{
+	name = "Officer Paramedic"
+	},
 /turf/simulated/floor,
 /area/station/security/secwing)
 "aKs" = (
@@ -15651,10 +15654,6 @@
 /obj/item/reagent_containers/food/drinks/drinkingglass{
 	pixel_x = -8;
 	pixel_y = 10
-	},
-/obj/item/reagent_containers/food/drinks/bottle/vintage{
-	pixel_x = 4;
-	pixel_y = 8
 	},
 /turf/simulated/floor,
 /area/station/security/main)
@@ -20786,10 +20785,10 @@
 /turf/simulated/floor/plating,
 /area/station/maintenance/disposal)
 "bfI" = (
-/mob/living/critter/small_animal/cat/jones,
 /obj/cable{
 	icon_state = "4-8"
 	},
+/mob/living/critter/small_animal/cat/jones,
 /turf/simulated/floor/carpet{
 	dir = 6;
 	icon_state = "fred5"
@@ -32378,11 +32377,6 @@
 	},
 /turf/simulated/floor/white,
 /area/station/science/lab)
-"bVi" = (
-/obj/lattice,
-/obj/item/reagent_containers/food/drinks/bottle/vintage,
-/turf/space,
-/area/space)
 "bVj" = (
 /turf/simulated/wall/auto/reinforced/supernorn,
 /area/station/science/lobby)
@@ -44521,11 +44515,11 @@
 /turf/simulated/floor/plating,
 /area/station/medical/medbay)
 "dAz" = (
-/mob/living/critter/spider/nice{
-	name = "spider"
-	},
 /obj/cable{
 	icon_state = "1-2"
+	},
+/mob/living/critter/spider/nice{
+	name = "spider"
 	},
 /turf/simulated/floor/plating,
 /area/station/maintenance/east)
@@ -45116,8 +45110,8 @@
 /area/space)
 "dZb" = (
 /obj/railing/orange/reinforced,
-/mob/living/critter/small_animal/ranch_base/sheep/white/dolly/ai_controlled,
 /obj/chicken_nesting_box,
+/mob/living/critter/small_animal/ranch_base/sheep/white/dolly/ai_controlled,
 /turf/simulated/floor/grass/leafy,
 /area/station/ranch)
 "dZu" = (
@@ -50921,6 +50915,20 @@
 	},
 /turf/simulated/floor/plating/airless,
 /area/station/science/lab)
+"jkn" = (
+/obj/machinery/camera{
+	c_tag = "autotag";
+	dir = 4;
+	name = "autoname - SS13";
+	tag = ""
+	},
+/obj/landmark/start{
+	name = "Officer Paramedic"
+	},
+/turf/simulated/floor/red/side{
+	dir = 8
+	},
+/area/station/security/main)
 "jkD" = (
 /obj/machinery/phone/wall,
 /turf/simulated/wall/auto/supernorn,
@@ -57322,10 +57330,10 @@
 /turf/simulated/floor/plating,
 /area/station/maintenance/northwest)
 "puY" = (
-/mob/living/critter/small_animal/cockroach,
 /obj/cable{
 	icon_state = "1-4"
 	},
+/mob/living/critter/small_animal/cockroach,
 /turf/simulated/floor/grime,
 /area/station/storage/hydroponics)
 "pvF" = (
@@ -57722,13 +57730,13 @@
 /turf/simulated/floor/plating,
 /area/station/engine/coldloop)
 "pLh" = (
-/mob/living/critter/small_animal/cockroach,
 /obj/cable{
 	icon_state = "4-8"
 	},
 /obj/machinery/light/small{
 	dir = 1
 	},
+/mob/living/critter/small_animal/cockroach,
 /turf/simulated/floor/plating,
 /area/station/maintenance/southwest)
 "pLi" = (
@@ -60227,7 +60235,7 @@
 /area/station/solar/south)
 "rYO" = (
 /obj/displaycase{
-	displayed = new/obj/item/captaingun
+	displayed = new /obj/item/captaingun()
 	},
 /obj/window/reinforced{
 	dir = 2
@@ -96580,7 +96588,7 @@ aDT
 pGt
 aGA
 aHE
-aJc
+jkn
 aKg
 aLs
 aMF
@@ -96647,7 +96655,7 @@ bPE
 jXp
 bSx
 bJY
-bVi
+aap
 bHW
 bXz
 vqd

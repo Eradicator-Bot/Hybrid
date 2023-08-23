@@ -16970,6 +16970,9 @@
 	dir = 4;
 	icon_state = "pipe-s"
 	},
+/obj/landmark/start{
+	name = "Officer Paramedic"
+	},
 /turf/simulated/floor/black,
 /area/station/security/processing)
 "bmH" = (
@@ -28906,14 +28909,14 @@
 /turf/simulated/floor/red,
 /area/station/security/main)
 "gAZ" = (
-/mob/living/critter/small_animal/boogiebot{
-	desc = "Sealed away for our safety.";
-	name = "Illegal Boogie Bot"
-	},
 /obj/item/clothing/glasses/sunglasses,
 /obj/item/clothing/head/flatcap,
 /obj/item/clothing/shoes/swat,
 /obj/item/clothing/under/misc/syndicate,
+/mob/living/critter/small_animal/boogiebot{
+	desc = "Sealed away for our safety.";
+	name = "Illegal Boogie Bot"
+	},
 /turf/simulated/floor/plating,
 /area/station/maintenance/southwest)
 "gBm" = (
@@ -29540,9 +29543,9 @@
 /turf/simulated/floor/grime,
 /area/station/security/equipment)
 "hdb" = (
-/mob/living/critter/fermid,
 /obj/item/raw_material/cobryl,
 /obj/item/raw_material/pharosium,
+/mob/living/critter/fermid,
 /turf/simulated/floor/plating/airless/asteroid/lighted,
 /area/space)
 "heK" = (
@@ -31694,8 +31697,8 @@
 /turf/simulated/floor/carpet/grime,
 /area/station/crew_quarters/quarters)
 "iQu" = (
-/mob/living/critter/rockworm,
 /obj/item/raw_material/rock,
+/mob/living/critter/rockworm,
 /turf/simulated/floor/plating/airless/asteroid/lighted,
 /area/space)
 "iQU" = (
@@ -32337,18 +32340,18 @@
 /area/station/science/lobby)
 "jpd" = (
 /obj/storage/closet/coffin,
-/mob/living/critter/small_animal/cockroach,
-/mob/living/critter/small_animal/cockroach,
-/mob/living/critter/small_animal/cockroach,
-/mob/living/critter/small_animal/cockroach,
-/mob/living/critter/small_animal/cockroach,
-/mob/living/critter/small_animal/cockroach,
-/mob/living/critter/small_animal/cockroach,
-/mob/living/critter/small_animal/cockroach,
 /obj/landmark{
 	icon_state = "pest-start";
 	name = "peststart"
 	},
+/mob/living/critter/small_animal/cockroach,
+/mob/living/critter/small_animal/cockroach,
+/mob/living/critter/small_animal/cockroach,
+/mob/living/critter/small_animal/cockroach,
+/mob/living/critter/small_animal/cockroach,
+/mob/living/critter/small_animal/cockroach,
+/mob/living/critter/small_animal/cockroach,
+/mob/living/critter/small_animal/cockroach,
 /turf/simulated/floor/plating,
 /area/station/maintenance/west)
 "jpe" = (
@@ -32486,7 +32489,6 @@
 /turf/simulated/floor/white/side,
 /area/station/crew_quarters/locker)
 "jtN" = (
-/mob/living/critter/small_animal/mouse/remy,
 /obj/machinery/drainage,
 /obj/cable{
 	icon_state = "1-4"
@@ -32495,6 +32497,7 @@
 /obj/disposalpipe/segment{
 	dir = 1
 	},
+/mob/living/critter/small_animal/mouse/remy,
 /turf/simulated/floor/specialroom/cafeteria,
 /area/station/crew_quarters/kitchen)
 "jud" = (
@@ -37624,8 +37627,8 @@
 /turf/simulated/floor/red/side,
 /area/station/security/main)
 "ncG" = (
-/mob/living/critter/fermid,
 /obj/item/raw_material/syreline,
+/mob/living/critter/fermid,
 /turf/simulated/floor/plating/airless/asteroid/lighted,
 /area/space)
 "ndp" = (
@@ -41252,7 +41255,6 @@
 	icon_state = "1-2"
 	},
 /obj/disposalpipe/segment,
-/mob/living/critter/small_animal/cockroach,
 /obj/stool/chair/blue{
 	dir = 8
 	},
@@ -41264,6 +41266,7 @@
 	network = "SS13";
 	tag = ""
 	},
+/mob/living/critter/small_animal/cockroach,
 /turf/simulated/floor/sanitary/white,
 /area/station/maintenance/west)
 "pGy" = (
@@ -46593,9 +46596,9 @@
 	},
 /area/station/quartermaster/magnet)
 "txz" = (
+/obj/item/raw_material/syreline,
+/obj/item/raw_material/syreline,
 /mob/living/critter/fermid,
-/obj/item/raw_material/syreline,
-/obj/item/raw_material/syreline,
 /turf/simulated/floor/plating/airless/asteroid/lighted,
 /area/space)
 "txI" = (
@@ -49138,8 +49141,8 @@
 /turf/simulated/floor/plating,
 /area/station/maintenance/west)
 "vwC" = (
-/mob/living/critter/small_animal/seal,
 /obj/stool/bench,
+/mob/living/critter/small_animal/seal,
 /turf/simulated/floor/pool/no_animate,
 /area/station/crew_quarters/pool)
 "vwR" = (
@@ -50873,7 +50876,7 @@
 	pixel_y = 6
 	},
 /obj/displaycase{
-	displayed = new/obj/item/captaingun
+	displayed = new /obj/item/captaingun()
 	},
 /obj/blind_switch/area/west{
 	pixel_y = -6
@@ -50915,9 +50918,9 @@
 /turf/simulated/floor,
 /area/station/science/lobby)
 "wSZ" = (
-/mob/living/critter/rockworm,
 /obj/item/raw_material/gold,
 /obj/item/raw_material/rock,
+/mob/living/critter/rockworm,
 /turf/simulated/floor/plating/airless/asteroid/lighted,
 /area/space)
 "wTp" = (
@@ -51431,6 +51434,17 @@
 	},
 /turf/simulated/floor/white,
 /area/station/science/lab)
+"xlK" = (
+/obj/stool/chair/office/red{
+	dir = 8;
+	icon_state = "office_chair_red";
+	tag = "icon-office_chair_red (WEST)"
+	},
+/obj/landmark/start{
+	name = "Officer Paramedic"
+	},
+/turf/simulated/floor,
+/area/station/security/main)
 "xlR" = (
 /obj/machinery/light/emergency{
 	dir = 8;
@@ -51899,8 +51913,8 @@
 /turf/simulated/floor/plating,
 /area/station/hallway/secondary/exit)
 "xDK" = (
-/mob/living/critter/small_animal/seal,
 /obj/machinery/light/small/floor,
+/mob/living/critter/small_animal/seal,
 /turf/simulated/floor/pool/no_animate,
 /area/station/crew_quarters/pool)
 "xEd" = (
@@ -91029,7 +91043,7 @@ bdZ
 bjC
 bkv
 boP
-bmv
+xlK
 bmv
 boe
 boP

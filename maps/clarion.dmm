@@ -8692,7 +8692,6 @@
 /turf/simulated/floor/wood,
 /area/station/crew_quarters/bar)
 "azB" = (
-/mob/living/critter/small_animal/dog/george,
 /obj/disposalpipe/segment/food{
 	dir = 4
 	},
@@ -8700,6 +8699,7 @@
 	dir = 1;
 	pixel_y = 21
 	},
+/mob/living/critter/small_animal/dog/george,
 /turf/simulated/floor/wood,
 /area/station/crew_quarters/bar)
 "azF" = (
@@ -29333,7 +29333,7 @@
 	},
 /obj/table/wood/auto,
 /obj/displaycase{
-	displayed = new/obj/item/captaingun();
+	displayed = new /obj/item/captaingun();
 	pixel_y = 8
 	},
 /turf/simulated/floor/carpet/arcade,
@@ -33557,9 +33557,6 @@
 	icon_state = "1-8"
 	},
 /obj/table/reinforced/auto,
-/obj/item/reagent_containers/food/drinks/bottle/vintage{
-	pixel_y = 8
-	},
 /turf/simulated/floor/specialroom/chapel{
 	dir = 4
 	},
@@ -37218,10 +37215,10 @@
 /turf/simulated/floor,
 /area/station/science/lab)
 "pzN" = (
-/mob/living/silicon/hivebot/eyebot,
 /obj/machinery/light/small/sticky/cool/very{
 	dir = 1
 	},
+/mob/living/silicon/hivebot/eyebot,
 /turf/simulated/floor,
 /area/station/medical/robotics)
 "pzQ" = (
@@ -42843,6 +42840,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/station/science/chemistry)
+"unQ" = (
+/obj/disposalpipe/segment/brig,
+/obj/landmark/start{
+	name = "Officer Paramedic"
+	},
+/turf/simulated/floor,
+/area/station/security/main)
 "uoc" = (
 /obj/cable{
 	icon_state = "1-2"
@@ -44045,6 +44049,13 @@
 	dir = 5
 	},
 /area/station/medical/medbay/cloner)
+"vkX" = (
+/obj/disposalpipe/segment/mail,
+/obj/landmark/start{
+	name = "Officer Paramedic"
+	},
+/turf/simulated/floor,
+/area/station/security/main)
 "vmJ" = (
 /obj/cable{
 	icon_state = "1-8"
@@ -76732,7 +76743,7 @@ aVn
 aWE
 oky
 aZg
-aZg
+unQ
 huQ
 hLB
 iJs
@@ -77761,7 +77772,7 @@ uDI
 hcb
 aZk
 aVo
-aVo
+vkX
 aVo
 aVo
 fUm
