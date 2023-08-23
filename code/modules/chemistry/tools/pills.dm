@@ -245,6 +245,15 @@
 		..()
 		reagents.add_reagent("hairgrownium", 5)
 
+/obj/item/reagent_containers/pill/ketamine
+	name = "ketamine pill"
+	desc = "Used to induce unconsciousness."
+	icon_state = "pill8"
+
+	New()
+		..()
+		reagents.add_reagent("ketamine", 15)
+
 // drugs 420 all day
 
 /obj/item/reagent_containers/pill/methamphetamine
