@@ -18,7 +18,7 @@
 #define WEAPON_VENDOR_CATEGORY_AMMO "ammo"
 #define WEAPON_VENDOR_CATEGORY_UTILITY "utility"
 #define WEAPON_VENDOR_CATEGORY_ASSISTANT "assistant"
-#define WEAPON_VENDOR_CATEGORY_PARAMEDIC "paramedic" //shows up without a colored background in the UI!
+#define WEAPON_VENDOR_CATEGORY_PARAMEDIC "paramedic"
 #define WEAPON_VENDOR_CATEGORY_FISHING "fishing"
 
 /obj/submachine/weapon_vendor
