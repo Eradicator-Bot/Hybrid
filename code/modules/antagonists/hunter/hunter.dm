@@ -144,6 +144,9 @@
 										if ("Security Officer")
 											skull_value = 2
 											skull_desc = "A worthy trophy from a capable opponent."
+										if ("Officer Paramedic")
+											skull_value = 2
+											skull_desc = "A worthy trophy from a capable opponent."
 										if ("Detective")
 											skull_value = 2
 											skull_desc = "A worthy trophy from a capable opponent."

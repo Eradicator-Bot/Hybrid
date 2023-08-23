@@ -229,13 +229,13 @@
 						civilianjobs = list("Staff Assistant", "Clown")
 						maintainencejobs = null
 						researchjobs = null
-						securityjobs = list("Security Officer", "Security Assistant", "Detective")
+						securityjobs = list("Security Officer", "Security Assistant", "Detective", "Officer Paramedic")
 						commandjobs = null
 			else
 				civilianjobs = list("Staff Assistant", "Bartender", "Chef", "Botanist", "Rancher", "Chaplain", "Janitor", "Clown")
 				maintainencejobs = list("Engineer", "Miner", "Quartermaster")
 				researchjobs = list("Scientist", "Medical Doctor", "Geneticist", "Roboticist", "Pathologist")
-				securityjobs = list("Security Officer", "Security Assistant", "Detective")
+				securityjobs = list("Security Officer", "Security Assistant", "Detective", "Officer Paramedic")
 				commandjobs = list("Head of Personnel", "Chief Engineer", "Research Director", "Medical Director", "Captain")
 
 			body += "<br><br><u>Jobs</u>"

@@ -14,7 +14,7 @@ This file is the critter itself, and all the custom procs it needs in order to f
 	flags = TABLEPASS
 
 	var/sawflynames = list("A", "B", "C", "D", "E", "F", "V", "W", "X", "Y", "Z", "Alpha", "Beta", "Gamma", "Lambda", "Delta")
-	var/static/list/priority_target_jobs = list("Head of Security", "Security Officer", "Nanotrasen Security Consultant")
+	var/static/list/priority_target_jobs = list("Head of Security", "Security Officer", "Officer Paramedic", "Nanotrasen Security Consultant")
 	var/obj/item/old_grenade/sawfly/ourgrenade = null
 
 	speechverb_say = "whirrs"
