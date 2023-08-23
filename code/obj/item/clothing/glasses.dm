@@ -222,10 +222,7 @@ TYPEINFO(/obj/item/clothing/glasses/sunglasses/tanning)
 /obj/item/clothing/glasses/sunglasses/sechud/combihud
 	name = "\improper ProDoc Secgoggles"
 	desc = "An expensive joint venture bringing security and medical functions together in one device. Unfortunately, this bespoke design can't be upgraded."
-	icon_state = "sec"
-	color_r = 0.9
-	color_g = 0.9
-	color_b = 0.95 // tinted blue
+	icon_state = "prodocs-sec"
 
 	equipped(var/mob/user, var/slot)
 		..()
