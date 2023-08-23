@@ -17095,7 +17095,7 @@
 "hwd" = (
 /obj/table/wood/auto,
 /obj/displaycase{
-	displayed = new/obj/item/captaingun;
+	displayed = new /obj/item/captaingun();
 	pixel_y = 6
 	},
 /obj/machinery/power/apc/autoname_north,
@@ -19448,6 +19448,9 @@
 	},
 /obj/cable{
 	icon_state = "1-2"
+	},
+/obj/landmark/start{
+	name = "Officer Paramedic"
 	},
 /turf/simulated/floor/black,
 /area/station/security/brig)
@@ -23819,7 +23822,7 @@
 	},
 /obj/item/reagent_containers/food/drinks/coffee{
 	desc = "There's a little bit of slop around the edge. This has to have been lying around a while.";
-	initial_reagents = list("coffee"=15);
+	initial_reagents = list("coffee" = 15);
 	name = "old Robust Coffee";
 	pixel_x = 9;
 	pixel_y = 4
@@ -53892,6 +53895,9 @@
 	dir = 4;
 	tag = "icon-office_chair_red (EAST)"
 	},
+/obj/landmark/start{
+	name = "Officer Paramedic"
+	},
 /turf/simulated/floor/redblack/corner{
 	dir = 1
 	},
@@ -54108,7 +54114,7 @@
 	doants = 0;
 	dropped_item = /obj/item/reagent_containers/food/snacks/soup/superchili;
 	food_effects = list("food_warm","food_fireburp","food_sweaty","food_deep_burp");
-	initial_reagents = list("capsaicin"=50,"refried_beans"=40,"histamine"=30);
+	initial_reagents = list("capsaicin" = 50, "refried_beans" = 40, "histamine" = 30);
 	initial_volume = 120;
 	name = "forbidden chili";
 	pixel_x = -7;

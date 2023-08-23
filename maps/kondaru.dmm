@@ -196,9 +196,6 @@
 /turf/simulated/floor/airless/plating/catwalk{
 	dir = 4
 	},
-/turf/simulated/floor/airless/plating/catwalk{
-	dir = 4
-	},
 /area/station/hangar/main)
 "aaJ" = (
 /obj/grille/catwalk{
@@ -21160,7 +21157,7 @@
 "bCR" = (
 /obj/table/wood/auto,
 /obj/displaycase{
-	displayed = new/obj/item/captaingun;
+	displayed = new /obj/item/captaingun();
 	pixel_y = 6
 	},
 /turf/simulated/floor/carpet/arcade,
@@ -23293,6 +23290,9 @@
 /obj/stool/chair/office/red,
 /obj/disposalpipe/segment/brig{
 	dir = 8
+	},
+/obj/landmark/start{
+	name = "Officer Paramedic"
 	},
 /turf/simulated/floor/carpet/red/standard/edge/nw,
 /area/station/security/main)
@@ -50222,8 +50222,8 @@
 	},
 /area/station/mining/magnet)
 "qoi" = (
-/mob/living/critter/small_animal/cockroach,
 /obj/item/device/multitool,
+/mob/living/critter/small_animal/cockroach,
 /turf/simulated/floor/grime,
 /area/station/maintenance/southeast)
 "qpa" = (
@@ -54874,10 +54874,10 @@
 	icon_state = "1-2"
 	},
 /obj/decal/cleanable/dirt,
-/mob/living/critter/small_animal/mouse,
 /obj/cable{
 	icon_state = "1-8"
 	},
+/mob/living/critter/small_animal/mouse,
 /turf/simulated/floor/plating,
 /area/station/maintenance/inner/east)
 "udD" = (
@@ -58433,6 +58433,9 @@
 /obj/stool/chair/red,
 /obj/cable{
 	icon_state = "4-8"
+	},
+/obj/landmark/start{
+	name = "Officer Paramedic"
 	},
 /turf/simulated/floor,
 /area/station/security/secwing)

@@ -4839,10 +4839,6 @@
 /area/station/crew_quarters/bathroom{
 	name = "South Bathroom"
 	})
-"brv" = (
-/obj/item/reagent_containers/food/drinks/bottle/vintage,
-/turf/simulated/floor/plating/jen,
-/area/station/crew_quarters/arcade/dungeon)
 "brC" = (
 /obj/decal/cleanable/dirt/jen,
 /obj/grille/catwalk/jen,
@@ -9278,7 +9274,7 @@
 /area/station/crew_quarters/captain)
 "cEO" = (
 /obj/displaycase{
-	displayed = new/obj/item/captaingun
+	displayed = new /obj/item/captaingun()
 	},
 /obj/machinery/light/incandescent/greenish{
 	dir = 1
@@ -16219,13 +16215,13 @@
 /turf/simulated/floor/black,
 /area/station/crew_quarters/market)
 "eSe" = (
-/mob/living/critter/aquatic/fish/tang{
-	desc = "This one holds a beauty that goes beyond words...";
-	name = "Livvy"
-	},
 /obj/fluid_spawner{
 	amount = 200;
 	delay = 200
+	},
+/mob/living/critter/aquatic/fish/tang{
+	desc = "This one holds a beauty that goes beyond words...";
+	name = "Livvy"
 	},
 /turf/simulated/floor/sand,
 /area/station/engine/engineering/ce)
@@ -34023,6 +34019,9 @@
 /obj/cable{
 	icon_state = "1-4"
 	},
+/obj/landmark/start{
+	name = "Officer Paramedic"
+	},
 /turf/simulated/floor/redwhite,
 /area/station/security/quarters)
 "kqq" = (
@@ -44394,14 +44393,14 @@
 /turf/simulated/wall/auto/jen,
 /area/station/maintenance/outer/se)
 "nxR" = (
-/mob/living/critter/aquatic/fish/clown{
-	desc = "Sounded like a good name. Looks good on it too. Yep.";
-	name = "Oscar"
-	},
 /obj/sea_plant/anemone,
 /obj/fluid_spawner{
 	amount = 200;
 	delay = 200
+	},
+/mob/living/critter/aquatic/fish/clown{
+	desc = "Sounded like a good name. Looks good on it too. Yep.";
+	name = "Oscar"
 	},
 /turf/simulated/floor/sand,
 /area/station/engine/engineering/ce)
@@ -44631,11 +44630,11 @@
 	},
 /area/station/ranch)
 "nBz" = (
+/obj/machinery/door/window/westleft,
+/obj/mapping_helper/access/robotics,
 /mob/living/silicon/hivebot/eyebot{
 	dir = 8
 	},
-/obj/machinery/door/window/westleft,
-/obj/mapping_helper/access/robotics,
 /turf/simulated/floor/circuit,
 /area/station/medical/robotics)
 "nBX" = (
@@ -61071,6 +61070,9 @@
 	dir = 4
 	},
 /obj/stool/chair/office/red,
+/obj/landmark/start{
+	name = "Officer Paramedic"
+	},
 /turf/simulated/floor/black,
 /area/station/security/main)
 "sBM" = (
@@ -69000,13 +69002,13 @@
 /turf/simulated/floor/grey,
 /area/station/science/artifact)
 "vcF" = (
-/mob/living/silicon/hivebot/eyebot{
-	dir = 8
-	},
 /obj/machinery/door/window/westright,
 /obj/mapping_helper/access/robotics,
 /obj/machinery/light/incandescent/cool/very{
 	dir = 4
+	},
+/mob/living/silicon/hivebot/eyebot{
+	dir = 8
 	},
 /turf/simulated/floor/circuit,
 /area/station/medical/robotics)
@@ -73998,13 +74000,13 @@
 /turf/simulated/floor/circuit,
 /area/station/bridge)
 "wzB" = (
-/mob/living/critter/aquatic/fish/nautilus{
-	desc = "Or just 'Alph' for short.";
-	name = "Alphonzo"
-	},
 /obj/fluid_spawner{
 	amount = 200;
 	delay = 200
+	},
+/mob/living/critter/aquatic/fish/nautilus{
+	desc = "Or just 'Alph' for short.";
+	name = "Alphonzo"
 	},
 /turf/simulated/floor/sand,
 /area/station/engine/engineering/ce)
@@ -76059,11 +76061,11 @@
 /turf/simulated/wall/auto/supernorn,
 /area/ghostdrone_factory)
 "xcn" = (
-/mob/living/critter/small_animal/dog/george{
-	dir = 4
-	},
 /obj/disposalpipe/segment/transport,
 /obj/disposalpipe/segment/mail{
+	dir = 4
+	},
+/mob/living/critter/small_animal/dog/george{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/grime,
@@ -78133,15 +78135,15 @@
 /turf/simulated/floor/plating/jen,
 /area/station/hallway/secondary/exit)
 "xEJ" = (
-/mob/living/critter/aquatic/fish/clown{
-	desc = "The aura radiating off this one is about as subtle as a nuclear fallout.";
-	name = "Erin"
-	},
 /obj/sea_plant/anemone,
 /obj/machinery/light/small/floor/blueish,
 /obj/fluid_spawner{
 	amount = 200;
 	delay = 200
+	},
+/mob/living/critter/aquatic/fish/clown{
+	desc = "The aura radiating off this one is about as subtle as a nuclear fallout.";
+	name = "Erin"
 	},
 /turf/simulated/floor/sand,
 /area/station/engine/engineering/ce)
@@ -123646,7 +123648,7 @@ kyv
 jUW
 xyo
 cWr
-brv
+qyH
 xvR
 cWr
 jnB
