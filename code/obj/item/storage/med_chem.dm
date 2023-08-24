@@ -413,7 +413,7 @@
 
 /obj/item/storage/pill_bottle/antirad
 	name = "pill bottle (potassium iodide)"
-	desc = "Contains pills ued to treat radiation poisoning."
+	desc = "Contains pills used to treat radiation poisoning."
 	spawn_contents = list(/obj/item/reagent_containers/pill/antirad = 7)
 
 /obj/item/storage/pill_bottle/salbutamol
@@ -440,6 +440,11 @@
 	name = "pill bottle (mannitol)"
 	desc = "Contains pills used to treat... brain damage."
 	spawn_contents = list(/obj/item/reagent_containers/pill/mannitol = 7)
+
+/obj/item/storage/pill_bottle/ketamine
+	name = "pill bottle (ketamine)"
+	desc = "Contains pills used to induce unconsciousness. One is sufficient to put a patient under for approximately forty-five seconds."
+	spawn_contents = list(/obj/item/reagent_containers/pill/ketamine = 7)
 
 /* -------------------- Pill Bottles - Drugs -------------------- */
 

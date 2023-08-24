@@ -862,6 +862,14 @@
 	tasersmg
 		spawn_contents = list(/obj/item/gun/energy/tasersmg, /obj/item/baton, /obj/item/barrier)
 
+	medsec
+		name = "security paramedic's toolbelt"
+		desc = "Made to carry lifesaving equipment for the sake of cops and crooks alike."
+		icon_state = "medic_belt_nt"
+		item_state = "medic_belt_nt"
+		can_hold = list(/obj/item/robodefibrillator)
+		spawn_contents = list(/obj/item/scalpel, /obj/item/storage/pill_bottle/ketamine, /obj/item/reagent_containers/glass/bottle/morphine, /obj/item/reagent_containers/glass/bottle/epinephrine, /obj/item/reagent_containers/syringe, /obj/item/item_box/medical_patches/mini_styptic, /obj/item/bandage)
+
 //////////////////////////////
 // ~Nuke Ops Class Storage~ //
 //////////////////////////////

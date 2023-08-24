@@ -53,6 +53,11 @@
 		..()
 		JobEquipSpawned("Security Officer")
 
+/mob/living/carbon/human/normal/officerparamedic
+	New()
+		..()
+		JobEquipSpawned("Officer Paramedic")
+
 /mob/living/carbon/human/normal/securityassistant
 	New()
 		..()

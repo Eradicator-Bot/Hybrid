@@ -485,6 +485,28 @@ ABSTRACT_TYPE(/datum/job/security)
 			return
 		M.traitHolder.addTrait("training_security")
 
+	para_sec
+		name = "Officer Paramedic"
+		limit = 1
+		slot_suit = list(/obj/item/clothing/suit/bio_suit/paramedic/armored/para_troop/alt)
+		slot_head = list(/obj/item/clothing/head/basecap/red)
+		slot_ears = list(/obj/item/device/radio/headset/para_sec)
+		slot_eyes = list(/obj/item/clothing/glasses/sunglasses/sechud/combihud)
+		slot_glov = list(/obj/item/clothing/gloves/latex)
+		slot_poc2 = list(/obj/item/requisition_token/security/para_sec)
+
+		New()
+			..()
+			src.access = get_access("Officer Paramedic")
+			return
+
+		special_setup(var/mob/living/carbon/human/M)
+			..()
+			if (!M)
+				return
+			M.traitHolder.addTrait("training_medical")
+			M.traitHolder.addTrait("training_security")
+
 	assistant
 		name = "Security Assistant"
 		limit = 3

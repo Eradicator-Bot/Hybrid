@@ -301,6 +301,21 @@
 	icon_override = "det" //neat little magnifying glass sprite I made
 	icon_tooltip = "Detective"
 
+/obj/item/device/radio/headset/para_sec
+	name = "security paramedic's headset"
+	desc = "In addition to having access to the Security radio channel, this headset also transceives on the Medical radio frequency."
+	icon_state = "sec med headset"
+	secure_frequencies = list(
+		"g" = R_FREQ_SECURITY,
+		"m" = R_FREQ_MEDICAL,
+		)
+	secure_classes = list(
+		"g" = RADIOCL_SECURITY,
+		"m" = RADIOCL_MEDICAL,
+		)
+	icon_override = "sec" //custom icon at some point?
+	icon_tooltip = "Security Paramedic"
+
 /obj/item/device/radio/headset/engineer
 	name = "engineering headset"
 	desc = "They stopped spending extra money trying to make these heat-resistant a while ago."

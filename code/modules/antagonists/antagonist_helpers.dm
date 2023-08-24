@@ -70,6 +70,7 @@ proc/get_all_gangs()
 		"Nanotrasen Special Operative",
 		"Nanotrasen Security Consultant",
 		"Security Officer",
+		"Officer Paramedic",
 		"Security Assistant",
 		"Vice Officer",
 		"Part-time Vice Officer",

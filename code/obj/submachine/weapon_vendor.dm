@@ -18,6 +18,7 @@
 #define WEAPON_VENDOR_CATEGORY_AMMO "ammo"
 #define WEAPON_VENDOR_CATEGORY_UTILITY "utility"
 #define WEAPON_VENDOR_CATEGORY_ASSISTANT "assistant"
+#define WEAPON_VENDOR_CATEGORY_PARAMEDIC "paramedic"
 #define WEAPON_VENDOR_CATEGORY_FISHING "fishing"
 
 /obj/submachine/weapon_vendor
@@ -35,9 +36,9 @@
 	var/sound_token = 'sound/machines/capsulebuy.ogg'
 	var/sound_buy = 'sound/machines/spend.ogg'
 #ifdef BONUS_POINTS
-	var/list/credits = list(WEAPON_VENDOR_CATEGORY_SIDEARM = 999, WEAPON_VENDOR_CATEGORY_LOADOUT = 999, WEAPON_VENDOR_CATEGORY_UTILITY = 999, WEAPON_VENDOR_CATEGORY_AMMO = 999, WEAPON_VENDOR_CATEGORY_ASSISTANT = 999)
+	var/list/credits = list(WEAPON_VENDOR_CATEGORY_SIDEARM = 999, WEAPON_VENDOR_CATEGORY_LOADOUT = 999, WEAPON_VENDOR_CATEGORY_UTILITY = 999, WEAPON_VENDOR_CATEGORY_AMMO = 999, WEAPON_VENDOR_CATEGORY_ASSISTANT = 999, WEAPON_VENDOR_CATEGORY_PARAMEDIC = 999)
 #else
-	var/list/credits = list(WEAPON_VENDOR_CATEGORY_SIDEARM = 0, WEAPON_VENDOR_CATEGORY_LOADOUT = 0, WEAPON_VENDOR_CATEGORY_UTILITY = 0, WEAPON_VENDOR_CATEGORY_AMMO = 0, WEAPON_VENDOR_CATEGORY_ASSISTANT = 0)
+	var/list/credits = list(WEAPON_VENDOR_CATEGORY_SIDEARM = 0, WEAPON_VENDOR_CATEGORY_LOADOUT = 0, WEAPON_VENDOR_CATEGORY_UTILITY = 0, WEAPON_VENDOR_CATEGORY_AMMO = 0, WEAPON_VENDOR_CATEGORY_ASSISTANT = 0, WEAPON_VENDOR_CATEGORY_PARAMEDIC = 0)
 #endif
 	var/list/datum/materiel_stock = list()
 	var/token_accepted = /obj/item/requisition_token
@@ -131,6 +132,7 @@
 		materiel_stock += new/datum/materiel/ammo/medium
 		materiel_stock += new/datum/materiel/ammo/self_charging
 		materiel_stock += new/datum/materiel/assistant/basic
+		materiel_stock += new/datum/materiel/paramedic/basic
 
 	vended(var/atom/A)
 		..()
@@ -150,6 +152,8 @@
 			src.credits[WEAPON_VENDOR_CATEGORY_UTILITY]++
 		else if (istype(token, /obj/item/requisition_token/security/utility))
 			src.credits[WEAPON_VENDOR_CATEGORY_UTILITY]++
+		else if (istype(token, /obj/item/requisition_token/security/para_sec))
+			src.credits[WEAPON_VENDOR_CATEGORY_PARAMEDIC]++
 		else
 			src.credits[WEAPON_VENDOR_CATEGORY_LOADOUT]++
 			src.credits[WEAPON_VENDOR_CATEGORY_AMMO]++
@@ -297,6 +301,9 @@
 /datum/materiel/assistant
 	category = WEAPON_VENDOR_CATEGORY_ASSISTANT
 
+/datum/materiel/paramedic
+	category = WEAPON_VENDOR_CATEGORY_PARAMEDIC
+
 /datum/materiel/ammo
 	category = WEAPON_VENDOR_CATEGORY_AMMO
 
@@ -404,6 +411,11 @@
 	name = "Assistant"
 	path = /obj/item/storage/belt/security/assistant
 	description = "One belt containing a security barrier, a forensic scanner, and a security ticket writer."
+
+/datum/materiel/paramedic/basic
+	name = "Paramedic"
+	path = /obj/item/storage/belt/security/medsec
+	description = "One belt containing a scalpel, a bottle of ketamine pills, a vial of morphine, a vial of epinephrine, a syringe, a box of miniature brute healing patches, and a roll of bandages."
 
 //SYNDIE
 
@@ -634,6 +646,10 @@
 			desc = "An NT-provided token that entitles the owner to one additional utility purchase."
 			icon_state = "req-token-secass"
 
+		para_sec
+			desc = "An NT-provided token compatible with the Security Weapons Vendor. This one says <i>for medical officer use only</i>."
+			//todo: icon_state = "req-token-secpara"
+
 	pirate
 		name = "doubloon"
 		desc = "A finely stamped gold coin compatible with the Pirate Weapons Vendor."
@@ -643,4 +659,5 @@
 #undef WEAPON_VENDOR_CATEGORY_LOADOUT
 #undef WEAPON_VENDOR_CATEGORY_UTILITY
 #undef WEAPON_VENDOR_CATEGORY_ASSISTANT
+#undef WEAPON_VENDOR_CATEGORY_PARAMEDIC
 #undef WEAPON_VENDOR_CATEGORY_FISHING

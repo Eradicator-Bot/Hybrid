@@ -160,7 +160,7 @@ var/global/crew_creds = null
 		if (!has_head)
 			what_role = "Head of Security"
 		else
-			what_role = pick("Security Officer", "Security Assistant")
+			what_role = pick("Security Officer", "Security Assistant", "Officer Paramedic")
 		security += src.generate_fake_crew_member(
 			real_name=src.fake_carbon_name(),
 			role=what_role,

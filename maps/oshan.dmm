@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aaa" = (
-/mob/living/critter/spider/nice,
 /obj/machinery/light/incandescent/blueish,
+/mob/living/critter/spider/nice,
 /turf/simulated/floor/plating/random,
 /area/station/maintenance/south)
 "aab" = (
@@ -1223,6 +1223,9 @@
 /obj/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
+	},
+/obj/landmark/start{
+	name = "Security Officer"
 	},
 /turf/simulated/floor/red,
 /area/station/security/main)
@@ -15313,8 +15316,8 @@
 /turf/space/fluid,
 /area/space)
 "aTu" = (
-/mob/living/critter/aquatic/shark,
 /obj/decal/woodclutter,
+/mob/living/critter/aquatic/shark,
 /turf/space/fluid,
 /area/space)
 "aTv" = (
@@ -19919,11 +19922,11 @@
 /turf/simulated/floor/specialroom/bar,
 /area/station/crew_quarters/bar)
 "blx" = (
-/mob/living/critter/small_animal/dog/george,
 /obj/disposalpipe/segment,
 /obj/cable{
 	icon_state = "1-2"
 	},
+/mob/living/critter/small_animal/dog/george,
 /turf/simulated/floor/darkblue{
 	dir = 10
 	},
@@ -23745,13 +23748,13 @@
 	},
 /area/station/bridge/hos)
 "bxa" = (
-/mob/living/critter/small_animal/dog/blair,
 /obj/cable{
 	icon_state = "1-10"
 	},
 /obj/cable{
 	icon_state = "1-8"
 	},
+/mob/living/critter/small_animal/dog/blair,
 /turf/simulated/floor/carpet{
 	dir = 1;
 	icon_state = "fgreen1"
@@ -29831,9 +29834,6 @@
 /area/station/crew_quarters/courtroom)
 "bPH" = (
 /obj/table/wood/auto,
-/obj/item/reagent_containers/food/drinks/bottle/vintage{
-	pixel_y = 8
-	},
 /obj/item/reagent_containers/food/drinks/drinkingglass{
 	pixel_x = -7;
 	pixel_y = 4
@@ -30932,7 +30932,7 @@
 	dir = 4
 	},
 /obj/landmark/start{
-	name = "Security Officer"
+	name = "Officer Paramedic"
 	},
 /turf/simulated/floor,
 /area/station/security/processing)
@@ -30993,6 +30993,9 @@
 	},
 /obj/disposalpipe/segment/mail{
 	dir = 4
+	},
+/obj/landmark/start{
+	name = "Security Officer"
 	},
 /turf/simulated/floor/red,
 /area/station/security/main)
@@ -32328,7 +32331,7 @@
 	},
 /obj/stool/chair/office/red,
 /obj/landmark/start{
-	name = "Security Officer"
+	name = "Officer Paramedic"
 	},
 /turf/simulated/floor/red,
 /area/station/security/main)
@@ -41904,8 +41907,8 @@
 /turf/simulated/floor/plating/random,
 /area/station/maintenance/south)
 "mAR" = (
-/mob/living/critter/small_animal/cockroach,
 /obj/decal/cleanable/dirt,
+/mob/living/critter/small_animal/cockroach,
 /turf/simulated/floor/plating/random,
 /area/station/storage/warehouse)
 "mBk" = (
@@ -43072,7 +43075,7 @@
 "oVS" = (
 /obj/table/wood/round/auto,
 /obj/displaycase{
-	displayed = new/obj/item/captaingun;
+	displayed = new /obj/item/captaingun();
 	pixel_y = 8
 	},
 /turf/simulated/floor/carpet/purple/standard/narrow/T_south,
@@ -46855,11 +46858,11 @@
 /turf/simulated/floor/plating/random,
 /area/station/maintenance/inner/central)
 "xAp" = (
-/mob/living/critter/small_animal/mouse/remy,
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
 	},
+/mob/living/critter/small_animal/mouse/remy,
 /turf/simulated/floor/white,
 /area/station/crew_quarters/kitchen)
 "xBw" = (

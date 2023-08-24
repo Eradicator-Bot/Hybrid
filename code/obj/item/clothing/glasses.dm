@@ -219,6 +219,23 @@ TYPEINFO(/obj/item/clothing/glasses/sunglasses/tanning)
 			get_image_group(CLIENT_IMAGE_GROUP_ARREST_ICONS).remove_mob(user)
 		..()
 
+/obj/item/clothing/glasses/sunglasses/sechud/combihud
+	name = "\improper ProDoc Secgoggles"
+	desc = "An expensive joint venture bringing security and medical functions together in one device. Unfortunately, this bespoke design can't be upgraded."
+	icon_state = "prodocs-sec"
+
+	equipped(var/mob/user, var/slot)
+		..()
+		if (slot == SLOT_GLASSES)
+			get_image_group(CLIENT_IMAGE_GROUP_ARREST_ICONS).add_mob(user)
+			get_image_group(CLIENT_IMAGE_GROUP_HEALTH_MON_ICONS).add_mob(user)
+
+	unequipped(var/mob/user)
+		if(src.equipped_in_slot == SLOT_GLASSES)
+			get_image_group(CLIENT_IMAGE_GROUP_ARREST_ICONS).remove_mob(user)
+			get_image_group(CLIENT_IMAGE_GROUP_HEALTH_MON_ICONS).remove_mob(user)
+		..()
+
 /obj/item/clothing/glasses/sunglasses/sechud/superhero
 	name = "superhero mask"
 	desc = "Perfect for hiding your identity while fighting crime."
