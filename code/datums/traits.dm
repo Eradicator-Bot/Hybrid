@@ -365,10 +365,8 @@
 
 					//give them an eyepatch
 					var/eyepatch = /obj/item/clothing/glasses/eyepatch
-					if (H.back?.storage && H.equip_if_possible(eyepatch, slot_in_backpack))
-
-					src.block_eye = "L"
-					src.icon_state = "eyepatch-L"
+					if (H.back?.storage)
+						H.back.storage += new eyepatch(src)
 
 	//to do: figure out some way of readding the eye when the trait is removed
 
@@ -384,6 +382,9 @@
 						var/eyeball = H.organHolder.left_eye
 						H.drop_organ("left_eye")
 						qdel(eyeball)
+
+						//src.block_eye = "L"
+						//src.icon_state = "eyepatch-L"
 
 /datum/trait/blind
 	name = "Blind"
