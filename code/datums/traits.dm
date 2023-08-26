@@ -295,7 +295,7 @@
 	desc = "Spawn with permanent deafness and an auditory headset."
 	id = "deaf"
 	icon_state = "deaf"
-	category = list("vision") //moved because of the header
+	category = list("body")
 	points = 1
 
 	onAdd(var/mob/owner)
@@ -357,9 +357,20 @@
 			if(ishuman(owner))
 				var/mob/living/carbon/human/H = owner
 				if(H.organHolder != null)
-					H.drop_organ("right eye")
+					var/eyeball = H.organHolder.right_eye
+					H.drop_organ("right_eye")
+					qdel(eyeball)
 
-	/*one_eyed_l
+	onRemove(var/mob/owner)
+		if(ishuman(owner))
+			var/mob/living/carbon/human/H = owner
+			if(H.organHolder != null)
+				if (H.organHolder.right_eye != null) //check to see if the eye has been replaced
+					return
+				else
+					H.receive_organ(/obj/item/organ/eye, "right_eye", 0, 1)
+
+	one_eyed_l
 		name = "One Eyed (Left Eye Missing)"
 		id = "one_eyed_l"
 
@@ -368,10 +379,18 @@
 				if(ishuman(owner))
 					var/mob/living/carbon/human/H = owner
 					if(H.organHolder != null)
-						var/eyeball = H.organHolder.get_organ("left eye")
-						H.drop_organ(eyeball)
-						H.update_body()
-						qdel(eyeball)*/
+						var/eyeball = H.organHolder.left_eye
+						H.drop_organ("left_eye")
+						qdel(eyeball)
+
+		onRemove(var/mob/owner)
+			if(ishuman(owner))
+				var/mob/living/carbon/human/H = owner
+				if(H.organHolder != null)
+					if (H.organHolder.left_eye != null)
+						return
+					else
+						H.receive_organ(/obj/item/organ/eye, "left_eye", 0, 1)
 
 /datum/trait/blind
 	name = "Blind"
