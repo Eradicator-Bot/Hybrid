@@ -268,6 +268,21 @@
 					H.limbs.r_arm.holder = H
 					H.update_body()
 
+/datum/trait/one_armed //relocated from trinkets category
+	name = "One Armed Spaceman"
+	desc = "You only have one arm. But which one? It's a mystery... or is it a thriller?"
+	id = "onearmed"
+	icon_state = "placeholder"
+	points = 0
+
+/datum/trait/nolegs
+	name = "Stumped"
+	desc = "Because of a freak accident involving a piano, a forklift, and lots of vodka, both of your legs had to be amputated. Fortunately, NT has kindly supplied you with a wheelchair out of the goodness of their heart. (due to regulations)"
+	id = "nolegs"
+	icon_state = "placeholder"
+	category = list("body")
+	points = 0
+
 /datum/trait/explolimbs
 	name = "Adamantium Skeleton"
 	desc = "Halves the chance that an explosion will blow off your limbs."
@@ -280,7 +295,7 @@
 	desc = "Spawn with permanent deafness and an auditory headset."
 	id = "deaf"
 	icon_state = "deaf"
-	category = list("body")
+	category = list("vision") //moved because of the header
 	points = 1
 
 	onAdd(var/mob/owner)
@@ -291,14 +306,6 @@
 	onLife(var/mob/owner) //Just to be super safe.
 		if(!owner.ear_disability)
 			owner.bioHolder.AddEffect("deaf", 0, 0, 0, 1)
-
-/datum/trait/nolegs
-	name = "Stumped"
-	desc = "Because of a freak accident involving a piano, a forklift, and lots of vodka, both of your legs had to be amputated. Fortunately, NT has kindly supplied you with a wheelchair out of the goodness of their heart. (due to regulations)"
-	id = "nolegs"
-	icon_state = "placeholder"
-	category = list("body")
-	points = 0
 
 // VISION/SENSES - Green Border
 
@@ -335,6 +342,39 @@
 	onLife(var/mob/owner) //Just to be super safe.
 		if(owner.bioHolder && !owner.bioHolder.HasEffect("bad_eyesight"))
 			owner.bioHolder.AddEffect("bad_eyesight", 0, 0, 0, 1)
+
+/datum/trait/one_eyed
+	name = "One Eyed (Right Eye Missing)"
+	desc = "No, you aren't a cyclops, but you are down one eye."
+	id = "one_eyed"
+	icon_state =  "placeholder"
+	category = list("vision")
+	points = 1
+	afterlife_blacklisted = TRUE
+
+	onAdd(var/mob/owner)
+		SPAWN(4 SECONDS)
+			if(ishuman(owner))
+				var/mob/living/carbon/human/H = owner
+				if(H.organHolder != null)
+					var/eyeball = H.organHolder.get_organ("right eye")
+					H.drop_organ(eyeball)
+					H.update_body()
+					qdel(eyeball)
+
+	/*one_eyed_l
+		name = "One Eyed (Left Eye Missing)"
+		id = "one_eyed_l"
+
+		onAdd(var/mob/owner)
+			SPAWN(4 SECONDS)
+				if(ishuman(owner))
+					var/mob/living/carbon/human/H = owner
+					if(H.organHolder != null)
+						var/eyeball = H.organHolder.get_organ("left eye")
+						H.drop_organ(eyeball)
+						H.update_body()
+						qdel(eyeball)*/
 
 /datum/trait/blind
 	name = "Blind"
@@ -437,15 +477,6 @@
 	icon_state = "placeholder"
 	points = 0
 	category = list("trinkets", "nopug")
-
-/datum/trait/one_armed
-	name = "One Armed Spaceman"
-	desc = "You only have one arm. But which one? It's a mystery... or is it a thriller?"
-	id = "onearmed"
-	icon_state = "placeholder"
-	points = 0
-
-
 
 // Skill - White Border
 
