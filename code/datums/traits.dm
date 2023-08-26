@@ -363,14 +363,14 @@
 					H.drop_organ("right_eye")
 					qdel(eyeball)
 
-	onRemove(var/mob/owner)
-		if(ishuman(owner))
-			var/mob/living/carbon/human/H = owner
-			if(H.organHolder != null)
-				if (H.organHolder.right_eye != null) //check to see if the eye has been replaced
-					return
-				else
-					H.receive_organ(/obj/item/organ/eye/right, "right_eye", 2, 0)
+					//give them an eyepatch
+					var/eyepatch = /obj/item/clothing/glasses/eyepatch
+					if (H.back?.storage && H.equip_if_possible(eyepatch, slot_in_backpack))
+
+					src.block_eye = "L"
+					src.icon_state = "eyepatch-L"
+
+	//to do: figure out some way of readding the eye when the trait is removed
 
 	one_eyed_l
 		name = "One Eyed (Left Eye Missing)"
@@ -384,15 +384,6 @@
 						var/eyeball = H.organHolder.left_eye
 						H.drop_organ("left_eye")
 						qdel(eyeball)
-
-		onRemove(var/mob/owner)
-			if(ishuman(owner))
-				var/mob/living/carbon/human/H = owner
-				if(H.organHolder != null)
-					if (H.organHolder.left_eye != null)
-						return
-					else
-						H.receive_organ(/obj/item/organ/eye/left, "left_eye", 2, 0)
 
 /datum/trait/blind
 	name = "Blind"
