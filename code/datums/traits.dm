@@ -368,7 +368,7 @@
 				if (H.organHolder.right_eye != null) //check to see if the eye has been replaced
 					return
 				else
-					H.receive_organ(/obj/item/organ/eye, "right_eye", 0, 1)
+					H.receive_organ(/obj/item/organ/eye/right, "right_eye", 0, 1)
 
 	one_eyed_l
 		name = "One Eyed (Left Eye Missing)"
@@ -390,7 +390,7 @@
 					if (H.organHolder.left_eye != null)
 						return
 					else
-						H.receive_organ(/obj/item/organ/eye, "left_eye", 0, 1)
+						H.receive_organ(/obj/item/organ/eye/left, "left_eye", 0, 1)
 
 /datum/trait/blind
 	name = "Blind"
