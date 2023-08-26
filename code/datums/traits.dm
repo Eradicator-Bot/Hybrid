@@ -347,7 +347,7 @@
 
 /datum/trait/one_eyed
 	name = "One Eyed (Right Eye Missing)"
-	desc = "No, you aren't a cyclops, but you are down one eye."
+	desc = "No, you aren't a cyclops, but you are down one eye. On the brightside, you start with an eyepatch."
 	id = "one_eyed"
 	icon_state =  "placeholder"
 	category = list("vision")
@@ -391,11 +391,8 @@
 						qdel(eyeball)
 
 						var/eyepatch = /obj/item/clothing/glasses/eyepatch
-						/*eyepatch.block_eye = "L"
-						eyepatch.icon_state = "eyepatch-L"*/
-						if (H.equip_new_if_possible(eyepatch, H.slot_glasses))
-							return
-						else if (H.equip_new_if_possible(eyepatch, H.slot_l_hand))
+						//attempted to get this to correctly equip to the eye slot, flipping itself in the process, but couldn't get it working
+						if (H.equip_new_if_possible(eyepatch, H.slot_l_hand))
 							return
 						else if (H.equip_new_if_possible(eyepatch, H.slot_r_hand))
 							return
