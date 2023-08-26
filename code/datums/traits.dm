@@ -283,6 +283,8 @@
 	category = list("body")
 	points = 0
 
+	//the limb removal component of this is currently in code/procs/jobprocs.dm; same for one armed
+
 /datum/trait/explolimbs
 	name = "Adamantium Skeleton"
 	desc = "Halves the chance that an explosion will blow off your limbs."
@@ -368,7 +370,7 @@
 				if (H.organHolder.right_eye != null) //check to see if the eye has been replaced
 					return
 				else
-					H.receive_organ(/obj/item/organ/eye/right, "right_eye", 0, 1)
+					H.receive_organ(/obj/item/organ/eye/right, "right_eye", 2, 0)
 
 	one_eyed_l
 		name = "One Eyed (Left Eye Missing)"
@@ -390,7 +392,7 @@
 					if (H.organHolder.left_eye != null)
 						return
 					else
-						H.receive_organ(/obj/item/organ/eye/left, "left_eye", 0, 1)
+						H.receive_organ(/obj/item/organ/eye/left, "left_eye", 2, 0)
 
 /datum/trait/blind
 	name = "Blind"
