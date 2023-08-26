@@ -357,10 +357,7 @@
 			if(ishuman(owner))
 				var/mob/living/carbon/human/H = owner
 				if(H.organHolder != null)
-					var/eyeball = H.organHolder.get_organ("right eye")
-					H.drop_organ(eyeball)
-					H.update_body()
-					qdel(eyeball)
+					H.drop_organ("right eye")
 
 	/*one_eyed_l
 		name = "One Eyed (Left Eye Missing)"
