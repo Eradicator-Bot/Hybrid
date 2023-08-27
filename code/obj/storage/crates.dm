@@ -226,14 +226,14 @@
 	desc = "A crate containing supplies for Robotics and an extra set of cyborg parts."
 	spawn_contents = list(/obj/item/sheet/steel/fullstack = 3,
 	/obj/item/sheet/glass/fullstack,
-	/obj/item/ai_interface,
-	/obj/item/parts/robot_parts/robot_frame,
+	/*/obj/item/ai_interface,
+	/obj/item/parts/robot_parts/robot_frame,*/
 	/obj/item/parts/robot_parts/leg/left/standard,
 	/obj/item/parts/robot_parts/leg/right/standard,
 	/obj/item/parts/robot_parts/arm/left/standard,
 	/obj/item/parts/robot_parts/arm/right/standard,
-	/obj/item/parts/robot_parts/chest/standard,
-	/obj/item/parts/robot_parts/head/standard,
+	/obj/item/parts/robot_parts/chest/standard, //retained here for crafting
+	/obj/item/parts/robot_parts/head/standard, // "
 	/obj/item/cell/supercell = 4,
 	/obj/item/cable_coil = 2)
 
@@ -370,8 +370,8 @@
 		if(..()) //obj/storage/proc/make_my_stuff returns 1 only the first time it's run, so this is how we only spawn stuff once. It's a bit of a weird system
 			new /obj/item/cable_coil/cut(src)
 
-			var/obj/item/parts/robot_parts/robot_frame/B1 = new /obj/item/parts/robot_parts/robot_frame(src)
-			B1.pixel_y = 3
+			/*var/obj/item/parts/robot_parts/robot_frame/B1 = new /obj/item/parts/robot_parts/robot_frame(src)
+			B1.pixel_y = 3*/
 
 			new /obj/item/parts/robot_parts/head/standard(src) //Was B2 but no offsets needed
 

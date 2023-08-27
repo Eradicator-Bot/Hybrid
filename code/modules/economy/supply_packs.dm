@@ -888,7 +888,7 @@ ABSTRACT_TYPE(/datum/supply_packs)
 	containername = "Restricted Medicine Shipment (Cardlocked \[Medical])"
 	access = access_medical_director
 
-/datum/supply_packs/cyborg
+/*/datum/supply_packs/cyborg
 	name = "Cyborg Component Crate"
 	desc = "Build your very own walking science nightmare! (Brain not included.)"
 	category = "Medical Department"
@@ -902,7 +902,7 @@ ABSTRACT_TYPE(/datum/supply_packs)
 					/obj/item/cable_coil)
 	cost = 4500
 	containertype = /obj/storage/crate/wooden
-	containername = "Junior Medical Science Set: For Ages 7+"
+	containername = "Junior Medical Science Set: For Ages 7+"*/
 
 /datum/supply_packs/rcd
 	name = "Rapid-construction-device Replacement"
@@ -1804,16 +1804,14 @@ ABSTRACT_TYPE(/datum/supply_packs/complex)
 
 /datum/supply_packs/complex/robotics_kit
 	name = "Robotics kit"
-	desc = "1x Staple Gun, 1x Scalpel, 1x Circular Saw, Frames: 1x Robotics Fabricator, 1x Operating Table, 1x Module Rewriter, 1x Recharge station"
+	desc = "1x Staple Gun, 1x Scalpel, 1x Circular Saw, Frames: 1x Robotics Fabricator, 1x Operating Table"
 	category = "Medical Department"
 	contains = list(/obj/item/staple_gun,
 					/obj/item/scalpel,
-					/obj/item/circular_saw,
-					/obj/item/circuitboard/robot_module_rewriter)
+					/obj/item/circular_saw)
 	frames = list(/obj/machinery/manufacturer/robotics,
-					/obj/machinery/optable,
-					/obj/machinery/recharge_station)
-	cost = 20000
+					/obj/machinery/optable)
+	cost = 15000
 	containertype = /obj/storage/crate
 	containername = "Robotics kit"
 

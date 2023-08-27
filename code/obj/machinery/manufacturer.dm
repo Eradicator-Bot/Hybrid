@@ -2349,34 +2349,34 @@ TYPEINFO(/obj/machinery/manufacturer)
 		/obj/item/material_piece/copper,
 		/obj/item/material_piece/glass)
 
-	available = list(/datum/manufacture/robo_frame,
+	available = list(/*/datum/manufacture/robo_frame,
 		/datum/manufacture/full_cyborg_standard,
 		/datum/manufacture/full_cyborg_light,
 		/datum/manufacture/robo_head,
-		/datum/manufacture/robo_chest,
+		/datum/manufacture/robo_chest,*/
 		/datum/manufacture/robo_arm_r,
 		/datum/manufacture/robo_arm_l,
 		/datum/manufacture/robo_leg_r,
 		/datum/manufacture/robo_leg_l,
-		/datum/manufacture/robo_head_light,
-		/datum/manufacture/robo_chest_light,
+		/*/datum/manufacture/robo_head_light,
+		/datum/manufacture/robo_chest_light,*/
 		/datum/manufacture/robo_arm_r_light,
 		/datum/manufacture/robo_arm_l_light,
 		/datum/manufacture/robo_leg_r_light,
 		/datum/manufacture/robo_leg_l_light,
 		/datum/manufacture/robo_leg_treads,
-		/datum/manufacture/robo_head_screen,
-		/datum/manufacture/robo_module,
+		/*/datum/manufacture/robo_head_screen,
+		/datum/manufacture/robo_module,*/
 		/datum/manufacture/cyberheart,
 		/datum/manufacture/cybereye,
 		/datum/manufacture/cybereye_meson,
 		/datum/manufacture/cybereye_spectro,
 		/datum/manufacture/cybereye_prodoc,
 		/datum/manufacture/cybereye_camera,
-		/datum/manufacture/shell_frame,
+		/*/datum/manufacture/shell_frame,
 		/datum/manufacture/ai_interface,
 		/datum/manufacture/latejoin_brain,
-		/datum/manufacture/shell_cell,
+		/datum/manufacture/shell_cell,*/
 		/datum/manufacture/cable,
 		/datum/manufacture/powercell,
 		/datum/manufacture/powercellE,
@@ -2401,7 +2401,7 @@ TYPEINFO(/obj/machinery/manufacturer)
 		/datum/manufacture/digbot,
 		/datum/manufacture/visor,
 		/datum/manufacture/deafhs,
-		/datum/manufacture/robup_jetpack,
+		/*/datum/manufacture/robup_jetpack,
 		/datum/manufacture/robup_healthgoggles,
 		/datum/manufacture/robup_sechudgoggles,
 		/datum/manufacture/robup_spectro,
@@ -2414,10 +2414,10 @@ TYPEINFO(/obj/machinery/manufacturer)
 		/datum/manufacture/robup_fireshield,
 		/datum/manufacture/robup_teleport,
 		/datum/manufacture/robup_visualizer,
-		/*/datum/manufacture/robup_thermal,*/
+		/datum/manufacture/robup_thermal,
 		/datum/manufacture/robup_efficiency,
 		/datum/manufacture/robup_repair,
-		/datum/manufacture/implant_robotalk,
+		/datum/manufacture/implant_robotalk,*/
 		/datum/manufacture/sbradio,
 		/datum/manufacture/implant_health,
 		/datum/manufacture/implant_antirot,
@@ -2433,17 +2433,17 @@ TYPEINFO(/obj/machinery/manufacturer)
 		/datum/manufacture/rods2,
 		/datum/manufacture/metal,
 		/datum/manufacture/glass,
-		/datum/manufacture/asimov_laws,
-		/datum/manufacture/borg_linker)
+		/*/datum/manufacture/asimov_laws,
+		/datum/manufacture/borg_linker*/)
 
 	hidden = list(/datum/manufacture/flash,
 		/datum/manufacture/cybereye_thermal,
 		/datum/manufacture/cybereye_laser,
 		/datum/manufacture/cyberbutt,
-		/datum/manufacture/robup_expand,
+		/*/datum/manufacture/robup_expand,*/
 		/datum/manufacture/cardboard_ai,
-		/datum/manufacture/corporate_laws,
-		/datum/manufacture/robocop_laws)
+		/*/datum/manufacture/corporate_laws,
+		/datum/manufacture/robocop_laws*/)
 
 /obj/machinery/manufacturer/medical
 	name = "medical fabricator"
