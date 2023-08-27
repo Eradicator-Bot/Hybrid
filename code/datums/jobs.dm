@@ -1033,7 +1033,7 @@ ABSTRACT_TYPE(/datum/job/civilian)
 
 // AI and Cyborgs
 
-/datum/job/civilian/AI
+/*/datum/job/civilian/AI
 	name = "AI"
 	linkcolor = "#999999"
 	limit = 1
@@ -1070,7 +1070,7 @@ ABSTRACT_TYPE(/datum/job/civilian)
 		..()
 		if (!M)
 			return
-		return M.Robotize_MK2()
+		return M.Robotize_MK2()*/
 
 // Special Cases
 
