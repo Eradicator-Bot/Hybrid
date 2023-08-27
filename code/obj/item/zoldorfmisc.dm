@@ -70,7 +70,7 @@
 	var/can_move = 1
 
 	var/list/cards = list("Unbalance","Freeze","Security","Discount Dan","Admin","Syndicate Operative","Robusted","Quartermaster"\
-	,"Cluwne","Clown","Armory","Bee","Head of Personnel","Traitor","Roboticist","Crusher","Geneticist","Scientist","Staff Assistant"\
+	,"Cluwne","Clown","Armory","Bee","Head of Personnel","Traitor",/*"Roboticist",*/"Crusher","Geneticist","Scientist","Staff Assistant"\
 	,"Captain","Wizard","Rajaijah")
 
 	var/list/usedcards = list()
@@ -288,8 +288,8 @@
 				else
 					boutput(user,"<span class='alert'>Hmmm...The card seems to have shorted out.</span>")
 				qdel(thing2)
-			if("Roboticist")
-				user.contract_disease(/datum/ailment/disease/robotic_transformation,null,null,1)
+			/*if("Roboticist")
+				user.contract_disease(/datum/ailment/disease/robotic_transformation,null,null,1)*/
 			if("Crusher")
 				deck.inuse = 0
 				user.u_equip(deck)
