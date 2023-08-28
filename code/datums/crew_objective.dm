@@ -775,7 +775,7 @@ ABSTRACT_TYPE(/datum/objective/crew/medicaldirector)
 				if(C.records.len > 4)
 					check_result = TRUE
 		return check_result
-/datum/objective/crew/medicaldirector/cyborgs
+/*/datum/objective/crew/medicaldirector/cyborgs
 	explanation_text = "Ensure that there are at least three living cyborgs at the end of the round."
 	medal_name = "Progenitor"
 	var/static/check_result = null
@@ -787,7 +787,7 @@ ABSTRACT_TYPE(/datum/objective/crew/medicaldirector)
 				borgcount ++
 			if(borgcount > 2)
 				check_result = TRUE
-		return check_result
+		return check_result*/
 /datum/objective/crew/medicaldirector/medibots
 	explanation_text = "Have at least five medibots on the station level at the end of the round."
 	medal_name = "Silent Running"
@@ -865,7 +865,7 @@ ABSTRACT_TYPE(/datum/objective/crew/geneticist)
 		return check_result
 
 ABSTRACT_TYPE(/datum/objective/crew/roboticist)
-/datum/objective/crew/roboticist/cyborgs
+/*/datum/objective/crew/roboticist/cyborgs
 	explanation_text = "Ensure that there are at least three living cyborgs at the end of the round."
 	medal_name = "Progenitor"
 	var/static/check_result = null
@@ -877,7 +877,7 @@ ABSTRACT_TYPE(/datum/objective/crew/roboticist)
 				borgcount ++
 			if(borgcount > 2)
 				check_result = TRUE
-		return check_result
+		return check_result*/
 
 /datum/objective/crew/roboticist/medibots
 	explanation_text = "Have at least five medibots on the station level at the end of the round."
