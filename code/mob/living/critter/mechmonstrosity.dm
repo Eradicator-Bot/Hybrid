@@ -149,7 +149,7 @@
 
 	New()
 		..()
-		abilityHolder.addAbility(/datum/targetable/critter/inject)
+		//abilityHolder.addAbility(/datum/targetable/critter/inject) See below
 		abilityHolder.addAbility(/datum/targetable/critter/scarylook)
 		abilityHolder.addAbility(/datum/targetable/critter/mechanimate)
 		abilityHolder.addAbility(/datum/targetable/critter/dissect)
