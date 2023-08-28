@@ -116,7 +116,7 @@
 				if ("martian")
 					O.leakChem = pick("space_fungus","blood","vomit","gvomit","ammonia","meat_slurry","grease","butter","synthflesh","bread","compost","ants","spiders")
 				if ("ancient")
-					O.leakChem = pick("voltagen","ash","cleaner", "oil", "thermite", "acid", "fuel", "nanites", "radium", "mercury")
+					O.leakChem = pick("voltagen","ash","cleaner", "oil", "thermite", "acid", "fuel", /*"nanites",*/ "radium", "mercury")
 				if ("wizard")
 					O.leakChem = pick("glitter","sakuride","grassgro","sparkles","glowing_fliptonium", "mugwort")
 				if ("precursor")

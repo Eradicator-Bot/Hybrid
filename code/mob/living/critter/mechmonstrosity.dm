@@ -149,7 +149,7 @@
 
 	New()
 		..()
-		abilityHolder.addAbility(/datum/targetable/critter/inject)
+		//abilityHolder.addAbility(/datum/targetable/critter/inject) See below
 		abilityHolder.addAbility(/datum/targetable/critter/scarylook)
 		abilityHolder.addAbility(/datum/targetable/critter/mechanimate)
 		abilityHolder.addAbility(/datum/targetable/critter/dissect)
@@ -161,7 +161,8 @@
 				if (src.emote_check(voluntary, 50))
 					playsound(src, 'sound/voice/mechmonstrositylaugh.ogg' , 80, 1, channel=VOLUME_CHANNEL_EMOTE)
 
-/datum/targetable/critter/inject
+//Corrupted nanites currently crash the game when a player transforms, disabling them until the issue is resolved
+/*/datum/targetable/critter/inject
 	name = "Inject Corrupted Nanites"
 	desc = "Transfer corrupted nanites into your target."
 	icon_state = "inject"
@@ -195,7 +196,7 @@
 			holder.owner.visible_message("<span class='alert'><b>[holder.owner] injects [target]!</b></span>")
 		else
 			holder.owner.show_message("<span class='notice'>You stealthily inject [target].</span>")
-		MT.reagents.add_reagent(venom_id, inject_amount)
+		MT.reagents.add_reagent(venom_id, inject_amount)*/
 
 
 /datum/targetable/critter/scarylook

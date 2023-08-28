@@ -1,4 +1,4 @@
-/obj/artifact/borgifier
+/*/obj/artifact/borgifier
 	name = "artifact human2cyborg converter"
 	associated_datum = /datum/artifact/borgifier
 
@@ -115,4 +115,4 @@
 			return
 		for (var/mob/M in O.contents)
 			O.visible_message("<span class='alert'><b>[O]</b> grumbles before releasing [M]!</span>")
-			M.set_loc(get_turf(O))
+			M.set_loc(get_turf(O))*/
