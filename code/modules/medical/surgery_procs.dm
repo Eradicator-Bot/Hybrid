@@ -154,7 +154,7 @@ var/global/list/chestitem_whitelist = list(/obj/item/gnomechompski, /obj/item/gn
 			screw_up_prob -= 5
 
 	if (surgeon.traitHolder.hasTrait("training_medical"))
-		screw_up_prob = clamp(screw_up_prob, 0, 100) // if they're a doctor they can have no chance to mess up
+		screw_up_prob = clamp(screw_up_prob, (10 - clamp((get_level(surgeon.ckey, "Medical Doctor") * 2), 0, 10)), 100) // If they're a doctor, their minimum chance of messing up is relative to their job xp
 	else
 		screw_up_prob = clamp(screw_up_prob, 15, 100) // otherwise there'll always be a slight chance
 
