@@ -357,8 +357,8 @@
 			return list(access_janitor, access_maint_tunnels, access_medical, access_morgue, access_crematorium)
 		if("Botanist", "Apiculturist")
 			return list(access_maint_tunnels, access_hydro)
-		if("Rancher")
-			return list(access_maint_tunnels, access_hydro, access_ranch)
+		/*if("Rancher")
+			return list(access_maint_tunnels, access_hydro, access_ranch)*/
 		if("Chef", "Sous-Chef")
 			return list(access_kitchen)
 		if("Bartender")

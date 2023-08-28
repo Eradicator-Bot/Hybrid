@@ -232,7 +232,7 @@
 						securityjobs = list("Security Officer", "Security Assistant", "Detective", "Officer Paramedic")
 						commandjobs = null
 			else
-				civilianjobs = list("Staff Assistant", "Bartender", "Chef", "Botanist", "Rancher", "Chaplain", "Janitor", "Clown")
+				civilianjobs = list("Staff Assistant", "Bartender", "Chef", "Botanist", /*"Rancher",*/ "Chaplain", "Janitor", "Clown")
 				maintainencejobs = list("Engineer", "Miner", "Quartermaster")
 				researchjobs = list("Scientist", "Medical Doctor", "Geneticist", "Roboticist", "Pathologist")
 				securityjobs = list("Security Officer", "Security Assistant", "Detective", "Officer Paramedic")

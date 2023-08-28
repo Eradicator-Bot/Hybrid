@@ -93,10 +93,10 @@
 		..()
 		JobEquipSpawned("Botanist")
 
-/mob/living/carbon/human/normal/rancher
+/*/mob/living/carbon/human/normal/rancher
 	New()
 		..()
-		JobEquipSpawned("Rancher")
+		JobEquipSpawned("Rancher")*/
 
 /mob/living/carbon/human/normal/janitor
 	New()
