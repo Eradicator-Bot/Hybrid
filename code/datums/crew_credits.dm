@@ -213,7 +213,7 @@ var/global/crew_creds = null
 		if (!has_head)
 			what_role = "Head of Personnel"
 		else
-			what_role = pick("Communications Officer","Botanist","Apiculturist","Rancher","Bartender","Chef","Sous-Chef","Waiter","Clown","Mime","Chaplain","Mailman","Musician","Janitor","Coach","Boxer","Barber","Staff Assistant")
+			what_role = pick("Communications Officer","Botanist","Apiculturist",/*"Rancher",*/"Bartender","Chef","Sous-Chef","Waiter","Clown","Mime","Chaplain","Mailman","Musician","Janitor","Coach","Boxer","Barber","Staff Assistant")
 		civilian += src.generate_fake_crew_member(
 			real_name=src.fake_carbon_name(),
 			role=what_role,

@@ -918,7 +918,7 @@ ABSTRACT_TYPE(/datum/job/civilian)
 		src.access = get_access("Botanist")
 		return
 
-/datum/job/civilian/rancher
+/*/datum/job/civilian/rancher
 	name = "Rancher"
 	limit = 1
 	wages = PAY_TRADESMAN
@@ -935,7 +935,7 @@ ABSTRACT_TYPE(/datum/job/civilian)
 	New()
 		..()
 		src.access = get_access("Rancher")
-		return
+		return*/
 
 /datum/job/civilian/janitor
 	name = "Janitor"
