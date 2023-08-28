@@ -933,6 +933,45 @@ ABSTRACT_TYPE(/datum/objective/crew/medicaldoctor)
 		else
 			return 1
 
+ABSTRACT_TYPE(/datum/objective/crew/officerparamedic) //identical objectives to medical doctors for now
+/datum/objective/crew/officerparamedic/cryo
+	explanation_text = "Ensure that both cryo cells are online and below 225K at the end of the round."
+	medal_name = "It's frickin' freezing in here, Mr. Bigglesworth"
+	var/static/check_result = null
+	check_completion()
+		if(isnull(check_result))
+			var/cryocount = 0
+			check_result = FALSE
+			for(var/obj/machinery/atmospherics/unary/cryo_cell/C in by_cat[TR_CAT_ATMOS_MACHINES])
+				if(C.on && C.air_contents.temperature < 225)
+					cryocount ++
+			if(cryocount > 1)
+				check_result = TRUE
+		return check_result
+/datum/objective/crew/officerparamedic/healself
+	explanation_text = "Make sure you are completely unhurt when the escape shuttle leaves."
+	medal_name = "Smooth Operator"
+	check_completion()
+		if(owner.current && !isdead(owner.current) && (owner.current.get_brute_damage() + owner.current.get_oxygen_deprivation() + owner.current.get_burn_damage() + owner.current.get_toxin_damage()) == 0)
+			return 1
+		else
+			return 0
+/datum/objective/crew/officerparamedic/heal
+	var/patchesused = 0
+	explanation_text = "Use at least 10 medical patches on injured people."
+	medal_name = "Patchwork"
+	check_completion()
+		if(patchesused > 9) return 1
+		else return 0
+/datum/objective/crew/officerparamedic/oath
+	explanation_text = "Do not commit a violent act all round - punching someone, hitting them with a weapon or shooting them with a laser will all cause you to fail."
+	medal_name = "Primum non nocere"
+	check_completion()
+		if (owner?.violated_hippocratic_oath)
+			return 0
+		else
+			return 1
+
 ABSTRACT_TYPE(/datum/objective/crew/staffassistant)
 /datum/objective/crew/staffassistant/butt
 	explanation_text = "Have your butt removed somehow by the end of the round."
