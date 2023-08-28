@@ -1063,7 +1063,7 @@ datum
 			name = "Beepskybräu Security Schwarzbier"
 			id = "beepskybeer"
 			result = "beepskybeer"
-			required_reagents = list("beer" = 1, "nanites" = 1)
+			required_reagents = list("beer" = 1, "nanites" = 1) //unmixable until the nanites get swapped out or updated
 			result_amount = 2
 			mix_phrase = "The beer is filled briefly by thousands of brilliant, tiny electrical arcs before growing calm and dark."
 			mix_sound = 'sound/effects/sparks6.ogg'

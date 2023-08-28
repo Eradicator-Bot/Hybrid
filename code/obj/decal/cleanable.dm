@@ -1306,8 +1306,8 @@ var/list/blood_decal_violent_icon_states = list("floor1", "floor2", "floor3", "f
 						M.name = "meatal"
 						M.desc = "Raw, twitching silicon based muscle. Eww."
 						M.icon_state = "cybermeat"
-						if (prob(25))
-							M.reagents.add_reagent("nanites", 2)
+						/*if (prob(25))
+							M.reagents.add_reagent("nanites", 2)*/
 					src.sampled = 1
 			else
 				return ..()

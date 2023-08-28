@@ -365,7 +365,7 @@
 	heal_amt = 1
 	food_color = "#C8C8C8"
 	brew_result = "beepskybeer"
-	initial_reagents = list("cholesterol"=5,"nanites"=20)
+	initial_reagents = list("cholesterol"=5/*,"nanites"=20*/)
 
 /obj/item/reagent_containers/food/snacks/burger/cheeseborger
 	name = "cheeseborger"
@@ -375,7 +375,7 @@
 	heal_amt = 1
 	food_color = "#C8C8C8"
 	brew_result = "beepskybeer"
-	initial_reagents = list("cholesterol"=5,"nanites"=20)
+	initial_reagents = list("cholesterol"=5/*,"nanites"=20*/)
 
 /obj/item/reagent_containers/food/snacks/burger/synthburger
 	name = "synthburger"
