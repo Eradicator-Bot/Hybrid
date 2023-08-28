@@ -53,8 +53,8 @@ var/global/list/persistent_bank_purchaseables =	list(\
 	new /datum/bank_purchaseable/dancin_shoes,\
 	new /datum/bank_purchaseable/frog,\
 
-	new /datum/bank_purchaseable/alohamaton,\
-	new /datum/bank_purchaseable/ai_hat)
+	/*new /datum/bank_purchaseable/alohamaton,\
+	new /datum/bank_purchaseable/ai_hat*/)
 
 
 /datum/bank_purchaseable
