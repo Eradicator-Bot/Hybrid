@@ -8739,7 +8739,6 @@
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "aKU" = (
-/obj/item/mousetrap/armed/cleaner,
 /obj/item/tile/steel,
 /obj/machinery/door/airlock/pyro/classic{
 	dir = 4
