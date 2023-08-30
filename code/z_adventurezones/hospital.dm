@@ -146,8 +146,8 @@
 	density = 1
 	anchored = ANCHORED
 	var/targeting = 0
-	var/mob_caught = list()
-	var/times_caught = list()
+	var/static/mob_caught = list()
+	var/static/times_caught = list()
 
 	New()
 		..()
