@@ -16123,14 +16123,6 @@
 /obj/item/plank,
 /turf/unsimulated/floor/wood,
 /area/marsoutpost)
-"bic" = (
-/obj/stool/bed,
-/obj/item/clothing/suit/bedsheet{
-	bcolor = "yellow";
-	icon_state = "bedsheet-yellow"
-	},
-/turf/unsimulated/floor/wood,
-/area/marsoutpost)
 "bid" = (
 /obj/stool/bed,
 /obj/decal/cleanable/dirt,
@@ -70610,7 +70602,7 @@
 	},
 /obj/securearea{
 	desc = "A warning sign which reads 'Radiation hazard'";
-	icon_state = "rad";
+	icon_state = "wall_warning3";
 	layer = 2.5;
 	name = "RADIATION HAZARD";
 	pixel_y = 30;
@@ -135919,7 +135911,7 @@ bgL
 aTs
 bhp
 aTs
-bic
+bhp
 aTs
 biP
 bjy
