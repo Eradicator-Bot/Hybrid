@@ -163,16 +163,18 @@
 			boutput(target, "<span><B>no no no no no no no no no no no no non&#9617;NO&#9617;NNnNNO</B></span>")
 
 			var/i = length(mob_caught)
+			boutput(target, "<span><B>[i]</B></span>")
+			boutput(target, "<span><B>[target.real_name]</B></span>")
 			if (i > 0)
 				for (i, i > 0, i--)
-					if (mob_caught[i-1] == target.real_name)
-						times_caught[i-1]++
-						if (times_caught[i-1] == 2)
+					if (mob_caught[i] == target.real_name)
+						times_caught[i]++
+						if (times_caught[i] == 2)
 							boutput(target, "<span><B>A voice rings inside your head: \"Leave this place...\"</B></span>")
 							if (ishuman(target))
 								var/mob/living/carbon/human/H = target
-								var/valid_limbs = H.get_valid_target_zones()
-								switch (valid_limbs)
+								var/valid_limbs = H?.get_valid_target_zones()
+								switch (pick(valid_limbs))
 									if("r_arm")
 										H.limbs.r_arm.sever()
 										src.visible_message("<span class='alert'><B>[src] tears off [target]'s right arm!</B></span>")
@@ -192,9 +194,6 @@
 							maniac_active &= ~2
 							qdel(src)
 							return
-					else
-						mob_caught += target.real_name
-						times_caught += 1
 			else
 				mob_caught += target.real_name
 				times_caught += 1
