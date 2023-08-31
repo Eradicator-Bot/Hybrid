@@ -7950,6 +7950,13 @@
 	},
 /turf/unsimulated/floor/grey/blackgrime,
 /area/moon/museum)
+"aGG" = (
+/obj/decal/fakeobjects/safehouse/cloning_console{
+	desc = "A pilot's console. A thick layer of dust has accumulated beneath the screen.";
+	name = "navigation console"
+	},
+/turf/unsimulated/floor/red,
+/area/marsoutpost/duststorm)
 "aGV" = (
 /turf/unsimulated/floor/caution/west,
 /area/hospital/underground)
@@ -36283,6 +36290,12 @@
 	dir = 1
 	},
 /area/owlery/lab)
+"czf" = (
+/obj/decal/fakeobjects/shuttleengine{
+	icon_state = "alt_heater-L"
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost/duststorm)
 "czg" = (
 /obj/item/casing/shotgun/blue,
 /obj/decal/cleanable/blood/tracks{
@@ -61267,6 +61280,17 @@
 	icon_state = "shore-11"
 	},
 /area/titlescreen)
+"fJK" = (
+/obj/machinery/door/poddoor/blast{
+	density = 0;
+	dir = 4;
+	icon = 'icons/obj/doors/sovblastdoor.dmi';
+	icon_state = "bdoorleft0";
+	opacity = 0;
+	spookTypes = null
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost/duststorm)
 "fKc" = (
 /obj/indestructible/shuttle_corner{
 	dir = 1;
@@ -62533,6 +62557,12 @@
 /area/centcom/offices{
 	icon_state = "blue"
 	})
+"hfx" = (
+/obj/decal/fakeobjects/shuttleengine{
+	icon_state = "alt_heater-R"
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost/duststorm)
 "hfB" = (
 /obj/table/reinforced/auto,
 /obj/item/currency/spacecash/million,
@@ -63159,6 +63189,13 @@
 /obj/item/sponge,
 /turf/unsimulated/floor/plating,
 /area/moon/museum)
+"hKn" = (
+/obj/indestructible/shuttle_corner{
+	dir = 1;
+	icon_state = "wall3_trans"
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "hKE" = (
 /turf/unsimulated/wall/auto/lead/gray,
 /area/sim/tdome/tdome1)
@@ -63500,14 +63537,6 @@
 /obj/mapping_helper/access/owlmaint,
 /turf/unsimulated/floor/plating,
 /area/owlery/staffhall)
-"ikD" = (
-/obj/decal/stripe_caution,
-/obj/item/scpgnome,
-/obj/decal/cleanable/blood/tracks{
-	icon_state = "drip5"
-	},
-/turf/unsimulated/floor/red,
-/area/marsoutpost/duststorm)
 "ikE" = (
 /obj/decal/fakeobjects{
 	anchored = 1;
@@ -64373,6 +64402,10 @@
 /area/centcom/offices{
 	icon_state = "blue"
 	})
+"iYH" = (
+/obj/mapping_helper/wingrille_spawn/auto/crystal,
+/turf/unsimulated/floor/black,
+/area/marsoutpost)
 "iZw" = (
 /obj/ladder{
 	id = "marksoffice";
@@ -65296,6 +65329,17 @@
 "jWq" = (
 /turf/unsimulated/wall/auto/lead/gray,
 /area/crypt/sigma/crew)
+"jWS" = (
+/obj/decal/poster/wallsign/stencil/right/zero{
+	pixel_x = -1;
+	pixel_y = 37
+	},
+/obj/decal/poster/wallsign/stencil/right/nine{
+	pixel_y = 37;
+	pixel_x = 10
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost/duststorm)
 "jWW" = (
 /turf/unsimulated/wall/auto/adventure/meat,
 /area/meat_derelict/entry)
@@ -65731,12 +65775,6 @@
 	},
 /turf/unsimulated/floor/red,
 /area/syndicate_station/assault_pod)
-"kzR" = (
-/obj/decal/fakeobjects/shuttleengine{
-	icon_state = "alt_heater-L"
-	},
-/turf/unsimulated/floor/setpieces/martian,
-/area/marsoutpost/duststorm)
 "kAr" = (
 /turf/unsimulated/floor/grey/side{
 	dir = 4
@@ -65920,17 +65958,6 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/moon/museum)
-"kIk" = (
-/obj/machinery/door/poddoor/blast{
-	density = 0;
-	dir = 4;
-	icon = 'icons/obj/doors/sovblastdoor.dmi';
-	icon_state = "bdoorright0";
-	opacity = 0
-	},
-/obj/decoration/syndcorpse10,
-/turf/unsimulated/floor/setpieces/martian,
-/area/marsoutpost/duststorm)
 "kIH" = (
 /obj/decal/fakeobjects/pipe{
 	dir = 9;
@@ -66472,6 +66499,9 @@
 /obj/item/matchbook,
 /turf/unsimulated/floor/carpet/red/decal/outercross,
 /area/syndicate_station/battlecruiser)
+"lir" = (
+/turf/unsimulated/wall/auto/adventure/shuttle/dark,
+/area/marsoutpost)
 "liz" = (
 /obj/table/auto,
 /obj/item/gun/kinetic/flaregun,
@@ -66787,12 +66817,6 @@
 	},
 /turf/unsimulated/wall/auto/lead/blue,
 /area/crater/biodome/research)
-"lzX" = (
-/obj/stool/chair/comfy/shuttle/red{
-	dir = 1
-	},
-/turf/unsimulated/floor/red,
-/area/marsoutpost/duststorm)
 "lAJ" = (
 /obj/table/reinforced/auto,
 /obj/item/currency/spacecash/million,
@@ -66995,6 +67019,12 @@
 	name = "assembly line door"
 	},
 /area/drone/office)
+"lLj" = (
+/obj/stool/chair/comfy/shuttle/red{
+	dir = 4
+	},
+/turf/unsimulated/floor/red,
+/area/marsoutpost/duststorm)
 "lLo" = (
 /turf/unsimulated/floor/shuttle{
 	icon_state = "floor2"
@@ -67509,10 +67539,6 @@
 	},
 /turf/unsimulated/floor/marble/black,
 /area/centcom/gallery)
-"mow" = (
-/mob/living/critter/robotic/sawfly/ai_controlled,
-/turf/unsimulated/floor/setpieces/martian,
-/area/marsoutpost/duststorm)
 "moP" = (
 /turf/unsimulated/wall/trench/side,
 /area/afterlife/bar/sanctuary)
@@ -67677,13 +67703,6 @@
 /area/centcom/offices{
 	icon_state = "blue"
 	})
-"mxN" = (
-/obj/decal/fakeobjects/safehouse/cloning_console{
-	desc = "A pilot's console. A thick layer of dust has accumulated beneath the screen.";
-	name = "navigation console"
-	},
-/turf/unsimulated/floor/red,
-/area/marsoutpost/duststorm)
 "myh" = (
 /turf/unsimulated/floor/plating,
 /area/meat_derelict/main)
@@ -67753,6 +67772,10 @@
 	},
 /turf/space,
 /area/wizard_station_space)
+"mCx" = (
+/obj/decoration/syndcorpse5,
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost/duststorm)
 "mCY" = (
 /obj/grille/catwalk{
 	dir = 6;
@@ -68435,10 +68458,6 @@
 	},
 /turf/unsimulated/floor/martian,
 /area/crunch)
-"noE" = (
-/obj/mapping_helper/wingrille_spawn/auto/crystal,
-/turf/unsimulated/floor/black,
-/area/marsoutpost)
 "noM" = (
 /obj/machinery/door/airlock/pyro/command/centcom{
 	dir = 4
@@ -68464,6 +68483,10 @@
 "npu" = (
 /turf/unsimulated/wall/auto/lead/gray,
 /area/sim/racing_track)
+"nqD" = (
+/mob/living/critter/robotic/sawfly/ai_controlled,
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost/duststorm)
 "nqE" = (
 /obj/overlay{
 	density = 1;
@@ -68527,6 +68550,29 @@
 /obj/item/reagent_containers/food/snacks/plant/peach,
 /turf/unsimulated/floor/carpet/grime,
 /area/centcom/offices/flaborized)
+"nsC" = (
+/obj/machinery/door/poddoor/blast{
+	density = 0;
+	dir = 4;
+	icon = 'icons/obj/doors/sovblastdoor.dmi';
+	icon_state = "bdoormid0";
+	opacity = 0;
+	spookTypes = null
+	},
+/obj/decal/cleanable/blood/tracks{
+	icon_state = "drip5"
+	},
+/obj/decal/cleanable/blood/tracks{
+	icon_state = "u_guilty"
+	},
+/obj/decal/cleanable/blood/tracks{
+	icon_state = "u_ketchup"
+	},
+/obj/decal/cleanable/blood/tracks{
+	dir = 9
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost/duststorm)
 "nte" = (
 /turf/unsimulated/floor/setpieces/Azarak/cavefloor/floor2{
 	desc = "It's over Enakai";
@@ -69060,6 +69106,14 @@
 	icon_state = "floor2"
 	},
 /area/shuttle/merchant_shuttle/diner_centcom)
+"nQU" = (
+/obj/machinery/access_button{
+	pixel_x = -5;
+	pixel_y = 26
+	},
+/mob/living/critter/robotic/sawfly/ai_controlled,
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost/duststorm)
 "nRf" = (
 /obj/item/paper{
 	burn_possible = 1;
@@ -69341,13 +69395,6 @@
 "obN" = (
 /turf/unsimulated/floor/wood/two,
 /area/centcom/offices/leah)
-"ocP" = (
-/obj/indestructible/shuttle_corner{
-	dir = 8;
-	icon_state = "wall3_trans"
-	},
-/turf/unsimulated/floor/setpieces/martian,
-/area/marsoutpost)
 "odb" = (
 /obj/stool/chair/comfy/purple{
 	dir = 4;
@@ -70614,6 +70661,24 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/hospital/underground)
+"pqc" = (
+/obj/machinery/door/poddoor/blast{
+	density = 0;
+	dir = 4;
+	icon = 'icons/obj/doors/sovblastdoor.dmi';
+	icon_state = "bdoorright0";
+	opacity = 0;
+	spookTypes = null
+	},
+/obj/decoration/syndcorpse10,
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost/duststorm)
+"prU" = (
+/obj/stool/chair/comfy/shuttle/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/red,
+/area/marsoutpost/duststorm)
 "psc" = (
 /obj/stool/chair/comfy/shuttle/red,
 /obj/machinery/light{
@@ -70914,17 +70979,6 @@
 "pHY" = (
 /turf/unsimulated/wall/auto/adventure/shuttle/dark,
 /area/drone)
-"pIz" = (
-/turf/unsimulated/wall/auto/adventure/shuttle/dark,
-/area/marsoutpost)
-"pIN" = (
-/obj/machinery/access_button{
-	pixel_x = -5;
-	pixel_y = 26
-	},
-/mob/living/critter/robotic/sawfly/ai_controlled,
-/turf/unsimulated/floor/setpieces/martian,
-/area/marsoutpost/duststorm)
 "pJw" = (
 /obj/machinery/shuttle/engine/heater{
 	icon_state = "alt_heater"
@@ -70995,6 +71049,10 @@
 	},
 /turf/unsimulated/grass,
 /area/owlery/owllock)
+"pMa" = (
+/obj/decal/nav_danger,
+/turf/unsimulated/floor/red,
+/area/marsoutpost/duststorm)
 "pMk" = (
 /obj/storage/closet/emergency,
 /turf/unsimulated/floor/plating,
@@ -71710,16 +71768,6 @@
 /obj/mapping_helper/access/owlcommand,
 /turf/unsimulated/floor/black,
 /area/owlery/lab)
-"qED" = (
-/obj/machinery/door/poddoor/blast{
-	density = 0;
-	dir = 4;
-	icon = 'icons/obj/doors/sovblastdoor.dmi';
-	icon_state = "bdoorleft0";
-	opacity = 0
-	},
-/turf/unsimulated/floor/setpieces/martian,
-/area/marsoutpost/duststorm)
 "qEK" = (
 /obj/decal/tile_edge/stripe/extra_big{
 	dir = 6
@@ -72737,6 +72785,9 @@
 	},
 /turf/unsimulated/outdoors/grass,
 /area/void_diner)
+"rBc" = (
+/turf/unsimulated/floor/red,
+/area/marsoutpost/duststorm)
 "rBq" = (
 /obj/machinery/door/unpowered/wood{
 	dir = 4;
@@ -74166,6 +74217,13 @@
 /obj/decal/stripe_delivery,
 /turf/unsimulated/floor/plating,
 /area/crater/biodome/research)
+"tnz" = (
+/obj/indestructible/shuttle_corner{
+	dir = 8;
+	icon_state = "wall3_trans"
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "tnB" = (
 /turf/unsimulated/floor/dream/beach{
 	icon_state = "shore-24"
@@ -74376,9 +74434,6 @@
 /obj/effects/precipitation/rain/dense/tile,
 /turf/unsimulated/floor/wood/six,
 /area/centcom/offices/aloe)
-"tzt" = (
-/turf/unsimulated/floor/red,
-/area/marsoutpost/duststorm)
 "tAi" = (
 /obj/machinery/door/airlock/pyro/external,
 /turf/unsimulated/floor/shuttle{
@@ -74449,6 +74504,14 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/sim/gunsim/lobby)
+"tHv" = (
+/obj/decal/stripe_caution,
+/obj/item/scpgnome,
+/obj/decal/cleanable/blood/tracks{
+	icon_state = "drip5"
+	},
+/turf/unsimulated/floor/red,
+/area/marsoutpost/duststorm)
 "tHH" = (
 /obj/storage/crate/wooden{
 	icon_state = "woodencrate6";
@@ -74882,13 +74945,6 @@
 /obj/decal/stripe_delivery,
 /turf/unsimulated/floor/plating,
 /area/crypt/sigma/mainhall)
-"ugD" = (
-/obj/indestructible/shuttle_corner{
-	dir = 1;
-	icon_state = "wall3_trans"
-	},
-/turf/unsimulated/floor/setpieces/martian,
-/area/marsoutpost)
 "ugE" = (
 /obj/decal/fakeobjects{
 	anchored = 1;
@@ -75348,10 +75404,6 @@
 	},
 /turf/space,
 /area/syndicate_station_space)
-"uHM" = (
-/obj/decal/nav_danger,
-/turf/unsimulated/floor/red,
-/area/marsoutpost/duststorm)
 "uIc" = (
 /obj/machinery/light/incandescent/warm,
 /obj/table/endtable_classic{
@@ -76540,12 +76592,6 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/meat_derelict/main)
-"vYq" = (
-/obj/decal/fakeobjects/shuttleengine{
-	icon_state = "alt_heater-R"
-	},
-/turf/unsimulated/floor/setpieces/martian,
-/area/marsoutpost/duststorm)
 "vYK" = (
 /obj/machinery/vending/medical_public,
 /turf/unsimulated/floor{
@@ -76862,6 +76908,10 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/hospital/samostrel)
+"wnG" = (
+/obj/decal/fakeobjects/shuttlethruster,
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost/duststorm)
 "woz" = (
 /obj/table/reinforced/auto,
 /obj/item/raw_material/shard/glass,
@@ -77063,10 +77113,6 @@
 /obj/mapping_helper/wingrille_spawn/auto,
 /turf/unsimulated/floor/plating,
 /area/meat_derelict/entry)
-"wwX" = (
-/obj/decal/fakeobjects/shuttlethruster,
-/turf/unsimulated/floor/setpieces/martian,
-/area/marsoutpost/duststorm)
 "wxy" = (
 /obj/crevice{
 	pixel_x = -28
@@ -77128,10 +77174,6 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/moon/museum/west)
-"wyT" = (
-/obj/decoration/syndcorpse5,
-/turf/unsimulated/floor/setpieces/martian,
-/area/marsoutpost/duststorm)
 "wAT" = (
 /obj/decal/stage_edge{
 	layer = 2.8;
@@ -77928,17 +77970,6 @@
 	dir = 6
 	},
 /area/centcom/offices/cogwerks)
-"xqF" = (
-/obj/decal/poster/wallsign/stencil/right/zero{
-	pixel_x = -1;
-	pixel_y = 37
-	},
-/obj/decal/poster/wallsign/stencil/right/nine{
-	pixel_y = 37;
-	pixel_x = 10
-	},
-/turf/unsimulated/floor/setpieces/martian,
-/area/marsoutpost/duststorm)
 "xqJ" = (
 /obj/machinery/door/unpowered/wood{
 	dir = 4;
@@ -78497,28 +78528,6 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/centcom/lobby)
-"xSL" = (
-/obj/machinery/door/poddoor/blast{
-	density = 0;
-	dir = 4;
-	icon = 'icons/obj/doors/sovblastdoor.dmi';
-	icon_state = "bdoormid0";
-	opacity = 0
-	},
-/obj/decal/cleanable/blood/tracks{
-	icon_state = "drip5"
-	},
-/obj/decal/cleanable/blood/tracks{
-	icon_state = "u_guilty"
-	},
-/obj/decal/cleanable/blood/tracks{
-	icon_state = "u_ketchup"
-	},
-/obj/decal/cleanable/blood/tracks{
-	dir = 9
-	},
-/turf/unsimulated/floor/setpieces/martian,
-/area/marsoutpost/duststorm)
 "xSV" = (
 /obj/machinery/light{
 	dir = 8
@@ -78786,12 +78795,6 @@
 	dir = 8
 	},
 /area/owlery/owleryhall)
-"ybX" = (
-/obj/stool/chair/comfy/shuttle/red{
-	dir = 4
-	},
-/turf/unsimulated/floor/red,
-/area/marsoutpost/duststorm)
 "ycl" = (
 /obj/machinery/shuttle/engine/propulsion{
 	icon_state = "alt_propulsion"
@@ -140357,8 +140360,8 @@ aIe
 aIe
 aYR
 aYR
-kzR
-wwX
+czf
+wnG
 aYR
 aYR
 aYR
@@ -140656,11 +140659,11 @@ aIe
 aIe
 aIe
 aIe
-ocP
-pIz
-noE
-pIz
-xqF
+tnz
+lir
+iYH
+lir
+jWS
 aYR
 aYR
 aYR
@@ -140957,11 +140960,11 @@ aTs
 aIe
 aIe
 aIe
-ocP
-pIz
-uHM
-ybX
-qED
+tnz
+lir
+pMa
+lLj
+fJK
 aYR
 aYR
 aYR
@@ -141259,13 +141262,13 @@ aTs
 aIe
 aIe
 aIe
-noE
-mxN
-lzX
-tzt
-xSL
-wyT
-mow
+iYH
+aGG
+prU
+rBc
+nsC
+mCx
+nqD
 aYR
 aYR
 aIe
@@ -141561,11 +141564,11 @@ aTs
 aIe
 aIe
 aIe
-ugD
-pIz
-uHM
-ikD
-kIk
+hKn
+lir
+pMa
+tHv
+pqc
 aYR
 aYR
 aYR
@@ -141864,11 +141867,11 @@ aIe
 aIe
 aIe
 aIe
-ugD
-pIz
-noE
-pIz
-pIN
+hKn
+lir
+iYH
+lir
+nQU
 aYR
 aYR
 aYR
@@ -142169,8 +142172,8 @@ aIe
 aIe
 aYR
 aYR
-vYq
-wwX
+hfx
+wnG
 aYR
 aYR
 aYR
