@@ -6717,13 +6717,6 @@
 	dir = 1
 	},
 /area/owlery/gangzone)
-"aAU" = (
-/obj/decoration/bullethole{
-	pixel_x = 8;
-	pixel_y = 5
-	},
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "aBb" = (
 /obj/decal/fakeobjects{
 	anchored = 1;
@@ -8975,10 +8968,6 @@
 	desc = "How are these not stale?";
 	name = "Robust Donuts"
 	},
-/obj/decoration/bullethole{
-	pixel_x = 21;
-	pixel_y = 10
-	},
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "aLI" = (
@@ -10714,10 +10703,6 @@
 "aQO" = (
 /obj/dialogueobj/securitycorpse6,
 /obj/fluid_spawner/polluted_filth/blood,
-/obj/decoration/bullethole{
-	pixel_x = 6;
-	pixel_y = 10
-	},
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "aQP" = (
@@ -44600,14 +44585,6 @@
 	},
 /turf/unsimulated/grass,
 /area/owlery/lab)
-"cUz" = (
-/obj/machinery/door/airlock/pyro/classic{
-	dir = 4;
-	locked = 1
-	},
-/obj/mapping_helper/airlock/bolter,
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "cUA" = (
 /obj/machinery/light/emergency{
 	dir = 4
@@ -59683,10 +59660,10 @@
 /area/crypt/sigma/mainhall)
 "dUc" = (
 /obj/machinery/embedded_controller/radio/maintpanel{
-	frequency = 1425;
-	setup_string = "lunar_rightroom,EAST HALL DOOR;giftshopinner,GIFT ACCESS;giftshopouter,WEST HALL DOOR;lunar_storage,ACC STORAGE;lunar_terror2,ACTOR 28";
 	pixel_y = 27;
-	pixel_x = -1
+	pixel_x = -1;
+	name = "cargo bay door control panel";
+	desc = "Seems to be broken."
 	},
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
@@ -61497,7 +61474,7 @@
 	},
 /area/sim/gunsim/maintenance)
 "fVq" = (
-/obj/random_item_spawner/loot_crate,
+/obj/storage/crate/loot,
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "fWQ" = (
@@ -62659,17 +62636,6 @@
 	},
 /turf/unsimulated/grass,
 /area/dojo/sakura)
-"hjH" = (
-/obj/decoration/bullethole{
-	pixel_y = -4;
-	pixel_x = 10
-	},
-/obj/decoration/bullethole{
-	pixel_x = -9;
-	pixel_y = 7
-	},
-/turf/unsimulated/floor/caution/south,
-/area/marsoutpost)
 "hjS" = (
 /obj/machinery/door/airlock/pyro/glass{
 	name = "Biodome"
@@ -63410,14 +63376,6 @@
 "iao" = (
 /obj/dialogueobj/securitycorpse1,
 /obj/fluid_spawner/polluted_filth/blood,
-/obj/decoration/bullethole{
-	pixel_x = 8;
-	pixel_y = 12
-	},
-/obj/decoration/bullethole{
-	pixel_x = 24;
-	pixel_y = -2
-	},
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "iaA" = (
@@ -65794,17 +65752,6 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/moon/museum)
-"kBT" = (
-/obj/decoration/bullethole{
-	pixel_x = -22;
-	pixel_y = -7
-	},
-/obj/decoration/bullethole{
-	pixel_x = -2;
-	pixel_y = -7
-	},
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "kBZ" = (
 /obj/map/light/graveyard,
 /obj/tombstone/memorial{
@@ -67604,7 +67551,7 @@
 	pixel_x = -22;
 	pixel_y = 5
 	},
-/obj/random_item_spawner/loot_crate,
+/obj/storage/crate/loot,
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "mvP" = (
@@ -69431,13 +69378,6 @@
 "ogW" = (
 /obj/decal/cleanable/blood/tracks{
 	icon_state = "u_guilty"
-	},
-/obj/decoration/bullethole{
-	pixel_x = -8;
-	pixel_y = 23
-	},
-/obj/decoration/bullethole{
-	pixel_y = 28
 	},
 /turf/unsimulated/floor{
 	icon_state = "plating_dusty3"
@@ -72765,15 +72705,6 @@
 	pixel_y = 3
 	},
 /turf/unsimulated/floor/grime,
-/area/marsoutpost)
-"rEq" = (
-/obj/decoration/bullethole{
-	pixel_x = -22;
-	pixel_y = 4
-	},
-/turf/unsimulated/floor{
-	icon_state = "plating_dusty1"
-	},
 /area/marsoutpost)
 "rEs" = (
 /obj/decal/fakeobjects/pipe{
@@ -78289,11 +78220,13 @@
 	icon_state = "blue"
 	})
 "xJS" = (
-/obj/decoration/bullethole{
-	pixel_x = -10;
-	pixel_y = 10
+/obj/item/gun/energy/heavyion,
+/obj/storage/crate/classcrate{
+	desc = "An oddly bulky crate...";
+	name = "suspiciously large crate";
+	pixel_y = 3
 	},
-/turf/unsimulated/floor/caution/south,
+/turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "xKr" = (
 /obj/mapping_helper/wingrille_spawn/auto,
@@ -131510,7 +131443,7 @@ aTs
 aTs
 aIA
 aIA
-rEq
+aIA
 aTs
 aTs
 aUQ
@@ -132412,7 +132345,7 @@ aMn
 aMR
 aMR
 aOq
-hjH
+aPl
 aJx
 aKr
 jSP
@@ -132714,7 +132647,7 @@ aKS
 aKS
 aKS
 aKS
-xJS
+aPl
 aJx
 aKr
 aRx
@@ -133010,7 +132943,7 @@ qkQ
 qkQ
 aKt
 aKS
-aAU
+aKS
 aKS
 aKS
 aKS
@@ -139057,7 +138990,7 @@ uiM
 bhP
 rDS
 xSV
-kBT
+aKS
 aQO
 aKS
 aKS
@@ -139954,7 +139887,7 @@ aTs
 aTs
 aTs
 aTs
-cUz
+tNt
 tNt
 aTs
 aTs
@@ -142070,7 +142003,7 @@ jbI
 aKS
 hhi
 aKS
-dkl
+xJS
 kCa
 uPO
 aKS
