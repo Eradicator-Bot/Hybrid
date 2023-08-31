@@ -804,3 +804,13 @@ TYPEINFO(/obj/vehicle/marsrover)
 								"Male Scientist",
 								"Male Scientist",
 								"Airlock")
+
+/obj/item/paper/note_to_maint_tech
+	name = "VAULT MEMO"
+	icon_state = "paper"
+	info ={"
+	The vault alarm system <b>is</b> working as intended. <br>
+	It <b>is</b> meant to automatically reseal after a short duration. <br>
+	No, our ethics commitee does not consider it inhumane to seal people in like that. <br>
+	What people are there on Mars anyway? Tentacled freaks don't count.
+	"}

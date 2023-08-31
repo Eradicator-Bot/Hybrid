@@ -8657,6 +8657,10 @@
 "aKx" = (
 /obj/decal/cleanable/dirt,
 /obj/table,
+/obj/item/clothing/mask/hastur{
+	pixel_y = 4;
+	pixel_x = 2
+	},
 /turf/unsimulated/floor{
 	icon_state = "plating_dusty1"
 	},
@@ -51183,10 +51187,9 @@
 	},
 /area/centcom)
 "dmS" = (
-/obj/mapping_helper/airlock/bolter,
-/obj/machinery/door/airlock/pyro/classic{
-	dir = 4;
-	locked = 1
+/obj/item/clothing/mask/cigarette/syndicate{
+	pixel_y = 6;
+	pixel_x = -39
 	},
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
@@ -61373,9 +61376,24 @@
 /obj/decal/stripe_delivery,
 /turf/unsimulated/floor/plating,
 /area/crater/biodome/research)
+"fPk" = (
+/turf/unsimulated/wall/auto/adventure/shuttle/dark,
+/area/marsoutpost/duststorm)
 "fPy" = (
 /obj/storage/crate/bin/trash{
 	pixel_y = 4
+	},
+/obj/item/paper/folded/ball{
+	pixel_x = -3;
+	pixel_y = -6
+	},
+/obj/item/clothing/mask/cigarette/cigarillo/juicer/exploding{
+	pixel_x = 2;
+	pixel_y = -6
+	},
+/obj/item/bananapeel{
+	pixel_y = -3;
+	pixel_x = -1
 	},
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
@@ -62512,6 +62530,13 @@
 /obj/trigger/lovefill,
 /turf/unsimulated/floor/wood/six,
 /area/centcom/offices/rodney)
+"heq" = (
+/obj/indestructible/shuttle_corner{
+	dir = 8;
+	icon_state = "wall3_trans"
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost/duststorm)
 "heN" = (
 /obj/machinery/light,
 /turf/unsimulated/floor/grey/side,
@@ -63288,6 +63313,17 @@
 "hSU" = (
 /turf/unsimulated/floor/void,
 /area/void_diner)
+"hTy" = (
+/obj/decal/poster/wallsign/stencil/right/zero{
+	pixel_x = -1;
+	pixel_y = 37
+	},
+/obj/decal/poster/wallsign/stencil/right/nine{
+	pixel_y = 37;
+	pixel_x = 10
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost/duststorm)
 "hTV" = (
 /obj/lattice,
 /obj/machinery/vending/standard,
@@ -63861,6 +63897,13 @@
 	dir = 9
 	},
 /area/centcom/gallery)
+"iyF" = (
+/obj/indestructible/shuttle_corner{
+	dir = 8;
+	icon_state = "wall3_trans"
+	},
+/turf/unsimulated/wall/auto/adventure/mars,
+/area/marsoutpost)
 "iyY" = (
 /turf/unsimulated/floor/grey/side{
 	dir = 8
@@ -64470,6 +64513,16 @@
 	icon_state = "rootfloor_3"
 	},
 /area/catacombs)
+"jcE" = (
+/obj/machinery/door/poddoor/blast{
+	density = 0;
+	dir = 4;
+	icon = 'icons/obj/doors/sovblastdoor.dmi';
+	icon_state = "bdoormid0";
+	opacity = 0
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost/duststorm)
 "jcM" = (
 /obj/machinery/conveyor/SN,
 /obj/machinery/door/poddoor/blast{
@@ -66677,6 +66730,10 @@
 	},
 /turf/space,
 /area/space)
+"luR" = (
+/obj/mapping_helper/wingrille_spawn/auto/crystal,
+/turf/unsimulated/floor/black,
+/area/marsoutpost/duststorm)
 "luT" = (
 /obj/shrub{
 	dir = 8
@@ -67542,18 +67599,6 @@
 /obj/machinery/light/runway_light/delay3,
 /turf/space,
 /area/syndicate_station_space)
-"mvl" = (
-/obj/machinery/light_switch{
-	pixel_x = -22;
-	pixel_y = -5
-	},
-/obj/machinery/light_switch{
-	pixel_x = -22;
-	pixel_y = 5
-	},
-/obj/storage/crate/loot,
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "mvP" = (
 /obj/tree,
 /obj/spacevine,
@@ -67873,6 +67918,9 @@
 "mKt" = (
 /turf/unsimulated/floor/wood/seven,
 /area/sim/gunsim/lobby)
+"mKG" = (
+/turf/unsimulated/floor/red,
+/area/marsoutpost/duststorm)
 "mKS" = (
 /obj/cable,
 /obj/decal/fakeobjects/pipe{
@@ -68061,6 +68109,13 @@
 	},
 /turf/unsimulated/floor/setpieces/bloodfloor,
 /area/meat_derelict/guts)
+"mWV" = (
+/obj/indestructible/shuttle_corner{
+	dir = 1;
+	icon_state = "wall3_trans"
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost/duststorm)
 "mXf" = (
 /obj/item/sticker/gold_star{
 	pixel_x = 11;
@@ -68721,6 +68776,13 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/iomoon/base/underground)
+"nBo" = (
+/obj/decal/fakeobjects/safehouse/cloning_console{
+	desc = "A pilot's console. A thick layer of dust has accumulated beneath the screen.";
+	name = "navigation console"
+	},
+/turf/unsimulated/floor/red,
+/area/marsoutpost/duststorm)
 "nBO" = (
 /obj/stool/chair/couch{
 	dir = 8;
@@ -69417,6 +69479,12 @@
 	icon_state = "fblue2"
 	},
 /area/centcom/offices/varshie)
+"oiu" = (
+/obj/stool/chair/comfy/shuttle/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/red,
+/area/marsoutpost/duststorm)
 "oix" = (
 /obj/decal/fakeobjects/pipe{
 	dir = 9;
@@ -70558,6 +70626,10 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/hospital/underground)
+"prB" = (
+/obj/decal/stripe_caution,
+/turf/unsimulated/floor/red,
+/area/marsoutpost/duststorm)
 "psc" = (
 /obj/stool/chair/comfy/shuttle/red,
 /obj/machinery/light{
@@ -72775,6 +72847,10 @@
 /obj/item/cable_coil/yellow{
 	pixel_y = 7
 	},
+/obj/item/paper/note_to_maint_tech{
+	pixel_y = -7;
+	pixel_x = -10
+	},
 /turf/unsimulated/floor/plating,
 /area/marsoutpost)
 "rGD" = (
@@ -73450,10 +73526,6 @@
 /area/hospital/underground)
 "stf" = (
 /obj/storage/secure/closet/engineering/cargo,
-/obj/machinery/light_switch{
-	pixel_x = -22;
-	pixel_y = 9
-	},
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "stu" = (
@@ -74506,6 +74578,10 @@
 	},
 /turf/unsimulated/floor/plating/random,
 /area/sim/gunsim/maintenance)
+"tRm" = (
+/obj/decal/nav_danger,
+/turf/unsimulated/floor/red,
+/area/marsoutpost/duststorm)
 "tRx" = (
 /turf/unsimulated/floor/marble/border_wb{
 	dir = 10
@@ -74832,6 +74908,13 @@
 	},
 /turf/unsimulated/floor/grime,
 /area/owlery/Owlmait)
+"uik" = (
+/obj/indestructible/shuttle_corner{
+	dir = 1;
+	icon_state = "wall3_trans"
+	},
+/turf/unsimulated/wall/auto/adventure/mars,
+/area/marsoutpost)
 "uiu" = (
 /obj/securearea{
 	desc = "A warning sign which reads 'Biohazard'";
@@ -74938,6 +75021,16 @@
 	icon_state = "shore-46"
 	},
 /area/titlescreen)
+"unW" = (
+/obj/machinery/door/poddoor/blast{
+	density = 0;
+	dir = 4;
+	icon = 'icons/obj/doors/sovblastdoor.dmi';
+	icon_state = "bdoorleft0";
+	opacity = 0
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost/duststorm)
 "uoE" = (
 /obj/shrub{
 	dir = 1
@@ -74946,6 +75039,13 @@
 /area/centcom/outside)
 "uoZ" = (
 /obj/rack,
+/obj/item/tank/emergency_oxygen{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/clothing/mask/gas/emergency{
+	pixel_x = 6
+	},
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "upc" = (
@@ -75103,6 +75203,12 @@
 	},
 /turf/unsimulated/floor/industrial,
 /area/centcom/offices/sovexe)
+"uAc" = (
+/obj/stool/chair/comfy/shuttle/red{
+	dir = 4
+	},
+/turf/unsimulated/floor/red,
+/area/marsoutpost/duststorm)
 "uAi" = (
 /obj/stool/chair/couch/yellow{
 	icon_state = "chair_couch_ew-yellow";
@@ -77202,6 +77308,10 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/meat_derelict/entry)
+"wHX" = (
+/obj/mapping_helper/wingrille_spawn/auto/crystal,
+/turf/unsimulated/floor/black,
+/area/marsoutpost)
 "wHY" = (
 /obj/item/clothing/shoes/red{
 	desc = "Aren't these the HoS's? You feel like he can probably live without these.";
@@ -77843,6 +77953,13 @@
 	},
 /turf/space,
 /area/wizard_station_space)
+"xtq" = (
+/obj/machinery/access_button{
+	pixel_x = -5;
+	pixel_y = 26
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost/duststorm)
 "xun" = (
 /obj/item/clothing/under/gimmick/donk,
 /turf/unsimulated/floor/plating,
@@ -78205,6 +78322,16 @@
 	},
 /turf/unsimulated/floor/carpet/grime,
 /area/iomoon/base)
+"xJb" = (
+/obj/machinery/door/poddoor/blast{
+	density = 0;
+	dir = 4;
+	icon = 'icons/obj/doors/sovblastdoor.dmi';
+	icon_state = "bdoorright0";
+	opacity = 0
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost/duststorm)
 "xJg" = (
 /turf/unsimulated/floor/dream/beach{
 	icon_state = "shore-25"
@@ -139288,7 +139415,7 @@ aKS
 aKS
 aKS
 aKS
-aKS
+dmS
 aKS
 aKS
 aKS
@@ -139887,12 +140014,12 @@ aTs
 aTs
 aTs
 aTs
-tNt
-tNt
+rwD
+rwD
 aTs
 aTs
-dmS
-dmS
+tNt
+tNt
 aTs
 aTs
 yhu
@@ -140192,7 +140319,7 @@ aKS
 aKS
 dkl
 aKS
-mvl
+fVq
 aKS
 aKS
 bnd
@@ -140505,11 +140632,11 @@ aIe
 aIe
 aIe
 aIe
-aYR
-aYR
-aYR
-aYR
-aYR
+heq
+fPk
+luR
+fPk
+hTy
 aYR
 aYR
 aYR
@@ -140806,11 +140933,11 @@ aTs
 aIe
 aIe
 aIe
-aIe
-aYR
-aYR
-aYR
-aYR
+iyF
+fPk
+tRm
+uAc
+unW
 aYR
 aYR
 aYR
@@ -141108,11 +141235,11 @@ aTs
 aIe
 aIe
 aIe
-aIe
-aYR
-aYR
-aYR
-aYR
+wHX
+nBo
+oiu
+mKG
+jcE
 aYR
 aYR
 aYR
@@ -141410,11 +141537,11 @@ aTs
 aIe
 aIe
 aIe
-aIe
-aYR
-aYR
-aYR
-aYR
+uik
+fPk
+tRm
+prB
+xJb
 aYR
 aYR
 aYR
@@ -141713,11 +141840,11 @@ aIe
 aIe
 aIe
 aIe
-aYR
-aYR
-aYR
-aYR
-aYR
+mWV
+fPk
+luR
+fPk
+xtq
 aYR
 aYR
 aYR
