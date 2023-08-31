@@ -2885,14 +2885,6 @@
 "ajB" = (
 /turf/unsimulated/floor/caution/corner/misc,
 /area/hospital/samostrel)
-"ajC" = (
-/obj/machinery/door/airlock/pyro/classic{
-	dir = 4;
-	locked = 1
-	},
-/obj/mapping_helper/airlock/bolter,
-/turf/unsimulated/floor/grime,
-/area/space)
 "ajD" = (
 /obj/rail/cap,
 /turf/unsimulated/floor/lunar,
@@ -5358,6 +5350,15 @@
 	icon_state = "leadwindow_white_2"
 	},
 /area/moon/museum)
+"atX" = (
+/turf/unsimulated/floor/plating,
+/area/marsoutpost)
+"atY" = (
+/obj/machinery/door/airlock/pyro/maintenance{
+	req_access_txt = ""
+	},
+/turf/unsimulated/floor/plating,
+/area/marsoutpost)
 "aua" = (
 /obj/decal/fakeobjects{
 	anchored = 1;
@@ -6716,6 +6717,10 @@
 	dir = 1
 	},
 /area/owlery/gangzone)
+"aAU" = (
+/obj/decoration/bullethole,
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "aBb" = (
 /obj/decal/fakeobjects{
 	anchored = 1;
@@ -25332,18 +25337,6 @@
 	},
 /turf/unsimulated/floor/wood/three,
 /area/afterlife/heaven/hydroponics)
-"bNM" = (
-/obj/decal/fakeobjects/firelock_broken{
-	density = 1;
-	desc = "It's jammed, apparently.  Or just really locked.";
-	dir = 4;
-	icon = 'icons/obj/doors/SL_doors.dmi';
-	icon_state = "maint_closed";
-	name = "sealed airlock";
-	opacity = 1
-	},
-/turf/unsimulated/floor/plating,
-/area/marsoutpost)
 "bNO" = (
 /obj/machinery/door/airlock/pyro{
 	name = "Bedroom"
@@ -44470,12 +44463,6 @@
 	},
 /turf/unsimulated/wall/auto/reinforced/supernorn,
 /area/owlery/Owlmait2)
-"cUj" = (
-/obj/stool/chair/office{
-	dir = 1
-	},
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "cUk" = (
 /obj/decal/cleanable/blood{
 	icon_state = "helmetblood"
@@ -44591,6 +44578,14 @@
 	},
 /turf/unsimulated/grass,
 /area/owlery/lab)
+"cUz" = (
+/obj/machinery/door/airlock/pyro/classic{
+	dir = 4;
+	locked = 1
+	},
+/obj/mapping_helper/airlock/bolter,
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "cUA" = (
 /obj/machinery/light/emergency{
 	dir = 4
@@ -50609,6 +50604,10 @@
 	},
 /turf/unsimulated/floor/shuttlebay,
 /area/wizard_station)
+"dkl" = (
+/obj/storage/crate,
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "dkn" = (
 /obj/machinery/door/unpowered/wood/pyro,
 /turf/unsimulated/floor/wood/two{
@@ -51184,6 +51183,14 @@
 	dir = 8
 	},
 /area/centcom)
+"dmS" = (
+/obj/mapping_helper/airlock/bolter,
+/obj/machinery/door/airlock/pyro/classic{
+	dir = 4;
+	locked = 1
+	},
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "dnj" = (
 /obj/decal/fakeobjects/firelock_broken,
 /obj/decal/fakeobjects/firelock_broken{
@@ -59652,6 +59659,15 @@
 	icon_state = "fred1"
 	},
 /area/crypt/sigma/mainhall)
+"dUc" = (
+/obj/machinery/embedded_controller/radio/maintpanel{
+	frequency = 1425;
+	setup_string = "lunar_rightroom,EAST HALL DOOR;giftshopinner,GIFT ACCESS;giftshopouter,WEST HALL DOOR;lunar_storage,ACC STORAGE;lunar_terror2,ACTOR 28";
+	pixel_y = 27;
+	pixel_x = -1
+	},
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "dUd" = (
 /obj/stool/bench/wooden/auto,
 /turf/unsimulated/floor/specialroom/chapel{
@@ -60046,13 +60062,6 @@
 "enf" = (
 /turf/unsimulated/wall/auto/lead/white,
 /area/moon/museum/west)
-"enT" = (
-/obj/machinery/door/airlock/pyro/maintenance{
-	req_access_txt = ""
-	},
-/obj/mapping_helper/airlock/bolter,
-/turf/unsimulated/floor/plating,
-/area/marsoutpost)
 "eoz" = (
 /obj/decal/cleanable/sakura,
 /obj/decal/fakeobjects/birdhouse/light,
@@ -60364,13 +60373,6 @@
 /obj/adventurepuzzle/triggerable/light/gauntlet,
 /turf/unsimulated/floor/plating,
 /area/sim/tdome/tdome1)
-"eGt" = (
-/obj/machinery/door/airlock/pyro/classic{
-	dir = 4;
-	locked = 1
-	},
-/turf/unsimulated/floor/grime,
-/area/space)
 "eHC" = (
 /obj/machinery/light{
 	dir = 4
@@ -60800,15 +60802,6 @@
 /obj/decal/stripe_delivery,
 /turf/unsimulated/floor/plating,
 /area/crypt/sigma/rd)
-"feS" = (
-/turf/unsimulated/wall/generic{
-	desc = "It's sealed shut.";
-	dir = 4;
-	icon = 'icons/obj/doors/blastdoor.dmi';
-	icon_state = "bdoorleft1";
-	name = "security door"
-	},
-/area/marsoutpost)
 "ffI" = (
 /obj/item/caution{
 	desc = "Caution! Construction Zone!";
@@ -61091,9 +61084,6 @@
 /obj/mapping_helper/access/syndie_shuttle,
 /turf/unsimulated/floor/shuttlebay,
 /area/syndicate_station/battlecruiser)
-"fwn" = (
-/turf/unsimulated/floor/setpieces/martian,
-/area/marsoutpost)
 "fxo" = (
 /obj/lattice,
 /obj/cable{
@@ -61240,10 +61230,6 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/hospital/underground)
-"fEc" = (
-/obj/filing_cabinet,
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "fFv" = (
 /obj/indestructible/shuttle_corner{
 	icon_state = "wall3_trans"
@@ -61388,6 +61374,12 @@
 /obj/decal/stripe_delivery,
 /turf/unsimulated/floor/plating,
 /area/crater/biodome/research)
+"fPy" = (
+/obj/storage/crate/bin/trash{
+	pixel_y = 4
+	},
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "fPB" = (
 /obj/storage/closet/thunderdome/green,
 /turf/unsimulated/floor/plating,
@@ -61431,18 +61423,6 @@
 	},
 /turf/unsimulated/floor/industrial,
 /area/iomoon/base/underground)
-"fSV" = (
-/obj/table/auto,
-/obj/item/playing_card{
-	pixel_x = 5;
-	pixel_y = 3
-	},
-/obj/item/reagent_containers/food/drinks/mug{
-	pixel_x = -6;
-	pixel_y = 0
-	},
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "fTb" = (
 /obj/decal/cleanable/dirt,
 /turf/unsimulated/floor/plating,
@@ -61494,6 +61474,10 @@
 	name = "virtual lead wall"
 	},
 /area/sim/gunsim/maintenance)
+"fVq" = (
+/obj/random_item_spawner/loot_crate,
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "fWQ" = (
 /obj/machinery/light/small/floor,
 /turf/unsimulated/wall/generic{
@@ -61615,10 +61599,6 @@
 "gcn" = (
 /turf/unsimulated/wall/auto/lead/blue,
 /area/centcom)
-"gcG" = (
-/obj/machinery/light/small/floor/broken,
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "gdS" = (
 /obj/decal/fakeobjects{
 	anchored = 1;
@@ -61744,6 +61724,12 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/hospital/underground)
+"ghT" = (
+/obj/stool/chair/office{
+	dir = 1
+	},
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "gig" = (
 /obj/lattice{
 	dir = 6;
@@ -62495,14 +62481,6 @@
 "hav" = (
 /turf/unsimulated/floor/caution/corner/sw,
 /area/centcom/offices/azrun)
-"haZ" = (
-/obj/decal/fakeobjects/firealarm_broken{
-	dir = 1;
-	pixel_y = -23
-	},
-/obj/storage/crate,
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "hba" = (
 /obj/machinery/light/flock/floor,
 /turf/unsimulated/floor/feather,
@@ -62618,6 +62596,10 @@
 	temperature = 372.15
 	},
 /area/iomoon)
+"hhi" = (
+/obj/machinery/light/small/floor,
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "hho" = (
 /obj/machinery/conveyor/NS{
 	id = "ddan"
@@ -62655,6 +62637,11 @@
 	},
 /turf/unsimulated/grass,
 /area/dojo/sakura)
+"hjH" = (
+/obj/decoration/bullethole,
+/obj/decoration/bullethole,
+/turf/unsimulated/floor/caution/south,
+/area/marsoutpost)
 "hjS" = (
 /obj/machinery/door/airlock/pyro/glass{
 	name = "Biodome"
@@ -62683,6 +62670,13 @@
 /obj/securearea,
 /turf/unsimulated/wall/auto/lead/blue,
 /area/crater/biodome/research)
+"hkL" = (
+/obj/machinery/door/airlock/pyro/maintenance{
+	req_access_txt = ""
+	},
+/obj/mapping_helper/airlock/bolter,
+/turf/unsimulated/floor/plating,
+/area/marsoutpost)
 "hla" = (
 /obj/machinery/light,
 /obj/cauldron/candy/ephemeral,
@@ -62707,6 +62701,10 @@
 	icon_state = "bloodfloor_3"
 	},
 /area/meat_derelict/guts)
+"hmY" = (
+/obj/decal/cleanable/dirt,
+/turf/unsimulated/floor/plating,
+/area/marsoutpost)
 "hnj" = (
 /obj/machinery/door/unpowered/wood{
 	dir = 8;
@@ -62769,15 +62767,6 @@
 	},
 /turf/unsimulated/floor/wood/two,
 /area/centcom/offices/leah)
-"hrM" = (
-/obj/machinery/embedded_controller/radio/maintpanel{
-	frequency = 1425;
-	setup_string = "lunar_rightroom,EAST HALL DOOR;giftshopinner,GIFT ACCESS;giftshopouter,WEST HALL DOOR;lunar_storage,ACC STORAGE;lunar_terror2,ACTOR 28";
-	pixel_y = 27;
-	pixel_x = -1
-	},
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "hrN" = (
 /obj/machinery/light{
 	dir = 8
@@ -62836,6 +62825,12 @@
 	},
 /obj/decal/stripe_delivery,
 /turf/unsimulated/floor/plating,
+/area/marsoutpost)
+"htA" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "huB" = (
 /obj/grille/steel,
@@ -64459,6 +64454,15 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/iomoon/base)
+"jbI" = (
+/turf/unsimulated/wall/generic{
+	desc = "It's sealed shut.";
+	dir = 4;
+	icon = 'icons/obj/doors/blastdoor.dmi';
+	icon_state = "bdoorright1";
+	name = "cargo bay door"
+	},
+/area/marsoutpost)
 "jbK" = (
 /turf/unsimulated/floor/stairs/dark,
 /area/iomoon/base)
@@ -64829,12 +64833,6 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/moon/museum)
-"jvh" = (
-/obj/decoration/bullethole,
-/turf/unsimulated/floor{
-	icon_state = "plating_dusty1"
-	},
-/area/marsoutpost)
 "jvG" = (
 /obj/decal/fakeobjects/cargopad,
 /obj/machinery/light,
@@ -65576,10 +65574,6 @@
 	},
 /turf/unsimulated/floor/plating/random,
 /area/sim/gunsim/maintenance)
-"knM" = (
-/obj/decoration/bullethole,
-/turf/unsimulated/floor/caution/south,
-/area/marsoutpost)
 "knY" = (
 /obj/lattice,
 /obj/machinery/vending/cola/red,
@@ -65920,6 +65914,11 @@
 	icon_state = "floor2"
 	},
 /area/shuttle/merchant_shuttle/left_centcom/destiny)
+"kJr" = (
+/obj/rack,
+/obj/item/caution,
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "kJE" = (
 /obj/machinery/bot/medbot/no_camera,
 /turf/unsimulated/floor/red,
@@ -66264,11 +66263,6 @@
 	icon_state = "shore-41"
 	},
 /area/titlescreen)
-"laV" = (
-/obj/decoration/bullethole,
-/obj/decoration/bullethole,
-/turf/unsimulated/floor/caution/south,
-/area/marsoutpost)
 "lbm" = (
 /obj/lattice{
 	dir = 9;
@@ -66677,16 +66671,6 @@
 	},
 /turf/unsimulated/iomoon/plating,
 /area/iomoon)
-"lue" = (
-/turf/unsimulated/wall/generic{
-	desc = "It's sealed shut.";
-	dir = 4;
-	icon = 'icons/obj/doors/blastdoor.dmi';
-	icon_state = "bdoormid1";
-	name = "cargo bay door";
-	tag = null
-	},
-/area/marsoutpost)
 "luu" = (
 /obj/mapping_helper/wingrille_spawn/auto/crystal,
 /obj/cable,
@@ -67365,6 +67349,17 @@
 	dir = 5
 	},
 /area/centcom/offices/janantilles)
+"mgT" = (
+/obj/table/auto,
+/obj/decal/fakeobjects{
+	anchored = 1;
+	desc = "An old computer that is obviously very broken.  It might actually not even be plugged in.  BROKEN.";
+	icon = 'icons/obj/computer.dmi';
+	icon_state = "old0";
+	name = "broken computer"
+	},
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "mhs" = (
 /obj/decal/fakeobjects{
 	anchored = 1;
@@ -67554,6 +67549,18 @@
 /obj/machinery/light/runway_light/delay3,
 /turf/space,
 /area/syndicate_station_space)
+"mvl" = (
+/obj/machinery/light_switch{
+	pixel_x = -22;
+	pixel_y = -5
+	},
+/obj/machinery/light_switch{
+	pixel_x = -22;
+	pixel_y = 5
+	},
+/obj/random_item_spawner/loot_crate,
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "mvP" = (
 /obj/tree,
 /obj/spacevine,
@@ -67815,10 +67822,6 @@
 	dir = 4
 	},
 /area/centcom)
-"mGv" = (
-/obj/rack,
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "mIm" = (
 /obj/decal/fakeobjects{
 	anchored = 1;
@@ -68135,6 +68138,16 @@
 	dir = 6
 	},
 /area/centcom/gallery)
+"naB" = (
+/turf/unsimulated/wall/generic{
+	desc = "It's sealed shut.";
+	dir = 4;
+	icon = 'icons/obj/doors/blastdoor.dmi';
+	icon_state = "bdoormid1";
+	name = "cargo bay door";
+	tag = null
+	},
+/area/marsoutpost)
 "naR" = (
 /obj/table/reinforced/auto,
 /obj/traitorifier/virtual/nuclear,
@@ -68168,6 +68181,10 @@
 	},
 /turf/space,
 /area/syndicate_station_space)
+"nbP" = (
+/obj/machinery/bot/mulebot/broken,
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "ndE" = (
 /obj/lattice{
 	dir = 6;
@@ -68372,20 +68389,6 @@
 	icon_state = "shore-40"
 	},
 /area/titlescreen)
-"non" = (
-/obj/table/auto,
-/obj/decal/cleanable/desk_clutter,
-/obj/item/paper_bin{
-	pixel_x = 3;
-	pixel_y = 7
-	},
-/obj/item/pen{
-	desc = "It's a normal black ink pen. Looks like it has been chewed on.";
-	pixel_x = -6;
-	pixel_y = 0
-	},
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "noq" = (
 /obj/indestructible/shuttle_corner{
 	dir = 10;
@@ -68419,10 +68422,6 @@
 "npu" = (
 /turf/unsimulated/wall/auto/lead/gray,
 /area/sim/racing_track)
-"npY" = (
-/obj/random_item_spawner/loot_crate,
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "nqE" = (
 /obj/overlay{
 	density = 1;
@@ -69990,12 +69989,6 @@
 /obj/decal/stripe_delivery,
 /turf/unsimulated/floor/plating,
 /area/upper_arctic/pod1)
-"oSc" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "oSg" = (
 /obj/indestructible/shuttle_corner{
 	dir = 5;
@@ -70198,13 +70191,6 @@
 /obj/mapping_helper/access/owlmaint,
 /turf/unsimulated/floor/plating,
 /area/owlery/owllock)
-"oYD" = (
-/obj/shrub/dead{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "oYO" = (
 /obj/machinery/door/airlock/pyro/external{
 	dir = 4
@@ -70517,6 +70503,18 @@
 	},
 /turf/unsimulated/floor/caution/south,
 /area/marsoutpost)
+"pnV" = (
+/obj/decal/fakeobjects/firelock_broken{
+	density = 1;
+	desc = "It's jammed, apparently.  Or just really locked.";
+	dir = 4;
+	icon = 'icons/obj/doors/SL_doors.dmi';
+	icon_state = "maint_closed";
+	name = "sealed airlock";
+	opacity = 1
+	},
+/turf/unsimulated/floor/plating,
+/area/marsoutpost)
 "pom" = (
 /obj/admin_plaque{
 	desc = "Scream!";
@@ -70569,12 +70567,6 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/hospital/underground)
-"pqv" = (
-/obj/machinery/door/airlock/pyro/maintenance{
-	dir = 4
-	},
-/turf/unsimulated/floor/plating,
-/area/marsoutpost)
 "psc" = (
 /obj/stool/chair/comfy/shuttle/red,
 /obj/machinery/light{
@@ -70723,13 +70715,6 @@
 	},
 /turf/unsimulated/floor/black,
 /area/iomoon/base/underground)
-"pyj" = (
-/obj/machinery/light/small{
-	dir = 1;
-	status = 2
-	},
-/turf/unsimulated/floor/plating,
-/area/marsoutpost)
 "pyA" = (
 /obj/decal/fakeobjects/pipe{
 	desc = "The air from it smells faintly of mildew.";
@@ -70780,10 +70765,6 @@
 	icon_state = "floor"
 	},
 /area/centcom/offices/pali)
-"pAD" = (
-/obj/storage/crate,
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "pAZ" = (
 /obj/indestructible/shuttle_corner{
 	dir = 1;
@@ -70831,10 +70812,6 @@
 	icon_state = "floor3"
 	},
 /area/meat_derelict/soviet)
-"pDM" = (
-/obj/decal/cleanable/dirt,
-/turf/unsimulated/floor/plating,
-/area/marsoutpost)
 "pEv" = (
 /obj/lattice{
 	dir = 10;
@@ -71664,6 +71641,10 @@
 "qDa" = (
 /turf/unsimulated/floor/carpet/red/fancy/narrow/west,
 /area/titlescreen)
+"qDI" = (
+/obj/filing_cabinet,
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "qDO" = (
 /obj/machinery/door/airlock/pyro/command{
 	dir = 8
@@ -71770,6 +71751,15 @@
 	dir = 8
 	},
 /area/centcom/gallery)
+"qIS" = (
+/turf/unsimulated/wall/generic{
+	desc = "It's sealed shut.";
+	dir = 4;
+	icon = 'icons/obj/doors/blastdoor.dmi';
+	icon_state = "bdoorleft1";
+	name = "security door"
+	},
+/area/marsoutpost)
 "qJM" = (
 /obj/noticeboard/persistent{
 	name = "aloe's personal persistent notice board";
@@ -71978,12 +71968,6 @@
 /area/centcom/offices{
 	icon_state = "blue"
 	})
-"qRK" = (
-/obj/machinery/door/airlock/pyro/maintenance{
-	req_access_txt = ""
-	},
-/turf/unsimulated/floor/plating,
-/area/marsoutpost)
 "qSB" = (
 /turf/unsimulated/wall/generic{
 	desc = "It won't budge.";
@@ -72329,10 +72313,6 @@
 	},
 /turf/unsimulated/outdoors/grass,
 /area/void_diner)
-"rjn" = (
-/obj/machinery/bot/mulebot/broken,
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "rkw" = (
 /obj/decal/cleanable/blood/splatter,
 /obj/mapping_helper/mob_spawn/corpse/human/owlery_security,
@@ -72427,9 +72407,12 @@
 	icon_state = "rootfloor_2"
 	},
 /area/centcom/offices/marknstein)
-"rpL" = (
-/obj/vehicle/forklift,
-/turf/unsimulated/floor/grime,
+"rqr" = (
+/obj/machinery/light/small{
+	dir = 1;
+	status = 2
+	},
+/turf/unsimulated/floor/plating,
 /area/marsoutpost)
 "rqw" = (
 /obj/pedestal,
@@ -72611,18 +72594,6 @@
 	name = "indoor garden"
 	},
 /area/afterlife/heaven/hydroponics/inside)
-"ryD" = (
-/obj/machinery/light_switch{
-	pixel_x = -22;
-	pixel_y = -5
-	},
-/obj/machinery/light_switch{
-	pixel_x = -22;
-	pixel_y = 5
-	},
-/obj/random_item_spawner/loot_crate,
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "ryU" = (
 /obj/decal/fakeobjects{
 	anchored = 1;
@@ -72737,6 +72708,19 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/moon/museum/west)
+"rDS" = (
+/obj/shrub/dead{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
+"rEq" = (
+/obj/decoration/bullethole,
+/turf/unsimulated/floor{
+	icon_state = "plating_dusty1"
+	},
+/area/marsoutpost)
 "rEs" = (
 /obj/decal/fakeobjects/pipe{
 	desc = "Probably shouldn't drink the water here.";
@@ -72794,6 +72778,20 @@
 	},
 /turf/unsimulated/floor/void/channel,
 /area/adventure/channel)
+"rFV" = (
+/obj/item/storage/toolbox/mechanical{
+	pixel_y = -11;
+	pixel_x = 5
+	},
+/obj/decal/fakeobjects/apc_broken{
+	pixel_y = 24;
+	pixel_x = 1
+	},
+/obj/item/cable_coil/yellow{
+	pixel_y = 7
+	},
+/turf/unsimulated/floor/plating,
+/area/marsoutpost)
 "rGD" = (
 /obj/decal/fakeobjects/pipe{
 	desc = "It is not working.";
@@ -73195,10 +73193,6 @@
 "sbF" = (
 /turf/space,
 /area/centcom/outside)
-"sbM" = (
-/obj/decoration/bullethole,
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "sbS" = (
 /obj/decal/cleanable/dirt,
 /turf/unsimulated/wall/generic{
@@ -73469,6 +73463,14 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/hospital/underground)
+"stf" = (
+/obj/storage/secure/closet/engineering/cargo,
+/obj/machinery/light_switch{
+	pixel_x = -22;
+	pixel_y = 9
+	},
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "stu" = (
 /obj/machinery/door/window{
 	base_state = "right";
@@ -73658,15 +73660,6 @@
 /obj/item/shinai_bag,
 /turf/unsimulated/floor/wood/two,
 /area/dojo)
-"sHy" = (
-/turf/unsimulated/wall/generic{
-	desc = "It's sealed shut.";
-	dir = 4;
-	icon = 'icons/obj/doors/blastdoor.dmi';
-	icon_state = "bdoorright1";
-	name = "cargo bay door"
-	},
-/area/marsoutpost)
 "sHI" = (
 /obj/machinery/door/unpowered/wood{
 	autoclose = 0;
@@ -73885,17 +73878,6 @@
 /area/centcom/offices{
 	icon_state = "blue"
 	})
-"sSp" = (
-/obj/table/auto,
-/obj/decal/fakeobjects{
-	anchored = 1;
-	desc = "An old computer that is obviously very broken.  It might actually not even be plugged in.  BROKEN.";
-	icon = 'icons/obj/computer.dmi';
-	icon_state = "old0";
-	name = "broken computer"
-	},
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "sSJ" = (
 /obj/rail/cap{
 	dir = 8
@@ -74498,6 +74480,13 @@
 /obj/item/clothing/gloves/yellow,
 /turf/unsimulated/floor/darkblue,
 /area/syndicate_station/battlecruiser)
+"tNt" = (
+/obj/machinery/door/airlock/pyro/classic{
+	dir = 4;
+	locked = 1
+	},
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "tNz" = (
 /obj/lattice{
 	dir = 9;
@@ -74554,6 +74543,9 @@
 /mob/living/critter/skeleton,
 /turf/unsimulated/floor/setpieces/rootfloor,
 /area/catacombs)
+"tUt" = (
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "tUJ" = (
 /obj/machinery/door/airlock/pyro/external,
 /turf/unsimulated/floor/shuttle{
@@ -74664,6 +74656,10 @@
 	},
 /turf/unsimulated/wall/auto/lead/blue,
 /area/centcom/lobby)
+"tZg" = (
+/obj/vehicle/forklift,
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "tZr" = (
 /obj/indestructible/shuttle_corner{
 	dir = 8;
@@ -74860,6 +74856,18 @@
 	},
 /turf/unsimulated/wall/auto/lead/gray,
 /area/crypt/sigma/lab)
+"uiM" = (
+/obj/table/auto,
+/obj/item/playing_card{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/obj/item/reagent_containers/food/drinks/mug{
+	pixel_x = -6;
+	pixel_y = 0
+	},
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "ujf" = (
 /obj/shrub{
 	dir = 10
@@ -74951,6 +74959,10 @@
 	},
 /turf/unsimulated/outdoors/grass,
 /area/centcom/outside)
+"uoZ" = (
+/obj/rack,
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "upc" = (
 /obj/decal/poster/wallsign/teleport_sign{
 	dir = 8
@@ -75434,6 +75446,20 @@
 	opacity = 0
 	},
 /area/centcom/lounge)
+"uPO" = (
+/obj/table/auto,
+/obj/decal/cleanable/desk_clutter,
+/obj/item/paper_bin{
+	pixel_x = 3;
+	pixel_y = 7
+	},
+/obj/item/pen{
+	desc = "It's a normal black ink pen. Looks like it has been chewed on.";
+	pixel_x = -6;
+	pixel_y = 0
+	},
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "uPR" = (
 /obj/tree,
 /turf/unsimulated/grass,
@@ -75448,14 +75474,6 @@
 "uQX" = (
 /turf/unsimulated/wall/auto/lead/gray,
 /area/sim/bball)
-"uQY" = (
-/obj/mapping_helper/airlock/bolter,
-/obj/machinery/door/airlock/pyro/classic{
-	dir = 4;
-	locked = 1
-	},
-/turf/unsimulated/floor/grime,
-/area/space)
 "uRk" = (
 /obj/overlay{
 	density = 1;
@@ -75638,6 +75656,14 @@
 	dir = 8
 	},
 /area/owlery/gangzone)
+"vfn" = (
+/obj/decal/fakeobjects/firealarm_broken{
+	dir = 1;
+	pixel_y = -23
+	},
+/obj/storage/crate,
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "vfY" = (
 /obj/fitness/speedbag/captain,
 /turf/unsimulated/floor/wood/eight{
@@ -75704,10 +75730,6 @@
 	},
 /turf/unsimulated/floor/wood/six,
 /area/centcom/offices/aloe)
-"viF" = (
-/obj/machinery/light/small/floor,
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "viL" = (
 /obj/item/paper/book/from_file/guardbot_guide,
 /turf/unsimulated/floor/yellow,
@@ -75851,20 +75873,6 @@
 "vol" = (
 /turf/unsimulated/iomoon/floor,
 /area/iomoon/base)
-"voG" = (
-/obj/item/storage/toolbox/mechanical{
-	pixel_y = -11;
-	pixel_x = 5
-	},
-/obj/decal/fakeobjects/apc_broken{
-	pixel_y = 24;
-	pixel_x = 1
-	},
-/obj/item/cable_coil/yellow{
-	pixel_y = 7
-	},
-/turf/unsimulated/floor/plating,
-/area/marsoutpost)
 "voO" = (
 /obj/table/wood/auto/desk,
 /obj/decoration/decorativeplant{
@@ -76562,12 +76570,6 @@
 /obj/shrub/dead,
 /turf/unsimulated/floor/black/side,
 /area/iomoon/base)
-"wfs" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "wfG" = (
 /obj/storage/closet/wardrobe/white/medical,
 /turf/unsimulated/floor/plating,
@@ -77160,14 +77162,6 @@
 /obj/mapping_helper/access/owlmaint,
 /turf/unsimulated/floor/specialroom/arcade,
 /area/owlery/owllock)
-"wGQ" = (
-/obj/storage/secure/closet/engineering/cargo,
-/obj/machinery/light_switch{
-	pixel_x = -22;
-	pixel_y = 9
-	},
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "wHm" = (
 /obj/indestructible/shuttle_corner{
 	dir = 8;
@@ -78240,6 +78234,10 @@
 /area/centcom/offices{
 	icon_state = "blue"
 	})
+"xJS" = (
+/obj/decoration/bullethole,
+/turf/unsimulated/floor/caution/south,
+/area/marsoutpost)
 "xKr" = (
 /obj/mapping_helper/wingrille_spawn/auto,
 /turf/unsimulated/floor/plating,
@@ -78291,12 +78289,6 @@
 	name = "pod bay door"
 	},
 /area/hospital/samostrel)
-"xLC" = (
-/obj/storage/crate/bin/trash{
-	pixel_y = 4
-	},
-/turf/unsimulated/floor/grime,
-/area/marsoutpost)
 "xMn" = (
 /turf/unsimulated/floor/marble/border_wb{
 	dir = 6
@@ -78380,9 +78372,6 @@
 	opacity = 0
 	},
 /area/centcom/gallery)
-"xRM" = (
-/turf/unsimulated/floor/plating,
-/area/marsoutpost)
 "xSb" = (
 /obj/lattice{
 	dir = 4;
@@ -78395,6 +78384,12 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/centcom/lobby)
+"xSV" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "xSW" = (
 /obj/stool/bar,
 /mob/living/carbon/human/don_glab/cow,
@@ -78442,6 +78437,10 @@
 	},
 /turf/unsimulated/floor/caution/north,
 /area/iomoon/base/underground)
+"xUd" = (
+/obj/machinery/light/small/floor/broken,
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "xUe" = (
 /turf/unsimulated/floor/dream/beach{
 	icon_state = "shore-21"
@@ -78722,6 +78721,12 @@
 /obj/decal/cleanable/sakura,
 /turf/unsimulated/floor/wood/two,
 /area/centcom/offices/angel)
+"yhu" = (
+/obj/machinery/door/airlock/pyro/maintenance{
+	dir = 4
+	},
+/turf/unsimulated/floor/plating,
+/area/marsoutpost)
 "yhB" = (
 /mob/living/critter/bear,
 /turf/unsimulated/floor/cave,
@@ -131448,7 +131453,7 @@ aTs
 aTs
 aIA
 aIA
-jvh
+rEq
 aTs
 aTs
 aUQ
@@ -132350,7 +132355,7 @@ aMn
 aMR
 aMR
 aOq
-laV
+hjH
 aJx
 aKr
 jSP
@@ -132652,7 +132657,7 @@ aKS
 aKS
 aKS
 aKS
-knM
+xJS
 aJx
 aKr
 aRx
@@ -132948,7 +132953,7 @@ qkQ
 qkQ
 aKt
 aKS
-sbM
+aAU
 aKS
 aKS
 aKS
@@ -138987,14 +138992,14 @@ aMp
 aMS
 aKS
 aKS
-wfs
-xLC
+xSV
+fPy
 czN
 bfN
-fSV
+uiM
 bhP
-oYD
-wfs
+rDS
+xSV
 aKS
 aQO
 aKS
@@ -139892,15 +139897,15 @@ aTs
 aTs
 aTs
 aTs
-ajC
-eGt
+cUz
+tNt
 aTs
 aTs
-uQY
-uQY
+dmS
+dmS
 aTs
 aTs
-pqv
+yhu
 aTs
 aTs
 aTs
@@ -140195,14 +140200,14 @@ aIe
 aTs
 aKS
 aKS
-pAD
+dkl
 aKS
-ryD
+mvl
 aKS
 aKS
 bnd
 aTs
-xRM
+atX
 aTs
 aIe
 aIe
@@ -140492,19 +140497,19 @@ aES
 dFc
 aaa
 aIj
-fwn
-fwn
-feS
+tUt
+tUt
+qIS
 aKS
-gcG
-aKS
-aKS
+xUd
 aKS
 aKS
-gcG
 aKS
-enT
-pDM
+aKS
+xUd
+aKS
+hkL
+hmY
 aTs
 aIe
 aIe
@@ -140794,19 +140799,19 @@ aES
 dFc
 aaa
 aIj
-fwn
-fwn
-lue
+tUt
+tUt
+naB
 aKS
 aKS
 aKS
 aKS
-rpL
-rjn
+tZg
+nbP
 aKS
-mGv
+kJr
 aTs
-xRM
+atX
 aTs
 aIe
 aIe
@@ -141096,19 +141101,19 @@ aES
 dFc
 aaa
 aIj
-fwn
-fwn
-lue
+tUt
+tUt
+naB
 aKS
-pAD
+dkl
 aKS
-haZ
+vfn
 aTs
 kCa
 cgt
 aTs
 aTs
-pyj
+rqr
 aTs
 aIe
 aIe
@@ -141398,19 +141403,19 @@ aES
 dFc
 aaa
 aIj
-fwn
-fwn
-lue
+tUt
+tUt
+naB
 aKS
-npY
+fVq
 aKS
-pAD
+dkl
 kCa
-mGv
+uoZ
 aKS
-wGQ
+stf
 aTs
-pDM
+hmY
 aTs
 aIe
 aIe
@@ -141700,19 +141705,19 @@ aES
 dFc
 aaa
 aIj
-fwn
-fwn
-lue
+tUt
+tUt
+naB
 aKS
-pAD
+dkl
 aKS
-npY
+fVq
 kCa
-sSp
-cUj
+mgT
+ghT
 aKS
 aTs
-pDM
+hmY
 aTs
 aIe
 aIe
@@ -142002,19 +142007,19 @@ aES
 dFc
 aaa
 aIj
-fwn
-fwn
-sHy
+tUt
+tUt
+jbI
 aKS
-viF
+hhi
 aKS
-pAD
+dkl
 kCa
-non
+uPO
 aKS
 aKS
-qRK
-xRM
+atY
+atX
 aTs
 aIe
 aIe
@@ -142304,19 +142309,19 @@ aES
 dFc
 aaa
 aIj
-fwn
-fwn
+tUt
+tUt
 aTs
-hrM
+dUc
 aKS
 aKS
 aKS
 kCa
-fEc
-oSc
-fEc
+qDI
+htA
+qDI
 aTs
-voG
+rFV
 aTs
 aIe
 aIe
@@ -142606,7 +142611,7 @@ aES
 dFc
 aaa
 aIj
-fwn
+tUt
 aIe
 aTs
 aTs
@@ -142618,7 +142623,7 @@ aTs
 aTs
 aTs
 aTs
-bNM
+pnV
 aTs
 aIe
 aIe
