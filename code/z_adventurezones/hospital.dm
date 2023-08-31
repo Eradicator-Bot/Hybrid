@@ -146,7 +146,8 @@
 	density = 1
 	anchored = ANCHORED
 	var/targeting = 0
-
+	var/static/mob_caught = list()
+	var/static/times_caught = list()
 
 	New()
 		..()
@@ -160,6 +161,45 @@
 			//playsound(src.loc, 'sound/impact_sounds/Flesh_Stab_1.ogg', 50, 1)
 			target.change_eye_blurry(10)
 			boutput(target, "<span><B>no no no no no no no no no no no no non&#9617;NO&#9617;NNnNNO</B></span>")
+
+			var/i = length(mob_caught)
+			if (i > 0)
+				if (!(target.real_name in mob_caught))
+					mob_caught += target.real_name
+					times_caught += 1
+				else
+					for (i, i > 0, i--)
+						if (mob_caught[i] == target.real_name)
+							times_caught[i]++
+							if (times_caught[i] == 2)
+								boutput(target, "<span><B>A voice rings inside your head: \"Leave this place...\"</B></span>")
+								if (ishuman(target))
+									var/mob/living/carbon/human/H = target
+									var/valid_limbs = H?.get_valid_target_zones()
+									switch (pick(valid_limbs))
+										if("r_arm")
+											src.visible_message("<span class='alert'><B>[src] tears off [target]'s right arm!</B></span>")
+											H.limbs.r_arm.sever()
+										if("l_arm")
+											src.visible_message("<span class='alert'><B>[src] tears off [target]'s left arm!</B></span>")
+											H.limbs.l_arm.sever()
+										if("r_leg")
+											src.visible_message("<span class='alert'><B>[src] tears off [target]'s right leg!</B></span>")
+											H.limbs.r_leg.sever()
+										if("l_leg")
+											src.visible_message("<span class='alert'><B>[src] tears off [target]'s left leg!</B></span>")
+											H.limbs.l_leg.sever()
+							else
+								boutput(target, "<span><B>A voice rings inside your head: \"You should not have returned...\"</B></span>")
+								target.vaporize(,1)
+								src.visible_message("<span class='alert'><B>[target] vaporises around [src]!</B></span>")
+								maniac_active &= ~2
+								qdel(src)
+								return
+			else
+				mob_caught += target.real_name
+				times_caught += 1
+
 			if (LANDMARK_SAMOSTREL_WARP in landmarks)
 				var/target_original_loc = target.loc
 				target.setStatusMin("paralysis", 10 SECONDS)
