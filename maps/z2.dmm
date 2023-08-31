@@ -6718,7 +6718,10 @@
 	},
 /area/owlery/gangzone)
 "aAU" = (
-/obj/decoration/bullethole,
+/obj/decoration/bullethole{
+	pixel_x = 8;
+	pixel_y = 5
+	},
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "aBb" = (
@@ -8226,12 +8229,20 @@
 /obj/decal/fakeobjects/firealarm_broken{
 	pixel_y = 24
 	},
+/obj/machinery/bot/medbot/terrifying,
+/obj/decal/cleanable/blood/tracks{
+	icon_state = "u_guilty"
+	},
 /turf/unsimulated/floor/black{
 	dir = 1
 	},
 /area/marsoutpost)
 "aJb" = (
 /obj/machinery/optable,
+/obj/dialogueobj/securitycorpse3,
+/obj/decal/cleanable/blood/tracks{
+	icon_state = "drip5"
+	},
 /turf/unsimulated/floor/black{
 	dir = 1
 	},
@@ -8251,6 +8262,7 @@
 /area/marsoutpost)
 "aJd" = (
 /obj/decal/cleanable/oil,
+/obj/item/gun/energy/phaser_gun,
 /turf/unsimulated/floor/black{
 	dir = 1
 	},
@@ -8963,7 +8975,10 @@
 	desc = "How are these not stale?";
 	name = "Robust Donuts"
 	},
-/obj/decoration/bullethole,
+/obj/decoration/bullethole{
+	pixel_x = 21;
+	pixel_y = 10
+	},
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "aLI" = (
@@ -8973,8 +8988,12 @@
 /turf/unsimulated/floor/white/grime,
 /area/marsoutpost)
 "aLJ" = (
-/obj/machinery/bot/medbot/terrifying,
-/turf/unsimulated/floor/white/grime,
+/obj/decal/cleanable/blood/tracks{
+	icon_state = "gibmid2"
+	},
+/turf/unsimulated/floor/black{
+	dir = 1
+	},
 /area/marsoutpost)
 "aLK" = (
 /obj/decoration/syndiepc/syndiepc9{
@@ -10695,7 +10714,10 @@
 "aQO" = (
 /obj/dialogueobj/securitycorpse6,
 /obj/fluid_spawner/polluted_filth/blood,
-/obj/decoration/bullethole,
+/obj/decoration/bullethole{
+	pixel_x = 6;
+	pixel_y = 10
+	},
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "aQP" = (
@@ -62638,8 +62660,14 @@
 /turf/unsimulated/grass,
 /area/dojo/sakura)
 "hjH" = (
-/obj/decoration/bullethole,
-/obj/decoration/bullethole,
+/obj/decoration/bullethole{
+	pixel_y = -4;
+	pixel_x = 10
+	},
+/obj/decoration/bullethole{
+	pixel_x = -9;
+	pixel_y = 7
+	},
 /turf/unsimulated/floor/caution/south,
 /area/marsoutpost)
 "hjS" = (
@@ -63382,7 +63410,14 @@
 "iao" = (
 /obj/dialogueobj/securitycorpse1,
 /obj/fluid_spawner/polluted_filth/blood,
-/obj/decoration/bullethole,
+/obj/decoration/bullethole{
+	pixel_x = 8;
+	pixel_y = 12
+	},
+/obj/decoration/bullethole{
+	pixel_x = 24;
+	pixel_y = -2
+	},
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "iaA" = (
@@ -65759,6 +65794,17 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/moon/museum)
+"kBT" = (
+/obj/decoration/bullethole{
+	pixel_x = -22;
+	pixel_y = -7
+	},
+/obj/decoration/bullethole{
+	pixel_x = -2;
+	pixel_y = -7
+	},
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "kBZ" = (
 /obj/map/light/graveyard,
 /obj/tombstone/memorial{
@@ -69386,8 +69432,13 @@
 /obj/decal/cleanable/blood/tracks{
 	icon_state = "u_guilty"
 	},
-/obj/decoration/bullethole,
-/obj/decoration/bullethole,
+/obj/decoration/bullethole{
+	pixel_x = -8;
+	pixel_y = 23
+	},
+/obj/decoration/bullethole{
+	pixel_y = 28
+	},
 /turf/unsimulated/floor{
 	icon_state = "plating_dusty3"
 	},
@@ -72716,7 +72767,10 @@
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "rEq" = (
-/obj/decoration/bullethole,
+/obj/decoration/bullethole{
+	pixel_x = -22;
+	pixel_y = 4
+	},
 /turf/unsimulated/floor{
 	icon_state = "plating_dusty1"
 	},
@@ -78235,7 +78289,10 @@
 	icon_state = "blue"
 	})
 "xJS" = (
-/obj/decoration/bullethole,
+/obj/decoration/bullethole{
+	pixel_x = -10;
+	pixel_y = 10
+	},
 /turf/unsimulated/floor/caution/south,
 /area/marsoutpost)
 "xKr" = (
@@ -137781,12 +137838,12 @@ aaa
 aIe
 aTs
 aJb
-aJA
+aLJ
 aKc
 aJA
 aKW
 aLm
-aLJ
+aLm
 aMr
 aLg
 aMr
@@ -139000,7 +139057,7 @@ uiM
 bhP
 rDS
 xSV
-aKS
+kBT
 aQO
 aKS
 aKS

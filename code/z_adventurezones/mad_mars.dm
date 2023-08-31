@@ -742,7 +742,7 @@ TYPEINFO(/obj/vehicle/marsrover)
 	desc = "A very old computer that controls the vault."
 	icon_state = "old"
 	pixel_y = 8
-	var/triggered = 1
+	var/triggered = 0
 
 	attack_hand(mob/user)
 		if (..() || (status & (NOPOWER|BROKEN)))
