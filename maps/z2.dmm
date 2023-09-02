@@ -71557,7 +71557,9 @@
 /area/centcom/offices/adhara)
 "qoS" = (
 /obj/dialogueobj/securitycorpse2,
-/obj/fluid_spawner/polluted_filth/blood,
+/obj/fluid_spawner/polluted_filth/blood{
+	amount = 200
+	},
 /turf/unsimulated/floor/specialroom/medbay,
 /area/marsoutpost)
 "qpG" = (
