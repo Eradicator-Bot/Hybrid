@@ -61280,6 +61280,15 @@
 	icon_state = "shore-11"
 	},
 /area/titlescreen)
+"fIT" = (
+/obj/decal/fakeobjects/skeleton,
+/turf/unsimulated/floor/setpieces/martian{
+	density = 1;
+	desc = "There's not much to see here.";
+	name = "barren desert";
+	opacity = 1
+	},
+/area/marsoutpost)
 "fJK" = (
 /obj/machinery/door/poddoor/blast{
 	density = 0;
@@ -62238,6 +62247,15 @@
 	temperature = 372.15
 	},
 /area/iomoon)
+"gGL" = (
+/obj/item/material_piece/bone,
+/turf/unsimulated/floor/setpieces/martian{
+	density = 1;
+	desc = "There's not much to see here.";
+	name = "barren desert";
+	opacity = 1
+	},
+/area/marsoutpost)
 "gGM" = (
 /turf/unsimulated/floor/void/channel,
 /area/adventure/channel/teleport)
@@ -63204,6 +63222,12 @@
 /obj/decal/stripe_delivery,
 /turf/unsimulated/floor/plating,
 /area/upper_arctic/pod1)
+"hKX" = (
+/obj/decal/cleanable/blood/tracks{
+	icon_state = "u_ketchup"
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost/duststorm)
 "hLe" = (
 /obj/table/reinforced/bar/auto,
 /obj/machinery/light,
@@ -68484,9 +68508,11 @@
 /turf/unsimulated/wall/auto/lead/gray,
 /area/sim/racing_track)
 "nqD" = (
-/mob/living/critter/robotic/sawfly/ai_controlled,
-/turf/unsimulated/floor/setpieces/martian,
-/area/marsoutpost/duststorm)
+/obj/ladder/embed{
+	id = "sandcave"
+	},
+/turf/unsimulated/wall/auto/adventure/mars,
+/area/marsoutpost)
 "nqE" = (
 /obj/overlay{
 	density = 1;
@@ -69111,7 +69137,6 @@
 	pixel_x = -5;
 	pixel_y = 26
 	},
-/mob/living/critter/robotic/sawfly/ai_controlled,
 /turf/unsimulated/floor/setpieces/martian,
 /area/marsoutpost/duststorm)
 "nRf" = (
@@ -77174,6 +77199,12 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/moon/museum/west)
+"wzc" = (
+/obj/decal/cleanable/blood/tracks{
+	icon_state = "gib2"
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost/duststorm)
 "wAT" = (
 /obj/decal/stage_edge{
 	layer = 2.8;
@@ -139162,9 +139193,9 @@ aYR
 aIe
 aIe
 aIe
-aPU
-aPU
-aPU
+aIe
+aIe
+aIe
 aIe
 aaa
 aaa
@@ -139464,9 +139495,9 @@ aYR
 aIe
 aIe
 aIe
-aPU
-aPU
-aPU
+nqD
+aIj
+aIe
 aIe
 aaa
 cnw
@@ -139766,9 +139797,9 @@ aYR
 aYR
 aIe
 aIe
-aPU
-aPU
-aPU
+aIe
+aIj
+aIe
 aIe
 aaa
 cnw
@@ -140068,9 +140099,9 @@ aYR
 aIe
 aIe
 aIe
-aPU
-aPU
-aPU
+aIj
+aIj
+aIe
 aIe
 aaa
 cnw
@@ -140370,9 +140401,9 @@ aIe
 aIe
 aIe
 aIe
-aPU
-aPU
-aPU
+aIj
+aIe
+aIe
 aIe
 aaa
 cnw
@@ -140671,10 +140702,10 @@ aYR
 aIe
 aIe
 aIe
-aPU
-aPU
-aPU
-aPU
+aIe
+aIj
+gGL
+aIe
 aIe
 aaa
 cnw
@@ -140973,10 +141004,10 @@ aIe
 aIe
 aIe
 aIe
-aPU
-aPU
-aPU
-aPU
+aIj
+aIj
+aIj
+aIj
 aIe
 aaa
 cnw
@@ -141268,17 +141299,17 @@ prU
 rBc
 nsC
 mCx
-nqD
 aYR
 aYR
+aYR
 aIe
 aIe
 aIe
 aIe
-aPU
-aPU
-aPU
-aPU
+gGL
+aIj
+aIj
+aIj
 aIe
 aaa
 cnw
@@ -141569,7 +141600,7 @@ lir
 pMa
 tHv
 pqc
-aYR
+wsz
 aYR
 aYR
 aYR
@@ -141577,10 +141608,10 @@ aIe
 aIe
 aIe
 aIe
-aPU
-aPU
-aPU
-aPU
+aIe
+aIe
+fIT
+aIe
 aIe
 aaa
 cnw
@@ -141872,17 +141903,17 @@ lir
 iYH
 lir
 nQU
-aYR
+wsz
 aYR
 aYR
 aYR
 aIe
 aIe
 aIe
-aPU
-aPU
-aPU
-aPU
+aIe
+aIe
+aIe
+aIe
 aIe
 aaa
 cnw
@@ -142476,7 +142507,7 @@ aYR
 aYR
 aYR
 aYR
-aYR
+wsz
 aYR
 djq
 aYR
@@ -142771,12 +142802,12 @@ pnV
 aTs
 aIe
 aIe
-aIe
+nqD
+wzc
 aYR
+hKX
 aYR
-aYR
-aYR
-aYR
+hKX
 aYR
 aYR
 aYR
