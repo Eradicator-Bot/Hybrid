@@ -61282,12 +61282,7 @@
 /area/titlescreen)
 "fIT" = (
 /obj/decal/fakeobjects/skeleton,
-/turf/unsimulated/floor/setpieces/martian{
-	density = 1;
-	desc = "There's not much to see here.";
-	name = "barren desert";
-	opacity = 1
-	},
+/turf/unsimulated/floor/setpieces/martian,
 /area/marsoutpost)
 "fJK" = (
 /obj/machinery/door/poddoor/blast{
@@ -62249,12 +62244,7 @@
 /area/iomoon)
 "gGL" = (
 /obj/item/material_piece/bone,
-/turf/unsimulated/floor/setpieces/martian{
-	density = 1;
-	desc = "There's not much to see here.";
-	name = "barren desert";
-	opacity = 1
-	},
+/turf/unsimulated/floor/setpieces/martian,
 /area/marsoutpost)
 "gGM" = (
 /turf/unsimulated/floor/void/channel,
@@ -139496,7 +139486,7 @@ aIe
 aIe
 aIe
 nqD
-aIj
+tUt
 aIe
 aIe
 aaa
@@ -139798,7 +139788,7 @@ aYR
 aIe
 aIe
 aIe
-aIj
+tUt
 aIe
 aIe
 aaa
@@ -140099,8 +140089,8 @@ aYR
 aIe
 aIe
 aIe
-aIj
-aIj
+tUt
+tUt
 aIe
 aIe
 aaa
@@ -140401,7 +140391,7 @@ aIe
 aIe
 aIe
 aIe
-aIj
+tUt
 aIe
 aIe
 aIe
@@ -140703,7 +140693,7 @@ aIe
 aIe
 aIe
 aIe
-aIj
+tUt
 gGL
 aIe
 aIe
@@ -141004,10 +140994,10 @@ aIe
 aIe
 aIe
 aIe
-aIj
-aIj
-aIj
-aIj
+tUt
+tUt
+tUt
+tUt
 aIe
 aaa
 cnw
@@ -141307,9 +141297,9 @@ aIe
 aIe
 aIe
 gGL
-aIj
-aIj
-aIj
+tUt
+tUt
+tUt
 aIe
 aaa
 cnw
