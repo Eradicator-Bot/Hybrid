@@ -21,7 +21,7 @@
 	ai_retaliate_persistence = RETALIATE_UNTIL_DEAD
 	ai_type = /datum/aiHolder/brullbar
 	is_npc = TRUE
-	add_abilities = list(/datum/targetable/critter/fadeout/brullbar, /datum/targetable/critter/tackle, /datum/targetable/critter/frenzy, /datum/targetable/critter/blood_bite, )
+	add_abilities = list(/datum/targetable/critter/fadeout/brullbar, /datum/targetable/critter/tackle, /datum/targetable/critter/frenzy, /datum/targetable/critter/blood_bite, /datum/targetable/critter/sandspray)
 	no_stamina_stuns = TRUE
 	var/frenzypath = /datum/targetable/critter/frenzy
 
