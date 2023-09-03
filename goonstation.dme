@@ -483,6 +483,7 @@ var/datum/preMapLoad/preMapLoad = new
 #include "code\mob\living\critter\mining_critter.dm"
 #include "code\mob\living\critter\mob_bots.dm"
 #include "code\mob\living\critter\plasmaspore.dm"
+#include "code\mob\living\critter\sand_stalker.dm"
 #include "code\mob\living\critter\sawfly.dm"
 #include "code\mob\living\critter\scuttlebot.dm"
 #include "code\mob\living\critter\singularity.dm"
