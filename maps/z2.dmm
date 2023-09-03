@@ -5359,7 +5359,7 @@
 /turf/unsimulated/floor{
 	icon_state = "plating_dusty2"
 	},
-/area/marsoutpost)
+/area/shuttle/mars_elevator/upper)
 "atY" = (
 /obj/machinery/door/airlock/pyro/maintenance{
 	req_access_txt = ""
@@ -62257,6 +62257,14 @@
 	temperature = 372.15
 	},
 /area/iomoon)
+"gGs" = (
+/obj/landmark{
+	name = "marselefall"
+	},
+/turf/unsimulated/floor{
+	icon_state = "plating_dusty2"
+	},
+/area/shuttle/mars_elevator/lower)
 "gGL" = (
 /obj/item/material_piece/bone,
 /turf/unsimulated/floor/setpieces/martian,
@@ -65819,6 +65827,15 @@
 	icon_state = "drip5"
 	},
 /turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
+"kAp" = (
+/obj/machinery/computer/mars_elevator{
+	dir = 4
+	},
+/obj/decal/fakeobjects/lightbulb_broken,
+/turf/unsimulated/floor{
+	icon_state = "plating_dusty1"
+	},
 /area/marsoutpost)
 "kAr" = (
 /turf/unsimulated/floor/grey/side{
@@ -71785,6 +71802,17 @@
 	},
 /turf/unsimulated/floor/caution/east,
 /area/drone/assembly)
+"qAc" = (
+/obj/machinery/computer/mars_elevator{
+	dir = 4
+	},
+/obj/decal/fakeobjects/lightbulb_broken{
+	dir = 8
+	},
+/turf/unsimulated/floor{
+	icon_state = "plating_dusty2"
+	},
+/area/marsoutpost)
 "qAq" = (
 /obj/chainlink_fence,
 /turf/unsimulated/floor/setpieces/martian,
@@ -131711,7 +131739,7 @@ aTs
 aTs
 atX
 atX
-aIA
+kAp
 aTs
 aTs
 aUQ
@@ -142901,7 +142929,7 @@ aIe
 aIe
 aIe
 pam
-aIB
+qAc
 aIe
 aIe
 aaa
@@ -143203,8 +143231,8 @@ aIe
 tUt
 qAq
 tUt
-aIB
-aIB
+gGs
+gGs
 aIe
 aaa
 cnw
@@ -143505,8 +143533,8 @@ wpu
 tUt
 tUt
 tUt
-aIB
-aIB
+gGs
+gGs
 aIe
 aaa
 cnw
