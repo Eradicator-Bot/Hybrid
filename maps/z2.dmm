@@ -5351,13 +5351,22 @@
 	},
 /area/moon/museum)
 "atX" = (
-/turf/unsimulated/floor/plating,
+/obj/grille/catwalk{
+	dir = 9;
+	icon_state = "catwalk_cross"
+	},
+/obj/decal/stripe_delivery,
+/turf/unsimulated/floor{
+	icon_state = "plating_dusty2"
+	},
 /area/marsoutpost)
 "atY" = (
 /obj/machinery/door/airlock/pyro/maintenance{
 	req_access_txt = ""
 	},
-/turf/unsimulated/floor/plating,
+/turf/unsimulated/floor{
+	icon_state = "plating_dusty1"
+	},
 /area/marsoutpost)
 "aua" = (
 /obj/decal/fakeobjects{
@@ -8031,10 +8040,6 @@
 "aIe" = (
 /turf/unsimulated/wall/auto/adventure/mars,
 /area/marsoutpost)
-"aIf" = (
-/obj/storage/crate/internals,
-/turf/unsimulated/floor/setpieces/martian,
-/area/marsoutpost)
 "aIj" = (
 /turf/unsimulated/floor/setpieces/martian{
 	density = 1;
@@ -10430,7 +10435,7 @@
 /turf/unsimulated/floor/grass/leafy,
 /area/crater/biodome/north)
 "aPU" = (
-/obj/boulder_trap,
+/obj/item/raw_material/miracle,
 /turf/unsimulated/floor/setpieces/martian,
 /area/marsoutpost)
 "aPV" = (
@@ -59686,6 +59691,7 @@
 	name = "cargo bay door control panel";
 	desc = "Seems to be broken."
 	},
+/obj/decal/cleanable/dirt,
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "dUd" = (
@@ -61850,6 +61856,10 @@
 	},
 /turf/unsimulated/floor/stairs/quilty,
 /area/owlery/owllock)
+"gjL" = (
+/obj/item/shovel,
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "gjN" = (
 /obj/cable{
 	d1 = 1;
@@ -62727,7 +62737,9 @@
 	req_access_txt = ""
 	},
 /obj/mapping_helper/airlock/bolter,
-/turf/unsimulated/floor/plating,
+/turf/unsimulated/floor{
+	icon_state = "plating_dusty1"
+	},
 /area/marsoutpost)
 "hla" = (
 /obj/machinery/light,
@@ -62755,7 +62767,9 @@
 /area/meat_derelict/guts)
 "hmY" = (
 /obj/decal/cleanable/dirt,
-/turf/unsimulated/floor/plating,
+/turf/unsimulated/floor{
+	icon_state = "plating_dusty1"
+	},
 /area/marsoutpost)
 "hnj" = (
 /obj/machinery/door/unpowered/wood{
@@ -65254,6 +65268,10 @@
 /obj/machinery/light/runway_light/delay2,
 /turf/space,
 /area/syndicate_station_space)
+"jQd" = (
+/obj/decal/cleanable/dirt,
+/turf/unsimulated/floor/grime,
+/area/marsoutpost)
 "jRr" = (
 /turf/unsimulated/floor/carpet/green/fancy/edge/sw,
 /area/centcom/offices{
@@ -65794,6 +65812,14 @@
 	},
 /turf/unsimulated/floor/red,
 /area/syndicate_station/assault_pod)
+"kyF" = (
+/obj/decal/fakeobjects/skeleton/decomposed_corpse,
+/obj/item/dagger,
+/obj/decal/cleanable/blood/tracks{
+	icon_state = "drip5"
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "kAr" = (
 /turf/unsimulated/floor/grey/side{
 	dir = 4
@@ -65995,7 +66021,11 @@
 /area/shuttle/merchant_shuttle/left_centcom/destiny)
 "kJr" = (
 /obj/rack,
-/obj/item/caution,
+/obj/item/caution{
+	pixel_x = 8
+	},
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/mop,
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "kJE" = (
@@ -69364,6 +69394,10 @@
 	dir = 1
 	},
 /area/crypt/graveyard)
+"nZj" = (
+/obj/item/gun/energy/crabgun,
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "nZV" = (
 /obj/decoration/regallamp{
 	lit = 1
@@ -69518,6 +69552,10 @@
 	icon_state = "shore-36"
 	},
 /area/titlescreen)
+"ohQ" = (
+/obj/boulder_trap,
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "ohW" = (
 /turf/unsimulated/floor/carpet{
 	dir = 1;
@@ -69548,6 +69586,14 @@
 /obj/item/device/multitool,
 /turf/unsimulated/floor/plating,
 /area/moon/museum/west)
+"ojl" = (
+/obj/storage/crate/internals,
+/obj/item/tank/oxygen,
+/obj/item/tank/oxygen,
+/obj/item/clothing/mask/gas/emergency,
+/obj/item/clothing/mask/gas/emergency,
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "ojn" = (
 /obj/cable,
 /obj/cable{
@@ -70334,6 +70380,13 @@
 /obj/item/paper/postcard/mushroom,
 /turf/unsimulated/floor/wood/two,
 /area/centcom/offices/efrem)
+"pam" = (
+/obj/decal/poster/wallsign/warning1{
+	desc = "Beware: loose rocks ahead.";
+	pixel_y = 32
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "pbV" = (
 /turf/unsimulated/wall/generic{
 	desc = "It's sealed shut.";
@@ -70627,7 +70680,9 @@
 	name = "sealed airlock";
 	opacity = 1
 	},
-/turf/unsimulated/floor/plating,
+/turf/unsimulated/floor{
+	icon_state = "plating_dusty1"
+	},
 /area/marsoutpost)
 "pom" = (
 /obj/admin_plaque{
@@ -70783,6 +70838,10 @@
 /obj/decal/poster/wallsign/stencil/right/i,
 /turf/unsimulated/wall/auto/lead/gray,
 /area/iomoon/base)
+"pum" = (
+/obj/item/stamped_bullion,
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "pux" = (
 /obj/meatlight{
 	brightness = 4
@@ -70897,6 +70956,10 @@
 	icon_state = "floor"
 	},
 /area/centcom/offices/pali)
+"pAV" = (
+/obj/item/mining_tools/pick,
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "pAZ" = (
 /obj/indestructible/shuttle_corner{
 	dir = 1;
@@ -71722,6 +71785,10 @@
 	},
 /turf/unsimulated/floor/caution/east,
 /area/drone/assembly)
+"qAq" = (
+/obj/chainlink_fence,
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "qAT" = (
 /obj/decal/lightshaft,
 /turf/unsimulated/floor/carpet/darkcarpet,
@@ -71734,6 +71801,10 @@
 /obj/decal/stripe_delivery,
 /turf/unsimulated/floor/plating,
 /area/crypt/sigma)
+"qBx" = (
+/obj/item/raw_material/uqill,
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "qBF" = (
 /obj/item/wrench,
 /obj/decal/tile_edge/stripe/extra_big{
@@ -72550,7 +72621,9 @@
 	dir = 1;
 	status = 2
 	},
-/turf/unsimulated/floor/plating,
+/turf/unsimulated/floor{
+	icon_state = "plating_dusty1"
+	},
 /area/marsoutpost)
 "rqw" = (
 /obj/pedestal,
@@ -72929,7 +73002,9 @@
 	pixel_y = -7;
 	pixel_x = -10
 	},
-/turf/unsimulated/floor/plating,
+/turf/unsimulated/floor{
+	icon_state = "plating_dusty1"
+	},
 /area/marsoutpost)
 "rGD" = (
 /obj/decal/fakeobjects/pipe{
@@ -74808,6 +74883,7 @@
 /area/centcom/lobby)
 "tZg" = (
 /obj/vehicle/forklift,
+/obj/decal/cleanable/dirt,
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "tZr" = (
@@ -75208,6 +75284,10 @@
 	tag = "icon-fblue2 (NORTHEAST)"
 	},
 /area/centcom/offices/varshie)
+"uwG" = (
+/obj/decal/fakeobjects/cultiststatue,
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "uwK" = (
 /obj/tombstone{
 	dir = 8
@@ -76963,6 +77043,10 @@
 	},
 /turf/unsimulated/floor/wood,
 /area/centcom/offices/urs)
+"wpu" = (
+/obj/item/raw_material/syreline,
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "wpw" = (
 /obj/cable{
 	d1 = 1;
@@ -78897,7 +78981,9 @@
 /obj/machinery/door/airlock/pyro/maintenance{
 	dir = 4
 	},
-/turf/unsimulated/floor/plating,
+/turf/unsimulated/floor{
+	icon_state = "plating_dusty1"
+	},
 /area/marsoutpost)
 "yhB" = (
 /mob/living/critter/bear,
@@ -131623,8 +131709,8 @@ aTs
 aOn
 aTs
 aTs
-aIA
-aIA
+atX
+atX
 aIA
 aTs
 aTs
@@ -131925,8 +132011,8 @@ kCa
 aOo
 aTs
 aTs
-aIA
-aIA
+atX
+atX
 aSx
 aTv
 aMo
@@ -140370,7 +140456,7 @@ aIe
 aIe
 aIe
 aTs
-aKS
+jQd
 aKS
 dkl
 aKS
@@ -140379,7 +140465,7 @@ aKS
 aKS
 bnd
 aTs
-atX
+aIA
 aTs
 aIe
 aIe
@@ -140679,7 +140765,7 @@ aKS
 aKS
 aKS
 xUd
-aKS
+jQd
 hkL
 hmY
 aTs
@@ -140977,13 +141063,13 @@ naB
 aKS
 aKS
 aKS
-aKS
+jQd
 tZg
 nbP
 aKS
 kJr
 aTs
-atX
+aIA
 aTs
 aIe
 aIe
@@ -141004,7 +141090,7 @@ aIe
 tUt
 tUt
 tUt
-tUt
+nZj
 aIe
 aaa
 cnw
@@ -141882,7 +141968,7 @@ tUt
 naB
 aKS
 dkl
-aKS
+jQd
 fVq
 kCa
 mgT
@@ -142191,7 +142277,7 @@ uPO
 aKS
 aKS
 atY
-atX
+aIA
 aTs
 aIe
 aIe
@@ -142512,7 +142598,7 @@ aIe
 aIe
 aIe
 aIe
-aIf
+ojl
 aTs
 aIe
 aIe
@@ -142814,8 +142900,8 @@ aIe
 aIe
 aIe
 aIe
-tUt
-tUt
+pam
+aIB
 aIe
 aIe
 aaa
@@ -143115,10 +143201,10 @@ aIe
 aIe
 aIe
 tUt
+qAq
 tUt
-tUt
-tUt
-tUt
+aIB
+aIB
 aIe
 aaa
 cnw
@@ -143415,12 +143501,12 @@ aIe
 aIe
 aIe
 aIe
+wpu
 tUt
 tUt
 tUt
-tUt
-tUt
-tUt
+aIB
+aIB
 aIe
 aaa
 cnw
@@ -143689,7 +143775,7 @@ aES
 dFc
 aaa
 aIe
-tUt
+qBx
 aIe
 aIe
 aIe
@@ -143719,7 +143805,7 @@ aIe
 tUt
 tUt
 tUt
-tUt
+qAq
 aIe
 aIe
 aIe
@@ -143994,36 +144080,36 @@ aIe
 tUt
 tUt
 tUt
-aPU
 tUt
+ohQ
 aIe
-aIe
-tUt
 aIe
 tUt
-tUt
-tUt
-aIe
-tUt
-tUt
-aIe
-aIe
-aIe
-aIe
-aIe
-aIe
-aIe
-aIe
-aIe
-aIe
 aIe
 tUt
 tUt
 tUt
 aIe
 tUt
+tUt
+aIe
+aIe
+aIe
+aIe
+aIe
+aIe
+aIe
+aIe
+aIe
+aIe
 aIe
 tUt
+tUt
+tUt
+aIe
+qAq
+aIe
+gjL
 tUt
 aIe
 aaa
@@ -144302,30 +144388,30 @@ tUt
 aIe
 tUt
 aIe
-tUt
+aPU
 aIe
 tUt
 aIe
 tUt
 tUt
 aIe
+qBx
+tUt
+aIe
+aIe
+aIe
+aIe
+tUt
+tUt
+tUt
+tUt
+tUt
 tUt
 tUt
 aIe
 aIe
 aIe
-aIe
-tUt
-tUt
-tUt
-tUt
-tUt
-tUt
-tUt
-aIe
-aIe
-aIe
-tUt
+pum
 tUt
 aIe
 aaa
@@ -144907,7 +144993,7 @@ aIe
 tUt
 tUt
 tUt
-aPU
+ohQ
 tUt
 tUt
 tUt
@@ -144920,7 +145006,7 @@ tUt
 tUt
 tUt
 aIe
-tUt
+wpu
 tUt
 aIe
 tUt
@@ -145230,7 +145316,7 @@ tUt
 tUt
 tUt
 tUt
-tUt
+wpu
 aIe
 tUt
 aIe
@@ -145513,12 +145599,12 @@ tUt
 tUt
 aIe
 tUt
-tUt
+uwG
 aIe
 aIe
 tUt
 aIe
-tUt
+wpu
 aIe
 tUt
 aIe
@@ -145527,7 +145613,7 @@ tUt
 tUt
 tUt
 aIe
-tUt
+wpu
 tUt
 aIe
 aIe
@@ -145815,24 +145901,24 @@ aIe
 aIe
 aIe
 tUt
+kyF
 tUt
-tUt
-aIe
-tUt
-aIe
-aIe
 aIe
 tUt
 aIe
 aIe
 aIe
+tUt
+aIe
+aIe
+aIe
 aIe
 tUt
 tUt
 tUt
 tUt
 aIe
-tUt
+pAV
 tUt
 tUt
 aIe
@@ -146112,7 +146198,7 @@ aIe
 tUt
 tUt
 tUt
-aPU
+ohQ
 tUt
 tUt
 tUt

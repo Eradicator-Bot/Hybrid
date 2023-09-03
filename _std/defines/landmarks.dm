@@ -94,6 +94,7 @@
 #define LANDMARK_FALL_MOON_MUSEUM "moonfall_museum" // Lunar museum elevator shaft
 #define LANDMARK_FALL_SEA "seafall" // Oshan trench elevator
 #define LANDMARK_FALL_SPACEMAS "spacemasfall" // Merry Spacemas!
+#define LANDMARK_FALL_MARS_ELE "marselefall" // Mars elevator shaft
 
 // misc adventure zone stuff
 #define LANDMARK_SUMMON "summon"

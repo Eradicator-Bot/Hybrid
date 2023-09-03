@@ -819,6 +819,16 @@ ABSTRACT_TYPE(/area/shuttle)
 	icon_state = "shuttle2"
 	force_fullbright = 0
 
+/area/shuttle/mars_elevator/upper
+	name = "Mars Lift Upper Section"
+	icon_state = "shuttle"
+	force_fullbright = 0
+
+/area/shuttle/mars_elevator/lower
+	name = "Mars Lift Lower Section"
+	icon_state = "shuttle2"
+	force_fullbright = 0
+
 /area/shuttle/centcom_elevator/upper
 	name = "Centcom Lift Upper Section"
 	icon_state = "shuttle"
