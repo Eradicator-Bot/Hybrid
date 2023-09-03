@@ -80,7 +80,7 @@
 
 		if (length(.) && prob(10))
 			playsound(src.loc, 'sound/voice/animal/brullbar_roar.ogg', 75, 1)
-			src.visible_message("<span class='alert'><B>[src]</B> roars!</span>")
+			src.visible_message("<span class='alert'><B>[src]</B> screeches!</span>")
 
 	seek_scavenge_target(var/range = 9)
 		. = list()
