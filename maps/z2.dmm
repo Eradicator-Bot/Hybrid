@@ -75860,6 +75860,10 @@
 "vaZ" = (
 /turf/unsimulated/wall/auto/adventure/shuttle/dark,
 /area/shuttle/merchant_shuttle/left_centcom/cogmap)
+"vbm" = (
+/mob/living/critter/sand_stalker,
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "vbr" = (
 /obj/cable{
 	d1 = 1;
@@ -141418,7 +141422,7 @@ aIe
 aIe
 aIe
 gGL
-tUt
+vbm
 tUt
 tUt
 aIe
@@ -144421,7 +144425,7 @@ aIe
 tUt
 aIe
 tUt
-tUt
+vbm
 aIe
 qBx
 tUt
@@ -145638,7 +145642,7 @@ tUt
 aIe
 tUt
 tUt
-tUt
+vbm
 tUt
 aIe
 wpu
