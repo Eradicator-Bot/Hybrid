@@ -7,6 +7,7 @@
 	icon_state = "sand_stalker"
 	icon_state_dead = "sand_stalker-dead"
 	custom_gib_handler = /proc/gibs
+	hand_count = 2
 	can_throw = TRUE
 	can_grab = TRUE
 	can_disarm = TRUE
@@ -48,6 +49,9 @@
 			if ("scream")
 				return 2
 		return ..()
+
+	setup_hands()
+		..()
 
 	New()
 		..()
