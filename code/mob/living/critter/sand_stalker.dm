@@ -95,7 +95,7 @@
 		var/datum/targetable/critter/frenzy = src.abilityHolder.getAbility(src.frenzypath)
 		var/datum/targetable/critter/tackle = src.abilityHolder.getAbility(/datum/targetable/critter/tackle)
 		var/datum/targetable/critter/blood_bite = src.abilityHolder.getAbility(/datum/targetable/critter/blood_bite)
-		var/datum/targetable/critter/sandspray = src.abilityHolder.getAbility(/datum/targetable/critter/sand_spray)
+		var/datum/targetable/critter/sandspray = src.abilityHolder.getAbility(/datum/targetable/critter/sandspray)
 		if (!tackle.disabled && tackle.cooldowncheck() && !is_incapacitated(target) && prob(30))
 			tackle.handleCast(target) // no return to wack people with the frenzy after the tackle sometimes
 			src.ai_attack_count = src.ai_attacks_per_ability //brullbars get to be evil and frenzy right away
