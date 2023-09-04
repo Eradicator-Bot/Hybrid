@@ -106,7 +106,7 @@
 		if (!blood_bite.disabled && tackle.cooldowncheck() && prob(20))
 			blood_bite.handleCast(target)
 			. = TRUE
-		if (!sandspray.disabled && sandspray.cooldowncheck() && is_incapacitated(target) && prob(20))
+		if (!sandspray.disabled && sandspray.cooldowncheck() && !is_incapacitated(target) && prob(20))
 			sandspray.handleCast(target)
 			. = TRUE
 
