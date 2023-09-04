@@ -15,7 +15,6 @@
 		if (!target)
 			return 1
 		var/turf/OT = get_turf(holder.owner)
-		var/turf/original_target = get_turf(target)
 		var/it = 7
 		while (GET_DIST(OT, target) > 3)
 			target = get_step(target, get_dir(target, OT))
@@ -35,10 +34,17 @@
 			if (T == OT)
 				continue
 			for (var/mob/living/M in T)
-				if (!(istype(M.glasses, /obj/item/clothing/glasses/) || M.bioHolder?.HasEffect("blind") || M.isBlindImmune())) //check for eye protection, blindness and blindness immunity
-					M.take_eye_damage(pick(5, 10), 1)
-					src.visible_message("The [src] kicks sand into [M]'s eyes!")
-					logTheThing(LOG_COMBAT, usr, "used their [src.name] ability on [M] at [log_loc(usr)]")
-				else
+				if (M.bioHolder?.HasEffect("blind") || M.isBlindImmune())
+					return
+				else if (ishuman(M))
+					var/mob/living/carbon/human/H = M
+					if (H.glasses && istype(H.glasses, /obj/item/clothing/glasses/)) //check for eye protection, blindness and blindness immunity
+						H.visible_message("[H]'s eyes are protected from the sand attack by the [H.glasses]!")
+						return
+					else
+						continue
+				M.take_eye_damage(pick(5, 10), 1)
+				usr.visible_message("The [usr] kicks sand into [M]'s eyes!")
+				logTheThing(LOG_COMBAT, usr, "used their [src.name] ability on [M] at [log_loc(usr)]")
 
 		return 0
