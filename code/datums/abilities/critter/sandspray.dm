@@ -35,7 +35,7 @@
 			if (T == OT)
 				continue
 			for (var/mob/living/M in T)
-				if (!(istype(M.glasses?, /obj/item/clothing/glasses/) || M.bioHolder?.HasEffect("blind") || M.isBlindImmune())) //check for eye protection, blindness and blindness immunity
+				if (!(istype(M.glasses, /obj/item/clothing/glasses/) || M.bioHolder?.HasEffect("blind") || M.isBlindImmune())) //check for eye protection, blindness and blindness immunity
 					M.take_eye_damage(pick(5, 10), 1)
 					src.visible_message("The [src] kicks sand into [M]'s eyes!")
 					logTheThing(LOG_COMBAT, usr, "used their [src.name] ability on [M] at [log_loc(usr)]")
