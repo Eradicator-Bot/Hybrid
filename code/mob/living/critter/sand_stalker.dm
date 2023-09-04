@@ -19,7 +19,7 @@
 	ai_retaliates = TRUE
 	ai_retaliate_patience = 0
 	ai_retaliate_persistence = RETALIATE_UNTIL_DEAD
-	ai_type = /datum/aiHolder/brullbar
+	ai_type = /datum/aiHolder/sand_stalker
 	is_npc = TRUE
 	add_abilities = list(/datum/targetable/critter/tackle, /datum/targetable/critter/frenzy, /datum/targetable/critter/blood_bite, /datum/targetable/critter/sandspray)
 	no_stamina_stuns = TRUE
