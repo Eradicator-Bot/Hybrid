@@ -35,7 +35,7 @@
 			if (T == OT)
 				continue
 			for (var/mob/living/M in T)
-				if (!M.eye)
+				if (!M.eye) //this needs to check for eye protection and blindness immunity
 					M.take_eye_damage(5, 1)
 					logTheThing(LOG_COMBAT, usr, "used their [src.name] ability on [M] at [log_loc(usr)]")
 				else

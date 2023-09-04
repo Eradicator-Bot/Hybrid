@@ -1,4 +1,4 @@
-//Based on brullbar, sounds need replacing, directional sprites need making, custom fadeout too
+//Based on brullbar, sounds need replacing, directional sprites need making, fadeout needs reimplementing with mob appropriate sprites
 /mob/living/critter/sand_stalker
 	name = "sand stalker"
 	real_name = "sand stalker"
@@ -21,7 +21,7 @@
 	ai_retaliate_persistence = RETALIATE_UNTIL_DEAD
 	ai_type = /datum/aiHolder/brullbar
 	is_npc = TRUE
-	add_abilities = list(/datum/targetable/critter/fadeout/brullbar, /datum/targetable/critter/tackle, /datum/targetable/critter/frenzy, /datum/targetable/critter/blood_bite, /datum/targetable/critter/sandspray)
+	add_abilities = list(/datum/targetable/critter/tackle, /datum/targetable/critter/frenzy, /datum/targetable/critter/blood_bite, /datum/targetable/critter/sandspray)
 	no_stamina_stuns = TRUE
 	var/frenzypath = /datum/targetable/critter/frenzy
 
@@ -125,8 +125,8 @@
 
 	can_critter_attack()
 		var/datum/targetable/critter/frenzy = src.abilityHolder.getAbility(src.frenzypath)
-		var/datum/targetable/critter/fadeout = src.abilityHolder.getAbility(/datum/targetable/critter/fadeout/brullbar)
-		return ..() && (!frenzy.disabled && !fadeout.disabled) // so they can't attack you while frenzying or while invisible (kinda)
+		//var/datum/targetable/critter/fadeout = src.abilityHolder.getAbility(/datum/targetable/critter/fadeout/brullbar)
+		return ..() && (!frenzy.disabled/* && !fadeout.disabled*/) // so they can't attack you while frenzying or while invisible (kinda)
 
 	proc/fuck_up_silicons(var/mob/living/silicon/silicon) // modified orginal object critter behaviour scream
 		if (isrobot(silicon) && !ON_COOLDOWN(src, "brullbar_messup_cyborg", 30 SECONDS))
@@ -146,10 +146,10 @@
 			playsound(src.loc, 'sound/impact_sounds/Metal_Clang_3.ogg', 50, 1)
 			random_brute_damage(silicon, 15, 0)
 
-	proc/go_invis()
+	/*proc/go_invis()
 		var/datum/targetable/critter/fadeout = src.abilityHolder.getAbility(/datum/targetable/critter/fadeout/brullbar)
 		if (!fadeout.disabled && fadeout.cooldowncheck())
-			fadeout.handleCast(src)
+			fadeout.handleCast(src)*/
 
 	death()
 		..()
