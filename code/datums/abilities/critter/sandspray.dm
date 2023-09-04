@@ -34,11 +34,11 @@
 			if (T == OT)
 				continue
 			for (var/mob/living/M in T)
-				if (M.bioHolder?.HasEffect("blind") || M.isBlindImmune())
+				if (M.bioHolder?.HasEffect("blind") || M.isBlindImmune()) //check for blindness and blindness immunity
 					return
 				else if (ishuman(M))
 					var/mob/living/carbon/human/H = M
-					if (H.glasses && istype(H.glasses, /obj/item/clothing/glasses/)) //check for eye protection, blindness and blindness immunity
+					if (H.glasses && istype(H.glasses, /obj/item/clothing/glasses/)) //check for eye protection
 						H.visible_message("[H]'s eyes are protected from the sand attack by the [H.glasses]!")
 						return
 					else
