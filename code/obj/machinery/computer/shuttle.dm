@@ -461,7 +461,7 @@ var/bombini_saved
 	if(location == 0) // at bottom
 		var/area/start_location = locate(/area/shuttle/mars_elevator/lower)
 		var/area/end_location = locate(/area/shuttle/mars_elevator/upper)
-		start_location.move_contents_to(end_location, /turf/simulated/floor/plating)
+		start_location.move_contents_to(end_location, /turf/unsimulated/floor/plating/scorched)
 		location = 1
 	else // at top
 		var/area/start_location = locate(/area/shuttle/mars_elevator/upper)

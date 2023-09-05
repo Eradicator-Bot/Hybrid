@@ -5360,9 +5360,7 @@
 	icon_state = "catwalk_cross"
 	},
 /obj/decal/stripe_delivery,
-/turf/unsimulated/floor{
-	icon_state = "plating_dusty2"
-	},
+/turf/unsimulated/floor/plating/scorched,
 /area/shuttle/mars_elevator/upper)
 "atY" = (
 /obj/machinery/door/airlock/pyro/maintenance{
@@ -62278,9 +62276,7 @@
 /obj/landmark{
 	name = "marselefall"
 	},
-/turf/unsimulated/floor{
-	icon_state = "plating_dusty2"
-	},
+/turf/unsimulated/floor/plating/scorched,
 /area/shuttle/mars_elevator/lower)
 "gGL" = (
 /obj/item/material_piece/bone,

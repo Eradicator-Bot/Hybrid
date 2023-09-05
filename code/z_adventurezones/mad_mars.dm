@@ -818,7 +818,7 @@ TYPEINFO(/obj/vehicle/marsrover)
 /turf/simulated/floor/mars_elevator_shaft
 	name = "elevator shaft"
 	desc = "It looks like it goes down a long ways."
-	icon_state = "void_gray"
+	icon_state = "pit"
 	step_material = "step_lattice"
 	step_priority = STEP_PRIORITY_MED
 
