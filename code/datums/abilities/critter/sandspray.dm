@@ -3,7 +3,7 @@
 	name = "Sand Spray"
 	icon_state = "fire_e_flamethrower"
 	desc = "Throw sand towards a target location up to three squares away."
-	cooldown = 30
+	cooldown = 10
 	targeted = 1
 	target_anything = 1
 

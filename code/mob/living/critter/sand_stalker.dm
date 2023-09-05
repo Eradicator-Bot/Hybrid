@@ -96,17 +96,17 @@
 		var/datum/targetable/critter/tackle = src.abilityHolder.getAbility(/datum/targetable/critter/tackle)
 		var/datum/targetable/critter/blood_bite = src.abilityHolder.getAbility(/datum/targetable/critter/blood_bite)
 		var/datum/targetable/critter/sandspray = src.abilityHolder.getAbility(/datum/targetable/critter/sandspray)
-		if (!tackle.disabled && tackle.cooldowncheck() && !is_incapacitated(target) && prob(30))
+		if (!tackle.disabled && tackle.cooldowncheck() && !is_incapacitated(target) && prob(15))
 			tackle.handleCast(target) // no return to wack people with the frenzy after the tackle sometimes
 			src.ai_attack_count = src.ai_attacks_per_ability //brullbars get to be evil and frenzy right away
 			. = TRUE
-		if (!frenzy.disabled && frenzy.cooldowncheck() && is_incapacitated(target) && prob(30))
+		if (!frenzy.disabled && frenzy.cooldowncheck() && is_incapacitated(target) && prob(15))
 			frenzy.handleCast(target)
 			. = TRUE
-		if (!blood_bite.disabled && tackle.cooldowncheck() && prob(20))
+		if (!blood_bite.disabled && blood_bite.cooldowncheck() && is_incapacitated(target) && prob(35))
 			blood_bite.handleCast(target)
 			. = TRUE
-		if (!sandspray.disabled && sandspray.cooldowncheck() && !is_incapacitated(target) && prob(20))
+		if (!sandspray.disabled && sandspray.cooldowncheck() && !is_incapacitated(target) && prob(35))
 			sandspray.handleCast(target)
 			. = TRUE
 
