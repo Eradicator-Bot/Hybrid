@@ -2858,7 +2858,11 @@
 /area/hospital)
 "ajx" = (
 /obj/table/auto,
-/obj/item/paper,
+/obj/item/paper{
+	icon_state = "postit-writing";
+	info = "15 credits for whoever finds my missing club";
+	name = "very unsticky sticky note"
+	},
 /obj/item/paper{
 	icon_state = "paper";
 	info = "<tt>Name: Unknown; calls self \"Melchior the Inscrutable\"<br>Sex: Male<br>Age: Mid-70s<br>Rank: Assumed Staff Assistant<br>Fingerprint: <ERROR><br>DNA: <ERROR><br>Current Health: <ERROR>, XYZ co-ordinates <ERROR><br>Diagnosis: Narcissistic personality disorder comorbid with paranoid schizophrenia<br><br>Details: Patient entertains elaborate fantasies of being a Space Wizard, claiming to possess supernatural powers and connections to the Space Wizard Federation. Patientâ€™s physical condition is extremely poor, showing signs of prolonged neglect and malnutrition. All medication regimes have failed to improve symptoms, and if anything only serve to strengthen delusional thinking. Challenges to delusional thinking are met with immediate justification â€? for instance, â€œMelchiorâ€? attributes his inability to actually use magic to his patient jumpsuit, demanding the return of his â€œrightful vestments.â€? Attempted use of a bathrobe to challenge this delusion was met with extreme violence.<br>Important Notes: Patient has extremely short temper, and will respond with violence to anything that overly challenges his delusions. Repeated attempts to shave him have only led to the hospitalization of four interns, and the death of two others.</tt>";
@@ -16782,7 +16786,11 @@
 /area/marsoutpost)
 "bjC" = (
 /obj/table/reinforced/bar/auto,
-/obj/item/paper,
+/obj/item/paper{
+	icon_state = "postit-writing";
+	info = "15 credits for whoever finds my missing club";
+	name = "very unsticky sticky note"
+	},
 /turf/unsimulated/floor/specialroom/bar,
 /area/marsoutpost)
 "bjD" = (
@@ -17994,7 +18002,11 @@
 "bmR" = (
 /obj/table/auto,
 /obj/item/wirecutters,
-/obj/item/paper,
+/obj/item/paper{
+	icon_state = "postit-writing";
+	info = "15 credits for whoever finds my missing club";
+	name = "very unsticky sticky note"
+	},
 /turf/unsimulated/floor/white/grime,
 /area/marsoutpost)
 "bmT" = (
@@ -64359,6 +64371,12 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/moon/museum)
+"iVm" = (
+/mob/living/critter/small_animal/scorpion/matriarch{
+	name = "\improper Martian dust scorpion matriarch"
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "iVo" = (
 /obj/decal/fakeobjects/pipe,
 /obj/decal/fakeobjects/pipe{
@@ -72977,6 +72995,11 @@
 	pixel_y = -7;
 	pixel_x = 6
 	},
+/obj/item/paper{
+	icon_state = "postit-writing";
+	info = "15 credits for whoever finds my missing club";
+	name = "very unsticky sticky note"
+	},
 /turf/unsimulated/floor/black,
 /area/marsoutpost)
 "rEs" = (
@@ -74271,12 +74294,6 @@
 /obj/decal/stripe_delivery,
 /turf/unsimulated/floor/plating,
 /area/crypt/sigma/mainhall)
-"tgV" = (
-/mob/living/critter/small_animal/scorpion/matriarch{
-	name = "\improper Martian dust scorpion matriarch"
-	},
-/turf/unsimulated/floor/setpieces/martian,
-/area/marsoutpost)
 "thx" = (
 /turf/unsimulated/wall/generic{
 	desc = "They're sealed shut.";
@@ -141461,7 +141478,7 @@ aIe
 aIe
 tUt
 tUt
-tgV
+iVm
 tUt
 vbm
 aIe
