@@ -61262,6 +61262,10 @@
 	},
 /turf/unsimulated/outdoors/grass,
 /area/shuttle/merchant_shuttle/right_centcom/cogmap2)
+"fFJ" = (
+/obj/item/golf_club,
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "fGD" = (
 /obj/table/wood/auto,
 /obj/item/clothing/suit/judgerobe,
@@ -61302,7 +61306,8 @@
 	icon = 'icons/obj/doors/sovblastdoor.dmi';
 	icon_state = "bdoorleft0";
 	opacity = 0;
-	spookTypes = null
+	spookTypes = null;
+	autoclose = FALSE
 	},
 /turf/unsimulated/floor/setpieces/martian,
 /area/marsoutpost/duststorm)
@@ -68625,7 +68630,8 @@
 	icon = 'icons/obj/doors/sovblastdoor.dmi';
 	icon_state = "bdoormid0";
 	opacity = 0;
-	spookTypes = null
+	spookTypes = null;
+	autoclose = FALSE
 	},
 /obj/decal/cleanable/blood/tracks{
 	icon_state = "drip5"
@@ -69412,7 +69418,11 @@
 	},
 /area/crypt/graveyard)
 "nZj" = (
-/obj/item/gun/energy/crabgun,
+/obj/item/injector_belt,
+/obj/item/reagent_containers/emergency_injector/antihistamine{
+	pixel_x = -6;
+	pixel_y = -10
+	},
 /turf/unsimulated/floor/setpieces/martian,
 /area/marsoutpost)
 "nZV" = (
@@ -70760,7 +70770,8 @@
 	icon = 'icons/obj/doors/sovblastdoor.dmi';
 	icon_state = "bdoorright0";
 	opacity = 0;
-	spookTypes = null
+	spookTypes = null;
+	autoclose = FALSE
 	},
 /obj/decoration/syndcorpse10,
 /turf/unsimulated/floor/setpieces/martian,
@@ -72957,6 +72968,17 @@
 	},
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
+"rEf" = (
+/obj/decal/cleanable/dirt,
+/obj/item/golf_club{
+	pixel_y = -1
+	},
+/obj/item/golf_ball{
+	pixel_y = -7;
+	pixel_x = 6
+	},
+/turf/unsimulated/floor/black,
+/area/marsoutpost)
 "rEs" = (
 /obj/decal/fakeobjects/pipe{
 	desc = "Probably shouldn't drink the water here.";
@@ -74116,6 +74138,13 @@
 /area/centcom/offices{
 	icon_state = "blue"
 	})
+"sSD" = (
+/obj/item/reagent_containers/emergency_injector/pentetic_acid{
+	pixel_y = -12;
+	pixel_x = 4
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "sSJ" = (
 /obj/rail/cap{
 	dir = 8
@@ -75313,7 +75342,9 @@
 	},
 /area/centcom/offices/varshie)
 "uwG" = (
-/obj/decal/fakeobjects/cultiststatue,
+/obj/decal/fakeobjects/cultiststatue{
+	desc = "A bizarre sculpture, looking upon it fills you with dread."
+	},
 /turf/unsimulated/floor/setpieces/martian,
 /area/marsoutpost)
 "uwK" = (
@@ -75861,7 +75892,9 @@
 /turf/unsimulated/wall/auto/adventure/shuttle/dark,
 /area/shuttle/merchant_shuttle/left_centcom/cogmap)
 "vbm" = (
-/mob/living/critter/sand_stalker,
+/mob/living/critter/small_animal/scorpion{
+	name = "\improper Martian dust scorpion"
+	},
 /turf/unsimulated/floor/setpieces/martian,
 /area/marsoutpost)
 "vbr" = (
@@ -135357,7 +135390,7 @@ aTs
 aJY
 aJX
 aKa
-aKa
+rEf
 aTs
 aMp
 aTs
@@ -140817,7 +140850,7 @@ aYR
 aIe
 aIe
 aIe
-aIe
+tUt
 tUt
 gGL
 aIe
@@ -141118,10 +141151,10 @@ aYR
 aIe
 aIe
 aIe
-aIe
+vbm
+gGL
 tUt
-tUt
-tUt
+sSD
 nZj
 aIe
 aaa
@@ -141420,11 +141453,11 @@ aYR
 aIe
 aIe
 aIe
-aIe
-gGL
+tUt
+tUt
+tUt
+tUt
 vbm
-tUt
-tUt
 aIe
 aaa
 cnw
@@ -141723,8 +141756,8 @@ aIe
 aIe
 aIe
 aIe
-aIe
-aIe
+gGL
+fFJ
 fIT
 aIe
 aIe
@@ -144425,7 +144458,7 @@ aIe
 tUt
 aIe
 tUt
-vbm
+tUt
 aIe
 qBx
 tUt
@@ -145642,7 +145675,7 @@ tUt
 aIe
 tUt
 tUt
-vbm
+tUt
 tUt
 aIe
 wpu
