@@ -6,5 +6,4 @@
 /datum/aiTask/prioritizer/critter/sand_stalker/New()
 	..()
 	transition_tasks += holder.get_instance(/datum/aiTask/sequence/goalbased/critter/attack, list(holder, src))
-	transition_tasks += holder.get_instance(/datum/aiTask/sequence/goalbased/critter/range_attack, list(holder, src))
 	transition_tasks += holder.get_instance(/datum/aiTask/sequence/goalbased/critter/scavenge, list(holder, src))
