@@ -74271,6 +74271,12 @@
 /obj/decal/stripe_delivery,
 /turf/unsimulated/floor/plating,
 /area/crypt/sigma/mainhall)
+"tgV" = (
+/mob/living/critter/small_animal/scorpion/matriarch{
+	name = "\improper Martian dust scorpion matriarch"
+	},
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "thx" = (
 /turf/unsimulated/wall/generic{
 	desc = "They're sealed shut.";
@@ -141455,7 +141461,7 @@ aIe
 aIe
 tUt
 tUt
-tUt
+tgV
 tUt
 vbm
 aIe
