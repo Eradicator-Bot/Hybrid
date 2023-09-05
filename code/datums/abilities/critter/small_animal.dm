@@ -203,6 +203,9 @@
 		venom2 = "toxin"
 		amt2 = 10
 
+		matriarch_sting
+			venom1 = "LSD"
+
 	snake_bite
 		name = "Bite"
 		desc = "Bite a mob, injecting them with venom."

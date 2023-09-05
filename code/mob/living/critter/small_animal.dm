@@ -1916,6 +1916,27 @@ var/list/mob_bird_species = list("smallowl" = /mob/living/critter/small_animal/b
 		qdel(friends)
 		return ..()
 
+	matriarch
+		name = "scorpion matriarch"
+		real_name = "scorpion matriarch"
+		desc = "Space hippies have been known to seek out brooding scorpions for the properties of their stings; suffice it to say, few make it back alive."
+		health_brute = 50
+		health_burn = 50
+
+		add_abilities = list(/datum/targetable/critter/wasp_sting/scorpion_sting/matriarch_sting,
+						/datum/targetable/critter/pincer_grab)
+
+		critter_ability_attack(var/mob/target)
+			var/datum/targetable/critter/wasp_sting/scorpion_sting/matriarch_sting/sting = src.abilityHolder.getAbility(/datum/targetable/critter/wasp_sting/scorpion_sting/matriarch_sting)
+			var/datum/targetable/critter/pincer_grab/pincer_grab = src.abilityHolder.getAbility(/datum/targetable/critter/pincer_grab)
+
+			if (!sting.disabled && sting.cooldowncheck() && prob(50))
+				sting.handleCast(target)
+				return TRUE
+			if (!pincer_grab.disabled && pincer_grab.cooldowncheck() && prob(50))
+				pincer_grab.handleCast(target)
+				return TRUE
+
 /* =================================================== */
 /* ------------------- Rattlesnake ------------------- */
 /* =================================================== */
