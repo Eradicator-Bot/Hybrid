@@ -748,6 +748,7 @@ This is basically useless for anyone but miners.
 	job = list("Research Director", "Scientist")
 	can_buy = UPLINK_TRAITOR
 
+/*
 /datum/syndicate_buylist/traitor/robosuit
 	name = "Syndicate Robot Frame"
 	item = /obj/item/parts/robot_parts/robot_frame/syndicate
@@ -770,7 +771,7 @@ This is basically useless for anyone but miners.
 
 	run_on_spawn(var/obj/item)
 		new /obj/item/wrench(item.loc) // clarify that we need to wrench it down before use
-
+*/
 
 /datum/syndicate_buylist/traitor/safari
 	name = "Safari Kit"
