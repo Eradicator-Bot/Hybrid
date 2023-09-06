@@ -855,6 +855,7 @@ TYPEINFO(/obj/vehicle/marsrover)
 	speechverb_exclaim = "beeps"
 	speechverb_ask = "intones"
 	health_brute = 40
+	health_burn = 200
 	density = TRUE
 	flags = TABLEPASS
 	fits_under_table = TRUE
