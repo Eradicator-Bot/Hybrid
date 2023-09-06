@@ -848,6 +848,7 @@ TYPEINFO(/obj/vehicle/marsrover)
 	real_name = "rogue digbot"
 	blood_id = "oil"
 	desc = "Do these things usually come equipped with flamethrowers?"
+	icon = 'icons/obj/bots/aibots.dmi'
 	icon_state = "digbot1"
 	icon_state_dead = "digbot0"
 	speechverb_say = "boops"
