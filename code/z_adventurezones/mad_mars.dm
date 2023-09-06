@@ -842,3 +842,48 @@ TYPEINFO(/obj/vehicle/marsrover)
 			A.set_loc(T)
 			return
 		else ..()
+
+/mob/living/critter/rogue_digbot
+	name = "digbot"
+	real_name = "rogue digbot"
+	blood_id = "oil"
+	desc = "Do these things usually come equipped with flamethrowers?"
+	icon_state = "digbot1"
+	icon_state_dead = "digbot0"
+	speechverb_say = "boops"
+	speechverb_exclaim = "beeps"
+	speechverb_ask = "intones"
+	health_brute = 40
+	density = TRUE
+	flags = TABLEPASS
+	fits_under_table = TRUE
+	can_lie = FALSE
+	ai_type = /datum/aiHolder/aggressive
+	ai_retaliate_patience = 1
+	ai_retaliate_persistence = RETALIATE_UNTIL_DEAD
+	var/aggressive = TRUE
+
+	add_abilities = list(/datum/targetable/critter/flamethrower)
+
+	setup_hands()
+		..()
+
+	critter_ability_attack(var/mob/target)
+		var/datum/targetable/critter/flamethrower/flamethrower = src.abilityHolder.getAbility(/datum/targetable/critter/flamethrower)
+
+		if (!flamethrower.disabled && flamethrower.cooldowncheck() && prob(50))
+			flamethrower.handleCast(target)
+			return TRUE
+
+	valid_target(mob/living/C)
+		if (istype(C, /mob/living/critter/rogue_digbot))
+			return FALSE
+		return ..()
+
+	seek_target(var/range = 8)
+		if(!src.aggressive)
+			return .
+		. = ..()
+
+	death()
+		return ..()
