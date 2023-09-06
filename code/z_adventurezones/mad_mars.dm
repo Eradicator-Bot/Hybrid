@@ -812,36 +812,8 @@ TYPEINFO(/obj/vehicle/marsrover)
 	The vault alarm system <b>is</b> working as intended. <br>
 	It <b>is</b> meant to automatically reseal after a short duration. <br>
 	No, our ethics commitee does not consider it inhumane to seal people in like that. <br>
-	What people are there on Mars anyway? Tentacled freaks don't count.
+	Nevertheless, we appreciate your enquiry.
 	"}
-
-/turf/simulated/floor/mars_elevator_shaft
-	name = "elevator shaft"
-	desc = "It looks like it goes down a long ways."
-	icon_state = "pit"
-	step_material = "step_lattice"
-	step_priority = STEP_PRIORITY_MED
-
-	ex_act(severity)
-		return
-
-	Entered(atom/movable/A as mob|obj)
-		if (istype(A, /obj/overlay/tile_effect) || istype(A, /mob/dead) || istype(A, /mob/living/intangible))
-			return ..()
-		var/turf/T = pick_landmark(LANDMARK_FALL_MARS_ELE)
-		if (isturf(T))
-			visible_message("<span class='alert'>[A] falls down [src]!</span>")
-			if (ismob(A))
-				var/mob/M = A
-				if(!M.stat && ishuman(M))
-					var/mob/living/carbon/human/H = M
-					if(H.gender == MALE) playsound(H.loc, 'sound/voice/screams/male_scream.ogg', 100, 0, 0, H.get_age_pitch(), channel=VOLUME_CHANNEL_EMOTE)
-					else playsound(H.loc, 'sound/voice/screams/female_scream.ogg', 100, 0, 0, H.get_age_pitch(), channel=VOLUME_CHANNEL_EMOTE)
-				random_brute_damage(M, 33)
-				M.changeStatus("stunned", 10 SECONDS)
-			A.set_loc(T)
-			return
-		else ..()
 
 /mob/living/critter/robotic/rogue_digbot
 	name = "digbot"

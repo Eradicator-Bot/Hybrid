@@ -328,13 +328,6 @@ var/bombini_saved
 	var/active = 0
 	var/location = 1 // 0 for bottom, 1 for top
 
-/obj/machinery/computer/mars_elevator
-	name = "Elevator Control"
-	icon_state = "shuttle"
-	machine_registry_idx = MACHINES_ELEVATORCOMPS
-	var/active = 0
-	var/location = 1 // 0 for bottom, 1 for top
-
 /obj/machinery/computer/shuttle/emag_act(var/mob/user, var/obj/item/card/emag/E)
 	if(emergency_shuttle.location != SHUTTLE_LOC_STATION)
 		return
@@ -410,75 +403,6 @@ var/bombini_saved
 				boutput(world, "<span class='notice'><B>All authorizations to shorting time for shuttle launch have been revoked!</B></span>")
 				src.authorized.len = 0
 				src.authorized = list(  )
-	return
-
-//MARS ELEVATOR
-
-/obj/machinery/computer/mars_elevator/attack_hand(mob/user)
-	if(..())
-		return
-	var/dat = "<a href='byond://?src=\ref[src];close=1'>Close</a><BR><BR>"
-
-	if(location)
-		dat += "Elevator Location: Upper level"
-	else
-		dat += "Elevator Location: Lower Level"
-	dat += "<BR>"
-	if(active)
-		dat += "Moving"
-	else
-		dat += "<a href='byond://?src=\ref[src];send=1'>Move Elevator</a><BR><BR>"
-
-	user.Browse(dat, "window=mars_elevator")
-	onclose(user, "mars_elevator")
-	return
-
-/obj/machinery/computer/mars_elevator/Topic(href, href_list)
-	if(..())
-		return
-	if ((usr.contents.Find(src) || (in_interact_range(src, usr) && istype(src.loc, /turf))) || (issilicon(usr)))
-		src.add_dialog(usr)
-
-		if (href_list["send"])
-			if(!active)
-				for(var/obj/machinery/computer/mars_elevator/C in machine_registry[MACHINES_ELEVATORCOMPS])
-					active = 1
-					C.visible_message("<span class='alert'>The elevator begins to move!</span>")
-					playsound(C.loc, 'sound/machines/elevator_move.ogg', 100, 0)
-				SPAWN(5 SECONDS)
-					call_shuttle()
-
-		if (href_list["close"])
-			src.remove_dialog(usr)
-			usr.Browse(null, "window=mars_elevator")
-
-	src.add_fingerprint(usr)
-	src.updateUsrDialog()
-	return
-
-/obj/machinery/computer/mars_elevator/proc/call_shuttle()
-
-	if(location == 0) // at bottom
-		var/area/start_location = locate(/area/shuttle/mars_elevator/lower)
-		var/area/end_location = locate(/area/shuttle/mars_elevator/upper)
-		start_location.move_contents_to(end_location, /turf/unsimulated/floor/plating/scorched)
-		location = 1
-	else // at top
-		var/area/start_location = locate(/area/shuttle/mars_elevator/upper)
-		var/area/end_location = locate(/area/shuttle/mars_elevator/lower)
-		for(var/mob/living/L in end_location) // oh dear, stay behind the yellow line kids
-			if(!isintangible(L))
-				SPAWN(1 DECI SECOND)
-					logTheThing(LOG_COMBAT, L, "was gibbed by an elevator at [log_loc(L)].")
-					L.gib()
-		start_location.move_contents_to(end_location, /turf/simulated/floor/mars_elevator_shaft)
-		location = 0
-
-	for(var/obj/machinery/computer/mars_elevator/C in machine_registry[MACHINES_ELEVATORCOMPS])
-		active = 0
-		C.visible_message("<span class='alert'>The elevator has moved.</span>")
-		C.location = src.location
-
 	return
 
 //ICEBASE ELEVATOR
