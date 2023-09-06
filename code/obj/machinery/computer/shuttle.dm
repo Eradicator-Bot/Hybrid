@@ -405,6 +405,8 @@ var/bombini_saved
 				src.authorized = list(  )
 	return
 
+//ICEBASE ELEVATOR
+
 /obj/machinery/computer/icebase_elevator/attack_hand(mob/user)
 	if(..())
 		return
@@ -473,6 +475,8 @@ var/bombini_saved
 
 	return
 
+// Biodome elevator code
+
 /obj/machinery/computer/biodome_elevator/attack_hand(mob/user)
 	if(..())
 		return
@@ -514,10 +518,6 @@ var/bombini_saved
 	src.add_fingerprint(usr)
 	src.updateUsrDialog()
 	return
-
-
-// Biodome elevator code
-
 
 /obj/machinery/computer/biodome_elevator/proc/call_shuttle()
 
