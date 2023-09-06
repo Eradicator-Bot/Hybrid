@@ -814,3 +814,14 @@ TYPEINFO(/obj/vehicle/marsrover)
 	No, our ethics commitee does not consider it inhumane to seal people in like that. <br>
 	Nevertheless, we appreciate your enquiry.
 	"}
+
+/obj/strange_monolith
+	name = "strange monolith"
+	desc = "Sounds vaguely hollow but you see no way of opening it."
+	icon = 'icons/obj/artifacts/artifacts.dmi'
+	icon_state = "ancient-3"
+	density = 1
+	layer = OBJ_LAYER
+	flags = FPRINT
+	event_handler_flags = USE_FLUID_ENTER
+	anchored = UNANCHORED
