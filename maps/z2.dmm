@@ -60388,6 +60388,10 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/moon/museum/west)
+"eFs" = (
+/obj/strange_monolith,
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "eFB" = (
 /turf/unsimulated/floor/logo_xg{
 	icon_state = "logo_xg15"
@@ -144786,7 +144790,7 @@ dFc
 aaa
 aIe
 aIe
-tUt
+eFs
 tUt
 aIe
 aIe
@@ -145390,7 +145394,7 @@ dFc
 aaa
 aIe
 aIe
-tUt
+eFs
 tUt
 aIe
 tUt
@@ -145994,7 +145998,7 @@ dFc
 aaa
 aIe
 aIe
-tUt
+eFs
 tUt
 aIe
 tUt
