@@ -77225,6 +77225,10 @@
 	},
 /turf/unsimulated/floor/plating,
 /area/meat_derelict/entry)
+"wut" = (
+/mob/living/critter/rogue_digbot,
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "wuv" = (
 /obj/decal/fakeobjects/skeleton/unanchored,
 /obj/item/clothing/head/wizard,
@@ -144175,7 +144179,7 @@ tUt
 tUt
 aIe
 tUt
-tUt
+wut
 aIe
 aIe
 aIe
@@ -144795,7 +144799,7 @@ tUt
 aIe
 tUt
 tUt
-tUt
+wut
 aIe
 aIe
 tUt
@@ -145695,7 +145699,7 @@ aIe
 tUt
 tUt
 tUt
-tUt
+wut
 aIe
 wpu
 tUt
@@ -146277,7 +146281,7 @@ aaa
 aIe
 aIe
 aIe
-tUt
+wut
 aIe
 tUt
 tUt
