@@ -77226,7 +77226,7 @@
 /turf/unsimulated/floor/plating,
 /area/meat_derelict/entry)
 "wut" = (
-/mob/living/critter/rogue_digbot,
+/mob/living/critter/robotic/rogue_digbot,
 /turf/unsimulated/floor/setpieces/martian,
 /area/marsoutpost)
 "wuv" = (
@@ -144178,8 +144178,8 @@ tUt
 tUt
 tUt
 aIe
-tUt
 wut
+tUt
 aIe
 aIe
 aIe
