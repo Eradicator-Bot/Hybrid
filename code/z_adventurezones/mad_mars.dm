@@ -843,7 +843,7 @@ TYPEINFO(/obj/vehicle/marsrover)
 			return
 		else ..()
 
-/mob/living/critter/rogue_digbot
+/mob/living/critter/robotic/rogue_digbot
 	name = "digbot"
 	real_name = "rogue digbot"
 	blood_id = "oil"
@@ -855,7 +855,7 @@ TYPEINFO(/obj/vehicle/marsrover)
 	speechverb_exclaim = "beeps"
 	speechverb_ask = "intones"
 	health_brute = 40
-	health_burn = 200
+	can_bleed = TRUE
 	density = TRUE
 	flags = TABLEPASS
 	fits_under_table = TRUE
@@ -870,6 +870,12 @@ TYPEINFO(/obj/vehicle/marsrover)
 	setup_hands()
 		..()
 
+	setup_healths()
+		add_hh_flesh(src.health_brute, src.health_brute_vuln)
+
+	emp_act()
+		src.TakeDamage(10 * emp_vuln)
+
 	critter_ability_attack(var/mob/target)
 		var/datum/targetable/critter/flamethrower/flamethrower = src.abilityHolder.getAbility(/datum/targetable/critter/flamethrower)
 
@@ -878,7 +884,7 @@ TYPEINFO(/obj/vehicle/marsrover)
 			return TRUE
 
 	valid_target(mob/living/C)
-		if (istype(C, /mob/living/critter/rogue_digbot))
+		if (istype(C, /mob/living/critter/robotic/rogue_digbot))
 			return FALSE
 		return ..()
 
