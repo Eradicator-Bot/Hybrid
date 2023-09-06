@@ -5355,13 +5355,12 @@
 	},
 /area/moon/museum)
 "atX" = (
-/obj/grille/catwalk{
-	dir = 9;
-	icon_state = "catwalk_cross"
-	},
+/obj/grille/catwalk,
 /obj/decal/stripe_delivery,
-/turf/unsimulated/floor/plating/scorched,
-/area/shuttle/mars_elevator/upper)
+/turf/unsimulated/floor{
+	icon_state = "plating_dusty1"
+	},
+/area/marsoutpost)
 "atY" = (
 /obj/machinery/door/airlock/pyro/maintenance{
 	req_access_txt = ""
@@ -62273,11 +62272,12 @@
 	},
 /area/iomoon)
 "gGs" = (
-/obj/landmark{
-	name = "marselefall"
+/obj/ladder/embed{
+	id = "sandcave";
+	pixel_y = 32
 	},
-/turf/unsimulated/floor/plating/scorched,
-/area/shuttle/mars_elevator/lower)
+/turf/unsimulated/floor/setpieces/martian,
+/area/marsoutpost)
 "gGL" = (
 /obj/item/material_piece/bone,
 /turf/unsimulated/floor/setpieces/martian,
@@ -65848,10 +65848,14 @@
 /turf/unsimulated/floor/setpieces/martian,
 /area/marsoutpost)
 "kAp" = (
-/obj/machinery/computer/mars_elevator{
-	dir = 4
-	},
 /obj/decal/fakeobjects/lightbulb_broken,
+/obj/overlay{
+	density = 1;
+	desc = "It probably has something to do with the elevator.";
+	icon = 'icons/obj/machines/nuclear.dmi';
+	icon_state = "neutinj";
+	name = "strange machine"
+	},
 /turf/unsimulated/floor{
 	icon_state = "plating_dusty1"
 	},
@@ -68569,10 +68573,12 @@
 /turf/unsimulated/wall/auto/lead/gray,
 /area/sim/racing_track)
 "nqD" = (
-/obj/ladder/embed{
-	id = "sandcave"
+/obj/ladder{
+	icon_state = "ladder_wall";
+	id = "marsmine";
+	pixel_y = 24
 	},
-/turf/unsimulated/wall/auto/adventure/mars,
+/turf/unsimulated/floor/setpieces/martian,
 /area/marsoutpost)
 "nqE" = (
 /obj/overlay{
@@ -71828,8 +71834,12 @@
 /turf/unsimulated/floor/caution/east,
 /area/drone/assembly)
 "qAc" = (
-/obj/machinery/computer/mars_elevator{
-	dir = 4
+/obj/overlay{
+	density = 1;
+	desc = "It probably has something to do with the elevator.";
+	icon = 'icons/obj/machines/nuclear.dmi';
+	icon_state = "neutinj";
+	name = "strange machine"
 	},
 /obj/decal/fakeobjects/lightbulb_broken{
 	dir = 8
@@ -77226,8 +77236,10 @@
 /turf/unsimulated/floor/plating,
 /area/meat_derelict/entry)
 "wut" = (
-/mob/living/critter/robotic/rogue_digbot,
-/turf/unsimulated/floor/setpieces/martian,
+/obj/ladder{
+	id = "marsmine"
+	},
+/turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "wuv" = (
 /obj/decal/fakeobjects/skeleton/unanchored,
@@ -77371,6 +77383,10 @@
 "wzc" = (
 /obj/decal/cleanable/blood/tracks{
 	icon_state = "gib2"
+	},
+/obj/ladder/embed{
+	id = "sandcave";
+	pixel_y = 32
 	},
 /turf/unsimulated/floor/setpieces/martian,
 /area/marsoutpost/duststorm)
@@ -131796,7 +131812,7 @@ aLD
 aTs
 aOn
 aTs
-aTs
+wut
 atX
 atX
 kAp
@@ -139666,8 +139682,8 @@ aYR
 aIe
 aIe
 aIe
-nqD
-tUt
+aIe
+gGs
 aIe
 aIe
 aaa
@@ -142973,7 +142989,7 @@ pnV
 aTs
 aIe
 aIe
-nqD
+aIe
 wzc
 aYR
 hKX
@@ -143289,10 +143305,10 @@ aIe
 aIe
 aIe
 tUt
-qAq
-tUt
-gGs
-gGs
+aTs
+nqD
+aIB
+aIB
 aIe
 aaa
 cnw
@@ -143593,8 +143609,8 @@ wpu
 tUt
 tUt
 tUt
-gGs
-gGs
+aIB
+aIB
 aIe
 aaa
 cnw
@@ -144178,8 +144194,8 @@ tUt
 tUt
 tUt
 aIe
-wut
 tUt
+vbm
 aIe
 aIe
 aIe
@@ -144490,7 +144506,7 @@ aIe
 aIe
 aIe
 tUt
-tUt
+vbm
 tUt
 tUt
 tUt
@@ -144799,7 +144815,7 @@ tUt
 aIe
 tUt
 tUt
-wut
+vbm
 aIe
 aIe
 tUt
@@ -145699,7 +145715,7 @@ aIe
 tUt
 tUt
 tUt
-wut
+tUt
 aIe
 wpu
 tUt
@@ -146008,7 +146024,7 @@ tUt
 aIe
 pAV
 tUt
-tUt
+vbm
 aIe
 tUt
 aIe
@@ -146281,7 +146297,7 @@ aaa
 aIe
 aIe
 aIe
-wut
+iVm
 aIe
 tUt
 tUt
@@ -146294,7 +146310,7 @@ tUt
 tUt
 tUt
 aIe
-tUt
+vbm
 tUt
 tUt
 tUt
