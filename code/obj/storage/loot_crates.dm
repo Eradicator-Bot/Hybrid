@@ -24,10 +24,6 @@
 	)
 	var/list/department = list(
 	// medbay
-		/obj/item/roboupgrade/efficiency = 20,\
-		/obj/item/roboupgrade/jetpack = 20,\
-		/obj/item/roboupgrade/physshield = 10,\
-		/obj/item/roboupgrade/teleport = 10,\
 		/obj/item/cloner_upgrade = 10,\
 		/obj/item/grinder_upgrade = 20,\
 		/obj/item/reagent_containers/mender/both = 10,\
