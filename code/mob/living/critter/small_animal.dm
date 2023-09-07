@@ -1898,7 +1898,8 @@ var/list/mob_bird_species = list("smallowl" = /mob/living/critter/small_animal/b
 			return TRUE
 
 	valid_target(mob/living/C)
-		if (istype(C, /mob/living/critter/small_animal/rattlesnake)) return FALSE //don't attack space rattlesnakes(the snake would lose)
+		if (istype(C, /mob/living/critter/small_animal/rattlesnake) || istype(C, /mob/living/critter/small_animal/scorpion))  //don't attack space rattlesnakes(the snake would lose), or other scorpions
+			return FALSE
 		return ..()
 
 	seek_target(var/range = 8)
