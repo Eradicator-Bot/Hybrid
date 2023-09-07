@@ -8249,9 +8249,15 @@
 /area/marsoutpost)
 "aJb" = (
 /obj/machinery/optable,
-/obj/dialogueobj/securitycorpse3,
 /obj/decal/cleanable/blood/tracks{
 	icon_state = "drip5"
+	},
+/obj/decal/fakeobjects/skeleton{
+	desc = "Eugh, the stench is horrible!";
+	icon = 'icons/obj/decoration.dmi';
+	icon_state = "seccorpse3";
+	name = "security officer";
+	pixel_y = 0
 	},
 /turf/unsimulated/floor/black{
 	dir = 1
@@ -10723,8 +10729,14 @@
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "aQO" = (
-/obj/dialogueobj/securitycorpse6,
 /obj/fluid_spawner/polluted_filth/blood,
+/obj/decal/fakeobjects/skeleton{
+	desc = "Eugh, the stench is horrible!";
+	icon = 'icons/obj/decoration.dmi';
+	icon_state = "seccorpse6";
+	name = "security officer";
+	pixel_y = 0
+	},
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "aQP" = (
@@ -11169,12 +11181,18 @@
 	icon_state = "4-10";
 	name = "power cable"
 	},
-/obj/dialogueobj/securitycorpse7,
+/obj/fluid_spawner/polluted_filth/blood,
+/obj/decal/fakeobjects/skeleton{
+	desc = "Eugh, the stench is horrible!";
+	icon = 'icons/obj/decoration.dmi';
+	icon_state = "seccorpse7";
+	name = "head of security corpse";
+	pixel_y = 0
+	},
 /obj/item/barrier{
 	pixel_x = 5;
 	pixel_y = -7
 	},
-/obj/fluid_spawner/polluted_filth/blood,
 /turf/unsimulated/floor{
 	icon_state = "plating_dusty1"
 	},
@@ -63476,8 +63494,14 @@
 	},
 /area/shuttle/merchant_shuttle/left_centcom/cogmap)
 "iao" = (
-/obj/dialogueobj/securitycorpse1,
 /obj/fluid_spawner/polluted_filth/blood,
+/obj/decal/fakeobjects/skeleton{
+	desc = "Eugh, the stench is horrible!";
+	icon = 'icons/obj/decoration.dmi';
+	icon_state = "seccorpse1";
+	name = "security officer";
+	pixel_y = 0
+	},
 /turf/unsimulated/floor/grime,
 /area/marsoutpost)
 "iaA" = (
@@ -66004,14 +66028,6 @@
 	name = "v-space"
 	},
 /area/sim/area2)
-"kFl" = (
-/obj/stool/bed,
-/obj/item/clothing/suit/bedsheet{
-	bcolor = "yellow";
-	icon_state = "bedsheet-yellow"
-	},
-/turf/unsimulated/floor/wood,
-/area/marsoutpost)
 "kHd" = (
 /obj/decal/cleanable/generic,
 /obj/decal/fakeobjects{
@@ -67866,7 +67882,13 @@
 /turf/space,
 /area/wizard_station_space)
 "mCx" = (
-/obj/decoration/syndcorpse5,
+/obj/decal/fakeobjects/skeleton{
+	desc = "Eugh, the stench is horrible!";
+	icon = 'icons/obj/decoration.dmi';
+	icon_state = "syndcorpse5";
+	name = "syndicate corpse";
+	pixel_y = 0
+	},
 /turf/unsimulated/floor/setpieces/martian,
 /area/marsoutpost/duststorm)
 "mCY" = (
@@ -70797,7 +70819,13 @@
 	spookTypes = null;
 	autoclose = FALSE
 	},
-/obj/decoration/syndcorpse10,
+/obj/decal/fakeobjects/skeleton{
+	desc = "Eugh, the stench is horrible!";
+	icon = 'icons/obj/decoration.dmi';
+	icon_state = "syndcorpse10";
+	name = "syndicate corpse";
+	pixel_y = 0
+	},
 /turf/unsimulated/floor/setpieces/martian,
 /area/marsoutpost/duststorm)
 "prU" = (
@@ -71676,9 +71704,15 @@
 	},
 /area/centcom/offices/adhara)
 "qoS" = (
-/obj/dialogueobj/securitycorpse2,
 /obj/fluid_spawner/polluted_filth/blood{
 	amount = 200
+	},
+/obj/decal/fakeobjects/skeleton{
+	desc = "Eugh, the stench is horrible!";
+	icon = 'icons/obj/decoration.dmi';
+	icon_state = "seccorpse2";
+	name = "security officer";
+	pixel_y = 0
 	},
 /turf/unsimulated/floor/specialroom/medbay,
 /area/marsoutpost)
@@ -72596,6 +72630,14 @@
 	dir = 4
 	},
 /area/owlery/gangzone)
+"rkQ" = (
+/obj/stool/bed,
+/obj/item/clothing/suit/bedsheet{
+	bcolor = "yellow";
+	icon_state = "bedsheet-yellow"
+	},
+/turf/unsimulated/floor/wood,
+/area/marsoutpost)
 "rkU" = (
 /obj/decal/cleanable/glitter/harmless,
 /obj/critter/domestic_bee/walp_bee,
@@ -75120,8 +75162,14 @@
 /turf/unsimulated/floor/plating,
 /area/owlery/owllock)
 "ufP" = (
-/obj/dialogueobj/syndiecorpse11,
 /obj/fluid_spawner/polluted_filth/blood,
+/obj/decal/fakeobjects/skeleton{
+	desc = "Eugh, the stench is horrible!";
+	icon = 'icons/obj/decoration.dmi';
+	icon_state = "syndcorpse11";
+	name = "syndicate corpse";
+	pixel_y = 0
+	},
 /turf/unsimulated/floor/caution/north,
 /area/marsoutpost)
 "ugt" = (
@@ -75915,9 +75963,15 @@
 /area/titlescreen)
 "val" = (
 /obj/item/mine/blast/armed,
-/obj/dialogueobj/syndiecorpse7,
 /obj/decal/cleanable/blood/tracks{
 	icon_state = "drip5"
+	},
+/obj/decal/fakeobjects/skeleton{
+	desc = "Eugh, the stench is horrible!";
+	icon = 'icons/obj/decoration.dmi';
+	icon_state = "syndcorpse7";
+	name = "syndicate corpse";
+	pixel_y = 0
 	},
 /turf/unsimulated/floor/setpieces/martian,
 /area/marsoutpost/duststorm)
@@ -136683,9 +136737,9 @@ bgo
 aTs
 bgL
 aTs
-kFl
+rkQ
 aTs
-kFl
+rkQ
 aTs
 biP
 bjy
