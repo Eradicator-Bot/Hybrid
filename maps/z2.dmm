@@ -66004,6 +66004,14 @@
 	name = "v-space"
 	},
 /area/sim/area2)
+"kFl" = (
+/obj/stool/bed,
+/obj/item/clothing/suit/bedsheet{
+	bcolor = "yellow";
+	icon_state = "bedsheet-yellow"
+	},
+/turf/unsimulated/floor/wood,
+/area/marsoutpost)
 "kHd" = (
 /obj/decal/cleanable/generic,
 /obj/decal/fakeobjects{
@@ -136675,9 +136683,9 @@ bgo
 aTs
 bgL
 aTs
-biC
+kFl
 aTs
-bhp
+kFl
 aTs
 biP
 bjy
@@ -144811,7 +144819,7 @@ tUt
 aIe
 tUt
 tUt
-vbm
+tUt
 aIe
 aIe
 tUt
