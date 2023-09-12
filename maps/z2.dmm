@@ -16947,7 +16947,7 @@
 	dir = 8
 	},
 /obj/table/wood/auto,
-/obj/item/device/dongle,
+/obj/item/paper/folded/ball,
 /turf/unsimulated/floor/carpet/grime,
 /area/drone/office)
 "bjU" = (

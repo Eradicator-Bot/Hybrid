@@ -223,12 +223,8 @@ var/global/the_automaton = null
 				boutput(user, "<span class='alert'><B>[src]</B> ignores you. This may be related to their lack of circular key holes.")
 				return
 
-			if (istype(W, /obj/item/device/key/hospital))
-				user.visible_message("<span class='alert'><b>[src]</b> studies [src]'s open hand for a moment, then looks disappointed.</span>", "<span class='alert'><b>[src]</b> studies [W] intently for a moment, then hands it back.  Maybe it's not yet time?</span>")
-				return
-
 			//Normal keys below
-			if (dd_hasprefix(ckey(W.name), "iridium"))
+			if (dd_hasprefix(ckey(W.name), "niobium"))
 				if (keycount < (AUTOMATON_MAX_KEYS-1))
 					src.visible_message("<span class='alert'><b>[src]</b> studies [W] intently for a moment, then hands it back.  Maybe it's not yet time?</span>")
 				else
