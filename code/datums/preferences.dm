@@ -461,25 +461,6 @@ datum/preferences
 					src.profile_modified = TRUE
 					return TRUE
 
-			if ("update-robotName")
-				var/new_name = tgui_input_text(usr, "Your preferred cyborg name, leave empty for random.", "Character Generation", src.robot_name)
-				if (isnull(new_name))
-					return
-				if (is_blank_string(new_name))
-					src.robot_name = ""
-					src.profile_modified = TRUE
-					return TRUE
-
-				new_name = strip_html(new_name, MOB_NAME_MAX_LENGTH, 1)
-				if (!length(new_name))
-					tgui_alert(usr, "That name was too short after removing bad characters from it. Please choose a different name.", "Name too short")
-					return
-
-				if (new_name)
-					src.robot_name = new_name
-					src.profile_modified = TRUE
-					return TRUE
-
 			if ("update-gender")
 				if (src.gender == MALE)
 					src.gender = FEMALE
