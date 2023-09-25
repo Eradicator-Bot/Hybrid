@@ -14149,9 +14149,6 @@
 /area/russian/radiation)
 "bRp" = (
 /obj/table/wood/auto,
-/obj/item/storage/briefcase/toxins{
-	pixel_y = 3
-	},
 /obj/item/reagent_containers/food/snacks/beefood{
 	desc = "A little birthday cupcake for Heisenbee.  May not taste good to non-bees.";
 	icon = 'icons/obj/foodNdrink/food_dessert.dmi';

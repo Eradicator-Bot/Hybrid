@@ -45252,9 +45252,6 @@
 "mkC" = (
 /obj/machinery/power/apc/autoname_north,
 /obj/table/wood/auto,
-/obj/item/storage/briefcase/toxins{
-	pixel_y = -9
-	},
 /obj/machinery/phone{
 	pixel_y = 2
 	},

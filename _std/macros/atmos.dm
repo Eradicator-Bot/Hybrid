@@ -158,10 +158,9 @@
 #define RADGAS_CONTAMINATION_PER_MOLE 5
 // only apply contamination to atoms on a turf every few seconds, instead of every tick
 #define RADGAS_CONTAMINATION_COOLDOWN 3 SECONDS
+
 //Gas Reaction Flags
-#define REACTION_ACTIVE (1<<0) 	//! Reaction is Active
 #define COMBUSTION_ACTIVE (1<<1) //! Combustion is Active
-#define CATALYST_ACTIVE (1<<2)	//! Hotspot Catalyst is Active
 
 // tank properties
 
@@ -282,7 +281,6 @@ proc/gas_text_color(gas_id)
 
 #define ATMOS_EPSILON 0.0001
 #define MINIMUM_HEAT_CAPACITY	0.0003
-#define MINIMUM_REACT_QUANTITY MINIMUM_HEAT_CAPACITY
 #define QUANTIZE(variable)		(round(variable, ATMOS_EPSILON))
 
 // Zeroing gases

@@ -30,9 +30,7 @@
 	interesting = "There is additional detail regarding the creation of flora and fauna."
 /obj/table/wood/auto/desk/azrun
 	has_drawer = TRUE
-	drawer_contents = list(/obj/item/raw_material/molitz_beta,
-							/obj/item/raw_material/molitz_beta,
-							/obj/item/raw_material/plasmastone,
+	drawer_contents = list(/obj/item/raw_material/plasmastone,
 							/obj/item/organ/lung/plasmatoid/left,
 							/obj/item/pen/crayon/red)
 

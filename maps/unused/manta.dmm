@@ -35157,10 +35157,6 @@
 	name = "heisenbed"
 	},
 /obj/critter/domestic_bee/heisenbee,
-/obj/item/storage/briefcase/toxins{
-	pixel_x = -7;
-	pixel_y = 21
-	},
 /obj/cable{
 	icon_state = "2-8"
 	},

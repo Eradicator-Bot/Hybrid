@@ -70,22 +70,6 @@ What are the archived variables for?
 /// Process all reactions, return bitfield if notable reaction occurs.
 /datum/gas_mixture/proc/react(atom/dump_location)
 	. = 0 //(used by pipe_network and hotspots)
-	var/reaction_rate
-
-	if(src.temperature > 900 && src.toxins > MINIMUM_REACT_QUANTITY && src.carbon_dioxide > MINIMUM_REACT_QUANTITY && src.oxygen_agent_b > MINIMUM_REACT_QUANTITY )
-		reaction_rate = min(src.carbon_dioxide*0.75, src.toxins*0.25, src.oxygen_agent_b*0.05)
-		reaction_rate = QUANTIZE(reaction_rate)
-
-		src.carbon_dioxide -= reaction_rate
-		src.oxygen += reaction_rate
-
-		src.oxygen_agent_b -= reaction_rate*0.05
-
-		src.temperature += (reaction_rate*20000)/HEAT_CAPACITY(src)
-
-		if(reaction_rate > MINIMUM_REACT_QUANTITY)
-			. |= CATALYST_ACTIVE
-		. |= REACTION_ACTIVE
 
 	src.fuel_burnt = 0
 	if(src.temperature > FIRE_MINIMUM_TEMPERATURE_TO_EXIST)
@@ -99,7 +83,7 @@ What are the archived variables for?
 	var/old_heat_capacity = HEAT_CAPACITY(src)
 
 	//Handle plasma burning
-	if(src.toxins > MINIMUM_REACT_QUANTITY)
+	if(src.toxins > MINIMUM_HEAT_CAPACITY)
 		var/plasma_burn_rate = 0
 		var/oxygen_burn_rate = 0
 		//more energy released at higher temperatures
@@ -114,7 +98,7 @@ What are the archived variables for?
 				plasma_burn_rate = (src.toxins * temperature_scale) / 4
 			else
 				plasma_burn_rate = (temperature_scale * (src.oxygen / PLASMA_OXYGEN_FULLBURN)) / 4
-			if(plasma_burn_rate > MINIMUM_REACT_QUANTITY)
+			if(plasma_burn_rate > MINIMUM_HEAT_CAPACITY)
 				src.toxins -= QUANTIZE(plasma_burn_rate / 3) // Plasma usage lowered
 				src.oxygen -= QUANTIZE(plasma_burn_rate * oxygen_burn_rate)
 				src.carbon_dioxide += QUANTIZE(plasma_burn_rate / 3)

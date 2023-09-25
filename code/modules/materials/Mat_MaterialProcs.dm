@@ -366,7 +366,7 @@ triggerOnEntered(var/atom/owner, var/atom/entering)
 		if (istype(alloy))
 			return locate(/datum/material/crystal/molitz) in alloy.parent_materials
 
-	execute(var/atom/owner, var/temp, var/agent_b=FALSE)
+	execute(var/atom/owner, var/temp)
 		if(temp < 500) return //less than reaction temp
 
 		var/datum/material/crystal/molitz/molitz = src.find_molitz(owner.material)
@@ -391,56 +391,14 @@ triggerOnEntered(var/atom/owner, var/atom/entering)
 		//okay, now we've passed all the conditions for gas generation - do that
 		var/datum/gas_mixture/payload = new /datum/gas_mixture
 
-		if(agent_b && air.toxins > MINIMUM_REACT_QUANTITY)
-			payload.oxygen_agent_b += 0.18 * owner.material_amt
-			payload.oxygen = 15 * owner.material_amt
-			payload.temperature = T0C //reduced temp is supposeed to represent endothermic reaction
-			air.merge(payload) //add it to the target air
-
-			//sparkles
-			animate_flash_color_fill_inherit(owner,"#ff0000",4, 2 SECONDS)
-			playsound(owner, 'sound/effects/leakagentb.ogg', 50, 1, 8)
-			if(!particleMaster.CheckSystemExists(/datum/particleSystem/sparklesagentb, owner))
-				particleMaster.SpawnSystem(new /datum/particleSystem/sparklesagentb(owner))
-		else //no plasma present, or this is just normal molitz - you get just plain oxygen
-			payload.oxygen = 80 * owner.material_amt
-			payload.temperature = temp
-			air.merge(payload) //add it to the target air
-			//blue sparkles
-			animate_flash_color_fill_inherit(owner,"#0000FF",4, 2 SECONDS)
-			playsound(owner, 'sound/effects/leakoxygen.ogg', 50, 1, 5)
-
+		payload.oxygen = 80 * owner.material_amt
+		payload.temperature = temp
+		air.merge(payload) //add it to the target air
+		//blue sparkles
+		animate_flash_color_fill_inherit(owner,"#0000FF",4, 2 SECONDS)
+		playsound(owner, 'sound/effects/leakoxygen.ogg', 50, 1, 5)
 
 		molitz.iterations -= 1
-
-
-/datum/materialProc/molitz_temp/agent_b
-	max_generations = 1
-	execute(var/atom/location, var/temp)
-		..(location, temp, TRUE)
-		return
-
-/datum/materialProc/molitz_exp
-	max_generations = 1
-	execute(var/atom/owner, var/sev)
-		if(!istype(owner.material, /datum/material/crystal/molitz))
-			return
-		var/datum/material/crystal/molitz/molitz = owner.material
-		if(molitz.unexploded <= 0)
-			return
-		var/turf/target = get_turf(owner)
-		if(sev > 0 && sev < 4) // Use pipebombs not canbombs!
-			if(molitz.iterations >= 1)
-				playsound(owner, 'sound/effects/leakoxygen.ogg', 50, 1, 5)
-			if(molitz.iterations == 0)
-				playsound(owner, 'sound/effects/molitzcrumble.ogg', 50, 1, 5)
-			var/datum/gas_mixture/payload = new /datum/gas_mixture
-			payload.oxygen = 50
-			payload.temperature = T20C
-			target.assume_air(payload)
-			molitz.iterations = 2
-			molitz.unexploded = 0
-
 
 /datum/materialProc/miracle_add
 	execute(var/location)
