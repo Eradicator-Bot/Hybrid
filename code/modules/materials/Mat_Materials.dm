@@ -584,7 +584,6 @@ ABSTRACT_TYPE(/datum/material/crystal)
 	desc = "Molitz is a common crystalline substance."
 	color = "#FFFFFF"
 	alpha = 180
-	var/unexploded = 1
 	var/iterations = 4
 
 	New()
@@ -592,20 +591,6 @@ ABSTRACT_TYPE(/datum/material/crystal)
 		setProperty("density", 3)
 		setProperty("hard", 4)
 		addTrigger(triggersTemp, new /datum/materialProc/molitz_temp())
-		addTrigger(triggersExp, new /datum/materialProc/molitz_exp())
-
-	beta
-		mat_id = "molitz_b"
-		name = "molitz beta"
-		color = "#ff2288"
-		desc = "A rare form of Molitz. When heated under special conditions it produces a powerful plasma fire catalyst."
-
-		New()
-			..()
-			// no need to remove molitz_on_hit, all it does is call molitz_temp
-			removeTrigger(triggersTemp, /datum/materialProc/molitz_temp)
-			addTrigger(triggersTemp, new /datum/materialProc/molitz_temp/agent_b())
-			return
 
 /datum/material/crystal/claretine
 	mat_id = "claretine"
