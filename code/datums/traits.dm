@@ -469,6 +469,24 @@
 	points = -1
 	category = list("trinkets")
 
+/datum/trait/abucted
+	name = "Abducted"
+	desc = "You believe yourself to have been the victim of an alien abduction at some point in your life and start out with a tinfoil hat to help you resist future attempts."
+	id = "abducted"
+	icon_state = "placeholder"
+	points = 0
+	category = list("trinkets")
+
+	onAdd(var/mob/owner) //we deliberately don't mention this
+		SPAWN(4 SECONDS)
+			if(ishuman(owner))
+				var/mob/living/carbon/human/H = owner
+				var/random_implant = pick(/obj/item/implant/artifact/eldritch/eldritch_good, /obj/item/implant/artifact/eldritch/eldritch_gimmick, /obj/item/implant/artifact/eldritch/eldritch_bad,
+								   		  /obj/item/implant/artifact/ancient/ancient_good, /obj/item/implant/artifact/ancient/ancient_gimmick, /obj/item/implant/artifact/ancient/ancient_bad,
+								   		  /obj/item/implant/artifact/wizard/wizard_good, /obj/item/implant/artifact/wizard/wizard_gimmick, /obj/item/implant/artifact/wizard/wizard_bad)
+				var/obj/item/implant/imp = new random_implant
+				imp.implanted(H, H)
+
 /datum/trait/pawnstar
 	name = "Pawn Star"
 	desc = "You sold your trinket before you departed for the station. You start with a bonus of 25% of your starting cash in your inventory."
