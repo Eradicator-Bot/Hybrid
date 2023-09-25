@@ -683,7 +683,7 @@ var/global/totally_random_jobs = FALSE
 	else if (src.traitHolder && src.traitHolder.hasTrait("petasusaphilic"))
 		var/picked = pick(filtered_concrete_typesof(/obj/item/clothing/head, /proc/filter_trait_hats))
 		trinket = new picked(src)
-	else if (src.traitHolder && src.traitHolder.hasTrait("conspiracytheorist"))
+	else if (src.traitHolder && (src.traitHolder.hasTrait("conspiracytheorist") || src.traitHolder.hasTrait("abducted")))
 		trinket = new/obj/item/clothing/head/tinfoil_hat
 	else if (src.traitHolder && src.traitHolder.hasTrait("beestfriend"))
 		if (prob(15))
