@@ -159,6 +159,9 @@
 // only apply contamination to atoms on a turf every few seconds, instead of every tick
 #define RADGAS_CONTAMINATION_COOLDOWN 3 SECONDS
 
+//Gas Reaction Flags
+#define COMBUSTION_ACTIVE (1<<1) //! Combustion is Active
+
 // tank properties
 
 /// Tank starts leaking

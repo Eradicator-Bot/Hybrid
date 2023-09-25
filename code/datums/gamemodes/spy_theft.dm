@@ -407,7 +407,6 @@
 	station_bounties[/obj/item/tank/jetpack] = 1
 
 	station_bounties[/obj/item/storage/secure/sbriefcase] = 2
-	station_bounties[/obj/item/storage/briefcase/toxins] = 2
 	station_bounties[/obj/item/storage/backpack/medic] = 2
 	station_bounties[/obj/item/storage/backpack/NT] = 3
 	station_bounties[/obj/item/storage/backpack/captain/blue] = 3
