@@ -122,7 +122,7 @@ o+`        `-` ``..-:yooos-..----------..`
 //#define MAP_OVERRIDE_COGMAP2			// Cogmap2, by Dr. Cogwerks
 //#define MAP_OVERRIDE_DONUT2				// Updated Donut2, by committee. Currently managed by Sord.
 //#define MAP_OVERRIDE_DONUT3				// Donut3 by Ryumi
-//#define MAP_OVERRIDE_KONDARU			// Kondaru by Kubius
+#define MAP_OVERRIDE_KONDARU			// Kondaru by Kubius
 //#define MAP_OVERRIDE_ATLAS				// Atlas by Gannets (and Kubius)
 //#define MAP_OVERRIDE_CLARION			// Used to be Destiny's Alt. By Dionsu and a69andahalf.
 //#define MAP_OVERRIDE_OSHAN				// Oshan by committee
@@ -154,7 +154,7 @@ o+`        `-` ``..-:yooos-..----------..`
 
 //------ HOLIDAYS AND OTHER SUCH TOGGLES ------//
 
-//#define RP_MODE 1
+#define RP_MODE 1
 //#define HALLOWEEN 1
 //#define AUTUMN 1
 //#define XMAS 1

@@ -7,7 +7,7 @@ Datum new() is called near the end of world/New()
 var/global/datum/mapSwitchHandler/mapSwitcher
 
 /datum/mapSwitchHandler
-	var/active = 0 //set to 1 if the datum initializes correctly
+	var/active = 1 //0 //set to 1 if the datum initializes correctly
 	var/current = null //the human-readable name of the current map
 	var/next = null //the human-readable name of the next map, if set
 
@@ -462,28 +462,30 @@ var/global/datum/mapSwitchHandler/mapSwitcher
 
 	Click()
 		var/client/C = usr.client
-		if (!C) return
-		var/mob/living/M = C.mob
-		var/chosenMap = null
-		if(istype(M))
-			var/obj/item/I = M.equipped()
-			if(istype(I, /obj/item/reagent_containers) && I:reagents:has_reagent("space_fungus"))
-				chosenMap = "Mushroom"
-			if(istype(I, /obj/item/reagent_containers) && (I:reagents:has_reagent("reversium") || I:reagents:has_reagent("fliptonium")))
-				chosenMap = "1 pamgoC"
-			//if(istype(I, /obj/item/reagent_containers) && I:reagents:has_reagent("ldmatter"))
-				//chosenMap = "Density"
-			if(istype(I, /obj/item/reagent_containers/food/snacks/donut))
-				chosenMap = "Donut 2"
-			//if(istype(I, /obj/item/grab))
-				//chosenMap = "Wrestlemap"
+		if (!C)
+			return
+		// # Secret map vote stuff:
+		// var/mob/living/M = C.mob
+		// var/chosenMap = null
+		// if(istype(M))
+		// 	var/obj/item/I = M.equipped()
+		// 	if(istype(I, /obj/item/reagent_containers) && I:reagents:has_reagent("space_fungus"))
+		// 		chosenMap = "Mushroom"
+		// 	if(istype(I, /obj/item/reagent_containers) && (I:reagents:has_reagent("reversium") || I:reagents:has_reagent("fliptonium")))
+		// 		chosenMap = "1 pamgoC"
+		// 	//if(istype(I, /obj/item/reagent_containers) && I:reagents:has_reagent("ldmatter"))
+		// 		//chosenMap = "Density"
+		// 	if(istype(I, /obj/item/reagent_containers/food/snacks/donut))
+		// 		chosenMap = "Donut 2"
+		// 	//if(istype(I, /obj/item/grab))
+		// 		//chosenMap = "Wrestlemap"
 
-		if (mapSwitcher.playersVoting)
-			if(chosenMap)
-				map_vote_holder.special_vote(C,chosenMap)
-				boutput(C.mob, "Map vote successful???")
-			else
-				map_vote_holder.show_window(C)
+		// if (mapSwitcher.playersVoting)
+		// 	if(chosenMap)
+		// 		map_vote_holder.special_vote(C,chosenMap)
+		// 		boutput(C.mob, "Map vote successful???")
+		// 	else
+		map_vote_holder.show_window(C)
 
 
 	examine()
