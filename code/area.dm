@@ -1357,17 +1357,6 @@ TYPEINFO(/area/diner)
 	name = "Bill E Bheezes"
 	icon_state = "red"
 
-/area/void_diner
-	name = "Void Diner"
-	icon_state = "purple"
-	requires_power = FALSE
-	sound_environment = 12
-	area_parallax_layers = list(
-		/atom/movable/screen/parallax_layer/void,
-		/atom/movable/screen/parallax_layer/void/clouds_1,
-		/atom/movable/screen/parallax_layer/void/clouds_2,
-		)
-
 /area/tech_outpost
 	name = "Tech Outpost"
 	icon_state = "storage"
